@@ -136,7 +136,7 @@ npx skills add plastic-labs/honcho
 ## Браузерная автоматизация
 
 - **Playwright MCP** (Microsoft, 27K stars) — скриншоты, автоматизация
-- **Browser Use** (80K stars) — автономный браузерный агент
+- **Browser Use** (87K stars) — автономный браузерный агент, ИИ сам кликает, заполняет формы, ходит по страницам. Хорош для автоматизации маркетплейсов. [GitHub](https://github.com/browser-use/browser-use)
 - **Context7** — документация 9000+ библиотек | `claude mcp add context7 -- npx -y @upstash/context7-mcp@latest`
 
 ## Стеки по бюджету
@@ -342,6 +342,12 @@ git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
 **Шаг 2** — готовый репозиторий? → Интегрируй
 **Шаг 3** — комбинация сервисов + n8n? → Комбинируй
 **Шаг 4** — ничего не подходит? → Только тогда пиши своё
+
+---
+
+# ЛОКАЛЬНЫЕ МОДЕЛИ
+
+- **[Ollama](https://github.com/ollama/ollama)** (169K stars) — запуск LLM локально на своём компьютере. Работает с DeepSeek, Llama, Qwen и десятками других моделей. Из РФ без VPN. Полностью бесплатно, данные не уходят наружу. Установка: `brew install ollama && ollama run deepseek-r1`
 
 ---
 
