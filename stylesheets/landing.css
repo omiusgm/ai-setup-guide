@@ -1,0 +1,67 @@
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.hero .hero-sub {
+  font-size: 1.15rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.3rem;
+}
+
+.hero .hero-meta {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--lighter);
+  margin-bottom: 2rem;
+}
+
+.hero .md-button--primary {
+  font-size: 1.1rem;
+  padding: 0.7rem 2.2rem;
+}
+
+.landing-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.landing-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.landing-divider {
+  border: none;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  margin: 2rem auto;
+  max-width: 200px;
+}
+
+.prompt-block {
+  background: var(--md-code-bg-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  max-width: 680px;
+  margin: 1rem auto;
+}
+
+.prompt-block ol {
+  padding-left: 1.2rem;
+}
+
+.landing-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--md-default-fg-color--lighter);
+  font-size: 0.85rem;
+}
