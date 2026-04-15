@@ -1,0 +1,85 @@
+site_name: "Как заставить ИИ работать за тебя"
+site_description: "Бесплатный гайд по ИИ — от новичка до продвинутого. Апрель 2026."
+site_url: https://omiusgm.github.io/ai-setup-guide/
+repo_url: https://github.com/omiusgm/ai-setup-guide
+repo_name: omiusgm/ai-setup-guide
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: ru
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Тёмная тема
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Светлая тема
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: ru
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - "": index.md
+  - "Начать":
+    - "Быстрый старт": getting-started.md
+    - "10 правил": guides/rules.md
+    - "Мифы про ИИ": guides/myths.md
+  - "Практика":
+    - "Бюджет от 0 до $200": guides/budget.md
+    - "Память и контекст": guides/memory.md
+    - "Экономия токенов (Caveman)": skills/caveman.md
+    - "Россия: VPN и оплата": guides/russia.md
+  - "Автоматизация":
+    - "AmoCRM + ИИ": crm/amocrm.md
+    - "n8n: автоматизация без кода": automation/n8n.md
+    - "Подключение поиска": skills/search.md
+  - "Для ИИ":
+    - "Для чатботов": for-chatbots.md
+    - "Для агентов": for-agents.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/agentezh
+      name: Telegram-канал Агент Ёж
+  generator: false
+
+copyright: "Контент сгенерирован ИИ | <a href='https://t.me/agentezh'>Telegram «Агент Ёж»</a>"

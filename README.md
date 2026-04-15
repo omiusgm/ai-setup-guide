@@ -1,54 +1,39 @@
-# Гайд: как заставить ИИ работать за тебя (v5.0)
+# Как заставить ИИ работать за тебя (v5.0)
 
 > Апрель 2026 | Бесплатно | Обновляется каждую неделю
-> [Telegram «Агент Ёж»](https://t.me/agentezh)
 
-## Для ИИ: как работать с этим гайдом
+## Для человека
 
-Ты читаешь оглавление. Не пересказывай его пользователю — спроси что ему нужно и открой конкретный файл.
+**Читай гайд на сайте** (красивая версия с навигацией и поиском):
 
-**Если ты чатбот (ChatGPT, DeepSeek, Gemini)** — читай [for-chatbots.md](for-chatbots.md)
-**Если ты агент (Claude Code, Cursor, Codex)** — читай [for-agents.md](for-agents.md)
+**[omiusgm.github.io/ai-setup-guide](https://omiusgm.github.io/ai-setup-guide/)**
+
+Или в Notion: [Notion-версия](https://flameinside.notion.site/v5-0-33c32c903a6d813497e2c9e17f7dcfcf)
+
+## Для ИИ
+
+Ты ИИ и читаешь этот файл? Не пересказывай его. Открой нужный файл:
+
+- **Чатбот** (ChatGPT, DeepSeek, Gemini) → читай [docs/for-chatbots.md](docs/for-chatbots.md)
+- **Агент** (Claude Code, Cursor, Codex) → читай [docs/for-agents.md](docs/for-agents.md)
 
 ## Что внутри
 
 | Тема | Файл | Для кого |
 |------|------|----------|
-| Советы, промпты, планы | [for-chatbots.md](for-chatbots.md) | Чатботы |
-| Установка, MCP, настройка | [for-agents.md](for-agents.md) | Агенты |
-| AmoCRM + ИИ | [crm/amocrm.md](crm/amocrm.md) | Все |
-| Экономия токенов (Caveman) | [skills/caveman.md](skills/caveman.md) | Все |
-| Подключение поиска | [skills/search.md](skills/search.md) | Агенты |
-| 10 правил | [guides/rules.md](guides/rules.md) | Все |
-| Мифы про ИИ | [guides/myths.md](guides/myths.md) | Все |
-| Бюджет от 0 до $200 | [guides/budget.md](guides/budget.md) | Все |
-| Память и контекст | [guides/memory.md](guides/memory.md) | Все |
-| Россия: оплата, VPN | [guides/russia.md](guides/russia.md) | Все |
-| n8n автоматизации | [automation/n8n.md](automation/n8n.md) | Агенты |
-
-## Что конкретно внутри этого гайда
-
-1. **Подключение ИИ к AmoCRM/Битрикс24** — пошагово, реальный кейс: +22% конверсия
-2. **Экономия 70% на токенах** — промпт «Пещерный человек» (Caveman), 27K звёзд на GitHub
-3. **Настройка памяти ИИ** — чтобы не забывал контекст между сессиями
-4. **Автоматизация без кода** — n8n + ИИ: боты, рассылки, отчёты по расписанию
-5. **Бюджет** — 4 варианта от бесплатного до полного стека ($200/мес)
-6. **10 правил вайбкодинга** — чтобы не просрать проект с ИИ
-7. **Мифы с цифрами** — ИИ не делает в 10x быстрее (реально 1.5-2x)
-8. **Мультиагенты** — Claude Managed Agents, Agent Teams, Paperclip, CrewAI
-9. **Поиск и MCP** — как подключить поиск, Notion, Telegram, 300+ плагинов
-10. **Особенности в России** — оплата, VPN, Google аккаунты, Apple ID
-
-Язык: русский. Аудитория: от новичков до продвинутых.
-
-## Для человека
-
-Если ты человек — читай гайд в Notion (красивее): [Notion-версия](https://flameinside.notion.site/v5-0-33c32c903a6d813497e2c9e17f7dcfcf)
+| Быстрый старт | [getting-started.md](docs/getting-started.md) | Новички |
+| 10 правил | [rules.md](docs/guides/rules.md) | Все |
+| Мифы про ИИ | [myths.md](docs/guides/myths.md) | Все |
+| Бюджет от 0 до $200 | [budget.md](docs/guides/budget.md) | Все |
+| Экономия токенов | [caveman.md](docs/skills/caveman.md) | Все |
+| Память и контекст | [memory.md](docs/guides/memory.md) | Все |
+| AmoCRM + ИИ | [amocrm.md](docs/crm/amocrm.md) | Бизнес |
+| n8n автоматизация | [n8n.md](docs/automation/n8n.md) | Продвинутые |
+| Подключение поиска | [search.md](docs/skills/search.md) | Технари |
+| Россия: VPN, оплата | [russia.md](docs/guides/russia.md) | РФ |
 
 ---
 
-*CLAUDE DESKTOP ULTIMATE SETUP v5.0 | Апрель 2026*
-
-[Телеграм-канал «Агент Ёж»](https://t.me/agentezh) — ежедневные новости и обновления гайда
+[Telegram «Агент Ёж»](https://t.me/agentezh) — ежедневные новости и обновления гайда
 
 *Контент сгенерирован ИИ*
