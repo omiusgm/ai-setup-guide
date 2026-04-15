@@ -54,6 +54,7 @@
 - [:material-head-question: **Мифы про ИИ**](guides/myths.md) — узнай правду до того как наступишь на грабли
 - [:material-cash-multiple: **Бюджет**](guides/budget.md) — сколько реально стоит (спойлер: можно бесплатно)
 - [:material-content-cut: **Caveman**](skills/caveman.md) — продвинутая экономия токенов
+- [:material-robot: **Автоматизация**](for-agents.md#автоматизация-loop-remote-tasks-handoffmd) — `/loop` и Remote Tasks позволяют ИИ работать по расписанию, даже когда ты спишь
 
 ---
 
