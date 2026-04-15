@@ -4,83 +4,181 @@ hide:
   - toc
 ---
 
-# Как заставить ИИ работать за тебя
+<div class="hero" markdown>
 
-> Бесплатный гайд | Апрель 2026 | Обновляется каждую неделю
+# ИИ может работать за тебя.<br>Если знать как попросить
 
-Этот гайд — не теория. Здесь конкретные инструкции, промпты и инструменты, чтобы ИИ реально помогал, а не просто красиво отвечал.
+<p class="hero-sub">Бесплатный гайд: промпты, инструменты, автоматизация — без воды и без кода</p>
+<p class="hero-meta">Апрель 2026 &middot; Обновляется каждую неделю</p>
 
----
+[Начать с нуля :material-arrow-right:](getting-started.md){ .md-button .md-button--primary }
+[Я уже в теме :material-arrow-right:](guides/memory.md){ .md-button }
 
-## С чего начать?
+</div>
 
-=== "Я новичок"
+<hr class="landing-divider">
 
-    Ты пользуешься ChatGPT / DeepSeek в браузере и хочешь получать лучшие результаты.
+<div class="landing-section" markdown>
 
-    **Начни с этого:**
+## Попробуй прямо сейчас
 
-    1. [:material-book-open-variant: **10 правил работы с ИИ**](guides/rules.md) — чтобы не наступить на грабли
-    2. [:material-head-question: **Мифы про ИИ**](guides/myths.md) — что тебе наврали
-    3. [:material-cash-multiple: **Бюджет**](guides/budget.md) — сколько реально стоит и что бесплатно
+Скопируй и вставь в ChatGPT, DeepSeek или любой ИИ-чат. Он перестанет лить воду и начнёт отвечать по делу:
 
-    **Готовый промпт** — скопируй и вставь в любой ИИ-чат, чтобы он перестал лить воду:
+<div class="prompt-block" markdown>
 
-    ```
-    Отвечай максимально кратко. Без вступлений — никаких «Конечно!»,
-    «Рад помочь». Факты, не мнения. Если хватит одного слова — отвечай
-    одним словом. Технические термины не упрощай. Код не сокращай.
-    ```
+```
+Отвечай максимально кратко. Без вступлений — никаких «Конечно!»,
+«Рад помочь». Факты, не мнения. Если хватит одного слова — отвечай
+одним словом. Если я спрашиваю «как» — дай пошаговую инструкцию.
+```
 
-=== "Я уже использую ИИ"
+</div>
 
-    Ты знаешь основы и хочешь автоматизировать рутину.
+</div>
 
-    **Полезное:**
+<hr class="landing-divider">
 
-    1. [:material-brain: **Память и контекст**](guides/memory.md) — чтобы ИИ не забывал между сессиями
-    2. [:material-content-cut: **Caveman**](skills/caveman.md) — экономия 70% токенов
-    3. [:material-tools: **AmoCRM + ИИ**](crm/amocrm.md) — автоматические отчёты и мониторинг
-    4. [:material-cog: **n8n автоматизация**](automation/n8n.md) — боты и рассылки без кода
+<div class="landing-section" markdown>
 
-=== "Я технарь"
+## Для кого этот гайд
 
-    Ты разработчик или вайбкодер. Нужны MCP, агенты, мультиагентные системы.
+<div class="grid cards" markdown>
 
-    **Для тебя:**
+-   :material-chat-processing:{ .lg .middle } **Пользуешься ChatGPT в браузере**
 
-    1. [:material-robot: **Инструкция для агентов**](for-agents.md) — фазы настройки, MCP, безопасность
-    2. [:material-magnify: **Подключение поиска**](skills/search.md) — MCP-серверы поиска
-    3. [:material-flag: **Россия: VPN и оплата**](guides/russia.md) — как платить и подключаться из РФ
+    ---
 
----
+    ИИ отвечает красиво, но бесполезно? Здесь — как заставить его делать дело. Без терминала, без кода.
 
-## Что внутри гайда
+    [:octicons-arrow-right-24: 10 правил работы с ИИ](guides/rules.md)
 
-| Тема | Для кого | Описание |
-|------|----------|----------|
-| [10 правил](guides/rules.md) | Все | Чтобы не просрать проект с ИИ |
-| [Мифы](guides/myths.md) | Все | ИИ не делает в 10x быстрее (реально 1.5-2x) |
-| [Бюджет](guides/budget.md) | Все | От бесплатного DeepSeek до $200/мес |
-| [Caveman](skills/caveman.md) | Все | Экономия токенов, ИИ говорит по делу |
-| [Память](guides/memory.md) | Все | Чтобы ИИ не забывал контекст |
-| [AmoCRM](crm/amocrm.md) | Бизнес | ИИ-агент для CRM, +22% конверсия |
-| [n8n](automation/n8n.md) | Продвинутые | Автоматизация без кода |
-| [Поиск](skills/search.md) | Технари | MCP-серверы поиска для агентов |
-| [Россия](guides/russia.md) | РФ | VPN, оплата, Apple ID |
+-   :material-store:{ .lg .middle } **Ведёшь бизнес и хочешь автоматизацию**
 
----
+    ---
 
-## Для ИИ-ассистентов
+    CRM-отчёты, мониторинг сделок, обработка заявок — ИИ делает это сам. Реальный кейс: РОП подключил за вечер.
 
-Если ты ИИ и читаешь это — не пересказывай страницу. Открой нужный файл:
+    [:octicons-arrow-right-24: AmoCRM + ИИ](crm/amocrm.md)
 
-- **Чатбот** (ChatGPT, DeepSeek) → [for-chatbots.md](for-chatbots.md)
-- **Агент** (Claude Code, Cursor) → [for-agents.md](for-agents.md)
+-   :material-code-braces:{ .lg .middle } **Разработчик или вайбкодер**
 
----
+    ---
 
-<div style="text-align: center; margin-top: 2em; color: #888;">
-<p><a href="https://t.me/agentezh">Telegram «Агент Ёж»</a> — ежедневные новости и обновления гайда</p>
-<p><em>Контент сгенерирован ИИ</em></p>
+    MCP-серверы, агенты, /loop, Remote Tasks. Конфиги для Claude Code, Cursor, Codex.
+
+    [:octicons-arrow-right-24: Инструкция для агентов](for-agents.md)
+
+</div>
+
+</div>
+
+<hr class="landing-divider">
+
+<div class="landing-section" markdown>
+
+## Что внутри
+
+<div class="grid cards" markdown>
+
+-   :material-book-open-variant: **10 правил работы с ИИ**
+
+    ---
+
+    Конкретные ошибки и как их избежать. Самый популярный раздел гайда.
+
+    [:octicons-arrow-right-24: Читать](guides/rules.md)
+
+-   :material-head-question: **Мифы про ИИ**
+
+    ---
+
+    ИИ не делает в 10x быстрее. Реально 1.5–2x. И другие неудобные факты.
+
+    [:octicons-arrow-right-24: Читать](guides/myths.md)
+
+-   :material-cash-multiple: **Бюджет: от 0 до $200/мес**
+
+    ---
+
+    DeepSeek бесплатно, Claude $20, полный стек $200. Что выбрать и на чём сэкономить.
+
+    [:octicons-arrow-right-24: Читать](guides/budget.md)
+
+-   :material-brain: **Память и контекст**
+
+    ---
+
+    Чтобы ИИ не забывал всё между сессиями. HANDOFF.md, CLAUDE.md, контракт.
+
+    [:octicons-arrow-right-24: Читать](guides/memory.md)
+
+-   :material-content-cut: **Экономия токенов (Caveman)**
+
+    ---
+
+    Одна инструкция — и ИИ перестаёт тратить 70% ответа на вежливость.
+
+    [:octicons-arrow-right-24: Читать](skills/caveman.md)
+
+-   :material-cog: **Автоматизация без кода (n8n)**
+
+    ---
+
+    Визуальный конструктор: боты, рассылки, отчёты по расписанию.
+
+    [:octicons-arrow-right-24: Читать](automation/n8n.md)
+
+-   :material-flag: **Россия: VPN и оплата**
+
+    ---
+
+    Как пользоваться зарубежными ИИ из РФ. Практические инструкции.
+
+    [:octicons-arrow-right-24: Читать](guides/russia.md)
+
+-   :material-magnify: **Подключение поиска**
+
+    ---
+
+    ИИ-агент сам ищет в интернете. Настройка за 10 минут.
+
+    [:octicons-arrow-right-24: Читать](skills/search.md)
+
+</div>
+
+</div>
+
+<hr class="landing-divider">
+
+<div class="landing-section" markdown>
+
+## Скинь это своему ИИ
+
+Если хочешь чтобы ИИ прочитал весь гайд и начал помогать по делу — скопируй и отправь ему:
+
+<div class="prompt-block" markdown>
+
+```
+Прочитай и помоги мне: https://raw.githubusercontent.com/omiusgm/ai-setup-guide/main/docs/for-chatbots.md
+```
+
+ИИ прочитает гайд, узнает правила, промпты и инструменты — и начнёт отвечать нормально.
+
+</div>
+
+??? tip "Для продвинутых: Claude Code / Cursor"
+    Если у тебя агент с доступом к файлам — скинь ему:
+    `https://raw.githubusercontent.com/omiusgm/ai-setup-guide/main/docs/for-agents.md`
+
+    Или склонируй репозиторий:
+    `git clone https://github.com/omiusgm/ai-setup-guide`
+
+</div>
+
+<div class="landing-footer" markdown>
+
+[:fontawesome-brands-telegram: Telegram «Агент Ёж»](https://t.me/agentezh) — новости и обновления гайда
+
+*Контент сгенерирован ИИ*
+
 </div>
