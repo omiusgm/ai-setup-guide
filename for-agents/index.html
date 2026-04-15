@@ -979,7 +979,37 @@
 <p>Активно работаешь с одним проектом, остальные — фоновые задачи.</p>
 <p><a href="https://support.claude.com/en/articles/13854387">Документация</a> | <a href="https://claudefa.st/blog/guide/development/scheduled-tasks">Гайд</a></p>
 <hr />
-<h1 id="_3">ПОИСК — АГЕНТЫ ИЗ КОРОБКИ ИЩУТ ПЛОХО<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<h1 id="loop-remote-tasks-handoffmd">АВТОМАТИЗАЦИЯ: /loop, Remote Tasks, HANDOFF.md<a class="headerlink" href="#loop-remote-tasks-handoffmd" title="Permanent link">&para;</a></h1>
+<h2 id="loop">/loop — агент работает по расписанию<a class="headerlink" href="#loop" title="Permanent link">&para;</a></h2>
+<p>Команда <code>/loop</code> запускает агента в цикле: выполнил задачу → подождал → выполнил снова. Работает пока не скажешь стоп.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/loop 1h проверяй новые лиды в CRM и пиши бриф в /briefs
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>/loop 30m мониторь рекламный кабинет, алерт если CTR упал
+</code></pre></div>
+<p>Два режима:
+- С интервалом: <code>/loop 5m</code>, <code>/loop 1h</code> — фиксированная пауза между итерациями
+- Динамический: <code>/loop</code> без интервала — агент сам выбирает когда проснуться</p>
+<p><strong>Ограничение:</strong> работает пока компьютер включён. Закрыл крышку — агент уснул.</p>
+<h2 id="remote-tasks-anthropic">Remote Tasks — агент на серверах Anthropic<a class="headerlink" href="#remote-tasks-anthropic" title="Permanent link">&para;</a></h2>
+<p>Для задач которые должны работать 24/7 — Remote Tasks. Агент выполняет задачу на серверах Anthropic, ноутбук может быть выключен.</p>
+<p>Настройка: claude.ai → Projects → Scheduled Tasks. Без кода.</p>
+<p>Примеры:
+- Утренний брифинг в 7:00 в Telegram
+- Еженедельный отчёт по метрикам
+- Ночной аудит безопасности
+- Мониторинг конкурентов</p>
+<h2 id="handoffmd">HANDOFF.md — память между сессиями<a class="headerlink" href="#handoffmd" title="Permanent link">&para;</a></h2>
+<p>Файл куда агент записывает прогресс. Не создаётся автоматически — нужно попросить:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>После каждых 10 действий обновляй HANDOFF.md: что сделано, что осталось, какие решения принял
+</code></pre></div>
+<p>Утром открываешь один файл — понимаешь всё что произошло за ночь.</p>
+<h2 id="_3">Экономия токенов при автоматизации<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Для мониторинга используй Haiku вместо Opus — кратно дешевле</li>
+<li>Разбивай ночные задачи на маленькие итерации — при сжатии контекста теряется меньше</li>
+<li><code>/loop</code> с Caveman-промптом экономит ещё больше</li>
+</ul>
+<hr />
+<h1 id="_4">ПОИСК — АГЕНТЫ ИЗ КОРОБКИ ИЩУТ ПЛОХО<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
 <h2 id="-mcp">Веб-поиск (MCP)<a class="headerlink" href="#-mcp" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Brave Search</strong> ($5/мес) — общий поиск | <code>claude mcp add brave-search -e BRAVE_API_KEY=... -- npx -y @brave/brave-search-mcp-server</code></li>
@@ -988,25 +1018,25 @@
 <li><strong>Jina AI</strong> (бесплатно) — 19 инструментов | <code>claude mcp add --transport http jina https://mcp.jina.ai/v1</code></li>
 <li><strong>DuckDuckGo</strong> (бесплатно) — нулевой бюджет | <code>claude mcp add ddg-search -- uvx duckduckgo-mcp-server</code></li>
 </ul>
-<h2 id="_4">Картинки<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Картинки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Stock Images MCP</strong> (Unsplash+Pexels+Pixabay, бесплатно) | <code>uvx stock-images-mcp</code></li>
 <li><strong>Brave Image Search</strong> — включён в Brave MCP</li>
 </ul>
-<h2 id="_5">Браузерная автоматизация<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Браузерная автоматизация<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Playwright MCP</strong> (Microsoft, 27K stars) — скриншоты, автоматизация</li>
 <li><strong>Browser Use</strong> (87K stars) — автономный браузерный агент, ИИ сам кликает, заполняет формы, ходит по страницам. Хорош для автоматизации маркетплейсов. <a href="https://github.com/browser-use/browser-use">GitHub</a></li>
 <li><strong>Context7</strong> — документация 9000+ библиотек | <code>claude mcp add context7 -- npx -y @upstash/context7-mcp@latest</code></li>
 </ul>
-<h2 id="_6">Стеки по бюджету<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_7">Стеки по бюджету<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>$0:</strong> DuckDuckGo + Jina + Playwright</li>
 <li><strong>$15-30/мес:</strong> Brave + Firecrawl + Context7 + Playwright</li>
 <li><strong>$50-100/мес:</strong> Brave + Exa + Firecrawl + Perplexity + Context7 + Stock Images + Playwright</li>
 </ul>
 <hr />
-<h1 id="_7">МУЛЬТИАГЕНТНЫЕ СИСТЕМЫ<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h1>
+<h1 id="_8">МУЛЬТИАГЕНТНЫЕ СИСТЕМЫ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h1>
 <h2 id="1_2">Уровень 1 — Работает сейчас<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h2>
 <p>Один агент с ролями (GSD + /code-review). Покрывает 80%.</p>
 <h2 id="2_2">Уровень 2 — Экспериментально<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h2>
@@ -1037,7 +1067,7 @@
 <p><a href="https://github.com/karpathy/autoresearch">GitHub</a> (69K stars)</p>
 <hr />
 <h1 id="effort">ВЫБОР МОДЕЛИ И EFFORT<a class="headerlink" href="#effort" title="Permanent link">&para;</a></h1>
-<h2 id="_8">Модели<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h2 id="_9">Модели<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Opus 4.6</strong> — самая мощная (архитектура, сложный дебаг)</li>
 <li><strong>Opus 4.6 1M</strong> — то же + 1M контекст (огромные кодобазы)</li>
@@ -1055,7 +1085,7 @@
 <hr />
 <h1 id="code_1">РЕЖИМЫ РАЗРЕШЕНИЙ В CODE<a class="headerlink" href="#code_1" title="Permanent link">&para;</a></h1>
 <p>По умолчанию Claude Code спрашивает подтверждение на КАЖДОЕ действие. Чтобы это изменить:</p>
-<h2 id="_9">Как настроить<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h2 id="_10">Как настроить<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>Settings → Claude Code:
 - <strong>Allow bypass permissions mode</strong> — без этого кнопка Bypass не работает
 - <strong>Draw attention on notifications</strong> — мигает иконкой когда ждёт тебя
@@ -1068,13 +1098,13 @@
 - <strong>Accessibility → Granted</strong>
 - <strong>Screen Recording → Granted</strong></p>
 <hr />
-<h1 id="_10">РАСШИРЕНИЯ<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h1>
+<h1 id="_11">РАСШИРЕНИЯ<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h1>
 <h2 id="remotion-code">Remotion — видео кодом (Code)<a class="headerlink" href="#remotion-code" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npx skills add remotion-dev/skills
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx skills add remotion-dev/skills
 </code></pre></div>
 <a href="https://github.com/remotion-dev/remotion">Репозиторий</a> (42K stars)</p>
 <h2 id="n8n-skills-n8n-workflow-code">n8n-skills — n8n workflow (Code)<a class="headerlink" href="#n8n-skills-n8n-workflow-code" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/plugin install czlonkowski/n8n-skills
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/plugin install czlonkowski/n8n-skills
 </code></pre></div>
 <a href="https://github.com/czlonkowski/n8n-skills">Репозиторий</a></p>
 <h2 id="n8n-claude-">n8n + Claude: паттерн "контент-завод"<a class="headerlink" href="#n8n-claude-" title="Permanent link">&para;</a></h2>
@@ -1084,7 +1114,7 @@
 <h2 id="n8n-mcp-claude-n8n-code">n8n-mcp — Claude управляет n8n (Code)<a class="headerlink" href="#n8n-mcp-claude-n8n-code" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/czlonkowski/n8n-mcp">Репозиторий</a> (18K stars)</p>
 <h2 id="firecrawl-code-cowork">Firecrawl — скрапинг для ИИ (Code + Cowork)<a class="headerlink" href="#firecrawl-code-cowork" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>claude mcp add firecrawl --url https://mcp.firecrawl.dev/v2/mcp
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>claude mcp add firecrawl --url https://mcp.firecrawl.dev/v2/mcp
 </code></pre></div>
 <a href="https://github.com/mendableai/firecrawl">Репозиторий</a> (106K stars)</p>
 <h2 id="docker-mcp-toolkit-300">Docker MCP Toolkit — 300+ плагинов<a class="headerlink" href="#docker-mcp-toolkit-300" title="Permanent link">&para;</a></h2>
@@ -1097,7 +1127,7 @@
 <p>Anthropic заблокировала использование подписки Claude (Pro/Max) в OpenClaw и сторонних инструментах (4 апреля 2026). Варианты: API-ключ (pay-as-you-go) или ACP-биндинги.</p>
 </blockquote>
 <h2 id="claude-code-mcp-code">claude-code-mcp — агент-в-агенте (Code)<a class="headerlink" href="#claude-code-mcp-code" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>claude mcp add claude-code -- npx -y claude-code-mcp
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>claude mcp add claude-code -- npx -y claude-code-mcp
 </code></pre></div>
 <a href="https://github.com/steipete/claude-code-mcp">Репозиторий</a> (1.1K stars)</p>
 <h2 id="postmypost">PostMyPost — постинг во все соцсети<a class="headerlink" href="#postmypost" title="Permanent link">&para;</a></h2>
@@ -1107,14 +1137,14 @@ MCP: <code>https://mcp.postmypost.io/mcp</code>
 <h2 id="composio-1000-code-cowork">Composio — 1000+ интеграций (Code + Cowork)<a class="headerlink" href="#composio-1000-code-cowork" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/ComposioHQ/composio">Репозиторий</a> | <a href="https://composio.dev">Сайт</a></p>
 <h2 id="humanizer-code-chat">Humanizer — человеческий текст (Code + Chat)<a class="headerlink" href="#humanizer-code-chat" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
 </code></pre></div>
 <a href="https://github.com/blader/humanizer">Репозиторий</a> (13K stars)</p>
 <hr />
-<h1 id="_11">МОБИЛЬНЫЙ ДОСТУП К АГЕНТУ<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h1>
+<h1 id="_12">МОБИЛЬНЫЙ ДОСТУП К АГЕНТУ<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h1>
 <p><strong>1. Dispatch (встроен в Cowork)</strong> — QR-код → задачи с телефона → результат на десктопе.</p>
 <p><strong>2. Telegram Channel Plugin</strong> — бот в Telegram управляет Claude Code.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>/plugin install telegram@claude-plugins-official
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>/plugin install telegram@claude-plugins-official
 </code></pre></div>
 Запуск: <code>claude --channels plugin:telegram@claude-plugins-official</code></p>
 <p><strong>3. Codex (облако)</strong> — <a href="http://claude.ai/code">claude.ai/code</a>, работает в браузере без десктопа. $200/мес Max.</p>
@@ -1129,7 +1159,7 @@ MCP: <code>https://mcp.postmypost.io/mcp</code>
 - <strong>Проверка зависимостей:</strong> npm audit / pip audit
 - <strong>Трёхуровневые гейты:</strong> тесты → AI review → человек</p>
 <hr />
-<h1 id="_12">ПРИНЦИП "ЛЕГО" — СНАЧАЛА ГОТОВОЕ, ПОТОМ КАСТОМНОЕ<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h1>
+<h1 id="_13">ПРИНЦИП "ЛЕГО" — СНАЧАЛА ГОТОВОЕ, ПОТОМ КАСТОМНОЕ<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h1>
 <p>Прежде чем писать свой микросервис — собери из готовых API:</p>
 <p><strong>Порядок ресёрча:</strong>
 1. <strong>Каталоги MCP:</strong> <a href="https://docs.docker.com/ai/mcp-catalog-and-toolkit/">Docker MCP Toolkit</a>, <a href="http://mcp.directory">mcp.directory</a>, <a href="http://pulsemcp.com">pulsemcp.com</a>
@@ -1141,12 +1171,12 @@ MCP: <code>https://mcp.postmypost.io/mcp</code>
 <strong>Шаг 3</strong> — комбинация сервисов + n8n? → Комбинируй
 <strong>Шаг 4</strong> — ничего не подходит? → Только тогда пиши своё</p>
 <hr />
-<h1 id="_13">ЛОКАЛЬНЫЕ МОДЕЛИ<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h1>
+<h1 id="_14">ЛОКАЛЬНЫЕ МОДЕЛИ<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h1>
 <ul>
 <li><strong><a href="https://github.com/ollama/ollama">Ollama</a></strong> (169K stars) — запуск LLM локально на своём компьютере. Работает с DeepSeek, Llama, Qwen и десятками других моделей. Из РФ без VPN. Полностью бесплатно, данные не уходят наружу. Установка: <code>brew install ollama &amp;&amp; ollama run deepseek-r1</code></li>
 </ul>
 <hr />
-<h1 id="_14">НОВЫЕ АГЕНТНЫЕ СИСТЕМЫ<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h1>
+<h1 id="_15">НОВЫЕ АГЕНТНЫЕ СИСТЕМЫ<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h1>
 <ul>
 <li><a href="https://github.com/OpenHands/OpenHands">OpenHands</a> (71K stars) — автономный инженер</li>
 <li><a href="https://github.com/google-gemini/gemini-cli">Gemini CLI</a> (101K stars) — бесплатный агент, 1M контекст</li>
@@ -1159,7 +1189,7 @@ MCP: <code>https://mcp.postmypost.io/mcp</code>
 <p><strong>TypeScript</strong> (strict) + <strong>Next.js 15+</strong> + <strong>Supabase</strong> ($25/мес) + <strong>n8n</strong> self-hosted + <strong>Vercel</strong></p>
 <p>Архитектура: модульный монолит. Микросервисы — после product-market fit.</p>
 <hr />
-<h1 id="_15">ССЫЛКИ<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h1>
+<h1 id="_16">ССЫЛКИ<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h1>
 <p><strong>Документация:</strong> <a href="https://support.claude.com/en/articles/13345190">Cowork</a> | <a href="https://support.claude.com/en/articles/13854387">Tasks</a> | <a href="https://support.claude.com/en/articles/13837440">Plugins</a> | <a href="https://code.claude.com/docs/en/agent-teams">Agent Teams</a> | <a href="https://code.claude.com/docs/en/memory">Memory</a></p>
 <p><strong>Скиллы:</strong> <a href="https://github.com/gsd-build/get-shit-done">GSD</a> | <a href="https://honcho.dev/">Honcho</a> | <a href="https://github.com/mendableai/firecrawl">Firecrawl</a> | <a href="https://github.com/czlonkowski/n8n-skills">n8n-skills</a> | <a href="https://github.com/remotion-dev/remotion">Remotion</a></p>
 <p><strong>Гайды:</strong> <a href="https://claudefa.st/blog/guide/mechanics/auto-dream">Auto Dream</a> | <a href="https://dev.to/raxxostudios/best-claude-code-skills-plugins-2026-guide-4ak4">Best Skills 2026</a> | <a href="https://findskill.ai/blog/claude-cowork-guide/">Cowork Guide</a></p>
