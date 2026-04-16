@@ -129,75 +129,119 @@ hide:
 
 <div class="landing-section" markdown>
 
-## Что внутри
+## Каталог инструментов
+
+<div class="tag-filters" markdown>
+<a class="tag-filter" href="tags/#новичкам" data-tooltip="Для тех кто в браузере с ChatGPT">🟢 новичкам</a>
+<a class="tag-filter" href="tags/#бизнесу" data-tooltip="CRM, отчёты, маркетплейсы">🟠 бизнесу</a>
+<a class="tag-filter" href="tags/#технарям" data-tooltip="Агенты, MCP, терминал">🔵 технарям</a>
+<a class="tag-filter" href="tags/#промпт" data-tooltip="Готовый промпт — скопируй и вставь">✏️ промпты</a>
+<a class="tag-filter" href="tags/#автоматизация" data-tooltip="Работает само, без тебя">⚡ автоматизация</a>
+<a class="tag-filter" href="tags/#бесплатно" data-tooltip="$0, без подписок">🆓 бесплатно</a>
+<a class="tag-filter" href="tags/#из-рф" data-tooltip="Работает из России без VPN">🇷🇺 из РФ</a>
+</div>
 
 <div class="grid cards" markdown>
 
--   :material-book-open-variant: **10 правил работы с ИИ**
+-   :material-content-cut: **Caveman — ИИ говорит по делу**
+
+    ---
+
+    Одна строка — и 70% воды из ответов исчезает. 27K⭐, работает в любом чате.
+
+    [:octicons-arrow-right-24: Подробнее](tools/caveman.md)
+
+-   :material-cash-multiple: **Бюджет: от 0 до $200**
+
+    ---
+
+    DeepSeek бесплатно, Claude $20, полный стек $200. Как выбрать и не переплатить.
+
+    [:octicons-arrow-right-24: Подробнее](tools/budget-guide.md)
+
+-   :material-book-open-variant: **10 правил вайбкодинга**
 
     ---
 
     Конкретные ошибки и как их избежать. С него обычно начинают.
 
-    [:octicons-arrow-right-24: Читать](guides/rules.md)
+    [:octicons-arrow-right-24: Подробнее](tools/10-rules.md)
 
--   :material-head-question: **Мифы про ИИ**
-
-    ---
-
-    ИИ не делает в 10x быстрее. Реально 1.5–2x. И другие неудобные факты.
-
-    [:octicons-arrow-right-24: Читать](guides/myths.md)
-
--   :material-cash-multiple: **Бюджет: от 0 до $200/мес**
+-   :material-robot: **DeepSeek — бесплатная альтернатива**
 
     ---
 
-    DeepSeek бесплатно, Claude $20, полный стек $200. Что выбрать и на чём сэкономить.
+    Не хуже ChatGPT, работает из РФ без VPN. V4 скоро на чипах Huawei.
 
-    [:octicons-arrow-right-24: Читать](guides/budget.md)
+    [:octicons-arrow-right-24: Подробнее](tools/deepseek.md)
 
--   :material-brain: **Память и контекст**
-
-    ---
-
-    Каждое утро ИИ как новый сотрудник — ничего не помнит. Вот как это починить.
-
-    [:octicons-arrow-right-24: Читать](guides/memory.md)
-
--   :material-content-cut: **Экономия токенов (Caveman)**
+-   :material-store: **AmoCRM + ИИ-агент**
 
     ---
 
-    Одна строка — и ИИ перестаёт тратить 70% ответа на «Конечно, я рад помочь!».
+    Отчёты, мониторинг сделок, забытые клиенты — за минуты вместо часов.
 
-    [:octicons-arrow-right-24: Читать](skills/caveman.md)
+    [:octicons-arrow-right-24: Подробнее](tools/amocrm-agent.md)
 
--   :material-cog: **Автоматизация без кода (n8n)**
-
-    ---
-
-    Собираешь цепочку мышкой, без кода: бот ответил — таблица обновилась — отчёт улетел в Telegram.
-
-    [:octicons-arrow-right-24: Читать](automation/n8n.md)
-
--   :material-flag: **Россия: VPN и оплата**
+-   :material-cog: **n8n — автоматизация без кода**
 
     ---
 
-    Ты в РФ, сервис говорит «нет». Что делать — пошагово.
+    Собираешь цепочку мышкой: бот ответил — таблица обновилась — отчёт улетел.
 
-    [:octicons-arrow-right-24: Читать](guides/russia.md)
+    [:octicons-arrow-right-24: Подробнее](tools/n8n.md)
 
--   :material-magnify: **Подключение поиска**
+-   :material-sleep: **/loop — ИИ работает пока ты спишь**
 
     ---
 
-    ИИ-агент сам ищет в интернете. Настройка за 10 минут.
+    Запустил задачу, ушёл. Утром — готовый результат. + Remote Tasks в облаке.
 
-    [:octicons-arrow-right-24: Читать](skills/search.md)
+    [:octicons-arrow-right-24: Подробнее](tools/loop-remote-tasks.md)
+
+-   :material-brain: **MemPalace — память для ИИ**
+
+    ---
+
+    ИИ наконец запоминает кто ты. Проект Миллы Йовович, 45K⭐ (но есть нюансы).
+
+    [:octicons-arrow-right-24: Подробнее](tools/mempalace.md)
+
+-   :material-duck: **Goose — бесплатный агент**
+
+    ---
+
+    Десктоп-приложение + CLI. Работает с Ollama, без VPN из РФ.
+
+    [:octicons-arrow-right-24: Подробнее](tools/goose.md)
+
+-   :material-cursor-default-click: **Browser Use — ИИ кликает за тебя**
+
+    ---
+
+    Автоматизация браузера: формы, парсинг, маркетплейсы. 87K⭐.
+
+    [:octicons-arrow-right-24: Подробнее](tools/browser-use.md)
+
+-   :material-text-box-edit: **Humanizer — убрать следы ИИ**
+
+    ---
+
+    Скилл который делает ИИ-текст похожим на человеческий. 14K⭐.
+
+    [:octicons-arrow-right-24: Подробнее](tools/humanizer.md)
+
+-   :material-server: **Ollama — ИИ на своём компе**
+
+    ---
+
+    Запусти DeepSeek, Llama, Qwen локально. Бесплатно, без VPN. 169K⭐.
+
+    [:octicons-arrow-right-24: Подробнее](tools/ollama.md)
 
 </div>
+
+[:octicons-arrow-right-24: Все инструменты и теги](tags.md){ .md-button }
 
 </div>
 

@@ -39,6 +39,8 @@ theme:
 plugins:
   - search:
       lang: ru
+  - tags:
+      tags_file: tags.md
 
 markdown_extensions:
   - admonition
@@ -77,6 +79,23 @@ nav:
     - "AmoCRM + ИИ": crm/amocrm.md
     - "n8n: автоматизация без кода": automation/n8n.md
     - "Подключение поиска": skills/search.md
+  - "Каталог":
+    - "Все инструменты": tags.md
+    - tools/caveman.md
+    - tools/deepseek.md
+    - tools/ollama.md
+    - tools/browser-use.md
+    - tools/n8n.md
+    - tools/amocrm-agent.md
+    - tools/mempalace.md
+    - tools/humanizer.md
+    - tools/everything-claude-code.md
+    - tools/goose.md
+    - tools/hermes-agent.md
+    - tools/loop-remote-tasks.md
+    - tools/oh-my-claudecode.md
+    - tools/10-rules.md
+    - tools/budget-guide.md
   - "Для ИИ":
     - "Для чатботов": for-chatbots.md
     - "Для агентов": for-agents.md
