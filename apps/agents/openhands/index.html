@@ -507,34 +507,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🛠️ Инфраструктура
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../bundles/" class="md-nav__link">
         
   
@@ -1069,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1080,17 +1052,6 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Нюансы
       
     </span>
@@ -1099,7 +1060,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1133,6 +1094,10 @@
 <blockquote>
 <p>87% на SWE-bench — один из самых сильных автономных ИИ-инженеров в опенсорсе. Ставишь задачу — уходишь пить кофе.</p>
 </blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Этот инструмент требует терминала и Docker</p>
+<p>OpenHands живёт в Docker-контейнере, без командной строки не запустить. Если ты не программист — посмотри <a href="../goose/">Goose</a> (десктоп-агент с обычным окном) или <a href="../../../knowledge/budget/">DeepSeek в браузере</a>. Оба работают из РФ без VPN, без терминала.</p>
+</div>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>OpenHands не помощник. Это автономный инженер, который работает по задаче от начала до конца. Тебе не надо подсказывать на каждом шагу — он САМ открывает файлы, правит код, запускает тесты, исправляет ошибки, пушит в гит.</p>
 <p>Результат на бенчмарке SWE-bench — 87%. Для справки: это тесты с реальными issue с GitHub. Человек-джун даёт около 70%, сеньор — 85-90%. OpenHands работает на уровне живого мидла/сеньора.</p>
@@ -1145,7 +1110,15 @@
 <li>❌ НЕ подходит для мелких задач — избыточно</li>
 <li>❌ Если не понимаешь что такое Docker — сначала разберись</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Если автономный агент нужен, а Docker пугает — вот что берут вместо OpenHands:</p>
+<ul>
+<li><strong><a href="../goose/">Goose</a></strong> — десктоп-приложение, ставится как обычная программа. Может работать автономно на локальных моделях</li>
+<li><strong><a href="https://claude.com/claude-code">Claude Code</a></strong> — терминал есть, но можно жить в Claude Projects без него</li>
+<li><strong><a href="https://cursor.com">Cursor</a></strong> — IDE с агентом, ставится как редактор, не требует Docker</li>
+</ul>
+<details class="note">
+<summary>Для продвинутых (терминал + Docker)</summary>
 <p>Через Docker (рекомендуемо):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>docker.all-hands.dev/all-hands-ai/openhands:latest
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--pull<span class="o">=</span>always<span class="w"> </span><span class="se">\</span>
@@ -1157,7 +1130,7 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span>docker.all-hands.dev/all-hands-ai/openhands:latest
 </code></pre></div>
 <p>Открыть <code>http://localhost:3000</code> в браузере.</p>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>Первый запуск:</strong></p>
 <ol>
 <li>Запустил Docker-контейнер</li>
 <li>Открыл localhost:3000 — появился веб-интерфейс</li>
@@ -1166,13 +1139,14 @@
 <li>Написал задачу в формате: «Сделай X, учти Y, не трогай Z»</li>
 <li>Ушёл на час — вернулся к результату</li>
 </ol>
-<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_4">Нюансы<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Жрёт токены как не в себя — большие задачи могут стоить $5-20</li>
 <li>Не оставляй без присмотра на опасных задачах (миграции БД, продакшн)</li>
 <li>Docker-контейнер требует ~8 ГБ RAM, слабые компы не вытянут</li>
 </ul>
-<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Ссылки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/All-Hands-AI/OpenHands">GitHub ⭐ 71K</a></li>
 <li><a href="https://docs.all-hands.dev">Документация</a></li>

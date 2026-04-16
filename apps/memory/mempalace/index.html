@@ -507,34 +507,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🛠️ Инфраструктура
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../bundles/" class="md-nav__link">
         
   
@@ -1058,7 +1030,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Кому подходит
+        Нюансы (прочитай до установки)
       
     </span>
   </a>
@@ -1069,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Кому подходит
       
     </span>
   </a>
@@ -1080,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
+        Установка
       
     </span>
   </a>
@@ -1091,7 +1063,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Нюансы
+        Первый запуск
       
     </span>
   </a>
@@ -1131,13 +1103,21 @@
 
 <h1 id="mempalace">🏛️ MemPalace<a class="headerlink" href="#mempalace" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p>«Дворец памяти» для ИИ-агента. Создатель — Милла Йовович (да, та самая), соавтор — Бен Сигман. Осторожно: есть вопросы к бенчмаркам.</p>
+<p>Хайповая система памяти от Миллы Йовович. Под капотом обычная ChromaDB. Осторожно: обвинения в накрутке звёзд.</p>
 </blockquote>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Обычный ИИ забывает тебя сразу после закрытия вкладки. MemPalace — это внешнее хранилище, куда агент пишет факты и достаёт их потом. Под капотом — векторная база данных (ChromaDB).</p>
+<p>Обычный ИИ забывает тебя сразу после закрытия вкладки. MemPalace — это внешнее хранилище, куда агент пишет факты и достаёт их потом. Под капотом — векторная база данных (ChromaDB), обёрнутая в простой интерфейс.</p>
 <p>Агент сохраняет: решения, контекст проекта, важные детали о тебе. При следующем запуске — «вспоминает» и работает как с того же места.</p>
-<p>45 тысяч звёзд. Но репутационно проект спорный: некоторые бенчмарки в README выглядят слишком красиво, сообщество периодически задаёт вопросы. Работает — но не обожествляй цифры.</p>
-<h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Создатель — Милла Йовович (да, та самая), соавтор — Бен Сигман. 45 тысяч звёзд. Но репутационно проект спорный: сообщество обвиняет в накрутке звёзд, бенчмарки в README выглядят слишком красиво. Работает — но не обожествляй цифры.</p>
+<h2 id="_2">Нюансы (прочитай до установки)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Обвинения в накрутке звёзд</strong> — 45K не отражают реальное комьюнити, будь осторожен с «популярностью»</li>
+<li><strong>Бенчмарки в README сомнительны</strong> — проверяй на своих задачах, не верь цифрам на слово</li>
+<li><strong>Это обёртка над ChromaDB</strong> — если умеешь работать с векторками, можешь взять её напрямую и не зависеть от MemPalace</li>
+<li><strong>Векторная база иногда выдаёт лишнее</strong> — придётся фильтровать в промпте</li>
+<li><strong>Для продакшна с SLA — не вариант</strong>, бери Honcho или собирай своё</li>
+</ul>
+<h2 id="_3">Кому подходит<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>✅ Работаешь с одним проектом долго, хочешь чтобы ИИ помнил контекст</li>
 <li>✅ Вайбкодеры — устал объяснять одно и то же каждую сессию</li>
@@ -1145,25 +1125,19 @@
 <li>❌ НЕ подходит для простых чатов — избыточно</li>
 <li>❌ Если нужен продакшн с SLA — лучше взять решение посерьёзнее (Honcho)</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">Установка<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mempalace
 </code></pre></div>
 <p>Для Claude Code:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>claude<span class="w"> </span>skill<span class="w"> </span>install<span class="w"> </span>mempalace
 </code></pre></div>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Первый запуск<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Поставил — появилась папка <code>.mempalace/</code> в проекте</li>
 <li>Агент автоматически начнёт писать туда контекст</li>
 <li>Следующая сессия — агент прочитает файлы и «вспомнит»</li>
 <li>Можешь открыть файлы руками — всё в markdown, читаемо</li>
 </ol>
-<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Бенчмарки в README сомнительны — проверяй на своих задачах</li>
-<li>Векторная база иногда выдаёт лишнее — фильтруй в промпте</li>
-<li>Под капотом ChromaDB — если надо что-то сложнее, можно взять её напрямую</li>
-</ul>
 <h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/MemPalace/mempalace">GitHub ⭐ 45K</a></li>

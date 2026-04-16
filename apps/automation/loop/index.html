@@ -507,34 +507,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🛠️ Инфраструктура
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../bundles/" class="md-nav__link">
         
   
@@ -1069,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1080,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
+        Примеры
       
     </span>
   </a>
@@ -1091,17 +1063,6 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Примеры
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Нюансы
       
     </span>
@@ -1110,7 +1071,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1155,10 +1116,18 @@
 <li>❌ НЕ подходит если нужно 24/7 с выключенным компом (используй <a href="../routines/">Routines</a>)</li>
 <li>❌ Для сложных ветвлений — лучше <a href="../n8n/">n8n</a></li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>Ничего не надо — команда встроена в Claude Code. Если у тебя стоит Claude Code, она уже доступна.</p>
-<p>Проверить: в чате введи <code>/loop</code> — должна подсказка появиться.</p>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><code>/loop</code> это встроенная команда Claude Code — то есть сам Claude Code надо поставить (он живёт в терминале). Если терминала нет — альтернативы без него:</p>
+<ul>
+<li><strong><a href="../routines/">Routines</a></strong> — облачный аналог от Anthropic. Задачи выполняются на их серверах, управление через веб-интерфейс Claude</li>
+<li><strong><a href="../n8n/">n8n Cloud</a></strong> — визуальный конструктор, собираешь цикл мышкой</li>
+<li><strong><a href="https://make.com">Make.com</a></strong> / <strong><a href="https://zapier.com">Zapier</a></strong> — облачная автоматизация, всё через браузер</li>
+</ul>
+<details class="note">
+<summary>Для продвинутых (команда в Claude Code)</summary>
+<p>Ничего ставить не надо — команда встроена. Если Claude Code стоит — она уже доступна.</p>
+<p>Проверка: введи <code>/loop</code> в чате — должна появиться подсказка.</p>
+<p><strong>Первый запуск:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/loop 1h проверь новые issue в GitHub и напиши сводку
 </code></pre></div>
 <p>Что произойдёт:</p>
@@ -1171,19 +1140,20 @@
 <p>Второй вариант — без интервала, агент сам решает когда продолжать:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/loop проверяй продакшн пока не будет зелёным
 </code></pre></div>
-<h2 id="_5">Примеры<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_4">Примеры<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>/loop 30m проверь метрики сайта, алерт если падение &gt;20%</code></li>
 <li><code>/loop 1h сканируй Twitter на упоминания бренда</code></li>
 <li><code>/loop пока не пофикшены все тесты — ищи ошибки и правь</code></li>
 </ul>
-<h2 id="_6">Нюансы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Комп должен быть включён — если заснёт, цикл остановится</li>
 <li>Жрёт токены непрерывно — следи за балансом</li>
 <li>Для долгих циклов лучше <a href="../routines/">Routines</a> — облачный аналог</li>
 </ul>
-<h2 id="_7">Ссылки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Документация Claude Code → команда loop</li>
 <li>Альтернативы: <a href="../routines/">Routines</a> (облако), <a href="../n8n/">n8n</a> (визуальные workflow)</li>

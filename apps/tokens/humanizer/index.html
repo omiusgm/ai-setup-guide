@@ -507,34 +507,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🛠️ Инфраструктура
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../bundles/" class="md-nav__link">
         
   
@@ -1069,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1080,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
+        Что конкретно убирает
       
     </span>
   </a>
@@ -1091,17 +1063,6 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Что конкретно убирает
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Нюансы
       
     </span>
@@ -1110,7 +1071,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1155,20 +1116,38 @@
 <li>✅ SMM, копирайтеры, блогеры</li>
 <li>❌ НЕ подходит для технической документации — там наоборот нужна формальность</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/blader/humanizer<span class="w"> </span>~/.claude/skills/humanizer
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><strong>Скопируй промпт и вставь в ChatGPT / Claude / DeepSeek:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Пиши как человек, а не как GPT. Избегай:
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>- «Конечно!», «Безусловно!», «Давайте рассмотрим...»
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>- Вводных фраз («Важно отметить, что...», «В заключение...»)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>- Тройных конструкций («структурировано, чётко, последовательно»)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>- Абстрактного канцелярита
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>- Длинных тире (em-dash)
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Пиши короткими предложениями. Конкретно. Без воды.
+</code></pre></div>
+<ol>
+<li>Новый диалог → вставил промпт первым сообщением</li>
+<li>Пишешь что нужно (пост, письмо, статью)</li>
+<li>ИИ выдаст текст без типичных «ИИшных» оборотов</li>
+</ol>
+<details class="note">
+<summary>Для продвинутых (скилл для Claude Code)</summary>
+<p>Через git clone:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/blader/humanizer<span class="w"> </span>~/.claude/skills/humanizer
 </code></pre></div>
 <p>Или через скилл-менеджер:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx<span class="w"> </span>skills<span class="w"> </span>add<span class="w"> </span>blader/humanizer
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npx<span class="w"> </span>skills<span class="w"> </span>add<span class="w"> </span>blader/humanizer
 </code></pre></div>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>Первый запуск:</strong></p>
 <ol>
 <li>Установил скилл</li>
 <li>В диалоге с ИИ: «используй humanizer для всех текстов»</li>
 <li>Агент начнёт писать «по-человечески»</li>
 </ol>
-<p>Можешь использовать как промпт в обычном ChatGPT — просто скопируй содержимое <code>humanizer.md</code> из репозитория и вставь в начало диалога.</p>
-<h2 id="_5">Что конкретно убирает<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_4">Что конкретно убирает<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>«Of course!», «Certainly!», «Давайте рассмотрим»</li>
 <li>Раздутые вводные («Важно отметить, что…»)</li>
@@ -1176,13 +1155,13 @@
 <li>Абстрактный канцелярит</li>
 <li>Em-dash-ы (длинные тире, которые так любит ИИ)</li>
 </ul>
-<h2 id="_6">Нюансы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Сам по себе не сделает текст хорошим — это фильтр, не генератор стиля</li>
 <li>Нужен нормальный стайлгайд — humanizer просто удаляет плохое</li>
 <li>Работает лучше на английском, русский тоже ок</li>
 </ul>
-<h2 id="_7">Ссылки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/blader/humanizer">GitHub ⭐ 14K</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing">Wikipedia: Signs of AI writing</a></li>

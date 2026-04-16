@@ -507,34 +507,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🛠️ Инфраструктура
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../bundles/" class="md-nav__link">
         
   
@@ -1058,7 +1030,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Кому подходит
+        Нюансы (прочитай до установки)
       
     </span>
   </a>
@@ -1069,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Кому подходит
       
     </span>
   </a>
@@ -1080,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1089,17 +1061,6 @@
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Нюансы
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1131,13 +1092,25 @@
 
 <h1 id="hermes-agent">🎓 Hermes Agent<a class="headerlink" href="#hermes-agent" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p>Агент от Nous Research, который учится на скиллах. Работает с любой LLM — OpenAI, Anthropic, локальная через Ollama.</p>
+<p>Агент с обучением скиллам — учебный проект Nous Research. Первые 5-10 сессий разницы не заметишь, скиллы часто кривые. Но идея классная и исполнение улучшается.</p>
 </blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Этот инструмент требует терминала</p>
+<p>Hermes ставится только через командную строку. Если ты не программист — посмотри <a href="../goose/">Goose</a> (десктоп-агент) или <a href="../../../knowledge/budget/">DeepSeek в браузере</a>. Оба из РФ без VPN, без единой команды.</p>
+</div>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Большинство агентов — одноразовые. Дал задачу, он решил, забыл. Hermes отличается: у него есть «скиллы» — файлы где сохранены удачные паттерны работы. Сделал что-то хорошо — запомнил. В следующий раз делает лучше и быстрее.</p>
-<p>Разработчики — Nous Research, это те же люди, что выпускают серию моделей Hermes (Llama-тюны). Репутация серьёзная, не накрутчики звёзд.</p>
-<p>93 тысячи звёзд. Работает с любой моделью — от GPT до Qwen на Ollama.</p>
-<h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Большинство агентов — одноразовые. Дал задачу, он решил, забыл. Hermes отличается: у него есть «скиллы» — файлы где сохранены удачные паттерны работы. Сделал что-то хорошо — запомнил. В следующий раз (в теории) делает лучше и быстрее.</p>
+<p>Разработчики — Nous Research, это те же люди, что выпускают серию моделей Hermes (Llama-тюны). Репутация серьёзная, 93 тысячи звёзд, работает с любой моделью — от GPT до Qwen на Ollama.</p>
+<p>Но это не революция, а эксперимент. Идея классная, исполнение улучшается, но сейчас это скорее учебный проект — ставь с пониманием что будешь дебажить его поведение, а не получишь волшебного обучающегося агента из коробки.</p>
+<h2 id="_2">Нюансы (прочитай до установки)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Первые 5-10 сессий разницы не заметишь</strong> — обучение идёт постепенно, не жди вау-эффекта сразу</li>
+<li><strong>Скиллы часто получаются кривые</strong> — придётся чистить <code>.hermes/skills/</code> руками или сносить папку целиком</li>
+<li><strong>Это эксперимент, не революция</strong> — идея с самообучением сыровата, местами работает, местами нет</li>
+<li><strong>Документация местами хардкорная</strong> — готовься гуглить и читать исходники</li>
+<li><strong>Для одноразовых задач бесполезен</strong> — весь смысл в повторах, без них это просто ещё один агент</li>
+</ul>
+<h2 id="_3">Кому подходит<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>✅ Нужен агент для регулярных задач — со временем станет точнее</li>
 <li>✅ Хочешь агента с открытым кодом для своих модификаций</li>
@@ -1145,7 +1118,15 @@
 <li>❌ НЕ подходит для одноразовых задач — без повторов смысла нет</li>
 <li>❌ Если ты новичок в агентах — начни с десктопного Goose</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">Как попробовать без терминала<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Для Hermes нет десктопной версии — это CLI-инструмент. Если тебе нужна сама идея «агент, который учится на опыте» без возни с терминалом:</p>
+<ul>
+<li><strong><a href="https://claude.ai">Claude Projects</a></strong> в браузере — накапливает контекст через Project knowledge</li>
+<li><strong><a href="../goose/">Goose</a></strong> — десктоп-агент, умеет сохранять полезные паттерны</li>
+<li><strong><a href="../../memory/handoff-pattern/">HANDOFF-паттерн</a></strong> — та же идея «памяти между сессиями», но через обычный markdown-файл</li>
+</ul>
+<details class="note">
+<summary>Для продвинутых (терминал)</summary>
 <p>Через pip:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>hermes-agent
 </code></pre></div>
@@ -1154,7 +1135,7 @@
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>hermes-agent
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 </code></pre></div>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>Первый запуск:</strong></p>
 <ol>
 <li><code>hermes init</code> в папке проекта</li>
 <li>Указываешь провайдера модели (OpenAI, Anthropic, Ollama)</li>
@@ -1163,13 +1144,8 @@
 <li>После нескольких удачных решений сам предлагает сохранить как скилл</li>
 <li>Скиллы в <code>.hermes/skills/</code> — можно править руками</li>
 </ol>
-<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Первые 5-10 сессий не увидишь разницы — обучение идёт постепенно</li>
-<li>Если скиллы получились кривые — удали папку и начни заново</li>
-<li>Документация местами хардкорная, требует навыка гугления</li>
-</ul>
-<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_5">Ссылки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/NousResearch/hermes-agent">GitHub ⭐ 93K</a></li>
 <li><a href="https://nousresearch.com">Nous Research</a></li>

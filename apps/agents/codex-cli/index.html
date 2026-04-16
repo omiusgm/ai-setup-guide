@@ -507,34 +507,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🛠️ Инфраструктура
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../bundles/" class="md-nav__link">
         
   
@@ -1069,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1080,17 +1052,6 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Нюансы
       
     </span>
@@ -1099,7 +1060,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1133,6 +1094,10 @@
 <blockquote>
 <p>OpenAI выпустили свой агент с открытым кодом. Живёт в терминале, работает со всеми OpenAI-моделями.</p>
 </blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Этот инструмент требует терминала</p>
+<p>Codex — CLI-агент, без командной строки никак. Если ты не программист — посмотри <a href="../goose/">Goose</a> (десктоп-агент) или сразу заходи в <a href="https://chat.openai.com">ChatGPT</a> / <a href="https://claude.ai">Claude</a> в браузере.</p>
+</div>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>То же что Claude Code, но от OpenAI и бесплатный (только за токены платишь). Запустил <code>codex</code> в терминале — появилась сессия, пишешь задачу — агент работает.</p>
 <p>Читает файлы, правит код, запускает команды. Может работать в двух режимах: интерактивный (подтверждает каждый шаг) и автономный (делает всё сам).</p>
@@ -1145,11 +1110,19 @@
 <li>❌ НЕ подходит если боишься терминала</li>
 <li>❌ Если нет OpenAI API — подключить другие модели сложнее</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>OpenAI не делает десктопную версию Codex — это CLI и только. Но агентов от OpenAI можно потрогать по-другому:</p>
+<ul>
+<li><strong><a href="https://chat.openai.com">ChatGPT в браузере</a></strong> — там есть режим «Code Interpreter» и «Advanced Data Analysis», работает как легковесный агент</li>
+<li><strong><a href="https://cursor.com">Cursor</a></strong> — IDE, под капотом OpenAI-модели, ставится как обычный редактор</li>
+<li><strong><a href="../goose/">Goose</a></strong> — десктоп-агент, можно настроить на OpenAI API</li>
+</ul>
+<details class="note">
+<summary>Для продвинутых (терминал)</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@openai/codex
 </code></pre></div>
 <p>Нужен Node.js. Если нет — поставь с <a href="https://nodejs.org">nodejs.org</a>.</p>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>Первый запуск:</strong></p>
 <ol>
 <li>В любой папке проекта: <code>codex</code></li>
 <li>Попросит API ключ — возьми на platform.openai.com</li>
@@ -1157,13 +1130,14 @@
 <li>Агент предложит план — подтверждаешь или правишь</li>
 <li>Он выполняет по шагам</li>
 </ol>
-<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_4">Нюансы<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Требует OpenAI API — в РФ без VPN не заработает</li>
 <li>С GPT-4 токены улетают быстро, держи лимиты на аккаунте</li>
 <li>У Anthropic есть свой аналог (Claude Code) — если ты в Anthropic, он удобнее</li>
 </ul>
-<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Ссылки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/openai/codex">GitHub ⭐ 76K</a></li>
 <li><a href="https://github.com/openai/codex#readme">Документация</a></li>

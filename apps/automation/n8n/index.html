@@ -507,34 +507,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🛠️ Инфраструктура
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../bundles/" class="md-nav__link">
         
   
@@ -1069,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1156,16 +1128,26 @@
 <li>❌ НЕ подходит для разовых задач — лучше скрипт написать</li>
 <li>❌ Если совсем не любишь разбираться — порог входа не нулевой</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p><strong>Самый простой путь — self-host на Beget за 210 руб/мес:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># На сервере</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>--name<span class="w"> </span>n8n<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">5678</span>:5678<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span>-v<span class="w"> </span>~/.n8n:/home/node/.n8n<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span>docker.n8n.io/n8nio/n8n
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><strong>Самый быстрый способ — n8n Cloud:</strong></p>
+<ol>
+<li>Заходи на <a href="https://n8n.cloud">n8n.cloud</a> — 14 дней бесплатный триал, дальше $20/мес</li>
+<li>Регистрация по email, ничего ставить не надо</li>
+<li>Через 30 секунд — готовое рабочее окно с workflow</li>
+</ol>
+<p>Это тот же самый n8n, просто на их серверах. Можно собирать автоматизации, подключать сервисы, экспериментировать. Если захочешь self-host — workflows переносятся экспортом JSON.</p>
+<details class="note">
+<summary>Для продвинутых (self-host через Docker)</summary>
+<p><strong>На сервере (Beget за 210 руб/мес подойдёт):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>--name<span class="w"> </span>n8n<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">5678</span>:5678<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span>-v<span class="w"> </span>~/.n8n:/home/node/.n8n<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span>docker.n8n.io/n8nio/n8n
 </code></pre></div>
-<p>Или облачная версия за $20/мес на <a href="https://n8n.io">n8n.io</a>.</p>
+<p>Дальше открываешь <code>localhost:5678</code> (или адрес Beget) и работаешь.</p>
+<p>Плюсы self-host: данные у тебя, без подписки. Минусы: нужен VPS и минимум 1 ГБ RAM.</p>
+</details>
 <h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Открыл <code>localhost:5678</code> (или адрес Beget)</li>

@@ -507,34 +507,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🛠️ Инфраструктура
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../bundles/" class="md-nav__link">
         
   
@@ -1069,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1080,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
+        Примеры
       
     </span>
   </a>
@@ -1091,17 +1063,6 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Примеры
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Нюансы
       
     </span>
@@ -1110,7 +1071,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1155,39 +1116,48 @@
 <li>❌ НЕ подходит если надо интерактив — облако не спрашивает подтверждений</li>
 <li>❌ Если нужен сложный workflow — <a href="../n8n/">n8n</a> гибче</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>Ничего ставить не надо. Нужна подписка Claude:</p>
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Routines работают прямо на <strong><a href="https://claude.ai">claude.ai</a></strong> в браузере — никакой установки. Нужна только подписка Claude:</p>
 <ul>
 <li><strong>Pro</strong> — 5 задач/день</li>
 <li><strong>Max</strong> — 15 задач/день</li>
 <li><strong>Team</strong> — 25 задач/день</li>
 </ul>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>В Claude Code (или на claude.ai):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/schedule daily 9:00 
+<p><strong>Запуск:</strong></p>
+<ol>
+<li>Зайди на <a href="https://claude.ai">claude.ai</a>, открой любой диалог</li>
+<li>Напиши: «создай Routine — каждое утро в 9:00 собирай топ-5 новостей из HackerNews и сохраняй саммари в Google Doc»</li>
+<li>Claude спросит детали, подтвердишь — задача уходит в облако</li>
+<li>Результаты приходят в диалог, проверяешь когда удобно</li>
+</ol>
+<p>Всё через веб-интерфейс, без команд.</p>
+<details class="note">
+<summary>Для продвинутых (через /schedule в Claude Code)</summary>
+<p>Если работаешь в Claude Code или на claude.ai через API — вот команда:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/schedule daily 9:00
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Задача: собери топ-5 новостей из HackerNews и напиши саммари в Markdown.
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Результат сохрани в notes/daily-digest.md
 </code></pre></div>
 <ol>
 <li>Ввёл команду — появилось подтверждение</li>
 <li>Указал: расписание (cron), что делать, где сохранять результат</li>
-<li>Дальше облако само выполняет</li>
-<li>Результаты приходят в Claude — можешь проверить когда захочешь</li>
+<li>Облако выполняет, результаты приходят в Claude</li>
 </ol>
-<h2 id="_5">Примеры<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_4">Примеры<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Ежедневный сводный отчёт по метрикам</li>
 <li>Мониторинг цен конкурентов раз в неделю</li>
 <li>Утренний дайджест новостей по теме</li>
 <li>Автобэкап важных данных</li>
 </ul>
-<h2 id="_6">Нюансы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Лимит задач/день привязан к плану — следи</li>
 <li>Нет полного доступа к твоей файловой системе — только к подключённым MCP</li>
 <li>Фича свежая, кое-где баги</li>
 </ul>
-<h2 id="_7">Ссылки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://docs.claude.com/claude-code">Claude Code документация</a> → schedule</li>
 <li>Альтернативы: <a href="../loop/">/loop</a> (локально), <a href="../n8n/">n8n</a> (self-host)</li>

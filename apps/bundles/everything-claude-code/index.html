@@ -507,34 +507,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🛠️ Инфраструктура
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../" class="md-nav__link">
         
   
@@ -1069,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1080,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
+        Что стоит стащить первым
       
     </span>
   </a>
@@ -1091,17 +1063,6 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Что стоит стащить первым
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Нюансы
       
     </span>
@@ -1110,7 +1071,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1156,19 +1117,31 @@
 <li>❌ НЕ подходит новичкам — каталог огромный, легко утонуть</li>
 <li>❌ Если хочешь всё-в-одном готовое — <a href="../oh-my-claudecode/">Oh My ClaudeCode</a> проще</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Everything Claude Code это репозиторий, его можно просматривать прямо в браузере:</p>
+<ol>
+<li>Открой <strong><a href="https://github.com/affaan-m/everything-claude-code">github.com/affaan-m/everything-claude-code</a></strong></li>
+<li>Ходи по папкам <code>agents/</code>, <code>skills/</code>, <code>commands/</code> как по каталогу</li>
+<li>Нашёл интересного агента или скилл — открой файл <code>.md</code> в браузере, скопируй содержимое</li>
+<li>Дальше:</li>
+<li>Если работаешь в ChatGPT/Claude — вставь как системный промпт</li>
+<li>Если у тебя Claude Code — положи файл в <code>~/.claude/agents/</code> или <code>~/.claude/skills/</code></li>
+</ol>
+<p>Этот каталог — не про «одну установку», а про «копирую что нужно».</p>
+<details class="note">
+<summary>Для продвинутых (клон через git)</summary>
+<p>Если хочешь иметь всё локально и обновлять:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/affaan-m/everything-claude-code<span class="w"> </span>~/everything-cc
 </code></pre></div>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>Это НЕ «установил и работает». Это каталог — ты берёшь оттуда нужное.</p>
+<p>Потом:</p>
 <ol>
-<li>Склонировал репо</li>
 <li>Прошёл по папкам <code>agents/</code>, <code>skills/</code>, <code>commands/</code></li>
 <li>Нашёл нужное (например, агента для код-ревью)</li>
 <li>Скопировал в свой <code>.claude/agents/reviewer.md</code></li>
 <li>Перезапустил Claude Code — агент доступен</li>
 </ol>
-<h2 id="_5">Что стоит стащить первым<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_4">Что стоит стащить первым<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>Самое полезное, если только начинаешь:</p>
 <ul>
 <li><code>skills/humanizer</code> — убирает ИИ-следы из текста</li>
@@ -1180,13 +1153,13 @@
 <li><code>agents/reviewer.md</code> — код-ревью</li>
 <li><code>commands/plan.md</code> — план задачи</li>
 </ul>
-<h2 id="_6">Нюансы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Размер репо большой — клонируется долго</li>
 <li>Не всё качественное, некоторые скиллы устаревшие</li>
 <li>Ищи «новые» — там основная ценность</li>
 </ul>
-<h2 id="_7">Ссылки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/affaan-m/everything-claude-code">GitHub ⭐ 158K</a></li>
 <li>Альтернативы: <a href="../oh-my-claudecode/">Oh My ClaudeCode</a> (проще), <a href="../gsd/">GSD</a> (встроено)</li>

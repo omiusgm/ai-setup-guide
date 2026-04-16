@@ -507,34 +507,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🛠️ Инфраструктура
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../bundles/" class="md-nav__link">
         
   
@@ -1069,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1080,17 +1052,6 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Нюансы
       
     </span>
@@ -1099,7 +1060,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1145,31 +1106,30 @@
 <li>❌ НЕ подходит если ты не в VS Code — в других редакторах не работает</li>
 <li>❌ Для новичков в коде — сначала лучше что-то с десктопом (Goose)</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>В VS Code:</p>
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Cline это расширение для VS Code. Всё ставится мышкой:</p>
 <ol>
-<li>Открой Extensions (Cmd+Shift+X)</li>
-<li>Вбей «Cline»</li>
-<li>Нажми Install</li>
+<li>Скачай <strong><a href="https://code.visualstudio.com">VS Code</a></strong> — обычный редактор, ставится как любая программа</li>
+<li>Открой редактор → слева иконка «Extensions» (или Cmd+Shift+X)</li>
+<li>Введи в поиск <strong>«Cline»</strong> → Install</li>
+<li>В боковой панели появится иконка робота → нажми</li>
+<li>Выбери провайдера (Anthropic, OpenAI, Google, OpenRouter, Ollama), вставь API ключ</li>
+<li>Пиши задачу в поле — агент начнёт</li>
 </ol>
-<p>Или через командную строку:</p>
+<p>Никакой командной строки, всё через окна и кнопки.</p>
+<details class="note">
+<summary>Для продвинутых (установка через CLI)</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>code<span class="w"> </span>--install-extension<span class="w"> </span>saoudrizwan.claude-dev
 </code></pre></div>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ol>
-<li>В боковой панели появится иконка робота — нажми</li>
-<li>Выбери провайдера: Anthropic, OpenAI, Google, OpenRouter, Ollama…</li>
-<li>Вставь API ключ (или укажи локальный Ollama сервер)</li>
-<li>Напиши задачу в поле — агент начнёт</li>
-<li>Каждый шаг требует подтверждения — удобно на старте</li>
-</ol>
-<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>Удобно если настраиваешь dev-environment скриптом.</p>
+</details>
+<h2 id="_4">Нюансы<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Cline покажет план перед выполнением — можешь поправить до того, как он начнёт</li>
 <li>Запрос подтверждений замедляет, но первое время лучше не отключать</li>
 <li>Токены улетают быстро — большие задачи дробь на части</li>
 </ul>
-<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Ссылки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/cline/cline">GitHub ⭐ 60K</a></li>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev">VS Code Marketplace</a></li>
