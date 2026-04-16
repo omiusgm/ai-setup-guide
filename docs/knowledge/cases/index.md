@@ -14,6 +14,8 @@ hide:
 
 - :material-store: **[РОП + AmoCRM + Wahelp](rop-amocrm.md)** — автоматизация отчётов по отделу продаж, +12% к выручке за 2 месяца
 - :material-cart: **[SMM: 50 карточек WB за 35 минут](smm-wb-cards.md)** — связка ChatGPT + Midjourney + Canva, экономия 100 часов
+- :material-chart-line: **[Маркетплейс: мониторинг цен](marketplace-prices.md)** — Browser Use + DeepSeek следит за конкурентами на WB, +8% маржи
+- :material-file-document-edit: **[500 описаний Ozon за вечер](product-descriptions.md)** — ChatGPT вместо копирайтера, экономия 50 000 ₽
 
 </div>
 
