@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1052,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
+        Примеры
       
     </span>
   </a>
@@ -1063,17 +1063,6 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Примеры
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Нюансы
       
     </span>
@@ -1082,7 +1071,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1128,10 +1117,18 @@
 <li>❌ НЕ подходит для простых задач — оверхед</li>
 <li>❌ Если не понимаешь что такое MCP — сначала разберись</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Claude Code MCP работает только внутри Claude Code — а он живёт в терминале. Если хочешь «один ИИ запускает другого» без терминала:</p>
+<ul>
+<li><strong><a href="https://claude.ai">Claude Projects</a></strong> — в одном проекте можно работать с разными специализациями через разные промпты, и копировать результаты между чатами</li>
+<li><strong><a href="../../automation/n8n/">n8n Cloud</a></strong> — визуально строишь цепочку «ИИ-1 → ИИ-2 → ИИ-3», каждый со своей задачей</li>
+<li><strong>Вручную</strong>: запусти ChatGPT/Claude в двух вкладках, в одной делай ресерч, в другой — синтез</li>
+</ul>
+<details class="note">
+<summary>Для продвинутых (MCP в Claude Code)</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>claude-code<span class="w"> </span>--<span class="w"> </span>npx<span class="w"> </span>-y<span class="w"> </span>claude-code-mcp
 </code></pre></div>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>Первый запуск:</strong></p>
 <ol>
 <li>Подключил MCP</li>
 <li>В агенте: «запусти 3 подагента: один читает docs/, второй код tests/, третий config/. Каждый найдёт проблемы, вернёт саммари»</li>
@@ -1139,19 +1136,20 @@
 <li>Каждая возвращает результат</li>
 <li>Главный собирает общий отчёт</li>
 </ol>
-<h2 id="_5">Примеры<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_4">Примеры<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Рефакторинг большого проекта — подагенты работают над разными модулями</li>
 <li>Ревью PR — один смотрит безопасность, второй стиль, третий тесты</li>
 <li>Исследование — подагенты читают разные источники, главный синтезирует</li>
 </ul>
-<h2 id="_6">Нюансы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Каждый подагент ест токены отдельно — дорого</li>
 <li>Нужна стабильная интернет-сессия — подагенты общаются через API</li>
 <li>Следи за лимитами Anthropic — легко вылететь за квоту</li>
 </ul>
-<h2 id="_7">Ссылки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/steipete/claude-code-mcp">GitHub ⭐ 1.1K</a></li>
 <li><a href="https://twitter.com/steipete">Автор: Peter Steinberger</a></li>

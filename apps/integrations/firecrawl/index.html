@@ -1041,65 +1041,15 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Установка">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Как облачный API (проще)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mcp-claude-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Как MCP для Claude Code
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#self-host" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Self-host
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Первый запуск
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Нюансы
@@ -1110,7 +1060,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1159,8 +1109,20 @@
 <li>❌ НЕ подходит для 1-2 разовых задач — можно просто скопировать</li>
 <li>❌ Если сайт защищён капчей — Firecrawl её не решит</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="api">Как облачный API (проще)<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>У Firecrawl есть веб-интерфейс — можно скрейпить без единой команды:</p>
+<ol>
+<li>Заходи на <strong><a href="https://firecrawl.dev">firecrawl.dev</a></strong> → регистрация по email</li>
+<li>В дашборде есть «Playground» — вставляешь URL, жмёшь «Scrape», получаешь markdown</li>
+<li>Бесплатный тир — 500 страниц/мес, хватает пощупать</li>
+<li>Результат копируешь и вставляешь в ChatGPT/Claude: «проанализируй этот текст»</li>
+</ol>
+<p><strong>Для связки с ИИ в браузере:</strong>
+- В <strong>Claude Projects</strong> подключается через Custom Connector (бета)
+- В <strong>ChatGPT</strong> — через кастомные GPTs или Actions</p>
+<details class="note">
+<summary>Для продвинутых (Python / MCP / self-host)</summary>
+<p><strong>Как облачный API:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>firecrawl-py
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">firecrawl</span><span class="w"> </span><span class="kn">import</span> <span class="n">FirecrawlApp</span>
@@ -1169,28 +1131,22 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">scrape_url</span><span class="p">(</span><span class="s2">&quot;https://example.com&quot;</span><span class="p">)</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;markdown&quot;</span><span class="p">])</span>
 </code></pre></div>
-<h3 id="mcp-claude-code">Как MCP для Claude Code<a class="headerlink" href="#mcp-claude-code" title="Permanent link">&para;</a></h3>
+<p><strong>Как MCP для Claude Code:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>firecrawl<span class="w"> </span>--<span class="w"> </span>npx<span class="w"> </span>-y<span class="w"> </span>@mendable/firecrawl-mcp
 </code></pre></div>
-<h3 id="self-host">Self-host<a class="headerlink" href="#self-host" title="Permanent link">&para;</a></h3>
+<p><strong>Self-host (для своих серверов):</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mendableai/firecrawl
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>firecrawl
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>docker-compose<span class="w"> </span>up
 </code></pre></div>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Получил API ключ на <a href="https://firecrawl.dev">firecrawl.dev</a></li>
-<li>Подключил к Claude Code через MCP</li>
-<li>В агенте: «собери документацию с docs.anthropic.com, положи в /docs/anthropic»</li>
-<li>Firecrawl обходит сайт, превращает в markdown</li>
-</ol>
-<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_4">Нюансы<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Облачный API — платный после бесплатного тира (500 страниц/мес)</li>
 <li>Self-host бесплатный, но нужен сервер</li>
 <li>Не все сайты ок со скрейпингом — уважай robots.txt и ToS</li>
 </ul>
-<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Ссылки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/mendableai/firecrawl">GitHub ⭐ 110K</a></li>
 <li><a href="https://firecrawl.dev">firecrawl.dev</a></li>

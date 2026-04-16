@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1052,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
+        Примеры
       
     </span>
   </a>
@@ -1063,17 +1063,6 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Примеры
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Нюансы
       
     </span>
@@ -1082,7 +1071,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1127,34 +1116,38 @@
 <li>❌ НЕ подходит если не хочешь ставить Docker</li>
 <li>❌ На слабом компе — Docker ест ресурсы</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Docker MCP Toolkit — как раз тот редкий случай, когда всё ставится мышкой. Терминал не нужен:</p>
 <ol>
-<li>Скачай Docker Desktop с <a href="https://www.docker.com/products/docker-desktop">docker.com</a></li>
-<li>Установи (обычный установщик)</li>
-<li>Открой — слева в панели появится «MCP Toolkit»</li>
+<li>Скачай <strong><a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a></strong> — обычный установщик (Mac, Windows, Linux)</li>
+<li>Запусти — слева в панели появится «MCP Toolkit»</li>
+<li>Открой вкладку → каталог плагинов (GitHub, Gmail, Postgres, AWS, Jira...)</li>
+<li>Жмёшь «Install» на нужном — плагин поднимается сам в контейнере</li>
+<li>Теперь он доступен в Claude Code и других MCP-клиентах</li>
 </ol>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Открыл MCP Toolkit вкладку</li>
-<li>Видишь каталог плагинов: GitHub, Gmail, Postgres, AWS, Jira…</li>
-<li>Нажал Install на нужный</li>
-<li>Плагин запустился в контейнере</li>
-<li>Теперь он доступен в Claude Code / другим MCP-клиентам</li>
-</ol>
-<h2 id="_5">Примеры<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>Это самый простой способ пощупать MCP без возни с конфигами и установками.</p>
+<details class="note">
+<summary>Для продвинутых (CLI)</summary>
+<p>Docker Desktop сам по себе не требует терминала. Но если хочешь управлять MCP-контейнерами из командной строки — у Docker есть свой CLI:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>mcp<span class="w"> </span>list
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>mcp<span class="w"> </span>install<span class="w"> </span>&lt;plugin-name&gt;
+</code></pre></div>
+<p>Удобно если настраиваешь окружение скриптом или в CI.</p>
+</details>
+<h2 id="_4">Примеры<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>GitHub MCP</strong> — ИИ читает/пишет issue, PR, код</li>
 <li><strong>Postgres MCP</strong> — ИИ выполняет SQL-запросы</li>
 <li><strong>AWS MCP</strong> — ИИ управляет облаком</li>
 <li><strong>Gmail MCP</strong> — читает/пишет письма</li>
 </ul>
-<h2 id="_6">Нюансы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Docker Desktop ест 2-4 ГБ RAM — на слабых компах тяжело</li>
 <li>Некоторые MCP требуют API ключи — подставь в настройках</li>
 <li>Не все MCP одинаково качественные — смотри рейтинг в каталоге</li>
 </ul>
-<h2 id="_7">Ссылки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a></li>
 <li><a href="https://docs.docker.com/desktop/mcp/">MCP Toolkit документация</a></li>

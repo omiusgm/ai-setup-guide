@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1052,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
+        Примеры
       
     </span>
   </a>
@@ -1063,17 +1063,6 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Примеры
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Нюансы
       
     </span>
@@ -1082,7 +1071,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1128,7 +1117,16 @@
 <li>❌ НЕ подходит если n8n пока нет — сначала поставь его</li>
 <li>❌ Для простых цепочек — быстрее мышкой</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>n8n-MCP нужен чтобы Claude Code собирал workflows за тебя. Но если не хочешь возиться с терминалом — n8n прекрасно управляется мышкой и без ИИ:</p>
+<ol>
+<li><strong><a href="https://n8n.cloud">n8n Cloud</a></strong> — веб-интерфейс, перетаскиваешь блоки</li>
+<li>В n8n встроен <strong>AI Assistant</strong> (в правом нижнем углу интерфейса) — можешь описать workflow словами, он предложит структуру. Без MCP, без Claude Code</li>
+<li>Готовые шаблоны в <strong><a href="https://n8n.io/workflows">n8n Templates</a></strong> — сотни примеров, клонируешь и правишь под себя</li>
+</ol>
+<p>Для простых автоматизаций этого хватает. MCP нужен только если хочешь генерить workflows пачками и сразу деплоить.</p>
+<details class="note">
+<summary>Для продвинутых (терминал)</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@czlonkowski/n8n-mcp
 </code></pre></div>
 <p>Подключить к Claude Code:</p>
@@ -1138,7 +1136,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>N8N_URL=https://твой-n8n.ru
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>N8N_API_KEY=твой-ключ
 </code></pre></div>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>Первый запуск:</strong></p>
 <ol>
 <li>В n8n включил API доступ (Settings → API)</li>
 <li>Скопировал API ключ в <code>.env</code></li>
@@ -1146,19 +1144,20 @@
 <li>В агенте: «создай workflow: каждый день в 9 утра собирай метрики с Google Analytics и пиши в Slack»</li>
 <li>Агент генерит блоки, подключает, тестирует</li>
 </ol>
-<h2 id="_5">Примеры<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_4">Примеры<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>«Скопируй мой workflow Х, но замени Gmail на Outlook»</li>
 <li>«Собери workflow для мониторинга моего сайта каждые 5 минут»</li>
 <li>«Добавь блок уведомления в Telegram к workflow продаж»</li>
 </ul>
-<h2 id="_6">Нюансы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Требует n8n — <a href="../../automation/n8n/">поставь</a> сначала</li>
 <li>API ключ даёт полный доступ — храни в <code>.env</code></li>
 <li>Сложные workflows лучше проверять глазами перед запуском в прод</li>
 </ul>
-<h2 id="_7">Ссылки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/czlonkowski/n8n-mcp">GitHub ⭐ 18K</a></li>
 <li><a href="../../automation/n8n/">n8n сам по себе</a></li>

@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1052,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
+        Примеры задач
       
     </span>
   </a>
@@ -1063,17 +1063,6 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Примеры задач
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Нюансы
       
     </span>
@@ -1082,7 +1071,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1132,13 +1121,21 @@
 <li>❌ НЕ подходит если CRM не AmoCRM</li>
 <li>❌ Для разовых задач — проще руками</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>AmoCRM MCP работает только через Claude Code (а он терминальный). Но «ИИ для CRM» можно подключить иначе:</p>
+<ul>
+<li><strong><a href="../../automation/n8n/">n8n Cloud</a></strong> — в облачном n8n есть готовый блок AmoCRM. Собираешь workflow мышкой: триггер → AmoCRM → ИИ → действие</li>
+<li><strong>Встроенные ИИ-фичи AmoCRM</strong> — в тарифах есть Salesbot и «умные» сценарии. Настройка через веб-интерфейс</li>
+<li><strong>Excel/Google Sheets + ИИ</strong> — выгружаешь сделки в таблицу, даёшь ИИ в браузере («что не так с этой воронкой?»)</li>
+</ul>
+<details class="note">
+<summary>Для продвинутых (MCP через терминал)</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>amocrm-mcp
 </code></pre></div>
 <p>Затем добавить в Claude Code:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>amocrm<span class="w"> </span>--<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>amocrm_mcp
 </code></pre></div>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>Первый запуск:</strong></p>
 <ol>
 <li>Получить в AmoCRM API-токен (Настройки → Интеграции → API)</li>
 <li>В <code>.env</code> положить <code>AMOCRM_TOKEN=...</code> и <code>AMOCRM_SUBDOMAIN=...</code></li>
@@ -1146,19 +1143,20 @@
 <li>В диалоге: «покажи 10 свежих сделок»</li>
 <li>Агент дёргает AmoCRM, отдаёт данные</li>
 </ol>
-<h2 id="_5">Примеры задач<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_4">Примеры задач<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Для РОПа:</strong> «Собери сводку за неделю — кто сколько закрыл, средний чек, проблемы»</li>
 <li><strong>Мониторинг:</strong> «Каждое утро проверяй сделки &gt;100K руб, пиши саммари»</li>
 <li><strong>Follow-up:</strong> «Найди клиентов, с которыми не общались 14 дней, подготовь письма»</li>
 </ul>
-<h2 id="_6">Нюансы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Репозиторий свежий — баги возможны, но активно фиксят</li>
 <li>В РФ работает без VPN (AmoCRM доступна)</li>
 <li>Токен AmoCRM даёт много прав — храни в <code>.env</code>, не в коде</li>
 </ul>
-<h2 id="_7">Ссылки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/cAIborg-ai/amocrm-mcp">GitHub cAIborg-ai/amocrm-mcp</a></li>
 <li><a href="../../../knowledge/cases/rop-amocrm/">Кейс РОПа</a> — как настроить под свой процесс</li>

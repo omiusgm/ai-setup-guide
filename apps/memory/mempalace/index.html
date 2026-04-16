@@ -1052,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1061,17 +1061,6 @@
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Первый запуск
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1125,20 +1114,30 @@
 <li>❌ НЕ подходит для простых чатов — избыточно</li>
 <li>❌ Если нужен продакшн с SLA — лучше взять решение посерьёзнее (Honcho)</li>
 </ul>
-<h2 id="_4">Установка<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_4">Как попробовать без терминала<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>MemPalace ставится через pip — без терминала никак. Но та же идея «памяти для ИИ» отлично работает без него:</p>
+<ul>
+<li><strong><a href="../handoff-pattern/">HANDOFF-паттерн</a></strong> — просто markdown-файл в проекте. Работает с любым ИИ, в любом редакторе, без установок</li>
+<li><strong><a href="https://claude.ai">Claude Projects</a></strong> — Project knowledge хранит контекст между чатами, управляется мышкой в браузере</li>
+<li><strong>ChatGPT Memory</strong> — в настройках есть галочка «Memory», ChatGPT сам запоминает факты</li>
+</ul>
+<p>Честно: для 90% задач HANDOFF.md хватает. MemPalace ставят скорее из любопытства к векторным БД.</p>
+<details class="note">
+<summary>Для продвинутых (терминал)</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mempalace
 </code></pre></div>
 <p>Для Claude Code:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>claude<span class="w"> </span>skill<span class="w"> </span>install<span class="w"> </span>mempalace
 </code></pre></div>
-<h2 id="_5">Первый запуск<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><strong>Первый запуск:</strong></p>
 <ol>
 <li>Поставил — появилась папка <code>.mempalace/</code> в проекте</li>
 <li>Агент автоматически начнёт писать туда контекст</li>
 <li>Следующая сессия — агент прочитает файлы и «вспомнит»</li>
 <li>Можешь открыть файлы руками — всё в markdown, читаемо</li>
 </ol>
-<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_5">Ссылки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/MemPalace/mempalace">GitHub ⭐ 45K</a></li>
 <li><a href="https://www.trychroma.com/">ChromaDB</a> — то что внутри</li>

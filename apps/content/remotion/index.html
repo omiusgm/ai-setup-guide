@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Установка
+        Как попробовать без терминала
       
     </span>
   </a>
@@ -1052,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
+        Связка с ИИ
       
     </span>
   </a>
@@ -1063,17 +1063,6 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Связка с ИИ
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Нюансы
       
     </span>
@@ -1082,7 +1071,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1128,11 +1117,21 @@
 <li>❌ НЕ подходит для разовых роликов — быстрее в Premiere</li>
 <li>❌ Если совсем не кодишь — порог входа высокий</li>
 </ul>
-<h2 id="_3">Установка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Remotion это код-инструмент — без терминала и React его не запустить. Но для шаблонного видео с ИИ есть более простые варианты:</p>
+<ul>
+<li><strong><a href="https://canva.com">Canva</a></strong> — в 2025 добавили AI video generator. Описал словами — получил ролик. Без кода</li>
+<li><strong><a href="https://runway.ml">Runway</a></strong> — text-to-video от OpenAI-конкурентов, работает в браузере</li>
+<li><strong><a href="https://descript.com">Descript</a></strong> — редактор видео с ИИ, можно собирать ролик как документ</li>
+<li><strong><a href="https://pika.art">Pika</a></strong> / <strong><a href="https://kling.ai">Kling AI</a></strong> — генерация видео из текста</li>
+</ul>
+<p>Если цель «автоматизировать однотипные ролики» — Remotion сильнее, но Canva хватит для большинства задач.</p>
+<details class="note">
+<summary>Для продвинутых (терминал)</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npx<span class="w"> </span>create-video@latest
 </code></pre></div>
 <p>Выберешь шаблон (Hello World, TikTok, YouTube) — получишь готовый проект.</p>
-<h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>Первый запуск:</strong></p>
 <ol>
 <li><code>npx create-video@latest my-video</code></li>
 <li><code>cd my-video &amp;&amp; npm start</code> — открывается студия в браузере</li>
@@ -1140,16 +1139,17 @@
 <li>Правишь компоненты — видишь превью в реальном времени</li>
 <li>Готово → <code>npm run build</code> — получаешь MP4</li>
 </ol>
-<h2 id="_5">Связка с ИИ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+</details>
+<h2 id="_4">Связка с ИИ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>Пишешь Claude: «сгенерируй Remotion-компонент для 15-секундного ролика с текстом Х и фоном Y». Агент пишет компонент — ты рендеришь.</p>
 <p>Комбо: ИИ генерит сценарий → ИИ пишет Remotion-код → рендер → публикация.</p>
-<h2 id="_6">Нюансы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Рендер тяжёлый — 1 минута видео может рендериться 2-5 минут</li>
 <li>Можно выгрузить в облако (Remotion Lambda) — параллелится на AWS</li>
 <li>Документация на английском, русских гайдов мало</li>
 </ul>
-<h2 id="_7">Ссылки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/remotion-dev/remotion">GitHub ⭐ 44K</a></li>
 <li><a href="https://remotion.dev">remotion.dev</a></li>
