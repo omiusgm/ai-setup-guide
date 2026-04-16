@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без терминала
+        Как попробовать без чёрного окна с командами
       
     </span>
   </a>
@@ -1113,32 +1113,36 @@
 
 
 <h1 id="n8n">🔗 n8n<a class="headerlink" href="#n8n" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">🤖💬 Для чатботов И агентов</p>
+<p>Работает и в браузере (облачная версия / альтернатива), и через агента (установка). Ниже оба варианта.</p>
+</div>
 <blockquote>
 <p>Визуальный конструктор автоматизаций. Собираешь цепочку мышкой: бот ответил — таблица обновилась — отчёт улетел.</p>
 </blockquote>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Представь Zapier, но бесплатный и open-source. В n8n ты соединяешь сервисы как блоки: «когда приходит письмо → вытащи вложение → отправь в ИИ → результат запиши в Notion».</p>
-<p>Код не нужен. Весь workflow рисуется стрелочками. Внутри блока — настройки (API ключ, фильтр, условия). Всё.</p>
-<p>184 тысячи звёзд. Один из самых популярных no-code инструментов в мире. В апреле 2026 добавили agent-to-agent фичу — агенты могут дёргать друг друга.</p>
+<p>Представь Zapier, но бесплатный и с открытым кодом. В n8n ты соединяешь сервисы как блоки: «когда приходит письмо → вытащи вложение → отправь в ИИ → результат запиши в Notion».</p>
+<p>Код не нужен. Вся цепочка (workflow) рисуется стрелочками. Внутри блока — настройки (ключ для подключения, фильтр, условия). Всё.</p>
+<p>184 тысячи звёзд. Один из самых популярных no-code инструментов (автоматизация без программирования) в мире. В апреле 2026 добавили фичу «агенты общаются между собой» — один ИИ может дёргать другого.</p>
 <h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>✅ Бизнес: автоматизация отчётов, лидов, CRM</li>
 <li>✅ Не кодишь, но хочешь убрать рутину</li>
-<li>✅ Нужен контроль — можно self-host, данные у тебя</li>
+<li>✅ Нужен контроль — можно установить у себя, данные у тебя</li>
 <li>❌ НЕ подходит для разовых задач — лучше скрипт написать</li>
 <li>❌ Если совсем не любишь разбираться — порог входа не нулевой</li>
 </ul>
-<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><strong>Самый быстрый способ — n8n Cloud:</strong></p>
 <ol>
 <li>Заходи на <a href="https://n8n.cloud">n8n.cloud</a> — 14 дней бесплатный триал, дальше $20/мес</li>
 <li>Регистрация по email, ничего ставить не надо</li>
-<li>Через 30 секунд — готовое рабочее окно с workflow</li>
+<li>Через 30 секунд — готовое рабочее окно с автоматизациями</li>
 </ol>
-<p>Это тот же самый n8n, просто на их серверах. Можно собирать автоматизации, подключать сервисы, экспериментировать. Если захочешь self-host — workflows переносятся экспортом JSON.</p>
+<p>Это тот же самый n8n, просто на их серверах. Можно собирать автоматизации, подключать сервисы, экспериментировать. Если захочешь установить у себя — цепочки переносятся экспортом в файл.</p>
 <details class="note">
-<summary>Для продвинутых (self-host через Docker)</summary>
-<p><strong>На сервере (Beget за 210 руб/мес подойдёт):</strong></p>
+<summary>Для программистов (установка у себя через Docker)</summary>
+<p><strong>На сервере (Beget за 210 руб/мес подойдёт). Docker — это программа-контейнер, запускает приложения в изоляции:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>--name<span class="w"> </span>n8n<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">5678</span>:5678<span class="w"> </span><span class="se">\</span>
@@ -1146,13 +1150,13 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span>docker.n8n.io/n8nio/n8n
 </code></pre></div>
 <p>Дальше открываешь <code>localhost:5678</code> (или адрес Beget) и работаешь.</p>
-<p>Плюсы self-host: данные у тебя, без подписки. Минусы: нужен VPS и минимум 1 ГБ RAM.</p>
+<p>Плюсы установки у себя: данные у тебя, без подписки. Минусы: нужен сервер (VPS) и минимум 1 ГБ RAM.</p>
 </details>
 <h2 id="_4">Первый запуск<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Открыл <code>localhost:5678</code> (или адрес Beget)</li>
 <li>Создал аккаунт</li>
-<li>Новый workflow — перетаскиваешь блоки из панели</li>
+<li>Новая автоматизация — перетаскиваешь блоки из панели</li>
 <li>Первый блок — триггер (что запускает цепочку)</li>
 <li>Дальше — шаги (читай Gmail → проанализируй ИИ → запиши в Google Sheets)</li>
 <li>Сохранил, включил — работает 24/7</li>
@@ -1161,19 +1165,19 @@
 <ul>
 <li><strong>SMM:</strong> Новый коммент → анализ тональности ИИ → негативные в Slack тебе</li>
 <li><strong>Лиды:</strong> Форма на сайте → обогащение через ИИ → запись в AmoCRM</li>
-<li><strong>Отчёты:</strong> Каждое утро → собираем продажи из БД → ИИ пишет саммари → в Telegram</li>
+<li><strong>Отчёты:</strong> Каждое утро → собираем продажи из базы → ИИ пишет саммари → в Telegram</li>
 </ul>
 <h2 id="_6">Нюансы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Self-host требует сервера — минимум 1 ГБ RAM</li>
-<li>Для интеграции с Claude нужен <a href="../../integrations/n8n-mcp/">n8n-MCP</a> — чтобы ИИ сам строил workflows</li>
-<li>Agent-to-agent фича пока бета, не на проде</li>
+<li>Установка у себя требует сервера — минимум 1 ГБ RAM</li>
+<li>Для связки с Claude нужен <a href="../../integrations/n8n-mcp/">n8n-MCP</a> — чтобы ИИ сам собирал цепочки (MCP — это способ дать ИИ руки, подключить его к внешним программам)</li>
+<li>Фича «агенты общаются» пока в бета-версии, не на продакшне</li>
 </ul>
 <h2 id="_7">Ссылки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/n8n-io/n8n">GitHub ⭐ 184K</a></li>
 <li><a href="https://n8n.io">n8n.io</a> — облако и документация</li>
-<li><a href="https://beget.com">Beget</a> — 210 руб/мес self-host</li>
+<li><a href="https://beget.com">Beget</a> — 210 руб/мес, поставить у себя</li>
 <li>Альтернативы: Make.com (платный), Zapier (дороже), <a href="../loop/">/loop</a> (проще)</li>
 </ul>
 <hr />

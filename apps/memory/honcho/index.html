@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без терминала
+        Как попробовать без чёрного окна с командами
       
     </span>
   </a>
@@ -1091,36 +1091,40 @@
 
 
 <h1 id="honcho">🧠 Honcho<a class="headerlink" href="#honcho" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">🤖 Для агентов (Claude Code / Cursor / Codex)</p>
+<p>Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. <a href="#как-попробовать-без-чёрного-окна-с-командами">альтернативы</a> ниже.</p>
+</div>
 <blockquote>
 <p>Внешняя память для ИИ-агентов от Plastic Labs. Не просто хранит факты, а делает выводы о пользователе.</p>
 </blockquote>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>Большинство систем памяти тупо сохраняют фразы. Honcho идёт дальше — строит модель пользователя. Понимает контекст, отношения, предпочтения. Агент не просто помнит «что ты сказал», а понимает «какой ты человек».</p>
 <p>Plastic Labs — не стартап-однодневка, они давно в теме персонализации ИИ. Репутация серьёзная.</p>
-<p>Работает как отдельный сервер (self-host) или облачный сервис. Агент обращается к Honcho через API.</p>
+<p>Работает как отдельный сервер (можно установить у себя) или облачный сервис. Агент обращается к Honcho через подключение.</p>
 <h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>✅ Делаешь продукт с постоянными пользователями (чат-бот, ассистент)</li>
 <li>✅ Важна персонализация — разные ответы разным людям</li>
-<li>✅ Хочешь контроль — self-host доступен</li>
+<li>✅ Хочешь контроль — можно установить у себя (не в облаке)</li>
 <li>❌ НЕ подходит для простых личных задач — избыточно</li>
-<li>❌ Если не умеешь работать с API и серверами — барьер входа высокий</li>
+<li>❌ Если не умеешь работать с подключениями и серверами — барьер входа высокий</li>
 </ul>
-<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Honcho — серверный инструмент для разработчиков. Если не кодишь, но нужна «память для ИИ» — забирай что попроще:</p>
 <ul>
-<li><strong><a href="../handoff-pattern/">HANDOFF-паттерн</a></strong> — обычный markdown-файл, работает везде без установок</li>
+<li><strong><a href="../handoff-pattern/">HANDOFF-паттерн</a></strong> — обычный текстовый файл с простой разметкой, работает везде без установок</li>
 <li><strong><a href="https://claude.ai">Claude Projects</a></strong> в браузере — Project knowledge хранит контекст между чатами</li>
 <li><strong><a href="../mempalace/">MemPalace</a></strong> — попроще технически, но тоже требует Python</li>
 <li><strong>ChatGPT Memory</strong> — в настройках ChatGPT есть «Memory», сам запоминает факты о тебе</li>
 </ul>
-<p>Если реально нужен именно Honcho — готовься разбираться с серверами, API и OAuth. Для хобби он перебор.</p>
+<p>Если реально нужен именно Honcho — готовься разбираться с серверами, подключениями и OAuth (авторизация одной кнопкой). Для хобби он перебор.</p>
 <details class="note">
-<summary>Для продвинутых (терминал)</summary>
+<summary>Для программистов (через чёрное окно с командами)</summary>
 <p>Для Claude Code через скилл:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npx<span class="w"> </span>skills<span class="w"> </span>add<span class="w"> </span>plastic-labs/honcho
 </code></pre></div>
-<p>Или self-host сервер:</p>
+<p>Или установить у себя — свой сервер:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/plastic-labs/honcho
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>honcho
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>docker-compose<span class="w"> </span>up
@@ -1128,15 +1132,15 @@
 <p><strong>Первый запуск:</strong></p>
 <ol>
 <li>Поднял сервер (локально или в облаке)</li>
-<li>В агенте — подключил через API</li>
+<li>В агенте — подключил</li>
 <li>Указал ID пользователя — агент начнёт писать туда заметки</li>
 <li>Следующие запросы — агент читает и использует</li>
 </ol>
 </details>
 <h2 id="_4">Нюансы<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Требует python-бэкенд — для hobby-проектов перебор</li>
-<li>Облачная версия платная, self-host бесплатен</li>
+<li>Требует python-бэкенд — для хобби-проектов перебор</li>
+<li>Облачная версия платная, установка у себя бесплатна</li>
 <li>Документация местами скудная, ищи в Discord сообщества</li>
 </ul>
 <h2 id="_5">Ссылки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>

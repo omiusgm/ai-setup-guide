@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без терминала
+        Как попробовать без чёрного окна с командами
       
     </span>
   </a>
@@ -1102,56 +1102,60 @@
 
 
 <h1 id="docker-mcp-toolkit">🐳 Docker MCP Toolkit<a class="headerlink" href="#docker-mcp-toolkit" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">🤖 Для агентов (Claude Code / Cursor / Codex)</p>
+<p>Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. <a href="#как-попробовать-без-чёрного-окна-с-командами">альтернативы</a> ниже.</p>
+</div>
 <blockquote>
-<p>300+ готовых MCP-плагинов в каталоге Docker Desktop. Установка в один клик — никаких npm, pip, терминала.</p>
+<p>300+ готовых MCP-плагинов в каталоге Docker Desktop (MCP = способ дать ИИ руки для работы с внешними программами). Установка в один клик — никаких npm, pip, чёрного окна с командами.</p>
 </blockquote>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Docker Desktop добавил раздел «MCP Toolkit». Открываешь — видишь каталог на 300+ MCP-серверов: Gmail, Slack, GitHub, базы данных, AWS, платежки. Каждый ставится в один клик. Не надо возиться с конфигами.</p>
-<p>Сами MCP запускаются в Docker-контейнерах — изолированно, не мусорят в системе. Удалил — ничего не осталось.</p>
+<p>Docker Desktop добавил раздел «MCP Toolkit». Открываешь — видишь каталог на 300+ готовых подключений: Gmail, Slack, GitHub, базы данных, AWS, платежки. Каждое ставится в один клик. Не надо возиться с настройками.</p>
+<p>Сами подключения запускаются в Docker-контейнерах — это программы-контейнеры, они запускают приложения в изоляции, не мусорят в системе. Удалил — ничего не осталось.</p>
 <h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>✅ Docker Desktop уже стоит</li>
-<li>✅ Хочешь пробовать MCP без боли с установкой</li>
+<li>✅ Хочешь пробовать подключения ИИ к сервисам без боли с установкой</li>
 <li>✅ Работаешь с корпоративными сервисами (AWS, Azure, GCP)</li>
 <li>❌ НЕ подходит если не хочешь ставить Docker</li>
 <li>❌ На слабом компе — Docker ест ресурсы</li>
 </ul>
-<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>Docker MCP Toolkit — как раз тот редкий случай, когда всё ставится мышкой. Терминал не нужен:</p>
+<h2 id="_3">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Docker MCP Toolkit — как раз тот редкий случай, когда всё ставится мышкой. Чёрное окно не нужно:</p>
 <ol>
 <li>Скачай <strong><a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a></strong> — обычный установщик (Mac, Windows, Linux)</li>
 <li>Запусти — слева в панели появится «MCP Toolkit»</li>
 <li>Открой вкладку → каталог плагинов (GitHub, Gmail, Postgres, AWS, Jira...)</li>
 <li>Жмёшь «Install» на нужном — плагин поднимается сам в контейнере</li>
-<li>Теперь он доступен в Claude Code и других MCP-клиентах</li>
+<li>Теперь он доступен в Claude Code и других программах, работающих с MCP</li>
 </ol>
-<p>Это самый простой способ пощупать MCP без возни с конфигами и установками.</p>
+<p>Это самый простой способ пощупать подключения ИИ к сервисам без возни с настройками и установками.</p>
 <details class="note">
-<summary>Для продвинутых (CLI)</summary>
-<p>Docker Desktop сам по себе не требует терминала. Но если хочешь управлять MCP-контейнерами из командной строки — у Docker есть свой CLI:</p>
+<summary>Для программистов (через команды)</summary>
+<p>Docker Desktop сам по себе не требует чёрного окна с командами. Но если хочешь управлять MCP-контейнерами командами — у Docker есть свои:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>mcp<span class="w"> </span>list
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>mcp<span class="w"> </span>install<span class="w"> </span>&lt;plugin-name&gt;
 </code></pre></div>
-<p>Удобно если настраиваешь окружение скриптом или в CI.</p>
+<p>Удобно если настраиваешь окружение скриптом или в системе сборки.</p>
 </details>
 <h2 id="_4">Примеры<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>GitHub MCP</strong> — ИИ читает/пишет issue, PR, код</li>
-<li><strong>Postgres MCP</strong> — ИИ выполняет SQL-запросы</li>
+<li><strong>GitHub MCP</strong> — ИИ читает/пишет задачи, пулреквесты, код</li>
+<li><strong>Postgres MCP</strong> — ИИ выполняет запросы к базе</li>
 <li><strong>AWS MCP</strong> — ИИ управляет облаком</li>
 <li><strong>Gmail MCP</strong> — читает/пишет письма</li>
 </ul>
 <h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Docker Desktop ест 2-4 ГБ RAM — на слабых компах тяжело</li>
-<li>Некоторые MCP требуют API ключи — подставь в настройках</li>
-<li>Не все MCP одинаково качественные — смотри рейтинг в каталоге</li>
+<li>Некоторые подключения требуют ключ для подключения — подставь в настройках</li>
+<li>Не все подключения одинаково качественные — смотри рейтинг в каталоге</li>
 </ul>
 <h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a></li>
 <li><a href="https://docs.docker.com/desktop/mcp/">MCP Toolkit документация</a></li>
-<li>Альтернативы: <a href="../composio/">Composio</a>, ручная установка MCP</li>
+<li>Альтернативы: <a href="../composio/">Composio</a>, ручная установка подключений</li>
 </ul>
 <hr />
 <p><em>Подходит для: технарям · корпоративному стеку · простоте установки</em></p>

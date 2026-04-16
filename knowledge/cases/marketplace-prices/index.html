@@ -1115,13 +1115,13 @@
 - Не тратить время на сам поиск
 - Алерты когда кто-то ставит ниже твоей минимальной цены</p>
 <h2 id="_2">Как сделал<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Стек: <strong>Browser Use</strong> (для обхода защиты WB) + <strong>Claude API</strong> (через DeepSeek, бесплатно из РФ) + <strong>Google Sheets</strong> для отчётов.</p>
+<p>Стек: <strong>Browser Use</strong> (для обхода защиты WB) + <strong>Claude API</strong> (способ подключения программ, через DeepSeek, бесплатно из РФ) + <strong>Google Sheets</strong> для отчётов.</p>
 <p>Шаги:
 1. Взял <a href="../../../apps/agents/browser-use/">Browser Use</a> — автономный агент который управляет браузером как человек
 2. Скормил ему список артикулов и запрос: «для каждого артикула найди 5 ближайших конкурентов, сравни цены и рейтинг»
 3. Результат → Google Sheet, подсветка красным где мы дороже на 10%+
 4. Поставил <code>/loop 1h</code> в Claude Code — обновляется каждый час пока комп работает
-5. Ночью — scheduled task в 7:00 утра, сводный отчёт в Telegram</p>
+5. Ночью — задача по расписанию (будильник для команд) в 7:00 утра, сводный отчёт в Telegram</p>
 <h2 id="_3">Результат<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2 часа рутины → 10 минут на проверку сводки</li>
@@ -1139,7 +1139,7 @@
 </thead>
 <tbody>
 <tr>
-<td>DeepSeek API (бесплатно до лимита)</td>
+<td>DeepSeek API (способ подключения программ, бесплатно до лимита)</td>
 <td>0 ₽</td>
 </tr>
 <tr>
@@ -1165,7 +1165,7 @@
 <h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../../../apps/agents/browser-use/">Browser Use</a> — агент для браузера</li>
-<li><a href="../../budget/">DeepSeek</a> — бесплатный API</li>
+<li><a href="../../budget/">DeepSeek</a> — бесплатный API (способ подключения)</li>
 <li><a href="../../../apps/automation/loop/">/loop</a> — запуск по расписанию</li>
 </ul>
 <hr />

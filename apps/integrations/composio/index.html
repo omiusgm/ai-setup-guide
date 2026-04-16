@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без терминала
+        Как попробовать без чёрного окна с командами
       
     </span>
   </a>
@@ -1102,33 +1102,37 @@
 
 
 <h1 id="composio">🔌 Composio<a class="headerlink" href="#composio" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">🤖💬 Для чатботов И агентов</p>
+<p>Работает и в браузере (облачная версия / альтернатива), и через агента (установка). Ниже оба варианта.</p>
+</div>
 <blockquote>
-<p>Один установ — и у ИИ-агента сразу 1000+ готовых интеграций. Gmail, Slack, GitHub, Jira, Notion, HubSpot — всё подключается через MCP.</p>
+<p>Один установ — и у ИИ-агента сразу 1000+ готовых подключений к сервисам. Gmail, Slack, GitHub, Jira, Notion, HubSpot — всё подключается через MCP (способ дать ИИ руки для работы с внешними программами).</p>
 </blockquote>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Вместо того чтобы каждый сервис подключать отдельно — ставишь Composio, и у агента сразу доступ ко всему. Отправить письмо через Gmail? Создать задачу в Jira? Прочитать документ в Notion? Всё через одну API.</p>
-<p>28 тысяч звёзд. ComposioHQ активно развивают, новые интеграции появляются каждую неделю. Поддержка Claude Code, LangChain, автоматизация CrewAI.</p>
+<p>Вместо того чтобы каждый сервис подключать отдельно — ставишь Composio, и у агента сразу доступ ко всему. Отправить письмо через Gmail? Создать задачу в Jira? Прочитать документ в Notion? Всё через одно подключение.</p>
+<p>28 тысяч звёзд. ComposioHQ активно развивают, новые подключения появляются каждую неделю. Поддержка Claude Code, LangChain, автоматизация CrewAI.</p>
 <h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>✅ Бизнесу: нужно подключить много сервисов сразу</li>
 <li>✅ Агент должен работать с Gmail, Slack, CRM, таск-трекером</li>
-<li>✅ Хочешь один стандарт для всех интеграций</li>
+<li>✅ Хочешь один стандарт для всех подключений</li>
 <li>❌ НЕ подходит если нужен один-два сервиса — проще взять отдельные MCP</li>
 <li>❌ Для простых промптов — избыточно</li>
 </ul>
-<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>У Composio есть веб-интерфейс для настройки — можно подключить сервисы мышкой:</p>
 <ol>
 <li>Зарегистрируйся на <strong><a href="https://composio.dev">composio.dev</a></strong> — обычный сайт, email + пароль</li>
-<li>В дашборде → «Apps» → жмёшь «Connect» на Gmail, Slack, GitHub, Notion и т.д. Каждый через OAuth (одна кнопка)</li>
-<li>Получаешь готовый API ключ для ИИ</li>
-<li>Дальше — либо в ChatGPT/Claude через MCP-коннектор (если платный план), либо через n8n Cloud</li>
+<li>В дашборде → «Apps» → жмёшь «Connect» на Gmail, Slack, GitHub, Notion и т.д. Каждый через OAuth — это авторизация одной кнопкой, ничего не надо копировать</li>
+<li>Получаешь готовый ключ для подключения ИИ ко всему</li>
+<li>Дальше — либо в ChatGPT/Claude через коннектор (если платный план), либо через n8n Cloud</li>
 </ol>
 <p>Альтернативы для простых задач:
-- <strong><a href="https://zapier.com">Zapier</a></strong> / <strong><a href="https://make.com">Make.com</a></strong> — готовые no-code интеграции, те же сервисы
+- <strong><a href="https://zapier.com">Zapier</a></strong> / <strong><a href="https://make.com">Make.com</a></strong> — готовые подключения без кода, те же сервисы
 - <strong><a href="../../automation/n8n/">n8n Cloud</a></strong> — визуальный конструктор</p>
 <details class="note">
-<summary>Для продвинутых (терминал)</summary>
+<summary>Для программистов (через чёрное окно с командами)</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>composio-core
 </code></pre></div>
 <p>Для Claude Code:</p>
@@ -1137,7 +1141,7 @@
 <p><strong>Первый запуск:</strong></p>
 <ol>
 <li>Создал аккаунт на <a href="https://composio.dev">composio.dev</a></li>
-<li>Получил API ключ</li>
+<li>Получил ключ для подключения</li>
 <li><code>composio login</code> — привязал аккаунт</li>
 <li>Подключил сервисы через OAuth: <code>composio add gmail</code>, <code>composio add slack</code></li>
 <li>В агенте — сразу доступны 1000+ инструментов</li>
@@ -1146,20 +1150,20 @@
 <h2 id="_4">Примеры задач<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>«Найди в Gmail письма от клиента X, создай по ним задачи в Linear»</li>
-<li>«Посмотри вчерашние PR в GitHub, напиши саммари в Slack»</li>
+<li>«Посмотри вчерашние пулреквесты в GitHub, напиши саммари в Slack»</li>
 <li>«Возьми данные из HubSpot, собери отчёт в Notion»</li>
 </ul>
 <h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Требует OAuth к каждому сервису — с SaaS-аккаунтами работает, с корпоративными может быть сложнее</li>
+<li>Требует OAuth к каждому сервису — с облачными аккаунтами работает, с корпоративными может быть сложнее</li>
 <li>Есть платный план — но для старта бесплатного хватает</li>
-<li>Некоторые интеграции в РФ недоступны из-за санкций (Jira Cloud, Slack)</li>
+<li>Некоторые подключения в РФ недоступны из-за санкций (Jira Cloud, Slack)</li>
 </ul>
 <h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/ComposioHQ/composio">GitHub ⭐ 28K</a></li>
 <li><a href="https://composio.dev">composio.dev</a></li>
-<li>Альтернативы: <a href="../docker-mcp/">Docker MCP</a>, отдельные MCP под задачу</li>
+<li>Альтернативы: <a href="../docker-mcp/">Docker MCP</a>, отдельные подключения под задачу</li>
 </ul>
 <hr />
 <p><em>Подходит для: бизнесу · технарям · полному стеку</em></p>

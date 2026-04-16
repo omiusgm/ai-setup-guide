@@ -23,7 +23,7 @@
     
     
       
-        <title>Firecrawl — скрапинг для ИИ - App Store для Claude Code</title>
+        <title>Firecrawl — собирает текст с сайтов для ИИ - App Store для Claude Code</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Firecrawl — скрапинг для ИИ
+              Firecrawl — собирает текст с сайтов для ИИ
             
           </span>
         </div>
@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без терминала
+        Как попробовать без чёрного окна с командами
       
     </span>
   </a>
@@ -1091,29 +1091,33 @@
 
 
 <h1 id="firecrawl">🔥 Firecrawl<a class="headerlink" href="#firecrawl" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">🤖💬 Для чатботов И агентов</p>
+<p>Работает и в браузере (облачная версия / альтернатива), и через агента (установка). Ниже оба варианта.</p>
+</div>
 <blockquote>
-<p>ИИ-ориентированный скрапинг сайтов. Даёшь URL — получаешь чистый markdown, готовый для ИИ.</p>
+<p>Собирает текст с любых сайтов и приводит в формат для ИИ. Даёшь ссылку — получаешь чистый текст с разметкой (формат с простыми звёздочками для жирного и заголовками), готовый для ИИ.</p>
 </blockquote>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Обычный скрапинг — это боль: HTML с рекламой, JS-загрузки, защита от ботов. Firecrawl решает это: кидаешь URL — получаешь чистый markdown без мусора. Идеально для ИИ.</p>
+<p>Обычный сбор данных с сайтов (когда программа копирует текст и картинки со страниц автоматом) — это боль: мусор из рекламы, скрытый текст, защита от ботов. Firecrawl решает это: кидаешь ссылку — получаешь чистый текст без мусора. Идеально для ИИ.</p>
 <p>Три режима:
 - <strong>Scrape</strong> — одна страница
 - <strong>Crawl</strong> — обход всего сайта
-- <strong>Search</strong> — поиск + автоскрейпинг</p>
-<p>Работает как облачный сервис (API) или self-host в Docker. 110 тысяч звёзд. Mendable AI давно в теме — делают RAG для крупных компаний.</p>
+- <strong>Search</strong> — поиск + автосбор</p>
+<p>Работает как облачный сервис (готовое решение с их серверов) или можно установить у себя (не в облаке) через программу-контейнер Docker, которая запускает приложения в изоляции. 110 тысяч звёзд. Mendable AI давно в теме — делают системы где ИИ отвечает по документам компании.</p>
 <h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>✅ ИИ-агентам нужны данные с сайтов</li>
-<li>✅ Надо собрать документацию для RAG</li>
+<li>✅ Надо собрать документацию чтобы ИИ по ней отвечал</li>
 <li>✅ Мониторинг конкурентов, цен, контента</li>
 <li>❌ НЕ подходит для 1-2 разовых задач — можно просто скопировать</li>
 <li>❌ Если сайт защищён капчей — Firecrawl её не решит</li>
 </ul>
-<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>У Firecrawl есть веб-интерфейс — можно скрейпить без единой команды:</p>
+<h2 id="_3">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>У Firecrawl есть веб-интерфейс — можно собирать тексты без единой команды:</p>
 <ol>
 <li>Заходи на <strong><a href="https://firecrawl.dev">firecrawl.dev</a></strong> → регистрация по email</li>
-<li>В дашборде есть «Playground» — вставляешь URL, жмёшь «Scrape», получаешь markdown</li>
+<li>В дашборде есть «Playground» — вставляешь ссылку, жмёшь «Scrape», получаешь готовый текст</li>
 <li>Бесплатный тир — 500 страниц/мес, хватает пощупать</li>
 <li>Результат копируешь и вставляешь в ChatGPT/Claude: «проанализируй этот текст»</li>
 </ol>
@@ -1121,8 +1125,8 @@
 - В <strong>Claude Projects</strong> подключается через Custom Connector (бета)
 - В <strong>ChatGPT</strong> — через кастомные GPTs или Actions</p>
 <details class="note">
-<summary>Для продвинутых (Python / MCP / self-host)</summary>
-<p><strong>Как облачный API:</strong></p>
+<summary>Для программистов (Python / подключение к Claude Code / установка у себя)</summary>
+<p><strong>Как облачный сервис:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>firecrawl-py
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">firecrawl</span><span class="w"> </span><span class="kn">import</span> <span class="n">FirecrawlApp</span>
@@ -1131,10 +1135,10 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">scrape_url</span><span class="p">(</span><span class="s2">&quot;https://example.com&quot;</span><span class="p">)</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;markdown&quot;</span><span class="p">])</span>
 </code></pre></div>
-<p><strong>Как MCP для Claude Code:</strong></p>
+<p><strong>Подключить к Claude Code как MCP (способ дать ИИ руки — подключить его к внешним сервисам):</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>firecrawl<span class="w"> </span>--<span class="w"> </span>npx<span class="w"> </span>-y<span class="w"> </span>@mendable/firecrawl-mcp
 </code></pre></div>
-<p><strong>Self-host (для своих серверов):</strong></p>
+<p><strong>Установить у себя (для своих серверов):</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mendableai/firecrawl
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>firecrawl
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>docker-compose<span class="w"> </span>up
@@ -1142,9 +1146,9 @@
 </details>
 <h2 id="_4">Нюансы<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Облачный API — платный после бесплатного тира (500 страниц/мес)</li>
-<li>Self-host бесплатный, но нужен сервер</li>
-<li>Не все сайты ок со скрейпингом — уважай robots.txt и ToS</li>
+<li>Облачный сервис — платный после бесплатного тира (500 страниц/мес)</li>
+<li>Установка у себя бесплатна, но нужен сервер</li>
+<li>Не все сайты ок со сбором данных — уважай robots.txt и правила сайтов</li>
 </ul>
 <h2 id="_5">Ссылки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1153,7 +1157,7 @@
 <li>Альтернативы: Playwright (без ИИ-обёртки), <a href="../../agents/browser-use/">Browser Use</a> (через агента)</li>
 </ul>
 <hr />
-<p><em>Подходит для: технарям · автоматизации · RAG</em></p>
+<p><em>Подходит для: технарям · автоматизации · системам "ИИ читает документы"</em></p>
 
 
 

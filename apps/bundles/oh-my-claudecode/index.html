@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без терминала
+        Как попробовать без чёрного окна с командами
       
     </span>
   </a>
@@ -1102,37 +1102,41 @@
 
 
 <h1 id="oh-my-claudecode">⚡ Oh My ClaudeCode<a class="headerlink" href="#oh-my-claudecode" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">🤖 Для агентов (Claude Code / Cursor / Codex)</p>
+<p>Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. <a href="#как-попробовать-без-чёрного-окна-с-командами">альтернативы</a> ниже.</p>
+</div>
 <blockquote>
-<p>32 специализированных агента + умный роутинг моделей. Система сама решает: простая задача — Haiku, средняя — Sonnet, сложная — Opus. Экономит токены.</p>
+<p>32 специализированных агента + умный роутинг моделей. Система сама решает: простая задача — Haiku, средняя — Sonnet, сложная — Opus. Экономит «слова» для ИИ (токены, за них считают стоимость).</p>
 </blockquote>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>Два главных ингредиента:</p>
 <p><strong>1. 32 агента под задачи.</strong> Писатель, ревьюер, архитектор, тестировщик, SMM, исследователь. Каждый заточен под своё — не надо всё объяснять агенту с нуля.</p>
-<p><strong>2. Smart routing.</strong> Эта штука смотрит на задачу и сама выбирает модель. «Переведи слово» → Haiku ($0.25/1M). «Напиши план» → Sonnet ($3/1M). «Отрефакторь архитектуру» → Opus ($15/1M). Экономия — 30-60% на токенах.</p>
+<p><strong>2. Smart routing (умное переключение моделей).</strong> Эта штука смотрит на задачу и сама выбирает модель. «Переведи слово» → Haiku ($0.25/1M). «Напиши план» → Sonnet ($3/1M). «Отрефакторь архитектуру» → Opus ($15/1M). Экономия — 30-60% на «словах» для ИИ.</p>
 <p>29 тысяч звёзд. Автор — Yeachan-Heo.</p>
 <h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>✅ Платишь за API — роутинг сэкономит заметно</li>
+<li>✅ Платишь за подключение к ИИ — роутинг сэкономит заметно</li>
 <li>✅ Хочешь готовый набор агентов без копания</li>
 <li>✅ Разные задачи ежедневно — от простых до сложных</li>
 <li>❌ НЕ подходит если только Opus нужен — роутинг лишний</li>
 <li>❌ Для одной конкретной задачи — проще свой агент</li>
 </ul>
-<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>Oh My ClaudeCode это пакет для Claude Code — без терминала его не настроишь. Но сами идеи можно взять по отдельности:</p>
+<h2 id="_3">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Oh My ClaudeCode это пакет для Claude Code — без чёрного окна с командами его не настроишь. Но сами идеи можно взять по отдельности:</p>
 <ul>
 <li><strong>32 специализированных агента</strong> — просматривай на <a href="https://github.com/Yeachan-Heo/oh-my-claudecode">GitHub</a>, копируй промпты агентов в ChatGPT/Claude</li>
-<li><strong>Smart routing</strong> — в браузере не получится. Альтернатива: бери сразу Sonnet для большинства задач (хороший баланс цены и качества)</li>
-<li>Если нужна разовая экономия на токенах — посмотри <strong><a href="../../tokens/caveman/">Caveman</a></strong> (промпт на сокращение ответов, работает без установок)</li>
+<li><strong>Умное переключение моделей</strong> — в браузере не получится. Альтернатива: бери сразу Sonnet для большинства задач (хороший баланс цены и качества)</li>
+<li>Если нужна разовая экономия на «словах» для ИИ — посмотри <strong><a href="../../tokens/caveman/">Caveman</a></strong> (промпт на сокращение ответов, работает без установок)</li>
 </ul>
 <details class="note">
-<summary>Для продвинутых (терминал)</summary>
+<summary>Для программистов (через чёрное окно с командами)</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>oh-my-claudecode
 </code></pre></div>
 <p>Потом:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>omc<span class="w"> </span>init
 </code></pre></div>
-<p>Это создаст конфиг в <code>~/.claude/</code>, добавит агентов и команды.</p>
+<p>Это создаст настройки в <code>~/.claude/</code>, добавит агентов и команды.</p>
 <p><strong>Первый запуск:</strong></p>
 <ol>
 <li>В Claude Code: <code>/agents</code> — видишь список 32 новых</li>

@@ -1052,7 +1052,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без терминала
+        Как попробовать без чёрного окна с командами
       
     </span>
   </a>
@@ -1091,17 +1091,21 @@
 
 
 <h1 id="hermes-agent">🎓 Hermes Agent<a class="headerlink" href="#hermes-agent" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">🤖 Для агентов (Claude Code / Cursor / Codex)</p>
+<p>Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. <a href="#как-попробовать-без-чёрного-окна-с-командами">альтернативы</a> ниже.</p>
+</div>
 <blockquote>
 <p>Агент с обучением скиллам — учебный проект Nous Research. Первые 5-10 сессий разницы не заметишь, скиллы часто кривые. Но идея классная и исполнение улучшается.</p>
 </blockquote>
 <div class="admonition warning">
-<p class="admonition-title">Этот инструмент требует терминала</p>
-<p>Hermes ставится только через командную строку. Если ты не программист — посмотри <a href="../goose/">Goose</a> (десктоп-агент) или <a href="../../../knowledge/budget/">DeepSeek в браузере</a>. Оба из РФ без VPN, без единой команды.</p>
+<p class="admonition-title">Этот инструмент только для программистов</p>
+<p>Hermes ставится только через чёрное окно с командами. Если ты не кодишь — посмотри <a href="../goose/">Goose</a> (обычное десктоп-приложение с окошком) или <a href="../../../knowledge/budget/">DeepSeek в браузере</a>. Оба из РФ без VPN, без единой команды.</p>
 </div>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>Большинство агентов — одноразовые. Дал задачу, он решил, забыл. Hermes отличается: у него есть «скиллы» — файлы где сохранены удачные паттерны работы. Сделал что-то хорошо — запомнил. В следующий раз (в теории) делает лучше и быстрее.</p>
 <p>Разработчики — Nous Research, это те же люди, что выпускают серию моделей Hermes (Llama-тюны). Репутация серьёзная, 93 тысячи звёзд, работает с любой моделью — от GPT до Qwen на Ollama.</p>
-<p>Но это не революция, а эксперимент. Идея классная, исполнение улучшается, но сейчас это скорее учебный проект — ставь с пониманием что будешь дебажить его поведение, а не получишь волшебного обучающегося агента из коробки.</p>
+<p>Но это не революция, а эксперимент. Идея классная, исполнение улучшается, но сейчас это скорее учебный проект — ставь с пониманием что будешь разбираться с его поведением, а не получишь волшебного обучающегося агента из коробки.</p>
 <h2 id="_2">Нюансы (прочитай до установки)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Первые 5-10 сессий разницы не заметишь</strong> — обучение идёт постепенно, не жди вау-эффекта сразу</li>
@@ -1118,19 +1122,19 @@
 <li>❌ НЕ подходит для одноразовых задач — без повторов смысла нет</li>
 <li>❌ Если ты новичок в агентах — начни с десктопного Goose</li>
 </ul>
-<h2 id="_4">Как попробовать без терминала<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>Для Hermes нет десктопной версии — это CLI-инструмент. Если тебе нужна сама идея «агент, который учится на опыте» без возни с терминалом:</p>
+<h2 id="_4">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Для Hermes нет обычной десктопной версии — только чёрное окно с командами. Если тебе нужна сама идея «агент, который учится на опыте» без возни с ним:</p>
 <ul>
 <li><strong><a href="https://claude.ai">Claude Projects</a></strong> в браузере — накапливает контекст через Project knowledge</li>
-<li><strong><a href="../goose/">Goose</a></strong> — десктоп-агент, умеет сохранять полезные паттерны</li>
-<li><strong><a href="../../memory/handoff-pattern/">HANDOFF-паттерн</a></strong> — та же идея «памяти между сессиями», но через обычный markdown-файл</li>
+<li><strong><a href="../goose/">Goose</a></strong> — десктоп-агент с обычным окошком, умеет сохранять полезные паттерны</li>
+<li><strong><a href="../../memory/handoff-pattern/">HANDOFF-паттерн</a></strong> — та же идея «памяти между сессиями», но через обычный текстовый файл с разметкой</li>
 </ul>
 <details class="note">
-<summary>Для продвинутых (терминал)</summary>
+<summary>Для программистов (через чёрное окно с командами)</summary>
 <p>Через pip:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>hermes-agent
 </code></pre></div>
-<p>Либо clone с GitHub и ставишь из исходников:</p>
+<p>Либо скачиваешь с GitHub и ставишь из исходников:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/NousResearch/hermes-agent
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>hermes-agent
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.

@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без терминала
+        Как попробовать без чёрного окна с командами
       
     </span>
   </a>
@@ -1102,30 +1102,34 @@
 
 
 <h1 id="claude-code-mcp">♻️ Claude Code MCP<a class="headerlink" href="#claude-code-mcp" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">🤖 Для агентов (Claude Code / Cursor / Codex)</p>
+<p>Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. <a href="#как-попробовать-без-чёрного-окна-с-командами">альтернативы</a> ниже.</p>
+</div>
 <blockquote>
-<p>Claude запускает другого Claude. Один агент делегирует задачи подагентам, каждый — в своей сессии.</p>
+<p>Claude запускает другого Claude. Один агент делегирует задачи подагентам, каждый — в своей сессии. Через MCP (способ дать ИИ руки — подключить его к внешним инструментам).</p>
 </blockquote>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Иногда одному агенту тяжело: большая задача, нужно параллелить, нужна изоляция контекстов. Claude Code MCP решает это: у главного агента появляется инструмент «запусти другого агента с такой-то задачей».</p>
+<p>Иногда одному агенту тяжело: большая задача, нужно параллелить, нужна изоляция — чтобы разные задачи не мешали друг другу. Claude Code MCP решает это: у главного агента появляется инструмент «запусти другого агента с такой-то задачей».</p>
 <p>Пример: «исследуй 5 конкурентов» — главный запускает 5 подагентов, каждый работает со своим конкурентом, возвращает саммари. Главный собирает.</p>
 <p>1100 звёзд. Автор — steipete (Петер Штайнбергер, известный в iOS-сообществе).</p>
 <h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>✅ Сложные задачи с параллельными частями</li>
-<li>✅ Нужна изоляция контекстов (разные проекты в одной сессии)</li>
+<li>✅ Нужна изоляция (разные проекты в одной сессии, чтобы не мешали друг другу)</li>
 <li>✅ Работаешь с Claude Code</li>
-<li>❌ НЕ подходит для простых задач — оверхед</li>
+<li>❌ НЕ подходит для простых задач — слишком сложно</li>
 <li>❌ Если не понимаешь что такое MCP — сначала разберись</li>
 </ul>
-<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>Claude Code MCP работает только внутри Claude Code — а он живёт в терминале. Если хочешь «один ИИ запускает другого» без терминала:</p>
+<h2 id="_3">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Claude Code MCP работает только внутри Claude Code — а он живёт в чёрном окне с командами. Если хочешь «один ИИ запускает другого» без этого:</p>
 <ul>
 <li><strong><a href="https://claude.ai">Claude Projects</a></strong> — в одном проекте можно работать с разными специализациями через разные промпты, и копировать результаты между чатами</li>
 <li><strong><a href="../../automation/n8n/">n8n Cloud</a></strong> — визуально строишь цепочку «ИИ-1 → ИИ-2 → ИИ-3», каждый со своей задачей</li>
 <li><strong>Вручную</strong>: запусти ChatGPT/Claude в двух вкладках, в одной делай ресерч, в другой — синтез</li>
 </ul>
 <details class="note">
-<summary>Для продвинутых (MCP в Claude Code)</summary>
+<summary>Для программистов (подключение MCP в Claude Code)</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>claude-code<span class="w"> </span>--<span class="w"> </span>npx<span class="w"> </span>-y<span class="w"> </span>claude-code-mcp
 </code></pre></div>
 <p><strong>Первый запуск:</strong></p>
@@ -1140,20 +1144,20 @@
 <h2 id="_4">Примеры<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Рефакторинг большого проекта — подагенты работают над разными модулями</li>
-<li>Ревью PR — один смотрит безопасность, второй стиль, третий тесты</li>
+<li>Ревью пулреквеста — один смотрит безопасность, второй стиль, третий тесты</li>
 <li>Исследование — подагенты читают разные источники, главный синтезирует</li>
 </ul>
 <h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Каждый подагент ест токены отдельно — дорого</li>
-<li>Нужна стабильная интернет-сессия — подагенты общаются через API</li>
+<li>Каждый подагент ест «слова» для ИИ (токены) отдельно — дорого</li>
+<li>Нужна стабильная интернет-сессия — подагенты общаются через подключение к Anthropic</li>
 <li>Следи за лимитами Anthropic — легко вылететь за квоту</li>
 </ul>
 <h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/steipete/claude-code-mcp">GitHub ⭐ 1.1K</a></li>
 <li><a href="https://twitter.com/steipete">Автор: Peter Steinberger</a></li>
-<li>Альтернативы: <a href="https://github.com/ruvnet/claude-flow">Claude Flow (Ruflo)</a>, кастомный оркестратор</li>
+<li>Альтернативы: <a href="https://github.com/ruvnet/claude-flow">Claude Flow (Ruflo)</a>, свой дирижёр агентов</li>
 </ul>
 <hr />
 <p><em>Подходит для: технарям · сложным задачам · параллелизации</em></p>

@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без терминала
+        Как попробовать без чёрного окна с командами
       
     </span>
   </a>
@@ -1091,34 +1091,38 @@
 
 
 <h1 id="openhands">🤲 OpenHands<a class="headerlink" href="#openhands" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">🤖 Для агентов (Claude Code / Cursor / Codex)</p>
+<p>Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. <a href="#как-попробовать-без-чёрного-окна-с-командами">альтернативы</a> ниже.</p>
+</div>
 <blockquote>
-<p>87% на SWE-bench — один из самых сильных автономных ИИ-инженеров в опенсорсе. Ставишь задачу — уходишь пить кофе.</p>
+<p>87% на SWE-bench — один из самых сильных автономных ИИ-инженеров в открытом коде. Ставишь задачу — уходишь пить кофе.</p>
 </blockquote>
 <div class="admonition warning">
-<p class="admonition-title">Этот инструмент требует терминала и Docker</p>
-<p>OpenHands живёт в Docker-контейнере, без командной строки не запустить. Если ты не программист — посмотри <a href="../goose/">Goose</a> (десктоп-агент с обычным окном) или <a href="../../../knowledge/budget/">DeepSeek в браузере</a>. Оба работают из РФ без VPN, без терминала.</p>
+<p class="admonition-title">Этот инструмент только для программистов (нужен Docker)</p>
+<p>OpenHands живёт в Docker-контейнере (это программа-контейнер, запускает приложения в изоляции). Без чёрного окна с командами не запустить. Если ты не кодишь — посмотри <a href="../goose/">Goose</a> (десктоп-агент с обычным окошком) или <a href="../../../knowledge/budget/">DeepSeek в браузере</a>. Оба работают из РФ без VPN, без команд.</p>
 </div>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>OpenHands не помощник. Это автономный инженер, который работает по задаче от начала до конца. Тебе не надо подсказывать на каждом шагу — он САМ открывает файлы, правит код, запускает тесты, исправляет ошибки, пушит в гит.</p>
-<p>Результат на бенчмарке SWE-bench — 87%. Для справки: это тесты с реальными issue с GitHub. Человек-джун даёт около 70%, сеньор — 85-90%. OpenHands работает на уровне живого мидла/сеньора.</p>
+<p>OpenHands не помощник. Это автономный инженер, который работает по задаче от начала до конца. Тебе не надо подсказывать на каждом шагу — он САМ открывает файлы, правит код, запускает тесты, исправляет ошибки, отправляет в git.</p>
+<p>Результат на бенчмарке SWE-bench — 87%. Для справки: это тесты с реальными задачами с GitHub. Человек-джун даёт около 70%, сеньор — 85-90%. OpenHands работает на уровне живого мидла/сеньора.</p>
 <p>71 тысяча звёзд. Консорциум разработчиков (All-Hands-AI) активно развивает.</p>
 <h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>✅ Есть большие задачи — перепиши модуль, закрой 10 issue, отрефакторь</li>
+<li>✅ Есть большие задачи — перепиши модуль, закрой 10 задач, отрефакторь</li>
 <li>✅ Нужна автономия — хочешь чтобы работало без тебя часами</li>
 <li>✅ Не боишься Docker и серверных штук</li>
 <li>❌ НЕ подходит для мелких задач — избыточно</li>
 <li>❌ Если не понимаешь что такое Docker — сначала разберись</li>
 </ul>
-<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Если автономный агент нужен, а Docker пугает — вот что берут вместо OpenHands:</p>
 <ul>
 <li><strong><a href="../goose/">Goose</a></strong> — десктоп-приложение, ставится как обычная программа. Может работать автономно на локальных моделях</li>
-<li><strong><a href="https://claude.com/claude-code">Claude Code</a></strong> — терминал есть, но можно жить в Claude Projects без него</li>
-<li><strong><a href="https://cursor.com">Cursor</a></strong> — IDE с агентом, ставится как редактор, не требует Docker</li>
+<li><strong><a href="https://claude.com/claude-code">Claude Code</a></strong> — чёрное окно с командами есть, но можно жить в Claude Projects без него</li>
+<li><strong><a href="https://cursor.com">Cursor</a></strong> — редактор кода с агентом, ставится как обычная программа, не требует Docker</li>
 </ul>
 <details class="note">
-<summary>Для продвинутых (терминал + Docker)</summary>
+<summary>Для программистов (команды + Docker)</summary>
 <p>Через Docker (рекомендуемо):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>docker.all-hands.dev/all-hands-ai/openhands:latest
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--pull<span class="o">=</span>always<span class="w"> </span><span class="se">\</span>
@@ -1134,16 +1138,16 @@
 <ol>
 <li>Запустил Docker-контейнер</li>
 <li>Открыл localhost:3000 — появился веб-интерфейс</li>
-<li>Указал провайдера модели и API ключ</li>
-<li>Подключил репозиторий (GitHub URL или локальную папку)</li>
+<li>Указал провайдера модели и ключ для подключения</li>
+<li>Подключил репозиторий (ссылка на GitHub или локальную папку)</li>
 <li>Написал задачу в формате: «Сделай X, учти Y, не трогай Z»</li>
 <li>Ушёл на час — вернулся к результату</li>
 </ol>
 </details>
 <h2 id="_4">Нюансы<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Жрёт токены как не в себя — большие задачи могут стоить $5-20</li>
-<li>Не оставляй без присмотра на опасных задачах (миграции БД, продакшн)</li>
+<li>Жрёт «слова» для ИИ (токены) как не в себя — большие задачи могут стоить $5-20</li>
+<li>Не оставляй без присмотра на опасных задачах (миграции баз, продакшн)</li>
 <li>Docker-контейнер требует ~8 ГБ RAM, слабые компы не вытянут</li>
 </ul>
 <h2 id="_5">Ссылки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>

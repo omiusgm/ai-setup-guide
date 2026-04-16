@@ -23,7 +23,7 @@
     
     
       
-        <title>Codex CLI — OpenAI-агент в терминале - App Store для Claude Code</title>
+        <title>Codex CLI — OpenAI-агент для программистов - App Store для Claude Code</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Codex CLI — OpenAI-агент в терминале
+              Codex CLI — OpenAI-агент для программистов
             
           </span>
         </div>
@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без терминала
+        Как попробовать без чёрного окна с командами
       
     </span>
   </a>
@@ -1091,41 +1091,45 @@
 
 
 <h1 id="codex-cli">⌨️ Codex CLI<a class="headerlink" href="#codex-cli" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">🤖 Для агентов (Claude Code / Cursor / Codex)</p>
+<p>Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. <a href="#как-попробовать-без-чёрного-окна-с-командами">альтернативы</a> ниже.</p>
+</div>
 <blockquote>
-<p>OpenAI выпустили свой агент с открытым кодом. Живёт в терминале, работает со всеми OpenAI-моделями.</p>
+<p>OpenAI выпустили свой агент с открытым кодом. Живёт в чёрном окне с командами (как в хакерских фильмах), работает со всеми OpenAI-моделями.</p>
 </blockquote>
 <div class="admonition warning">
-<p class="admonition-title">Этот инструмент требует терминала</p>
-<p>Codex — CLI-агент, без командной строки никак. Если ты не программист — посмотри <a href="../goose/">Goose</a> (десктоп-агент) или сразу заходи в <a href="https://chat.openai.com">ChatGPT</a> / <a href="https://claude.ai">Claude</a> в браузере.</p>
+<p class="admonition-title">Этот инструмент только для программистов</p>
+<p>Codex работает в чёрном окне с командами — без него никак. Если ты не кодишь — посмотри <a href="../goose/">Goose</a> (обычное десктоп-приложение с окошком) или сразу заходи в <a href="https://chat.openai.com">ChatGPT</a> / <a href="https://claude.ai">Claude</a> в браузере.</p>
 </div>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>То же что Claude Code, но от OpenAI и бесплатный (только за токены платишь). Запустил <code>codex</code> в терминале — появилась сессия, пишешь задачу — агент работает.</p>
+<p>То же что Claude Code, но от OpenAI и бесплатный (только за «слова» для ИИ платишь — токены, за них считают стоимость). Запустил <code>codex</code> в чёрном окне — появилась сессия, пишешь задачу — агент работает.</p>
 <p>Читает файлы, правит код, запускает команды. Может работать в двух режимах: интерактивный (подтверждает каждый шаг) и автономный (делает всё сам).</p>
 <p>76 тысяч звёзд — один из самых популярных агентов на гитхабе. OpenAI вложились: активно развивают, обновления каждую неделю.</p>
 <h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>✅ Уже работаешь с OpenAI (ChatGPT Plus, API ключ)</li>
-<li>✅ Любишь терминал — минимум UI, максимум скорости</li>
+<li>✅ Уже работаешь с OpenAI (ChatGPT Plus, ключ для подключения программы к их ИИ)</li>
+<li>✅ Любишь чёрное окно с командами — минимум интерфейса, максимум скорости</li>
 <li>✅ Нужен агент без привязки к редактору</li>
-<li>❌ НЕ подходит если боишься терминала</li>
-<li>❌ Если нет OpenAI API — подключить другие модели сложнее</li>
+<li>❌ НЕ подходит если чёрное окно с командами пугает</li>
+<li>❌ Если нет подключения к OpenAI — другие модели подключить сложнее</li>
 </ul>
-<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>OpenAI не делает десктопную версию Codex — это CLI и только. Но агентов от OpenAI можно потрогать по-другому:</p>
+<h2 id="_3">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>OpenAI не делает обычную десктопную версию Codex — только чёрное окно с командами. Но агентов от OpenAI можно потрогать по-другому:</p>
 <ul>
 <li><strong><a href="https://chat.openai.com">ChatGPT в браузере</a></strong> — там есть режим «Code Interpreter» и «Advanced Data Analysis», работает как легковесный агент</li>
-<li><strong><a href="https://cursor.com">Cursor</a></strong> — IDE, под капотом OpenAI-модели, ставится как обычный редактор</li>
-<li><strong><a href="../goose/">Goose</a></strong> — десктоп-агент, можно настроить на OpenAI API</li>
+<li><strong><a href="https://cursor.com">Cursor</a></strong> — редактор кода с ИИ, под капотом OpenAI-модели, ставится как обычная программа</li>
+<li><strong><a href="../goose/">Goose</a></strong> — десктоп-агент с обычным окошком, можно настроить на OpenAI</li>
 </ul>
 <details class="note">
-<summary>Для продвинутых (терминал)</summary>
+<summary>Для программистов (через чёрное окно с командами)</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@openai/codex
 </code></pre></div>
 <p>Нужен Node.js. Если нет — поставь с <a href="https://nodejs.org">nodejs.org</a>.</p>
 <p><strong>Первый запуск:</strong></p>
 <ol>
 <li>В любой папке проекта: <code>codex</code></li>
-<li>Попросит API ключ — возьми на platform.openai.com</li>
+<li>Попросит ключ для подключения — возьми на platform.openai.com</li>
 <li>Пиши задачу</li>
 <li>Агент предложит план — подтверждаешь или правишь</li>
 <li>Он выполняет по шагам</li>
@@ -1133,8 +1137,8 @@
 </details>
 <h2 id="_4">Нюансы<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Требует OpenAI API — в РФ без VPN не заработает</li>
-<li>С GPT-4 токены улетают быстро, держи лимиты на аккаунте</li>
+<li>Требует подключение к OpenAI — в РФ без VPN не заработает</li>
+<li>С GPT-4 «слова» для ИИ (токены) улетают быстро, держи лимиты на аккаунте</li>
 <li>У Anthropic есть свой аналог (Claude Code) — если ты в Anthropic, он удобнее</li>
 </ul>
 <h2 id="_5">Ссылки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
@@ -1144,7 +1148,7 @@
 <li>Альтернативы: <a href="https://claude.com/claude-code">Claude Code</a>, <a href="../goose/">Goose</a>, <a href="../cline/">Cline</a></li>
 </ul>
 <hr />
-<p><em>Подходит для: технарям · OpenAI-пользователям · терминальщикам</em></p>
+<p><em>Подходит для: технарям · OpenAI-пользователям · кто любит чёрное окно с командами</em></p>
 
 
 

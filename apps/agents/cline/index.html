@@ -1041,7 +1041,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без терминала
+        Как попробовать без чёрного окна с командами
       
     </span>
   </a>
@@ -1091,43 +1091,47 @@
 
 
 <h1 id="cline">🤖 Cline<a class="headerlink" href="#cline" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">🤖 Для агентов (Claude Code / Cursor / Codex)</p>
+<p>Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. <a href="#как-попробовать-без-чёрного-окна-с-командами">альтернативы</a> ниже.</p>
+</div>
 <blockquote>
 <p>Бесплатный агент, который живёт прямо в VS Code. Работает с любой моделью — Claude, GPT, Gemini, локальная через Ollama.</p>
 </blockquote>
 <h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>Открыл VS Code, нажал на иконку Cline в боковой панели — и у тебя агент, который читает твои файлы, пишет код, запускает команды. Всё в одном окне, без переключения.</p>
 <p>Отличие от Copilot: Copilot — подсказки. Cline — полноценный агент. Ставишь задачу «добавь авторизацию», он сам выбирает файлы, пишет код, запускает тесты. Можешь подсмотреть, что он делает, в любой момент.</p>
-<p>60 тысяч звёзд. Бесплатный, код открыт. Платишь только за токены модели (или вообще не платишь, если локалка).</p>
+<p>60 тысяч звёзд. Бесплатный, код открыт. Платишь только за «слова» для ИИ — токены (или вообще не платишь, если локалка).</p>
 <h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>✅ Уже сидишь в VS Code, не хочешь менять привычку</li>
-<li>✅ Хочешь агента без подписки — плати только за API</li>
+<li>✅ Хочешь агента без подписки — плати только за подключение</li>
 <li>✅ Работаешь с локальной моделью через Ollama</li>
 <li>❌ НЕ подходит если ты не в VS Code — в других редакторах не работает</li>
-<li>❌ Для новичков в коде — сначала лучше что-то с десктопом (Goose)</li>
+<li>❌ Для новичков в коде — сначала лучше что-то с обычным окошком (Goose)</li>
 </ul>
-<h2 id="_3">Как попробовать без терминала<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Cline это расширение для VS Code. Всё ставится мышкой:</p>
 <ol>
-<li>Скачай <strong><a href="https://code.visualstudio.com">VS Code</a></strong> — обычный редактор, ставится как любая программа</li>
+<li>Скачай <strong><a href="https://code.visualstudio.com">VS Code</a></strong> — обычный редактор кода, ставится как любая программа</li>
 <li>Открой редактор → слева иконка «Extensions» (или Cmd+Shift+X)</li>
 <li>Введи в поиск <strong>«Cline»</strong> → Install</li>
 <li>В боковой панели появится иконка робота → нажми</li>
-<li>Выбери провайдера (Anthropic, OpenAI, Google, OpenRouter, Ollama), вставь API ключ</li>
+<li>Выбери провайдера (Anthropic, OpenAI, Google, OpenRouter, Ollama), вставь ключ для подключения</li>
 <li>Пиши задачу в поле — агент начнёт</li>
 </ol>
-<p>Никакой командной строки, всё через окна и кнопки.</p>
+<p>Никакого чёрного окна с командами, всё через окна и кнопки.</p>
 <details class="note">
-<summary>Для продвинутых (установка через CLI)</summary>
+<summary>Для программистов (установка через команду)</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>code<span class="w"> </span>--install-extension<span class="w"> </span>saoudrizwan.claude-dev
 </code></pre></div>
-<p>Удобно если настраиваешь dev-environment скриптом.</p>
+<p>Удобно если настраиваешь рабочее окружение скриптом.</p>
 </details>
 <h2 id="_4">Нюансы<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Cline покажет план перед выполнением — можешь поправить до того, как он начнёт</li>
 <li>Запрос подтверждений замедляет, но первое время лучше не отключать</li>
-<li>Токены улетают быстро — большие задачи дробь на части</li>
+<li>«Слова» для ИИ (токены) улетают быстро — большие задачи дробь на части</li>
 </ul>
 <h2 id="_5">Ссылки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
