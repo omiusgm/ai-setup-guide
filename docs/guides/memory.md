@@ -30,7 +30,7 @@ Claude сам запоминает паттерны между сессиями.
 npx skills add plastic-labs/honcho
 ```
 
-[honcho.dev](http://honcho.dev) -- внешняя память с reasoning.
+[honcho.dev](http://honcho.dev) -- внешняя память — ИИ запоминает между чатами и думает о запомненном.
 
 ### Кастомные GPTs / Projects
 
