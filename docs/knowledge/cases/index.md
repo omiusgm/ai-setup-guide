@@ -16,15 +16,19 @@ hide:
 - :material-cart: **[SMM: 50 карточек WB за 35 минут](smm-wb-cards.md)** — связка ChatGPT + Midjourney + Canva, экономия 100 часов
 - :material-chart-line: **[Маркетплейс: мониторинг цен](marketplace-prices.md)** — Browser Use + DeepSeek следит за конкурентами на WB, +8% маржи
 - :material-file-document-edit: **[500 описаний Ozon за вечер](product-descriptions.md)** — ChatGPT вместо копирайтера, экономия 50 000 ₽
+- :material-code-braces: **[dev_family: 46K строк CRM за 1.5 месяца](dev-family-46k.md)** — 2 разработчика + Claude Code, вместо 4-5 месяцев командой
+- :material-rss: **[The Register: RSS-продукт за $40 и 7 недель](register-7-weeks.md)** — журналист собрал коммерческий продукт с нуля, 337 коммитов
+- :material-flash: **[Delivery Hero: 200 часов/мес через n8n](delivery-hero-n8n.md)** — один workflow, 5 часов разработки, экономия по всей компании
+- :material-whatsapp: **[Ultima.school: x2 лидов через WhatsApp + amoCRM](ultima-whatsapp-amocrm.md)** — ИИ-бот квалифицирует лидов, менеджер получает тёплого
+- :material-hospital-box: **[Eugene Vestel: 21 репо за $2800 — честный антикейс](vestel-21-repos.md)** — что бывает, когда вайб-кодишь без продуктового мышления
 
 </div>
 
 ## Скоро
 
-- Таргетолог: аналитика рекламных кампаний через ИИ
-- Бухгалтер: автоматизация первички
-- Копирайтер: контент-машина на 20 постов/день
-- Программист: ИИ пишет 80% кода за тебя
+- Таргетолог: как ИИ собирает аналитику по рекламным кампаниям (Meta, Yandex)
+- Бухгалтер: автоматизация первички через связку ИИ + 1С
+- Студия разработки: как перешли на Claude Code и не потеряли качество
 
 ## Что добавить?
 
