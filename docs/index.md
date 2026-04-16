@@ -8,56 +8,178 @@ hide:
 
 <span class="hero-hedgehog">🦔</span>
 
-# ИИ может работать за тебя.<br>Если знать как попросить
+# App Store для Claude Code
 
-<p class="hero-sub">Бесплатный гайд: промпты, инструменты, автоматизация — без воды и без кода</p>
+<p class="hero-sub">Лучшие инструменты от комьюнити — в одном месте. Бесплатно, из РФ, без воды.</p>
 <p class="hero-meta">Апрель 2026 &middot; Обновляется каждую неделю</p>
 
-[Начать с нуля :material-arrow-right:](getting-started.md){ .md-button .md-button--primary }
-[Я уже в теме :material-arrow-right:](guides/memory.md){ .md-button }
+[Начать с нуля :material-arrow-right:](knowledge/getting-started.md){ .md-button .md-button--primary }
+[Я уже в теме :material-arrow-right:](knowledge/rules.md){ .md-button }
 
 </div>
 
 <div class="landing-section">
 
-<h2 style="text-align:center; margin-bottom:1rem;">Каталог инструментов</h2>
-<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">Выбери тег — каталог отфильтруется</p>
+<h2 style="text-align:center; margin-bottom:0.5rem;">🏆 Топ этой недели</h2>
+<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">Что реально скачивают вайбкодеры</p>
 
-<div class="tag-filters">
-<button class="tag-filter active" data-tag="all" data-tooltip="Показать всё">🦔 все</button>
-<button class="tag-filter" data-tag="новичкам" data-tooltip="Для тех кто в браузере с ChatGPT">🟢 новичкам</button>
-<button class="tag-filter" data-tag="бизнесу" data-tooltip="CRM, отчёты, маркетплейсы">🟠 бизнесу</button>
-<button class="tag-filter" data-tag="технарям" data-tooltip="Агенты, MCP, терминал">🔵 технарям</button>
-<button class="tag-filter" data-tag="промпт" data-tooltip="Готовый промпт — скопируй и вставь">✏️ промпты</button>
-<button class="tag-filter" data-tag="автоматизация" data-tooltip="Работает само, без тебя">⚡ автоматизация</button>
-<button class="tag-filter" data-tag="бесплатно" data-tooltip="$0, без подписок">🆓 бесплатно</button>
-<button class="tag-filter" data-tag="из-рф" data-tooltip="Работает из России без VPN">🇷🇺 из РФ</button>
+<div class="top-grid">
+<a class="top-card" href="apps/automation/n8n/">
+<div class="top-emoji">⚙️</div>
+<div class="top-stars">184K⭐</div>
+<div class="top-name">n8n</div>
+<div class="top-desc">Автоматизация без кода</div>
+</a>
+<a class="top-card" href="apps/infra/ollama/">
+<div class="top-emoji">🖥️</div>
+<div class="top-stars">169K⭐</div>
+<div class="top-name">Ollama</div>
+<div class="top-desc">ИИ локально, без VPN</div>
+</a>
+<a class="top-card" href="apps/bundles/everything-claude-code/">
+<div class="top-emoji">🔧</div>
+<div class="top-stars">158K⭐</div>
+<div class="top-name">Everything CC</div>
+<div class="top-desc">181 скилл одним махом</div>
+</a>
+<a class="top-card" href="apps/integrations/firecrawl/">
+<div class="top-emoji">🔥</div>
+<div class="top-stars">110K⭐</div>
+<div class="top-name">Firecrawl</div>
+<div class="top-desc">Скрапинг для ИИ</div>
+</a>
+<a class="top-card" href="apps/agents/hermes-agent/">
+<div class="top-emoji">🎓</div>
+<div class="top-stars">93K⭐</div>
+<div class="top-name">Hermes Agent</div>
+<div class="top-desc">Учится на опыте</div>
+</a>
 </div>
 
-<div class="catalog-grid" id="catalog">
-<a class="catalog-card" href="tools/caveman/" data-tags="промпт новичкам бесплатно из-рф"><div class="card-tags"><span class="card-tag">промпт</span><span class="card-tag">новичкам</span><span class="card-tag">бесплатно</span></div><h3>✂️ Caveman — ИИ говорит по делу</h3><p>Одна строка — и 70% воды из ответов исчезает. 27K⭐, работает в любом чате.</p></a>
-<a class="catalog-card" href="tools/budget-guide/" data-tags="новичкам бизнесу бесплатно"><div class="card-tags"><span class="card-tag">новичкам</span><span class="card-tag">бизнесу</span></div><h3>💰 Бюджет: от 0 до $200</h3><p>DeepSeek бесплатно, Claude $20, полный стек $200. Как выбрать и не переплатить.</p></a>
-<a class="catalog-card" href="tools/10-rules/" data-tags="новичкам промпт"><div class="card-tags"><span class="card-tag">новичкам</span><span class="card-tag">промпт</span></div><h3>📖 10 правил вайбкодинга</h3><p>Конкретные ошибки и как их избежать. С него обычно начинают.</p></a>
-<a class="catalog-card" href="tools/deepseek/" data-tags="новичкам бесплатно из-рф"><div class="card-tags"><span class="card-tag">бесплатно</span><span class="card-tag">из-рф</span></div><h3>🤖 DeepSeek — бесплатная альтернатива</h3><p>Не хуже ChatGPT, работает из РФ без VPN. V4 скоро на чипах Huawei.</p></a>
-<a class="catalog-card" href="tools/amocrm-agent/" data-tags="бизнесу автоматизация"><div class="card-tags"><span class="card-tag">бизнесу</span><span class="card-tag">автоматизация</span></div><h3>🏪 AmoCRM + ИИ-агент</h3><p>Отчёты, мониторинг сделок, забытые клиенты — за минуты вместо часов.</p></a>
-<a class="catalog-card" href="tools/n8n/" data-tags="автоматизация бизнесу бесплатно"><div class="card-tags"><span class="card-tag">автоматизация</span><span class="card-tag">бесплатно</span></div><h3>⚙️ n8n — автоматизация без кода</h3><p>Собираешь цепочку мышкой: бот ответил — таблица обновилась — отчёт улетел.</p></a>
-<a class="catalog-card" href="tools/loop-remote-tasks/" data-tags="автоматизация технарям"><div class="card-tags"><span class="card-tag">автоматизация</span><span class="card-tag">технарям</span></div><h3>😴 /loop — ИИ работает пока ты спишь</h3><p>Запустил задачу, ушёл. Утром — готовый результат. + Remote Tasks в облаке.</p></a>
-<a class="catalog-card" href="tools/mempalace/" data-tags="технарям"><div class="card-tags"><span class="card-tag">технарям</span></div><h3>🧠 MemPalace — память для ИИ</h3><p>ИИ наконец запоминает кто ты. Проект Миллы Йовович, 45K⭐ (но есть нюансы).</p></a>
-<a class="catalog-card" href="tools/goose/" data-tags="технарям бесплатно из-рф"><div class="card-tags"><span class="card-tag">бесплатно</span><span class="card-tag">из-рф</span></div><h3>🪿 Goose — бесплатный агент</h3><p>Десктоп-приложение + CLI. Работает с Ollama, без VPN из РФ.</p></a>
-<a class="catalog-card" href="tools/browser-use/" data-tags="автоматизация бизнесу технарям"><div class="card-tags"><span class="card-tag">автоматизация</span><span class="card-tag">бизнесу</span></div><h3>🖱️ Browser Use — ИИ кликает за тебя</h3><p>Автоматизация браузера: формы, парсинг, маркетплейсы. 87K⭐.</p></a>
-<a class="catalog-card" href="tools/humanizer/" data-tags="промпт новичкам"><div class="card-tags"><span class="card-tag">промпт</span><span class="card-tag">новичкам</span></div><h3>✍️ Humanizer — убрать следы ИИ</h3><p>Скилл который делает ИИ-текст похожим на человеческий. 14K⭐.</p></a>
-<a class="catalog-card" href="tools/ollama/" data-tags="технарям бесплатно из-рф"><div class="card-tags"><span class="card-tag">бесплатно</span><span class="card-tag">из-рф</span></div><h3>🖥️ Ollama — ИИ на своём компе</h3><p>Запусти DeepSeek, Llama, Qwen локально. Бесплатно, без VPN. 169K⭐.</p></a>
-<a class="catalog-card" href="tools/hermes-agent/" data-tags="технарям бесплатно"><div class="card-tags"><span class="card-tag">технарям</span><span class="card-tag">бесплатно</span></div><h3>🎓 Hermes Agent — ИИ который учится</h3><p>Агент запоминает что работает и становится лучше. 84K⭐, любая модель.</p></a>
-<a class="catalog-card" href="tools/everything-claude-code/" data-tags="технарям"><div class="card-tags"><span class="card-tag">технарям</span></div><h3>🔧 Everything Claude Code — 181 скилл</h3><p>47 агентов, 181 скилл, 79 команд. Менеджер плагинов для Claude Code. 157K⭐.</p></a>
-<a class="catalog-card" href="tools/oh-my-claudecode/" data-tags="технарям"><div class="card-tags"><span class="card-tag">технарям</span></div><h3>⚡ Oh My ClaudeCode — 32 агента</h3><p>Умная маршрутизация между Haiku/Sonnet/Opus. Экономит токены. 28K⭐.</p></a>
 </div>
-<p class="catalog-empty" id="catalog-empty" style="display:none; text-align:center; color:var(--md-default-fg-color--light); padding:2rem;">🦔 Ничего не нашлось. Попробуй другой фильтр.</p>
+
+<div class="landing-section">
+
+<h2 style="text-align:center; margin-bottom:0.5rem;">📂 Категории</h2>
+<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">Выбери что тебе нужно</p>
+
+<div class="category-grid">
+<a class="category-tile" href="apps/agents/">
+<div class="cat-emoji">🤖</div>
+<div class="cat-name">Агенты</div>
+<div class="cat-count">6 инструментов</div>
+<div class="cat-desc">Автономные ИИ-помощники</div>
+</a>
+<a class="category-tile" href="apps/memory/">
+<div class="cat-emoji">🧠</div>
+<div class="cat-name">Память</div>
+<div class="cat-count">3 инструмента</div>
+<div class="cat-desc">Чтобы ИИ не забывал</div>
+</a>
+<a class="category-tile" href="apps/tokens/">
+<div class="cat-emoji">✂️</div>
+<div class="cat-name">Экономия токенов</div>
+<div class="cat-count">2 инструмента</div>
+<div class="cat-desc">Меньше воды, меньше цены</div>
+</a>
+<a class="category-tile" href="apps/automation/">
+<div class="cat-emoji">⚡</div>
+<div class="cat-name">Автоматизация</div>
+<div class="cat-count">3 инструмента</div>
+<div class="cat-desc">Работает само, ты спишь</div>
+</a>
+<a class="category-tile" href="apps/integrations/">
+<div class="cat-emoji">🔌</div>
+<div class="cat-name">Интеграции (MCP)</div>
+<div class="cat-count">6 инструментов</div>
+<div class="cat-desc">Подключения к сервисам</div>
+</a>
+<a class="category-tile" href="apps/content/">
+<div class="cat-emoji">🎨</div>
+<div class="cat-name">Контент</div>
+<div class="cat-count">1 инструмент</div>
+<div class="cat-desc">Генерация видео и текста</div>
+</a>
+<a class="category-tile" href="apps/infra/">
+<div class="cat-emoji">🛠️</div>
+<div class="cat-name">Инфраструктура</div>
+<div class="cat-count">2 инструмента</div>
+<div class="cat-desc">Основа — модели и сервисы</div>
+</a>
+<a class="category-tile" href="apps/bundles/">
+<div class="cat-emoji">📦</div>
+<div class="cat-name">Наборы</div>
+<div class="cat-count">3 набора</div>
+<div class="cat-desc">Коллекции скиллов и агентов</div>
+</a>
+</div>
+
+</div>
+
+<div class="landing-section">
+
+<h2 style="text-align:center; margin-bottom:0.5rem;">🎯 Для кого</h2>
+<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">Подберём под уровень</p>
+
+<div class="audience-grid">
+<a class="audience-tile audience-newbie" href="knowledge/no-code-start/">
+<div class="aud-emoji">🟢</div>
+<div class="aud-name">Новичкам</div>
+<div class="aud-desc">Ты в браузере с ChatGPT. Начни здесь — промпты, правила, бюджет.</div>
+</a>
+<a class="audience-tile audience-biz" href="knowledge/cases/">
+<div class="aud-emoji">🟠</div>
+<div class="aud-name">Бизнесу</div>
+<div class="aud-desc">CRM, маркетплейсы, автоматизация. Реальные кейсы с цифрами.</div>
+</a>
+<a class="audience-tile audience-techy" href="for-agents/">
+<div class="aud-emoji">🔵</div>
+<div class="aud-name">Технарям</div>
+<div class="aud-desc">MCP, Claude Code, мультиагенты. Конфиги и лайфхаки.</div>
+</a>
+</div>
+
+</div>
+
+<div class="landing-section">
+
+<h2 style="text-align:center; margin-bottom:0.5rem;">📚 Знания</h2>
+<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">Основы и контекст</p>
+
+<div class="knowledge-grid">
+<a class="knowledge-card" href="knowledge/getting-started/">🚀 Быстрый старт</a>
+<a class="knowledge-card" href="knowledge/rules/">📖 10 правил</a>
+<a class="knowledge-card" href="knowledge/myths/">🎭 Мифы про ИИ</a>
+<a class="knowledge-card" href="knowledge/budget/">💰 Бюджет: 0 до $200</a>
+<a class="knowledge-card" href="knowledge/memory/">🧠 Память и контекст</a>
+<a class="knowledge-card" href="knowledge/russia/">🇷🇺 Россия: VPN, оплата</a>
+<a class="knowledge-card" href="knowledge/levels/">📊 4 уровня ИИ</a>
+<a class="knowledge-card" href="knowledge/no-code-start/">🌱 Без кода</a>
+</div>
+
+</div>
+
+<div class="landing-section">
+
+<h2 style="text-align:center; margin-bottom:0.5rem;">🤖 Скинь своему ИИ</h2>
+<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1rem;">Чтобы он прочитал гайд и начал помогать по делу</p>
+
+<div class="prompt-block" markdown>
+
+```
+Прочитай и помоги мне: https://raw.githubusercontent.com/omiusgm/ai-setup-guide/main/docs/for-chatbots.md
+```
+
+</div>
+
+??? tip "Для агента (Claude Code / Cursor)"
+    `https://raw.githubusercontent.com/omiusgm/ai-setup-guide/main/docs/for-agents.md`
 
 </div>
 
 <div class="landing-footer" markdown>
 
-[:fontawesome-brands-telegram: Telegram «Агент Ёж»](https://t.me/agentezh) — новости и обновления гайда
+[:fontawesome-brands-telegram: Telegram «Агент Ёж»](https://t.me/agentezh) — новости и обновления
 
 *Контент сгенерирован ИИ при участии армии ежей*
 

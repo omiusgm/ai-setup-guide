@@ -1,5 +1,5 @@
-site_name: "Как заставить ИИ работать за тебя"
-site_description: "Бесплатный гайд по ИИ — от новичка до продвинутого. Апрель 2026."
+site_name: "App Store для Claude Code"
+site_description: "Лучшие инструменты от комьюнити — промпты, агенты, MCP-подключения. Бесплатно, из РФ."
 site_url: https://omiusgm.github.io/ai-setup-guide/
 repo_url: https://github.com/omiusgm/ai-setup-guide
 repo_name: omiusgm/ai-setup-guide
@@ -24,8 +24,8 @@ theme:
         name: Светлая тема
   features:
     - navigation.sections
-    - navigation.expand
     - navigation.top
+    - navigation.tracking
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -39,8 +39,6 @@ theme:
 plugins:
   - search:
       lang: ru
-  - tags:
-      tags_file: tags.md
 
 markdown_extensions:
   - admonition
@@ -64,47 +62,29 @@ markdown_extensions:
 extra_css:
   - stylesheets/landing.css
 
-extra_javascript:
-  - javascripts/catalog-filter.js
-
 nav:
   - "": index.md
-  - "Новичкам":
-    - "Быстрый старт": getting-started.md
-    - "4 уровня ИИ": guides/levels.md
-    - "10 правил": guides/rules.md
-    - "Мифы про ИИ": guides/myths.md
-    - "Бюджет от 0 до $200": guides/budget.md
-    - "Россия: VPN и оплата": guides/russia.md
-  - "Скиллы и репозитории":
-    - "Caveman — краткость": skills/caveman.md
-    - "GSD — оркестрация": skills/gsd.md
-    - "Humanizer — живой текст": skills/humanizer.md
-    - "Honcho — память": skills/honcho.md
-    - "Remotion — видео": skills/remotion.md
-    - "Поиск": skills/search.md
-  - "MCP-подключения":
-    - "Что такое MCP": mcp/overview.md
-    - "Firecrawl — скрапинг": mcp/firecrawl.md
-    - "Composio — 1000+ интеграций": mcp/composio.md
-    - "Docker MCP — 300+ плагинов": mcp/docker-mcp.md
-    - "n8n-MCP": mcp/n8n-mcp.md
-    - "Агент-в-агенте": mcp/claude-code-mcp.md
-  - "Мультиагенты":
-    - "3 уровня": agents/overview.md
-    - "Managed Agents": agents/managed-agents.md
-    - "Agent Teams": agents/agent-teams.md
-    - "Альтернативы": agents/alternatives.md
-    - "AutoResearch": agents/autoresearch.md
-  - "Автоматизация":
-    - "n8n без кода": automation/n8n.md
-    - "/loop и Remote Tasks": automation/loop.md
-    - "AmoCRM + ИИ": crm/amocrm.md
-  - "Практика":
-    - "3 режима Claude": guides/modes.md
-    - "Память и контекст": guides/memory.md
-    - "Экономия токенов": skills/caveman.md
-  - "Для ИИ":
+  - "📂 Приложения":
+    - "🤖 Агенты": apps/agents/index.md
+    - "🧠 Память": apps/memory/index.md
+    - "✂️ Экономия токенов": apps/tokens/index.md
+    - "⚡ Автоматизация": apps/automation/index.md
+    - "🔌 Интеграции (MCP)": apps/integrations/index.md
+    - "🎨 Контент": apps/content/index.md
+    - "🛠️ Инфраструктура": apps/infra/index.md
+    - "📦 Наборы": apps/bundles/index.md
+  - "📚 Знания":
+    - "Быстрый старт": knowledge/getting-started.md
+    - "10 правил": knowledge/rules.md
+    - "Мифы про ИИ": knowledge/myths.md
+    - "Бюджет: 0 → $200": knowledge/budget.md
+    - "Память и контекст": knowledge/memory.md
+    - "Россия: VPN, оплата": knowledge/russia.md
+    - "4 уровня ИИ": knowledge/levels.md
+    - "3 режима Claude": knowledge/modes.md
+    - "Без кода — начни здесь": knowledge/no-code-start.md
+    - "Реальные кейсы": knowledge/cases/index.md
+  - "🤖 Для ИИ":
     - "Для чатботов": for-chatbots.md
     - "Для агентов": for-agents.md
 
