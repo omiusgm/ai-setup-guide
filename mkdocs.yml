@@ -69,36 +69,41 @@ extra_javascript:
 
 nav:
   - "": index.md
-  - "Начать":
+  - "Новичкам":
     - "Быстрый старт": getting-started.md
+    - "4 уровня ИИ": guides/levels.md
     - "10 правил": guides/rules.md
     - "Мифы про ИИ": guides/myths.md
-  - "Практика":
     - "Бюджет от 0 до $200": guides/budget.md
-    - "Память и контекст": guides/memory.md
-    - "Экономия токенов (Caveman)": skills/caveman.md
     - "Россия: VPN и оплата": guides/russia.md
+  - "Скиллы и репозитории":
+    - "Caveman — краткость": skills/caveman.md
+    - "GSD — оркестрация": skills/gsd.md
+    - "Humanizer — живой текст": skills/humanizer.md
+    - "Honcho — память": skills/honcho.md
+    - "Remotion — видео": skills/remotion.md
+    - "Поиск": skills/search.md
+  - "MCP-подключения":
+    - "Что такое MCP": mcp/overview.md
+    - "Firecrawl — скрапинг": mcp/firecrawl.md
+    - "Composio — 1000+ интеграций": mcp/composio.md
+    - "Docker MCP — 300+ плагинов": mcp/docker-mcp.md
+    - "n8n-MCP": mcp/n8n-mcp.md
+    - "Агент-в-агенте": mcp/claude-code-mcp.md
+  - "Мультиагенты":
+    - "3 уровня": agents/overview.md
+    - "Managed Agents": agents/managed-agents.md
+    - "Agent Teams": agents/agent-teams.md
+    - "Альтернативы": agents/alternatives.md
+    - "AutoResearch": agents/autoresearch.md
   - "Автоматизация":
+    - "n8n без кода": automation/n8n.md
+    - "/loop и Remote Tasks": automation/loop.md
     - "AmoCRM + ИИ": crm/amocrm.md
-    - "n8n: автоматизация без кода": automation/n8n.md
-    - "Подключение поиска": skills/search.md
-  - "Каталог":
-    - "Все инструменты": tags.md
-    - tools/caveman.md
-    - tools/deepseek.md
-    - tools/ollama.md
-    - tools/browser-use.md
-    - tools/n8n.md
-    - tools/amocrm-agent.md
-    - tools/mempalace.md
-    - tools/humanizer.md
-    - tools/everything-claude-code.md
-    - tools/goose.md
-    - tools/hermes-agent.md
-    - tools/loop-remote-tasks.md
-    - tools/oh-my-claudecode.md
-    - tools/10-rules.md
-    - tools/budget-guide.md
+  - "Практика":
+    - "3 режима Claude": guides/modes.md
+    - "Память и контекст": guides/memory.md
+    - "Экономия токенов": skills/caveman.md
   - "Для ИИ":
     - "Для чатботов": for-chatbots.md
     - "Для агентов": for-agents.md
