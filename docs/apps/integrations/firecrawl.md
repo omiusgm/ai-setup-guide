@@ -33,42 +33,48 @@ updated: 2026-04-16
 - ❌ НЕ подходит для 1-2 разовых задач — можно просто скопировать
 - ❌ Если сайт защищён капчей — Firecrawl её не решит
 
-## Установка
+## Как попробовать без терминала
 
-### Как облачный API (проще)
+У Firecrawl есть веб-интерфейс — можно скрейпить без единой команды:
 
-```bash
-pip install firecrawl-py
-```
+1. Заходи на **[firecrawl.dev](https://firecrawl.dev)** → регистрация по email
+2. В дашборде есть «Playground» — вставляешь URL, жмёшь «Scrape», получаешь markdown
+3. Бесплатный тир — 500 страниц/мес, хватает пощупать
+4. Результат копируешь и вставляешь в ChatGPT/Claude: «проанализируй этот текст»
 
-```python
-from firecrawl import FirecrawlApp
+**Для связки с ИИ в браузере:**
+- В **Claude Projects** подключается через Custom Connector (бета)
+- В **ChatGPT** — через кастомные GPTs или Actions
 
-app = FirecrawlApp(api_key="твой-ключ")
-result = app.scrape_url("https://example.com")
-print(result["markdown"])
-```
+??? note "Для продвинутых (Python / MCP / self-host)"
 
-### Как MCP для Claude Code
+    **Как облачный API:**
 
-```bash
-claude mcp add firecrawl -- npx -y @mendable/firecrawl-mcp
-```
+    ```bash
+    pip install firecrawl-py
+    ```
 
-### Self-host
+    ```python
+    from firecrawl import FirecrawlApp
 
-```bash
-git clone https://github.com/mendableai/firecrawl
-cd firecrawl
-docker-compose up
-```
+    app = FirecrawlApp(api_key="твой-ключ")
+    result = app.scrape_url("https://example.com")
+    print(result["markdown"])
+    ```
 
-## Первый запуск
+    **Как MCP для Claude Code:**
 
-1. Получил API ключ на [firecrawl.dev](https://firecrawl.dev)
-2. Подключил к Claude Code через MCP
-3. В агенте: «собери документацию с docs.anthropic.com, положи в /docs/anthropic»
-4. Firecrawl обходит сайт, превращает в markdown
+    ```bash
+    claude mcp add firecrawl -- npx -y @mendable/firecrawl-mcp
+    ```
+
+    **Self-host (для своих серверов):**
+
+    ```bash
+    git clone https://github.com/mendableai/firecrawl
+    cd firecrawl
+    docker-compose up
+    ```
 
 ## Нюансы
 

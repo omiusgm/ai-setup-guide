@@ -25,19 +25,28 @@ Docker Desktop добавил раздел «MCP Toolkit». Открываешь
 - ❌ НЕ подходит если не хочешь ставить Docker
 - ❌ На слабом компе — Docker ест ресурсы
 
-## Установка
+## Как попробовать без терминала
 
-1. Скачай Docker Desktop с [docker.com](https://www.docker.com/products/docker-desktop)
-2. Установи (обычный установщик)
-3. Открой — слева в панели появится «MCP Toolkit»
+Docker MCP Toolkit — как раз тот редкий случай, когда всё ставится мышкой. Терминал не нужен:
 
-## Первый запуск
+1. Скачай **[Docker Desktop](https://www.docker.com/products/docker-desktop)** — обычный установщик (Mac, Windows, Linux)
+2. Запусти — слева в панели появится «MCP Toolkit»
+3. Открой вкладку → каталог плагинов (GitHub, Gmail, Postgres, AWS, Jira...)
+4. Жмёшь «Install» на нужном — плагин поднимается сам в контейнере
+5. Теперь он доступен в Claude Code и других MCP-клиентах
 
-1. Открыл MCP Toolkit вкладку
-2. Видишь каталог плагинов: GitHub, Gmail, Postgres, AWS, Jira…
-3. Нажал Install на нужный
-4. Плагин запустился в контейнере
-5. Теперь он доступен в Claude Code / другим MCP-клиентам
+Это самый простой способ пощупать MCP без возни с конфигами и установками.
+
+??? note "Для продвинутых (CLI)"
+
+    Docker Desktop сам по себе не требует терминала. Но если хочешь управлять MCP-контейнерами из командной строки — у Docker есть свой CLI:
+
+    ```bash
+    docker mcp list
+    docker mcp install <plugin-name>
+    ```
+
+    Удобно если настраиваешь окружение скриптом или в CI.
 
 ## Примеры
 

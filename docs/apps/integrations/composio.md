@@ -29,25 +29,38 @@ updated: 2026-04-16
 - ❌ НЕ подходит если нужен один-два сервиса — проще взять отдельные MCP
 - ❌ Для простых промптов — избыточно
 
-## Установка
+## Как попробовать без терминала
 
-```bash
-pip install composio-core
-```
+У Composio есть веб-интерфейс для настройки — можно подключить сервисы мышкой:
 
-Для Claude Code:
+1. Зарегистрируйся на **[composio.dev](https://composio.dev)** — обычный сайт, email + пароль
+2. В дашборде → «Apps» → жмёшь «Connect» на Gmail, Slack, GitHub, Notion и т.д. Каждый через OAuth (одна кнопка)
+3. Получаешь готовый API ключ для ИИ
+4. Дальше — либо в ChatGPT/Claude через MCP-коннектор (если платный план), либо через n8n Cloud
 
-```bash
-composio add claude
-```
+Альтернативы для простых задач:
+- **[Zapier](https://zapier.com)** / **[Make.com](https://make.com)** — готовые no-code интеграции, те же сервисы
+- **[n8n Cloud](../automation/n8n.md)** — визуальный конструктор
 
-## Первый запуск
+??? note "Для продвинутых (терминал)"
 
-1. Создал аккаунт на [composio.dev](https://composio.dev)
-2. Получил API ключ
-3. `composio login` — привязал аккаунт
-4. Подключил сервисы через OAuth: `composio add gmail`, `composio add slack`
-5. В агенте — сразу доступны 1000+ инструментов
+    ```bash
+    pip install composio-core
+    ```
+
+    Для Claude Code:
+
+    ```bash
+    composio add claude
+    ```
+
+    **Первый запуск:**
+
+    1. Создал аккаунт на [composio.dev](https://composio.dev)
+    2. Получил API ключ
+    3. `composio login` — привязал аккаунт
+    4. Подключил сервисы через OAuth: `composio add gmail`, `composio add slack`
+    5. В агенте — сразу доступны 1000+ инструментов
 
 ## Примеры задач
 
