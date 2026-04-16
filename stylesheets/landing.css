@@ -202,6 +202,105 @@
   animation: hedgehog-peek 4s ease-in-out infinite;
 }
 
+/* === Каталог: фильтры-теги === */
+.tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1.5rem auto;
+  max-width: 700px;
+}
+
+.tag-filter {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.tag-filter:hover {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(103, 58, 183, 0.25);
+}
+
+/* Тултипы на фильтрах */
+.tag-filter[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--md-default-fg-color);
+  color: var(--md-default-bg-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.3rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tag-filter[data-tooltip]:hover::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--md-default-fg-color);
+  z-index: 10;
+}
+
+/* Карточки каталога */
+.catalog-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.catalog-card:hover {
+  border-color: var(--md-primary-fg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(103, 58, 183, 0.12);
+}
+
+.catalog-card .card-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 1rem;
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  margin-right: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.catalog-card h3 {
+  margin: 0.3rem 0;
+  font-size: 1.1rem;
+}
+
+.catalog-card p {
+  margin: 0.3rem 0 0;
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color--light);
+}
+
 @keyframes hedgehog-peek {
   0%, 70%, 100% { transform: translateY(0) rotate(0deg); }
   75% { transform: translateY(-5px) rotate(-5deg); }
