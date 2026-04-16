@@ -177,7 +177,6 @@ npx skills add plastic-labs/honcho
 
 ## Картинки
 
-- **Stock Images MCP** (Unsplash+Pexels+Pixabay, бесплатно) | `uvx stock-images-mcp`
 - **Brave Image Search** — включён в Brave MCP
 
 ## Браузерная автоматизация
