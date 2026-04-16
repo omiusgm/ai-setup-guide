@@ -49,6 +49,8 @@ Just answer. One sentence when possible.
 
 ??? note "Для продвинутых (скилл для Claude Code)"
 
+    > ⚠️ Это опциональная установка как скилл для Claude Code. **Если ты просто пользуешься ChatGPT/DeepSeek в браузере — промпт выше уже всё что нужно.** Не трогай npx если не знаешь что это.
+
     ```bash
     npx skills add JuliusBrussee/caveman
     ```
