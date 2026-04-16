@@ -491,6 +491,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как это выглядит для маркетплейса
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -502,7 +513,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Бесплатные фишки
@@ -513,7 +524,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Если фишек мало
@@ -524,7 +535,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Что читать дальше
@@ -1117,6 +1128,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как это выглядит для маркетплейса
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1128,7 +1150,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Бесплатные фишки
@@ -1139,7 +1161,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Если фишек мало
@@ -1150,7 +1172,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Что читать дальше
@@ -1185,13 +1207,17 @@
 <h1 id="_1">⚡ Автоматизация<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>Одноразовый запуск — это не автоматизация. Нажал <code>/run</code> один раз, получил результат, закрыл ноут — и всё опять надо делать руками завтра.</p>
 <p>Настоящая автоматизация — когда оно само. Каждое утро в 9:00 собирает дайджест. Каждое новое письмо — проверяет на срочность. Каждую ночь — бэкап. Ты один раз настроил и забыл.</p>
+<h2 id="_2">Как это выглядит для маркетплейса<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><a href="../../knowledge/cases/rop-amocrm/">РОП подключил ИИ к AmoCRM за вечер</a> → отчёты за минуты вместо 4 часов.</p>
+<p><a href="../../knowledge/cases/marketplace-prices/">Мониторинг цен WB через Browser Use</a> → +8% маржи за месяц.</p>
+<p>Оба кейса — без программиста, с промптами и готовыми инструментами.</p>
 <h2 id="run">Почему <code>/run</code> недостаточно<a class="headerlink" href="#run" title="Permanent link">&para;</a></h2>
 <p>Команда запуска — это старт одного шага. Автоматизация требует трёх вещей:</p>
 <p><strong>Расписание или триггер.</strong> Что-то должно дёрнуть задачу. Либо время (cron, каждый день в 9:00), либо событие (пришло письмо, появился коммит).</p>
 <p><strong>Цикл.</strong> Задача не одноразовая. Она повторяется день за днём, иногда с правками. Значит нужно место где она живёт.</p>
 <p><strong>Обработка ошибок.</strong> Пропустил день? Упал API? Надо логировать, ретраить, алертить. Иначе автоматизация тихо ломается и ты узнаёшь через месяц.</p>
 <p>Просто запустить скрипт один раз — это не автоматизация. Это напоминание.</p>
-<h2 id="_2">Бесплатные фишки<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Бесплатные фишки<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><strong>cron + shell-скрипт</strong></p>
 <p>Если задача простая и ты на Linux/Mac — <code>cron</code> уже есть в системе. Пишешь скрипт, добавляешь в <code>crontab -e</code>, готово:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Каждый день в 9:00</span>
@@ -1209,7 +1235,7 @@
 <p>Если код в гитхабе — Actions даёт cron и триггеры из коробки. 2000 минут в месяц бесплатно. Работает когда комп выключен, сам тянет репо, запускает.</p>
 <p><strong>Scheduled tasks в Claude Code</strong></p>
 <p>Встроенная штука — задачи которые Claude запускает по расписанию. Есть в самом Claude Code, отдельно ничего ставить не надо.</p>
-<h2 id="_3">Если фишек мало<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">Если фишек мало<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.4 7.5c.8.8.8 2.1 0 2.8l-2.8 2.8-7.8-7.8 2.8-2.8c.8-.8 2.1-.8 2.8 0l1.8 1.8 3-3 1.4 1.4-3 3zm-5.8 5.8-1.4-1.4-2.8 2.8-2.1-2.1 2.8-2.8-1.4-1.4-2.8 2.8-1.5-1.4-2.8 2.8c-.8.8-.8 2.1 0 2.8l1.8 1.8-4 4 1.4 1.4 4-4 1.8 1.8c.8.8 2.1.8 2.8 0l2.8-2.8-1.4-1.4z"/></svg></span> <strong><a href="n8n/">n8n</a></strong> — 184K⭐ визуальный конструктор, собираешь мышкой</li>
 <li>:material-loop: <strong><a href="loop/">/loop</a></strong> — встроенная команда Claude Code, агент крутится в цикле</li>
@@ -1219,7 +1245,7 @@
 - Вообще не кодишь → n8n, визуальный, self-host на Beget за 210 руб/мес
 - Цикл на своём компе → /loop, включил, ушёл, вернулся к результату
 - 24/7 без компа → Routines (Pro: 5/день, Max: 15/день)</p>
-<h2 id="_4">Что читать дальше<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Что читать дальше<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../../knowledge/modes/">Автономные циклы</a> — как устроены многошаговые задачи</li>
 <li><a href="../../knowledge/memory/">Scheduled tasks</a> — расписание в Claude Code</li>
