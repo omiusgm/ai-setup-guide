@@ -120,3 +120,91 @@
 [data-md-color-scheme="slate"] .before-after__col--after {
   background: rgba(76, 175, 80, 0.1);
 }
+
+/* === ЁЖИК === */
+
+/* Пиксельный ёж в hero */
+.hero-hedgehog {
+  font-size: 4rem;
+  display: block;
+  margin: 0 auto 1rem;
+  animation: hedgehog-bounce 2s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+@keyframes hedgehog-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Ёж-разделитель вместо скучной линии */
+.hedgehog-divider {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2rem auto;
+  max-width: 300px;
+  position: relative;
+  opacity: 0.5;
+}
+
+.hedgehog-divider::before,
+.hedgehog-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 35%;
+  height: 1px;
+  background: var(--md-default-fg-color--lightest);
+}
+
+.hedgehog-divider::before { left: 0; }
+.hedgehog-divider::after { right: 0; }
+
+/* Бегущий ёж внизу страницы */
+.running-hedgehog {
+  position: relative;
+  overflow: hidden;
+  height: 2rem;
+  margin: 1rem 0;
+}
+
+.running-hedgehog span {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: hedgehog-run 12s linear infinite;
+  top: 0;
+}
+
+@keyframes hedgehog-run {
+  0% { left: -5%; transform: scaleX(1); }
+  49% { left: 100%; transform: scaleX(1); }
+  50% { left: 100%; transform: scaleX(-1); }
+  99% { left: -5%; transform: scaleX(-1); }
+  100% { left: -5%; transform: scaleX(1); }
+}
+
+/* Ёж-карточки: иголки при hover */
+.grid.cards > ul > li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(103, 58, 183, 0.15);
+  transition: all 0.3s ease;
+}
+
+.grid.cards > ul > li {
+  transition: all 0.3s ease;
+}
+
+/* Ёж-подсказка в футере */
+.hedgehog-footer-mascot {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  animation: hedgehog-peek 4s ease-in-out infinite;
+}
+
+@keyframes hedgehog-peek {
+  0%, 70%, 100% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(-5px) rotate(-5deg); }
+  80% { transform: translateY(-3px) rotate(5deg); }
+  85% { transform: translateY(-5px) rotate(-3deg); }
+}
