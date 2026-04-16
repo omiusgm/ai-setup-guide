@@ -64,6 +64,9 @@ markdown_extensions:
 extra_css:
   - stylesheets/landing.css
 
+extra_javascript:
+  - javascripts/catalog-filter.js
+
 nav:
   - "": index.md
   - "Начать":

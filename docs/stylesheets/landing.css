@@ -261,44 +261,70 @@
   z-index: 10;
 }
 
+/* Сетка каталога */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .catalog-grid { grid-template-columns: 1fr; }
+}
+
 /* Карточки каталога */
 .catalog-card {
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 0.5rem;
   padding: 1.2rem 1.4rem;
-  margin-bottom: 1rem;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   display: block;
   text-decoration: none;
   color: inherit;
 }
 
+.catalog-card.hidden {
+  display: none;
+}
+
 .catalog-card:hover {
   border-color: var(--md-primary-fg-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(103, 58, 183, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(103, 58, 183, 0.15);
+}
+
+.catalog-card .card-tags {
+  margin-bottom: 0.4rem;
 }
 
 .catalog-card .card-tag {
   display: inline-block;
-  font-size: 0.7rem;
-  padding: 0.15rem 0.5rem;
+  font-size: 0.65rem;
+  padding: 0.1rem 0.45rem;
   border-radius: 1rem;
   background: var(--md-primary-fg-color);
   color: #fff;
-  margin-right: 0.3rem;
-  margin-bottom: 0.5rem;
+  margin-right: 0.25rem;
 }
 
 .catalog-card h3 {
   margin: 0.3rem 0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .catalog-card p {
   margin: 0.3rem 0 0;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--md-default-fg-color--light);
+}
+
+/* Активный фильтр */
+.tag-filter.active {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  border-color: var(--md-primary-fg-color);
 }
 
 @keyframes hedgehog-peek {
