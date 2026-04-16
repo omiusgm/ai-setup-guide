@@ -21,6 +21,30 @@
          <lastmod>2026-04-16</lastmod>
     </url>
     <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/agents/agent-teams/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/agents/alternatives/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/agents/autoresearch/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/agents/managed-agents/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/agents/overview/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/automation/loop/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/automation/n8n/</loc>
          <lastmod>2026-04-16</lastmod>
     </url>
@@ -33,7 +57,15 @@
          <lastmod>2026-04-16</lastmod>
     </url>
     <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/guides/levels/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/guides/memory/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/guides/modes/</loc>
          <lastmod>2026-04-16</lastmod>
     </url>
     <url>
@@ -49,7 +81,47 @@
          <lastmod>2026-04-16</lastmod>
     </url>
     <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/mcp/claude-code-mcp/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/mcp/composio/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/mcp/docker-mcp/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/mcp/firecrawl/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/mcp/n8n-mcp/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/mcp/overview/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/skills/caveman/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/skills/gsd/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/skills/honcho/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/skills/humanizer/</loc>
+         <lastmod>2026-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/skills/remotion/</loc>
          <lastmod>2026-04-16</lastmod>
     </url>
     <url>
