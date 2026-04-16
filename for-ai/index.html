@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://omiusgm.github.io/ai-setup-guide/for-chatbots/">
+        <link rel="canonical" href="https://omiusgm.github.io/ai-setup-guide/for-ai/">
       
       
-        <link rel="prev" href="../knowledge/cases/">
-      
-      
-        <link rel="next" href="../for-agents/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>Для чатботов - App Store для Claude Code</title>
+        <title>Для ИИ-читателей - App Store для Claude Code</title>
       
     
     
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#-" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -116,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Для чатботов
+              Для ИИ-читателей
             
           </span>
         </div>
@@ -224,6 +220,8 @@
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -910,8 +908,6 @@
       
   
   
-    
-  
   
   
     
@@ -924,11 +920,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -949,7 +945,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -964,19 +960,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../for-chatbots/" class="md-nav__link">
         
   
   
@@ -992,7 +979,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1041,7 +1027,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1052,6 +1040,47 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что доступно
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как ИИ нас читает
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Для людей, которые делают ИИ-агентов
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1065,197 +1094,44 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
   
   
 
 
-<h1 id="_1">Инструкция для чатботов<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Ты чатбот (ChatGPT, DeepSeek, Gemini, Claude Chat, Perplexity). Ты НЕ можешь трогать файлы, ставить программы, выполнять команды терминала.</p>
-<p><strong>Что ты МОЖЕШЬ:</strong> объяснять, советовать, составлять планы, писать промпты, генерить тексты, помогать выбрать инструмент.</p>
-<p><strong>Чего НЕ делай:</strong>
-- Не выдумывай папки, MCP-серверы и команды терминала — пользователь сидит в браузере
-- Не спрашивай "чем помочь?" — предлагай конкретное
-- Не выдумывай того чего нет в гайде
-- Если не знаешь ответа — так и скажи, не галлюцинируй</p>
-<p><strong>Если пользователю нужно что-то, что требует агента</strong> (файлы, автоматизация, код) — честно скажи: "Для этого нужен агент (Claude Desktop/Code, Cursor, Codex). Я могу составить план, а выполнить — он." Разница объяснена ниже в секции "Уровни ИИ".</p>
-<p>Отвечай на языке пользователя. Прежде чем писать кастомное решение — предлагай собрать из готовых API и сервисов как конструктор.</p>
-<hr />
-<h1 id="_2">ЗОЛОТЫЕ ПРАВИЛА ВАЙБКОДИНГА — ДЛЯ КОЖАНОГО<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
-<p><strong>Эта секция — для человека.</strong> Если ты чатбот и тебя об этом спросили — объясни на пальцах, с примерами из жизни пользователя.</p>
-<h2 id="1">Правило 1: Новый чат — это не потеря. Это перезагрузка<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p>У ИИ есть лимит памяти (контекстное окно). Чем дольше диалог — тем хуже ИИ помнит начало. Через 50-100 сообщений он начинает тупить.</p>
-<p>Закончил задачу — начни новый чат. Если проект правильно настроен, ИИ подхватит контекст за секунды.</p>
-<p>Аналогия: это как смены на работе. Новый сотрудник читает журнал смены и продолжает.</p>
-<h2 id="2">Правило 2: Проект живёт в файлах, не в чате<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>Чат закончится и исчезнет. Всё важное должно быть в файлах проекта:
-- <strong>CLAUDE.md</strong> — конституция проекта. ИИ читает его при каждом запуске
-- <strong>docs/roadmap.md</strong> — куда идём, что в планах
-- <strong>docs/decisions.md</strong> — почему приняли решение X
-- <strong>CHANGELOG.md</strong> — что изменилось и когда</p>
-<p>Аналогия: представь что ты нанимаешь фрилансера на день. Ты дашь ему документацию, а не будешь рассказывать весь проект голосом. CLAUDE.md — это и есть документация для ИИ-фрилансера.</p>
-<h2 id="3-git">Правило 3: Git — это твои сейвы. Без них ты голый<a class="headerlink" href="#3-git" title="Permanent link">&para;</a></h2>
-<p>Git — система версий. Как "сохраниться" в игре перед боссом. Если ИИ сломает проект — откатишься к рабочей версии за секунду.</p>
+<h1 id="-">🤖 Для ИИ-читателей<a class="headerlink" href="#-" title="Permanent link">&para;</a></h1>
+<p>Этот сайт в первую очередь для людей. Но кое-что тут есть специально для других ИИ-агентов — если тебя читает бот, ассистент или автономный агент.</p>
+<h2 id="_1">Что доступно<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="app-list">
 <ul>
-<li>Перед большими изменениями: "сделай коммит перед тем как менять"</li>
-<li>Сломалось всё: "откати к последнему рабочему коммиту"</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 15.5c0 1.11-.89 2-2 2s-2-.89-2-2 .9-2 2-2 2 .9 2 2m-9-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2z"/></svg></span> <strong><a href="../for-chatbots/">for-chatbots.md</a></strong> — оптимизированная версия для чат-ботов и ассистентов. Краткая, структурированная, с чёткими ссылками.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.41 4 16 6.41v.18L18.41 9H22v2h-4.41L16 9.41V12h-1a2 2 0 0 1-2-2V7.5H9.86c-.09.37-.24.72-.44 1.05L15.18 19H20a2 2 0 0 1 2 2v1H2v-1a2 2 0 0 1 2-2h6.61l-4.69-8.5a4.006 4.006 0 0 1-3.81-3A4 4 0 0 1 5 2.63c2.13-.55 4.31.73 4.86 2.87H13V3a2 2 0 0 1 2-2h1v2.59L17.59 2H22v2zM6 4.5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> <strong><a href="../for-agents/">for-agents.md</a></strong> — полная версия для автономных агентов. Глубокая структура, машиночитаемые метаданные.</li>
 </ul>
-<h2 id="4">Правило 4: Сначала план, потом код<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<p>Главная ошибка: "напиши мне приложение". ИИ радостно напишет — криво, сложно, не то.</p>
-<p>Сначала попроси план. Обсуди. Поправь. И только потом — "делай".</p>
+</div>
+<h2 id="_2">Как ИИ нас читает<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Неправильно: "Сделай мне CRM-систему"</li>
-<li>Правильно: "Составь план: что нужно для простой CRM. Какие страницы, база, функции. Покажи план — я скажу что убрать и добавить"</li>
+<li><code>for-chatbots.md</code> — подходит для интеграции в системные промпты. Короткое саммари, хорошие якоря.</li>
+<li><code>for-agents.md</code> — подходит для агентов с MCP. Содержит структурированные данные о каждом инструменте.</li>
 </ul>
-<h2 id="5">Правило 5: Маленькие шаги, частые проверки<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<p>Не пытайся сделать всё за один запрос. ИИ теряет фокус на больших задачах. Разбивай на шаги: сделал шаг — проверил — следующий.</p>
-<h2 id="6">Правило 6: Говори "максимально просто"<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
-<p>ИИ обожает усложнять. Напишет "энтерпрайз-архитектуру" для TODO-списка. Добавляй: "делай максимально просто", "без лишнего".</p>
-<h2 id="7">Правило 7: Ошибки — это нормально. Не лезь чинить руками<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
-<p>ИИ сломал что-то? Скопируй ошибку, отдай ИИ: "ты накосячил, исправь". В 90% случаев разберётся. В 10% — начни новый чат и объясни проблему с чистого листа.</p>
-<h2 id="8">Правило 8: Не доверяй — проверяй<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
-<p>ИИ скажет "всё готово, работает идеально" с уверенностью, которой не стоит верить. Протестируй сам. ИИ не умеет объективно проверять свою работу — это как спрашивать повара "вкусно ли он готовит".</p>
-<h2 id="9-mcp">Правило 9: Скиллы и MCP — не сразу<a class="headerlink" href="#9-mcp" title="Permanent link">&para;</a></h2>
-<p>Не бросайся ставить 20 скиллов. Начни с базы: промпты → Git и CLAUDE.md → первый проект → и только потом расширяй.</p>
-<h2 id="10">Правило 10: Ты — дирижёр, не скрипач<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
-<p>Вайбкодинг — это не "ИИ всё сделает за меня". Ты решаешь ЧТО строить, ЗАЧЕМ и КУДА. ИИ — исполнитель. Чем лучше ты объясняешь "что" и "зачем" — тем лучше результат.</p>
-<hr />
-<h1 id="_3">ЕЖЛИКБЕЗ: УРОВНИ ИИ — КАКОЙ ЗАПУСКАТЬ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
-<p>Не "от плохого к хорошему", а как транспорт: самокат не хуже машины — он для другого.</p>
-<h2 id="3">Найди себя за 3 вопроса<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p><strong>1. Тебе нужно поговорить или сделать?</strong>
-- Поговорить (спросить, найти инфо, написать текст) → <strong>Чатбот</strong>
-- Сделать (создать файлы, автоматизировать) → читай дальше</p>
-<p><strong>2. Ты готов ставить программу на комп?</strong>
-- Нет, только браузер → <strong>Чатбот</strong> (и это нормально, 80% задач решаются тут)
-- Да → <strong>Агент на ПК</strong></p>
-<p><strong>3. Тебе нужно писать код?</strong>
-- Нет, я не кодер → <strong>Агент на ПК</strong> (Claude Desktop, Codex) — он сам разберётся
-- Да → <strong>Редактор кода</strong> (Cursor, VS Code + расширения)</p>
-<h2 id="1_1">Уровень 1: Чатбот (браузер)<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h2>
-<p><em>Умный собеседник в кафе — обсуждает, советует, но за тебя ничего не делает</em></p>
-<p>Примеры: ChatGPT, DeepSeek, Claude.ai, Gemini, Perplexity</p>
-<p>Лучшие сценарии: написать/отредактировать текст, ресёрч, объяснить тему, перевести, составить план</p>
-<p>Чего НЕ может: не трогает файлы, не помнит между сессиями, не делает действий — только текст</p>
-<p>Цена: DeepSeek бесплатно. ChatGPT Plus ~$20/мес. Claude Pro ~$20/мес</p>
-<h2 id="2-">Уровень 2: Агент на ПК (десктоп-приложение)<a class="headerlink" href="#2-" title="Permanent link">&para;</a></h2>
-<p><em>Ассистент с доступом к компьютеру — ходит по папкам, открывает браузер, делает за тебя</em></p>
-<p>Примеры: Claude Desktop (Code/Cowork), OpenAI Codex</p>
-<p>Лучшие сценарии: сайт/лендинг, пачка файлов, автоматизация, работа с Notion/Telegram/Google Docs одновременно</p>
-<p>Почему он не рисует? ChatGPT = болтун + художник (DALL-E). Claude Desktop = мощный болтун + руки (файлы). Разные суперсилы.</p>
-<p>Цена: Claude Max ~$100-200/мес. Codex ~$200/мес</p>
-<h2 id="3-cli">Уровень 3: Терминал / CLI<a class="headerlink" href="#3-cli" title="Permanent link">&para;</a></h2>
-<p><em>Механик в яме — залезет куда надо, но ты должен знать куда показать</em></p>
-<p>Примеры: Claude Code, Aider, Goose, Cline</p>
-<p>Это тот же мозг что в Claude Desktop, просто другой интерфейс. Как авто с механикой vs автоматом.</p>
-<p>Цена: Claude Max ~$100-200/мес</p>
-<h2 id="4-ide">Уровень 4: Редактор кода (IDE)<a class="headerlink" href="#4-ide" title="Permanent link">&para;</a></h2>
-<p><em>Кабинет разработчика — код слева, ИИ справа</em></p>
-<p>Примеры: Cursor, VS Code + Copilot, Windsurf, JetBrains + AI</p>
-<p>Цена: VS Code бесплатно (+ Copilot ~$10/мес). Cursor ~$20/мес</p>
-<h2 id="_4">Сводная таблица<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Параметр</th>
-<th>Чатбот</th>
-<th>Агент на ПК</th>
-<th>Терминал</th>
-<th>Редактор кода</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Порог входа</td>
-<td>Ноль</td>
-<td>Поставить приложение</td>
-<td>Знать терминал</td>
-<td>Знать код</td>
-</tr>
-<tr>
-<td>Поиск в интернете</td>
-<td>Да (встроен)</td>
-<td>Через MCP</td>
-<td>Через MCP</td>
-<td>Зависит от расширения</td>
-</tr>
-<tr>
-<td>Память</td>
-<td>Слабая/нет</td>
-<td>Да (файлы)</td>
-<td>Да (файлы + git)</td>
-<td>Да (проект)</td>
-</tr>
-<tr>
-<td>Мой сценарий</td>
-<td>Спросить, текст, ресёрч</td>
-<td>Сайт, бот, автоматизация</td>
-<td>Серьёзная разработка</td>
-<td>Код каждый день</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h1 id="_5">БЮДЖЕТ НА ИИ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
-<p><strong>Сжигаем лимиты</strong> (&gt;$200/мес) — Claude Max ($100-200) + Cursor Pro $20 + API. Лучшие модели, максимальная скорость.</p>
-<p><strong>Эконом</strong> (~$100/мес) — Claude Pro $20 + Cursor Pro $20 + Gemini CLI бесплатно + n8n. Покрывает 90% задач.</p>
-<p><strong>Супер-эконом</strong> (~$20/мес) — Claude Pro $20 ИЛИ Cursor Pro $20. Одна подписка.</p>
-<p><strong>Арбузный</strong> (минимум) — Gemini CLI (1000 запросов/день бесплатно) + Cline в VS Code (свои API-ключи) + DuckDuckGo MCP.</p>
-<p><strong>API vs подписка:</strong> подписка ($20-200/мес) — фиксированная цена, лимиты. API (pay-as-you-go) — платишь за каждый токен, без лимитов но непредсказуемые расходы. Новичкам: начни с подписки.</p>
-<hr />
-<h1 id="caveman">CAVEMAN — РЕЖИМ "ПЕЩЕРНЫЙ ЧЕЛОВЕК"<a class="headerlink" href="#caveman" title="Permanent link">&para;</a></h1>
-<p>ИИ тратит до 70% ответа на вежливость и воду. Caveman убирает это: экономия токенов + повышение точности.</p>
-<p><strong>Три режима:</strong> Light (убрать вежливость), Full (убрать лишние слова), Ultra (аббревиатуры и стрелочки)</p>
-<p><strong>Для обычного чата (ChatGPT, DeepSeek, Claude):</strong> скопируй этот промпт в начало диалога:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Отвечай максимально кратко. Правила:
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>1. Без вступлений — никаких &quot;Конечно!&quot;, &quot;Рад помочь&quot;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2. Без воды — убирай лишние союзы и вводные
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>3. Факты, не мнения — вместо &quot;возможно стоит&quot; пиши &quot;делай так:&quot;
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>4. Причина → следствие через стрелку →
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>5. Технические термины не упрощай
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>6. Код не сокращай — сокращай только пояснения
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>7. Хватит одного слова — отвечай одним словом
+<p>Оба файла лежат в корне, чтобы быть доступными по одной ссылке:
+- <code>https://omiusgm.github.io/ai-setup-guide/for-chatbots.md</code>
+- <code>https://omiusgm.github.io/ai-setup-guide/for-agents.md</code></p>
+<h2 id="-_1">Для людей, которые делают ИИ-агентов<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h2>
+<p>Если ты делаешь своего агента и хочешь дать ему этот гайд как справочник:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Простой вариант — дай ссылку на for-chatbots.md как контекст</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">system_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s2">Ты помощник пользователя.</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s2">Когда спрашивают про ИИ-инструменты, агентов, автоматизацию — </span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s2">обращайся к этому гайду: </span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s2">https://omiusgm.github.io/ai-setup-guide/for-chatbots.md</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s2">&quot;&quot;&quot;</span>
 </code></pre></div>
-<p>Для агентов (Claude Code/Cursor): <code>npx skills add JuliusBrussee/caveman</code></p>
-<p><a href="https://github.com/JuliusBrussee/caveman">Репозиторий</a> (27K stars)</p>
+<p>Или через MCP — можно дать агенту инструмент «читай гайд», который подтягивает свежую версию.</p>
 <hr />
-<h1 id="_6">МИФЫ И РЕАЛЬНОСТЬ — ВСЁ ЧТО ВАМ НАВРАЛИ ПРО ИИ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
-<h2 id="_7">Продуктивность<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<p><strong>Миф: ИИ делает в 10x быстрее.</strong> Реальность: устойчивое ускорение 1.5-2x, пики 3-5x на конкретных задачах. Исследование METR: опытные разработчики с ИИ были на 19% МЕДЛЕННЕЕ, но думали что на 20% быстрее.</p>
-<p><strong>Миф: Больше PR = больше продуктивность.</strong> Реальность: объёмы PR +98%, скорость доставки — плоская. ИИ сдвигает bottleneck, а не убирает.</p>
-<h2 id="_8">Качество кода<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p><strong>Миф: Если код работает — значит правильный.</strong> Реальность: 45% ИИ-кода содержит уязвимости. Работает — не значит безопасно.</p>
-<p><strong>Миф: Достаточно "make it secure".</strong> Реальность: улучшение только с 56% до 66%. Нужны SAST-инструменты.</p>
-<h2 id="_9">Мультиагенты<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
-<p><strong>Миф: Больше агентов = быстрее.</strong> Реальность: при 85% точности на действие, 10-шаговый workflow успешен лишь 20% времени. 41-86% мультиагентных систем фейлятся.</p>
-<p><strong>Миф: Автономная компания агентов.</strong> Реальность: полное делегирование — 0-20% задач (Anthropic). Ассистирование ~60%.</p>
-<h2 id="_10">Галлюцинации<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<p><strong>Миф: ИИ редко галлюцинирует в коде.</strong> Реальность: ИИ галлюцинирует API, функции, параметры и даже зависимости.</p>
-<p><strong>Миф: ИИ может проверить свой код.</strong> Реальность: ИИ галлюцинирует корректность и удваивает ставку на ошибки. Никогда не доверяй self-report.</p>
-<h2 id="_11">Риски<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
-<p><strong>Миф: Vibe coding — не нужно понимать код.</strong> Реальность: "Стена 18 месяцев" — месяцы 1-3: эйфория. 4-8: растущий overhead. 16-18: разработка встаёт.</p>
-<h2 id="_12">Главный вывод<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
-<p>ИИ не заменит разработчиков в 2026-2027. Он меняет профессию: от "я пишу код" к "я определяю что строить, оркестрирую ИИ, проверяю и несу ответственность".</p>
-<hr />
-<h1 id="_13">КОНСИЛИУМ — ПРОВЕРКА РАБОТЫ ЧУЖИМИ ГЛАЗАМИ<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h1>
-<p>ИИ не может проверить свою работу сам. Но может спавнить других ИИ с другими ролями.</p>
-<p><strong>Как попробовать (в любом чате):</strong></p>
-<p>Написал текст/код — скажи: "Проверь мой текст от лица трёх человек: новичок (не в теме), скептик (устал от хайпа), эксперт (знает тему глубоко). Каждый пусть ответит от первого лица."</p>
-<hr />
-<h1 id="_14">ПАМЯТЬ И КОНТЕКСТ<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h1>
-<h2 id="_15">Проблема "Мементо"<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
-<p>ИИ как герой фильма "Мементо" — каждый разговор с чистого листа. Через 20-50 сообщений теряет начало. Не помнит прошлые сессии.</p>
-<h2 id="_16">Как решать<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>CLAUDE.md</strong> — файл который агент читает при каждом запуске. Храни архитектуру, решения, приоритеты</li>
-<li><strong>/compact</strong> — сжатие контекста когда диалог длинный</li>
-<li><strong>Кастомные GPTs / Projects</strong> — привязанная инструкция + база знаний</li>
-<li><strong>Обратный промптинг</strong> — получил идеальный результат? Скажи: "Напиши промпт, который даст такой же результат в новом чате"</li>
-</ul>
-<hr />
-<p><em>v5.0 | Апрель 2026 | Контент сгенерирован ИИ</em></p>
-<p><a href="https://t.me/agentezh">Телеграм-канал «Агент Ёж»</a></p>
+<p><em>Оба файла обновляются автоматом — новые инструменты попадают туда же, куда и на сайт для людей.</em></p>
 
 
 
@@ -1263,8 +1139,13 @@
 
 
 
+  
+  
 
 
+
+
+  
 
 
 

@@ -112,7 +112,300 @@
   padding: 0.4rem 1.2rem;
 }
 
-/* Dark theme */
+/* ========= App Store стили ========= */
+
+/* Топ-5 карточки */
+.top-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.top-card {
+  padding: 1.2rem 1rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, var(--md-primary-fg-color--light), var(--md-primary-fg-color));
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.top-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(103, 58, 183, 0.35);
+  color: #fff;
+}
+
+.top-card .top-emoji {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.top-card .top-stars {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  background: rgba(255,255,255,0.2);
+  padding: 0.1rem 0.5rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.top-card .top-name {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.top-card .top-desc {
+  font-size: 0.75rem;
+  opacity: 0.85;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .top-grid { grid-template-columns: repeat(3, 1fr); }
+  .top-card:nth-child(4), .top-card:nth-child(5) { grid-column: span 1; }
+}
+
+@media (max-width: 600px) {
+  .top-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Категории-плитки */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.category-tile {
+  padding: 1.4rem 1.2rem;
+  border-radius: 0.7rem;
+  border: 2px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color);
+  text-decoration: none;
+  color: inherit;
+  text-align: left;
+  transition: all 0.25s ease;
+  display: block;
+}
+
+.category-tile:hover {
+  border-color: var(--md-primary-fg-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(103, 58, 183, 0.15);
+  color: inherit;
+}
+
+.category-tile .cat-emoji {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.category-tile .cat-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.category-tile .cat-count {
+  font-size: 0.75rem;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.category-tile .cat-desc {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .category-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .category-grid { grid-template-columns: 1fr; }
+}
+
+/* Для кого */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.audience-tile {
+  padding: 1.8rem 1.4rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: block;
+  border: 2px solid transparent;
+}
+
+.audience-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  color: inherit;
+}
+
+.audience-newbie {
+  background: linear-gradient(135deg, #a8e063 15%, #56ab2f 100%);
+  color: #fff;
+}
+.audience-newbie:hover { color: #fff; }
+
+.audience-biz {
+  background: linear-gradient(135deg, #f2994a 15%, #f2c94c 100%);
+  color: #fff;
+}
+.audience-biz:hover { color: #fff; }
+
+.audience-techy {
+  background: linear-gradient(135deg, #667eea 15%, #764ba2 100%);
+  color: #fff;
+}
+.audience-techy:hover { color: #fff; }
+
+.audience-tile .aud-emoji {
+  font-size: 2.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.audience-tile .aud-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.audience-tile .aud-desc {
+  font-size: 0.9rem;
+  opacity: 0.95;
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  .audience-grid { grid-template-columns: 1fr; }
+}
+
+/* Знания — простая сетка */
+.knowledge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.knowledge-card {
+  padding: 0.7rem 1.2rem;
+  border-radius: 1.5rem;
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.knowledge-card:hover {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ========= App-detail страницы ========= */
+
+/* Мета-блок на странице app */
+.app-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 2rem;
+  padding: 1rem 1.4rem;
+  border-radius: 0.5rem;
+  background: var(--md-code-bg-color);
+}
+
+.app-meta-item {
+  font-size: 0.85rem;
+}
+
+.app-meta-item strong {
+  color: var(--md-primary-fg-color);
+}
+
+/* App-list на странице категории */
+.app-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.app-card {
+  padding: 1.2rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+  display: block;
+}
+
+.app-card:hover {
+  border-color: var(--md-primary-fg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(103, 58, 183, 0.12);
+}
+
+.app-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.app-card-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.app-card-stars {
+  font-size: 0.8rem;
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+}
+
+.app-card-desc {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  .app-list { grid-template-columns: 1fr; }
+}
+
+/* Dark theme support */
+[data-md-color-scheme="slate"] .category-tile {
+  background: rgba(255,255,255,0.03);
+}
+
 [data-md-color-scheme="slate"] .before-after__col--before {
   background: rgba(244, 67, 54, 0.1);
 }
