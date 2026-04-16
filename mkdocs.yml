@@ -71,7 +71,6 @@ nav:
     - "⚡ Автоматизация": apps/automation/index.md
     - "🔌 Интеграции (MCP)": apps/integrations/index.md
     - "🎨 Контент": apps/content/index.md
-    - "🛠️ Инфраструктура": apps/infra/index.md
     - "📦 Наборы": apps/bundles/index.md
   - "📚 Знания":
     - "Быстрый старт": knowledge/getting-started.md

@@ -30,21 +30,33 @@ updated: 2026-04-16
 - ❌ НЕ подходит новичкам — каталог огромный, легко утонуть
 - ❌ Если хочешь всё-в-одном готовое — [Oh My ClaudeCode](oh-my-claudecode.md) проще
 
-## Установка
+## Как попробовать без терминала
 
-```bash
-git clone https://github.com/affaan-m/everything-claude-code ~/everything-cc
-```
+Everything Claude Code это репозиторий, его можно просматривать прямо в браузере:
 
-## Первый запуск
+1. Открой **[github.com/affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)**
+2. Ходи по папкам `agents/`, `skills/`, `commands/` как по каталогу
+3. Нашёл интересного агента или скилл — открой файл `.md` в браузере, скопируй содержимое
+4. Дальше:
+   - Если работаешь в ChatGPT/Claude — вставь как системный промпт
+   - Если у тебя Claude Code — положи файл в `~/.claude/agents/` или `~/.claude/skills/`
 
-Это НЕ «установил и работает». Это каталог — ты берёшь оттуда нужное.
+Этот каталог — не про «одну установку», а про «копирую что нужно».
 
-1. Склонировал репо
-2. Прошёл по папкам `agents/`, `skills/`, `commands/`
-3. Нашёл нужное (например, агента для код-ревью)
-4. Скопировал в свой `.claude/agents/reviewer.md`
-5. Перезапустил Claude Code — агент доступен
+??? note "Для продвинутых (клон через git)"
+
+    Если хочешь иметь всё локально и обновлять:
+
+    ```bash
+    git clone https://github.com/affaan-m/everything-claude-code ~/everything-cc
+    ```
+
+    Потом:
+
+    1. Прошёл по папкам `agents/`, `skills/`, `commands/`
+    2. Нашёл нужное (например, агента для код-ревью)
+    3. Скопировал в свой `.claude/agents/reviewer.md`
+    4. Перезапустил Claude Code — агент доступен
 
 ## Что стоит стащить первым
 

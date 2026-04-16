@@ -55,7 +55,7 @@ tags: [бизнесу, автоматизация]
 ## Ссылки
 
 - [Browser Use](../../apps/agents/browser-use.md) — агент для браузера
-- [DeepSeek](../../apps/infra/deepseek.md) — бесплатный API
+- [DeepSeek](../../knowledge/budget.md) — бесплатный API
 - [/loop](../../apps/automation/loop.md) — запуск по расписанию
 
 ---

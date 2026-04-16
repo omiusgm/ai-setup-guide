@@ -30,12 +30,6 @@ hide:
 <div class="top-name">n8n</div>
 <div class="top-desc">Автоматизация без кода</div>
 </a>
-<a class="top-card" href="apps/infra/ollama/">
-<div class="top-emoji">🖥️</div>
-<div class="top-stars">169K⭐</div>
-<div class="top-name">Ollama</div>
-<div class="top-desc">ИИ локально, без VPN</div>
-</a>
 <a class="top-card" href="apps/bundles/everything-claude-code/">
 <div class="top-emoji">🔧</div>
 <div class="top-stars">158K⭐</div>
@@ -46,13 +40,19 @@ hide:
 <div class="top-emoji">🔥</div>
 <div class="top-stars">110K⭐</div>
 <div class="top-name">Firecrawl</div>
-<div class="top-desc">Скрапинг для ИИ</div>
+<div class="top-desc">Скрапинг сайтов для ИИ</div>
 </a>
-<a class="top-card" href="apps/agents/hermes-agent/">
-<div class="top-emoji">🎓</div>
-<div class="top-stars">93K⭐</div>
-<div class="top-name">Hermes Agent</div>
-<div class="top-desc">Учится на опыте</div>
+<a class="top-card" href="apps/agents/browser-use/">
+<div class="top-emoji">🖱️</div>
+<div class="top-stars">88K⭐</div>
+<div class="top-name">Browser Use</div>
+<div class="top-desc">ИИ кликает за тебя</div>
+</a>
+<a class="top-card" href="apps/integrations/composio/">
+<div class="top-emoji">🔌</div>
+<div class="top-stars">28K⭐</div>
+<div class="top-name">Composio</div>
+<div class="top-desc">1000+ интеграций</div>
 </a>
 </div>
 
@@ -99,12 +99,6 @@ hide:
 <div class="cat-name">Контент</div>
 <div class="cat-count">1 инструмент</div>
 <div class="cat-desc">Генерация видео и текста</div>
-</a>
-<a class="category-tile" href="apps/infra/">
-<div class="cat-emoji">🛠️</div>
-<div class="cat-name">Инфраструктура</div>
-<div class="cat-count">2 инструмента</div>
-<div class="cat-desc">Основа — модели и сервисы</div>
 </a>
 <a class="category-tile" href="apps/bundles/">
 <div class="cat-emoji">📦</div>

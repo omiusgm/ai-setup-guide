@@ -14,6 +14,9 @@ updated: 2026-04-16
 
 > 87% на SWE-bench — один из самых сильных автономных ИИ-инженеров в опенсорсе. Ставишь задачу — уходишь пить кофе.
 
+!!! warning "Этот инструмент требует терминала и Docker"
+    OpenHands живёт в Docker-контейнере, без командной строки не запустить. Если ты не программист — посмотри [Goose](goose.md) (десктоп-агент с обычным окном) или [DeepSeek в браузере](../../knowledge/budget.md). Оба работают из РФ без VPN, без терминала.
+
 ## Что делает
 
 OpenHands не помощник. Это автономный инженер, который работает по задаче от начала до конца. Тебе не надо подсказывать на каждом шагу — он САМ открывает файлы, правит код, запускает тесты, исправляет ошибки, пушит в гит.
@@ -30,31 +33,39 @@ OpenHands не помощник. Это автономный инженер, к�
 - ❌ НЕ подходит для мелких задач — избыточно
 - ❌ Если не понимаешь что такое Docker — сначала разберись
 
-## Установка
+## Как попробовать без терминала
 
-Через Docker (рекомендуемо):
+Если автономный агент нужен, а Docker пугает — вот что берут вместо OpenHands:
 
-```bash
-docker pull docker.all-hands.dev/all-hands-ai/openhands:latest
-docker run -it --pull=always \
-  -e SANDBOX_RUNTIME_CONTAINER_IMAGE=docker.all-hands.dev/all-hands-ai/runtime:latest \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  -p 3000:3000 \
-  --add-host host.docker.internal:host-gateway \
-  --name openhands-app \
-  docker.all-hands.dev/all-hands-ai/openhands:latest
-```
+- **[Goose](goose.md)** — десктоп-приложение, ставится как обычная программа. Может работать автономно на локальных моделях
+- **[Claude Code](https://claude.com/claude-code)** — терминал есть, но можно жить в Claude Projects без него
+- **[Cursor](https://cursor.com)** — IDE с агентом, ставится как редактор, не требует Docker
 
-Открыть `http://localhost:3000` в браузере.
+??? note "Для продвинутых (терминал + Docker)"
 
-## Первый запуск
+    Через Docker (рекомендуемо):
 
-1. Запустил Docker-контейнер
-2. Открыл localhost:3000 — появился веб-интерфейс
-3. Указал провайдера модели и API ключ
-4. Подключил репозиторий (GitHub URL или локальную папку)
-5. Написал задачу в формате: «Сделай X, учти Y, не трогай Z»
-6. Ушёл на час — вернулся к результату
+    ```bash
+    docker pull docker.all-hands.dev/all-hands-ai/openhands:latest
+    docker run -it --pull=always \
+      -e SANDBOX_RUNTIME_CONTAINER_IMAGE=docker.all-hands.dev/all-hands-ai/runtime:latest \
+      -v /var/run/docker.sock:/var/run/docker.sock \
+      -p 3000:3000 \
+      --add-host host.docker.internal:host-gateway \
+      --name openhands-app \
+      docker.all-hands.dev/all-hands-ai/openhands:latest
+    ```
+
+    Открыть `http://localhost:3000` в браузере.
+
+    **Первый запуск:**
+
+    1. Запустил Docker-контейнер
+    2. Открыл localhost:3000 — появился веб-интерфейс
+    3. Указал провайдера модели и API ключ
+    4. Подключил репозиторий (GitHub URL или локальную папку)
+    5. Написал задачу в формате: «Сделай X, учти Y, не трогай Z»
+    6. Ушёл на час — вернулся к результату
 
 ## Нюансы
 
