@@ -21,7 +21,8 @@ hide:
 <div class="landing-section">
 
 <h2 style="text-align:center; margin-bottom:0.5rem;">🏆 Топ этой недели</h2>
-<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">Что реально скачивают вайбкодеры · <em>звёзды актуальны на 16 апреля 2026, из GitHub API</em></p>
+<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:0.75rem;">Что реально скачивают вайбкодеры · <em>звёзды актуальны на 16 апреля 2026, из GitHub API</em></p>
+<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem; font-size:0.9em;">💬 — работает в браузере (ChatGPT, DeepSeek). 🤖 — нужен агент (Claude Code, Cursor). 🤖💬 — и там и там.</p>
 
 <div class="top-grid">
 <a class="top-card" href="apps/automation/n8n/">
