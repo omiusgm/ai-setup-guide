@@ -6,6 +6,8 @@ hide:
 
 <div class="hero" markdown>
 
+<span class="hero-hedgehog">🦔</span>
+
 # ИИ может работать за тебя.<br>Если знать как попросить
 
 <p class="hero-sub">Бесплатный гайд: промпты, инструменты, автоматизация — без воды и без кода</p>
@@ -16,7 +18,7 @@ hide:
 
 </div>
 
-<hr class="landing-divider">
+<div class="hedgehog-divider">🦔</div>
 
 <div class="landing-section" markdown>
 
@@ -36,7 +38,7 @@ hide:
 
 </div>
 
-<hr class="landing-divider">
+<div class="hedgehog-divider">🦔</div>
 
 <div class="landing-section" markdown>
 
@@ -68,7 +70,7 @@ hide:
 
 </div>
 
-<hr class="landing-divider">
+<div class="hedgehog-divider">🦔</div>
 
 <div class="landing-section" markdown>
 
@@ -104,7 +106,7 @@ hide:
 
 </div>
 
-<hr class="landing-divider">
+<div class="hedgehog-divider">🦔</div>
 
 <div class="landing-section" markdown>
 
@@ -123,7 +125,7 @@ hide:
 
 </div>
 
-<hr class="landing-divider">
+<div class="hedgehog-divider">🦔</div>
 
 <div class="landing-section" markdown>
 
@@ -199,7 +201,7 @@ hide:
 
 </div>
 
-<hr class="landing-divider">
+<div class="hedgehog-divider">🦔</div>
 
 <div class="landing-section" markdown>
 
@@ -226,10 +228,14 @@ hide:
 
 </div>
 
+<div class="running-hedgehog"><span>🦔</span></div>
+
 <div class="landing-footer" markdown>
+
+<span class="hedgehog-footer-mascot">🦔</span>
 
 [:fontawesome-brands-telegram: Telegram «Агент Ёж»](https://t.me/agentezh) — новости и обновления гайда
 
-*Контент сгенерирован ИИ*
+*Контент сгенерирован ИИ при участии армии ежей*
 
 </div>
