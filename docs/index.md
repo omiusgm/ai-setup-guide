@@ -67,6 +67,52 @@ hide:
 
 <div class="landing-section">
 
+<h2 style="text-align:center; margin-bottom:0.5rem;">🦔 Ёжиный must-have</h2>
+<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">Без чего агент как без рук · субъективный выбор редакции</p>
+
+<div class="musthave-grid">
+<a class="musthave-card" href="apps/automation/superpowers/">
+<div class="musthave-emoji">🦸</div>
+<div class="musthave-name">Superpowers</div>
+<div class="musthave-tag">АВТОНОМНЫЙ КОД</div>
+<div class="musthave-desc">Код пишется сам, ИИ проверяет ИИ по методологии G3. 2-3 часа без тебя.</div>
+</a>
+<a class="musthave-card" href="apps/integrations/youtube/">
+<div class="musthave-emoji">🎥</div>
+<div class="musthave-name">YouTube Insight</div>
+<div class="musthave-tag">ВИДЕО → ТЕКСТ</div>
+<div class="musthave-desc">Кидаешь ссылку — ИИ смотрит видео и выжимает главное за 30 секунд.</div>
+</a>
+<a class="musthave-card" href="apps/automation/handy/">
+<div class="musthave-emoji">🎙️</div>
+<div class="musthave-name">Handy</div>
+<div class="musthave-tag">ГОЛОС → ТЕКСТ</div>
+<div class="musthave-desc">Одна клавиша — и диктуешь куда угодно. Локально, бесплатно, без интернета.</div>
+</a>
+<a class="musthave-card" href="apps/tokens/caveman/">
+<div class="musthave-emoji">🗣️</div>
+<div class="musthave-name">Caveman</div>
+<div class="musthave-tag">ЭКОНОМИЯ ТОКЕНОВ</div>
+<div class="musthave-desc">Промпт-стиль «как пещерный человек». Сокращает расход в 3-5 раз.</div>
+</a>
+<a class="musthave-card" href="apps/content/documents/">
+<div class="musthave-emoji">📄</div>
+<div class="musthave-name">Pretty-Docs</div>
+<div class="musthave-tag">КРАСИВЫЕ ДОКИ</div>
+<div class="musthave-desc">Google Docs и PDF с таблицами, графиками, callout-боксами — в пару минут.</div>
+</a>
+<a class="musthave-card" href="apps/memory/handoff-pattern/">
+<div class="musthave-emoji">🧠</div>
+<div class="musthave-name">Handoff Pattern</div>
+<div class="musthave-tag">ПАМЯТЬ</div>
+<div class="musthave-desc">ИИ не забывает контекст между сессиями. CLAUDE.md + HANDOFF.md — и всё.</div>
+</a>
+</div>
+
+</div>
+
+<div class="landing-section">
+
 <h2 style="text-align:center; margin-bottom:0.5rem;">💼 Реальные кейсы</h2>
 <p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">Не теория — живые истории с цифрами</p>
 

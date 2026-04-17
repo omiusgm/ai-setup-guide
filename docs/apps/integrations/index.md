@@ -53,6 +53,7 @@ Claude и ChatGPT видят изображения. Скрин экрана →
 - :material-robot: **[AmoCRM MCP](amocrm-mcp.md)** — 36 инструментов для AmoCRM (родная русская)
 - :material-sitemap: **[n8n-MCP](n8n-mcp.md)** — 18K⭐ Claude управляет n8n workflows
 - :material-recursive: **[Claude Code MCP](claude-code-mcp.md)** — 1.1K⭐ агент запускает другого агента
+- :material-youtube: **[YouTube Insight](youtube.md)** — кидаешь ссылку на видео, ИИ смотрит и выжимает главное (бесплатно)
 
 **Как выбрать:**
 - Один конкретный сервис (Gmail, Slack, Notion) → ищи готовый MCP по названию
