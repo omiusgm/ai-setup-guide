@@ -1077,3 +1077,23 @@
     justify-content: center;
   }
 }
+
+/* ====== Decision tree блок ====== */
+.decision-tree {
+  background: rgba(124, 58, 237, 0.04);
+  border-left: 3px solid rgba(124, 58, 237, 0.5);
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.decision-tree p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+[data-md-color-scheme="slate"] .decision-tree {
+  background: rgba(167, 139, 250, 0.08);
+  border-left: 3px solid rgba(167, 139, 250, 0.6);
+}
