@@ -2,218 +2,226 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/for-agents/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/for-chatbots/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/agents/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/agents/browser-use/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/agents/cline/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/agents/codex-cli/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/agents/goose/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/agents/hermes-agent/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/agents/openhands/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/apps/agents/sisyphus/</loc>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/automation/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/automation/loop/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/automation/n8n/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/automation/routines/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/bundles/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/bundles/everything-claude-code/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/bundles/gsd/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/bundles/oh-my-claudecode/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/content/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/content/remotion/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/integrations/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/integrations/amocrm-mcp/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/integrations/claude-code-mcp/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/integrations/composio/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/integrations/docker-mcp/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/integrations/firecrawl/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/integrations/n8n-mcp/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/memory/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/memory/handoff-pattern/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/memory/honcho/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/memory/mempalace/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/tokens/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/tokens/caveman/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/apps/tokens/humanizer/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/for-ai/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/budget/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/getting-started/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/levels/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/memory/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
+    </url>
+    <url>
+         <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/model-updates/</loc>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/modes/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/myths/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/no-code-start/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/rules/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/russia/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/cases/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/cases/delivery-hero-n8n/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/cases/dev-family-46k/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/cases/marketplace-prices/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/cases/product-descriptions/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/cases/register-7-weeks/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/cases/rop-amocrm/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/cases/smm-wb-cards/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/cases/ultima-whatsapp-amocrm/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
     <url>
          <loc>https://omiusgm.github.io/ai-setup-guide/knowledge/cases/vestel-21-repos/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-17</lastmod>
     </url>
 </urlset>
