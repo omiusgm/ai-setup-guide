@@ -501,13 +501,13 @@
   background: rgba(76, 175, 80, 0.1);
 }
 
-/* === PRODUCT HERO (App Store-style для app-страниц) === */
+/* === PRODUCT HERO (компактный App Store-style) === */
 .product-hero {
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 0.75rem;
-  padding: 1.5rem 1.8rem;
+  padding: 1.1rem 1.4rem;
   background: linear-gradient(135deg, rgba(103, 58, 183, 0.04), rgba(255, 193, 7, 0.03));
-  margin: 1rem 0 2rem;
+  margin: 0.8rem 0 1.5rem;
 }
 
 [data-md-color-scheme="slate"] .product-hero {
@@ -515,61 +515,48 @@
   border-color: rgba(255,255,255,0.08);
 }
 
-.product-hero-header {
-  margin-bottom: 1rem;
-}
-
-.product-hero-header p:first-child {
+.product-hero > p:first-of-type {
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--md-primary-fg-color);
-  margin-bottom: 0.4rem;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.35;
 }
 
-.product-hero-header p:last-child {
-  font-size: 0.95rem;
+.product-hero > p:nth-of-type(2) {
+  font-size: 0.92rem;
   line-height: 1.5;
   color: var(--md-default-fg-color--light);
-  margin: 0;
+  margin: 0 0 0.75rem 0;
 }
 
-.product-hero-meta {
-  margin: 1rem 0;
-  font-size: 0.9rem;
+.product-hero-stats {
+  font-size: 0.82rem !important;
+  color: var(--md-default-fg-color--light) !important;
+  margin: 0 0 0.75rem 0 !important;
+  padding: 0.5rem 0.75rem !important;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 0.35rem;
+  line-height: 1.5 !important;
 }
 
-.product-hero-meta table {
-  margin: 0.5rem 0 0.8rem;
-  font-size: 0.85rem;
+[data-md-color-scheme="slate"] .product-hero-stats {
+  background: rgba(255, 255, 255, 0.05);
 }
 
-.product-hero-meta table th,
-.product-hero-meta table td {
-  padding: 0.4rem 0.6rem;
+.product-hero-stats strong {
+  color: var(--md-primary-fg-color) !important;
+  font-weight: 700;
 }
 
-.product-hero-meta p {
-  margin: 0.3rem 0;
-  line-height: 1.5;
+.product-hero pre {
+  margin: 0.4rem 0 0.7rem !important;
 }
 
-.product-hero-install {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px dashed var(--md-default-fg-color--lightest);
-}
-
-.product-hero-install p:first-child {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.product-hero-install pre {
-  margin: 0.5rem 0 0.8rem;
-}
-
-.product-hero-install .md-button {
-  margin: 0.3rem 0.3rem 0 0;
+.product-hero .md-button {
+  margin: 0.2rem 0.3rem 0 0 !important;
+  padding: 0.35rem 0.85rem !important;
+  font-size: 0.85rem !important;
 }
 
 /* === VIDEO EMBED (16:9 responsive, full width) === */
