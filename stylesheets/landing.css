@@ -922,3 +922,72 @@
   80% { transform: translateY(-3px) rotate(5deg); }
   85% { transform: translateY(-5px) rotate(-3deg); }
 }
+
+/* ====== Ёжиный must-have ====== */
+.musthave-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.musthave-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.3rem 1.1rem 1.2rem;
+  border-radius: 14px;
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.05) 0%, rgba(124, 58, 237, 0.01) 100%);
+  color: var(--md-default-fg-color) !important;
+  text-decoration: none;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  position: relative;
+}
+
+.musthave-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow: 0 10px 28px rgba(124, 58, 237, 0.18);
+  color: var(--md-default-fg-color) !important;
+}
+
+.musthave-emoji {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.musthave-name {
+  font-weight: 700;
+  font-size: 1.08rem;
+  letter-spacing: -0.01em;
+}
+
+.musthave-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(124, 58, 237, 0.95);
+  text-transform: uppercase;
+}
+
+.musthave-desc {
+  font-size: 0.88em;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.45;
+  margin-top: 0.15rem;
+}
+
+[data-md-color-scheme="slate"] .musthave-card {
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  background: linear-gradient(180deg, rgba(167, 139, 250, 0.07) 0%, rgba(167, 139, 250, 0.02) 100%);
+}
+
+[data-md-color-scheme="slate"] .musthave-card:hover {
+  border-color: rgba(167, 139, 250, 0.55);
+  box-shadow: 0 10px 28px rgba(167, 139, 250, 0.22);
+}
+
+[data-md-color-scheme="slate"] .musthave-tag {
+  color: rgba(167, 139, 250, 0.95);
+}
