@@ -43,9 +43,28 @@ claude plugin install superpowers@claude-plugins-official
 ## Требования
 
 - **Где работает:** Claude Code, Cursor, Codex CLI, Gemini CLI, Copilot CLI
-- **Тариф Anthropic:** Pro ($20/мес) или Max ($200/мес). На Free-плане лимитов не хватит
-- **Лицензия:** MIT (open-source, можно использовать в коммерческих проектах)
-- **Автор:** obra (Jesse Vincent)
+- **Токены:** повышенное потребление — каждый subagent идёт в отдельной сессии, расход в **3-5 раз выше обычной**. На Free-плане лимитов не хватит, нужен тариф Anthropic Pro ($20/мес) или Max ($200/мес)
+- **Лицензия:** MIT — open-source, можно использовать в коммерческих проектах
+
+## Автор
+
+<div class="author-card" markdown>
+
+<img class="author-avatar" src="https://avatars.githubusercontent.com/u/45416?v=4" alt="Jesse Vincent">
+
+<div class="author-info" markdown>
+
+### [Jesse Vincent (obra)](https://github.com/obra)
+Berkeley, CA · Prime Radiant · [fsck.com](http://fsck.com) · 4 950 подписчиков
+
+**Легенда open-source.** Создатель [Request Tracker](https://bestpractical.com/request-tracker) (1994) — той самой системы тикетов на которой 25+ лет работает пол-интернета. Экс-project lead [K-9 Mail](https://en.wikipedia.org/wiki/K-9_Mail) (acquired by Mozilla → Thunderbird for Android). Со-основатель [Keyboardio](https://keyboard.io) (эргономичные клавиатуры) и [VaccinateCA](https://vaccinateca.com) (2021, COVID-помощник). Ветеран Perl-сообщества, бывший Perl 5 pumpking.
+
+Superpowers запустил в октябре 2025 — в тот же день когда Anthropic официально открыл plugin-систему Claude Code. За полгода проект вырос с пары тысяч до **157K+ звёзд**.
+
+</div>
+
+</div>
+
 
 ## Зачем это нужно
 
