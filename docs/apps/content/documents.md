@@ -18,12 +18,6 @@ for: agents
 
 > ИИ умеет генерировать не только текст, но и готовые деловые документы с таблицами, цветными callout-боксами, диаграммами и фирменным стилем. .docx, PDF, Google Docs — без Word и Canva.
 
-<div class="video-embed">
-  <iframe src="https://www.youtube-nocookie.com/embed/_f3latmOhew" title="Quarto обзор — Posit PBC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-
-<p class="video-caption">Обзор: Posit PBC — «Get started with Quarto — Mine Çetinkaya-Rundel»</p>
-
 ## Зачем это нужно
 
 Предпринимателю без команды регулярно нужны красивые документы:
