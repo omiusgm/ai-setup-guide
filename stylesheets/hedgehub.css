@@ -1,0 +1,64 @@
+/* ===== Announcement-полоска top-nav ===== */
+.ezh-topnav {
+  background: #1e1e2e;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.ezh-topnav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.55rem 1rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ezh-topnav__link {
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+  font-size: 0.87rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.ezh-topnav__link:hover {
+  background: rgba(124,58,237,0.9);
+  color: #fff;
+}
+
+@media (max-width: 560px) {
+  .ezh-topnav__inner { gap: 0.8rem; }
+  .ezh-topnav__link { font-size: 0.78rem; padding: 0.1rem 0.35rem; }
+}
+
+/* ===== Поиск: иконка-лупа вместо inline-поля ===== */
+.md-search__form .md-search__input {
+  display: none !important;
+}
+
+.md-search__form {
+  background: transparent !important;
+  box-shadow: none !important;
+  width: auto !important;
+  position: relative;
+  cursor: pointer;
+}
+
+.md-search__form::before {
+  content: "🔍";
+  font-size: 1.1rem;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+  color: rgba(255,255,255,0.85);
+  border-radius: 6px;
+  transition: background 0.15s;
+  display: inline-block;
+}
+
+.md-search__form:hover::before {
+  background: rgba(255,255,255,0.15);
+}
