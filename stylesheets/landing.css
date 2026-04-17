@@ -593,60 +593,78 @@
   font-style: italic;
 }
 
-/* === AUTHOR CARD (блок с фото и биографией автора) === */
-.author-card {
-  display: grid;
-  grid-template-columns: 96px 1fr;
-  gap: 1.2rem;
-  align-items: start;
-  padding: 1.2rem 1.4rem;
+/* === AUTHOR CHIP (маленькая горизонтальная карточка между hero и видео) === */
+.author-chip {
+  display: grid !important;
+  grid-template-columns: 48px 1fr;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.7rem 0.9rem;
+  margin: 0.8rem 0 1rem;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 0.85rem;
-  background: linear-gradient(135deg, rgba(103, 58, 183, 0.025), rgba(255, 255, 255, 0.01));
-  margin: 1rem 0 1.5rem;
+  border-radius: 0.6rem;
+  background: rgba(103, 58, 183, 0.03);
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: all 0.15s ease;
 }
 
-[data-md-color-scheme="slate"] .author-card {
-  background: linear-gradient(135deg, rgba(103, 58, 183, 0.08), rgba(255, 255, 255, 0.02));
-  border-color: rgba(255, 255, 255, 0.06);
+.author-chip:hover {
+  background: rgba(103, 58, 183, 0.06);
+  border-color: rgba(103, 58, 183, 0.2);
+  transform: translateY(-1px);
 }
 
-.author-avatar {
-  width: 96px !important;
-  height: 96px !important;
+[data-md-color-scheme="slate"] .author-chip {
+  background: rgba(103, 58, 183, 0.08);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-md-color-scheme="slate"] .author-chip:hover {
+  background: rgba(103, 58, 183, 0.15);
+  border-color: rgba(103, 58, 183, 0.3);
+}
+
+.author-chip__avatar {
+  width: 48px !important;
+  height: 48px !important;
   border-radius: 50% !important;
   object-fit: cover;
-  border: 2px solid rgba(103, 58, 183, 0.15);
-  box-shadow: 0 2px 8px rgba(103, 58, 183, 0.15);
+  border: 1.5px solid rgba(103, 58, 183, 0.2);
 }
 
-.author-info h3,
-.author-info > h3 {
-  margin-top: 0 !important;
-  font-size: 1.1rem !important;
-  letter-spacing: -0.01em;
+.author-chip__text {
+  min-width: 0;
+  overflow: hidden;
 }
 
-.author-info p {
-  margin: 0.3rem 0 0.5rem !important;
-  font-size: 0.9rem;
-  line-height: 1.55;
+.author-chip__name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  line-height: 1.2;
+  margin-bottom: 0.15rem;
+  letter-spacing: -0.005em;
 }
 
-.author-info p:first-of-type {
-  color: var(--md-default-fg-color--light) !important;
-  font-size: 0.82rem !important;
+.author-chip__handle {
+  font-weight: 400;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+}
+
+.author-chip__bio {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 700px) {
-  .author-card {
-    grid-template-columns: 64px 1fr;
-    gap: 0.9rem;
-    padding: 1rem 1.1rem;
-  }
-  .author-avatar {
-    width: 64px !important;
-    height: 64px !important;
+  .author-chip__bio {
+    white-space: normal;
   }
 }
 
