@@ -52,6 +52,12 @@ claude plugin install superpowers@claude-plugins-official
 
 </div>
 
+## 📺 Видеообзор
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/ol7KYIfUm1Y" title="Superpowers обзор" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 ---
 
 ## Зачем это нужно
