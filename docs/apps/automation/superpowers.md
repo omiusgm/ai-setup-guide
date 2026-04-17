@@ -34,13 +34,7 @@ claude plugin install superpowers@claude-plugins-official
 
 </div>
 
-<a class="author-chip" href="https://github.com/obra" title="Профиль на GitHub">
-<img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/45416?v=4" alt="Jesse Vincent">
-<div class="author-chip__text">
-<div class="author-chip__name">Jesse Vincent <span class="author-chip__handle">@obra</span></div>
-<div class="author-chip__bio">Легенда open-source. Создатель Request Tracker (1994) и K-9 Mail (→ Thunderbird for Android). Co-founder Keyboardio. Бывший Perl 5 pumpking.</div>
-</div>
-</a>
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/45416?v=4" alt="Jesse Vincent"><div class="author-chip__text"><div class="author-chip__name"><a href="https://github.com/obra">Jesse Vincent</a> <span class="author-chip__handle">@obra</span></div><div class="author-chip__bio">Легенда open-source. Создатель Request Tracker (1994) и K-9 Mail (→ Thunderbird for Android). Co-founder Keyboardio. Бывший Perl 5 pumpking.</div></div></div>
 
 <div class="video-embed">
   <iframe src="https://www.youtube-nocookie.com/embed/ol7KYIfUm1Y" title="Superpowers обзор — Матвей Шульга" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
