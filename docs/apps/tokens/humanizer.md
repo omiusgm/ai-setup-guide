@@ -35,6 +35,12 @@ npx skills add blader/humanizer
 
 <div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/1672?v=4" alt="Siqi Chen"><div class="author-chip__text"><div class="author-chip__label">АВТОР ПРОЕКТА</div><div class="author-chip__name"><a href="https://github.com/blader">Siqi Chen</a> <span class="author-chip__handle">@blader</span></div><div class="author-chip__bio">CEO Runway, серийный предприниматель в Кремниевой долине. Сделал humanizer чтобы свои же тексты в LinkedIn не выглядели как ChatGPT-болванка.</div></div></div>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/L2MLVS6UHyU" title="Humanizer обзор — Dan - Smart Tutorials" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Dan - Smart Tutorials — «How to Humanize AI Text in 2026 | TwainGPT Tutorial»</p>
+
 ## Требования
 
 - **Где работает:** Claude Code, Cursor, OpenCode как скилл; в любом чате — как промпт

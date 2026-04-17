@@ -16,6 +16,12 @@ for: agent
 
 > Встроенная команда Claude Code. Агент крутится в цикле, пока не сделает задачу. Ты ушёл спать — он работает.
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/7JKTLLW856I" title="/loop обзор — Leon van Zyl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Leon van Zyl — «Claude Code /loop Is Insanely Useful (5 Ways I Use It)»</p>
+
 ## Что делает
 
 Обычный агент делает один проход: спросил — ответил. `/loop` превращает это в цикл: «делай X каждые 30 минут», «проверяй Y пока не пофиксишь». Агент продолжает работать без твоего участия.

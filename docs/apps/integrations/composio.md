@@ -36,6 +36,12 @@ composio login
 
 <div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/128464815?v=4" alt="Composio"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/ComposioHQ">Composio</a> <span class="author-chip__handle">@ComposioHQ</span></div><div class="author-chip__bio">YC-стартап (S23). Делают «integration layer» для AI-агентов: подключение к 1000+ SaaS, OAuth, ключи, безопасность — на их стороне.</div></div></div>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/oVmHJvErnf8" title="Composio tutorial — iNeuronix AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: iNeuronix AI — «Composio Tutorial: Connect AI Agents to 250+ Tools in Minutes!»</p>
+
 ## Требования
 
 - **Где работает:** Claude Code, Cursor, Claude Desktop — любой клиент с поддержкой MCP. Также SDK для Python / TypeScript / LangChain / CrewAI

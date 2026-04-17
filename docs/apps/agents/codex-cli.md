@@ -33,6 +33,12 @@ npm install -g @openai/codex
 
 <div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/14957082?v=4" alt="OpenAI"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/openai">OpenAI</a> <span class="author-chip__handle">@openai</span></div><div class="author-chip__bio">Создатели ChatGPT и GPT-5. Codex CLI — их ответ Claude Code: open-source на Rust, входит в Plus/Pro/Business планы без доплат.</div></div></div>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/i5-Mf5OAQ2A" title="Codex CLI обзор — NullsCode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: NullsCode — «Codex ПОЛНАЯ ИНСТРУКЦИЯ! Установка, настройка, MCP серверы. Гайд 2026»</p>
+
 ## Требования
 
 - **Где работает:** Linux / macOS / Windows, нужен Node.js 18+ (для npm) или Homebrew

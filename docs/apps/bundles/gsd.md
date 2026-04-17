@@ -16,6 +16,12 @@ for: both
 
 > Встроенный паттерн Claude Code для оркестрации больших проектов. План → задачи → исполнение. Агент сам разбивает и делает.
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/uEit1oOJK0w" title="GSD Get Shit Done обзор — AI LABS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: AI LABS — «GSD Is the Missing Piece For Claude Code»</p>
+
 ## Что делает
 
 Не внешний пакет, не репозиторий. GSD — это рабочий процесс, который живёт в Claude Code. Активируется командой или промптом.

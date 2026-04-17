@@ -35,6 +35,12 @@ npm install -g oh-my-claude-sisyphus
 
 <div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/54757707?v=4" alt="Yeachan Heo"><div class="author-chip__text"><div class="author-chip__label">АВТОР ПРОЕКТА</div><div class="author-chip__name"><a href="https://github.com/Yeachan-Heo">Yeachan Heo (Bellman)</a> <span class="author-chip__handle">@Yeachan-Heo</span></div><div class="author-chip__bio">Алго-трейдер из Сеула, лидер Quant.start() — крупнейшего сообщества квант-трейдеров Кореи. Днём торгует, ночью вайб-кодит с Claude.</div></div></div>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/VOjZ8Htv9NU" title="Oh My Claude Code обзор — Prism Labs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Prism Labs — «Oh My Claude Code: Multi-Agent Orchestration with Zero Learning Curve»</p>
+
 ## Требования
 
 - **Где работает:** только внутри Claude Code (надстройка)

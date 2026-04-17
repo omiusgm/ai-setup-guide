@@ -35,6 +35,12 @@ npx skills add JuliusBrussee/caveman
 
 <div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/104168679?v=4" alt="Julius Brussee"><div class="author-chip__text"><div class="author-chip__label">АВТОР ПРОЕКТА</div><div class="author-chip__name"><a href="https://github.com/JuliusBrussee">Julius Brussee</a> <span class="author-chip__handle">@JuliusBrussee</span></div><div class="author-chip__bio">Разработчик, придумавший «caveman mode» как способ сжать вывод LLM без потери смысла. Один из самых вирусных Claude Code skills апреля 2026.</div></div></div>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/4FO1Liu-ttk" title="Caveman обзор — Chase AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Chase AI — «Caveman Claude Code Is the New Meta (Here's the Science)»</p>
+
 ## Требования
 
 - **Где работает:** Claude Code, Cursor, Codex CLI как скилл; в любом чате (ChatGPT, DeepSeek, Qwen) — как обычный промпт

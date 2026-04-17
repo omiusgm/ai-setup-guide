@@ -50,6 +50,12 @@ for: both
 
 ---
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/a0WGqimPab8" title="Handy обзор — AsapGuide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: AsapGuide — «This AI is Better Than Wispr Flow and 100% FREE Forever»</p>
+
 ## Зачем это нужно
 
 Печатать медленнее чем говорить. Исследования показывают: средняя скорость печати — 40 слов в минуту, средняя скорость речи — 150 слов в минуту. **Разница в 3-4 раза.**

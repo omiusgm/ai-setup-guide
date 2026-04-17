@@ -16,6 +16,12 @@ for: both
 
 > Самый простой способ дать ИИ память между сессиями. Не репо, не пакет — просто файл `HANDOFF.md` в проекте.
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/6NK4Pona2fY" title="HANDOFF-паттерн обзор — Олег Стефанов" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Олег Стефанов — «Claude Code: полный гайд по AI-кодингу (хаки, техники и секреты)»</p>
+
 ## Что делает
 
 Никаких установок. Создаёшь в корне проекта файл `HANDOFF.md`. Агент пишет туда прогресс работы перед завершением сессии. Новая сессия — читает файл и продолжает с того же места.

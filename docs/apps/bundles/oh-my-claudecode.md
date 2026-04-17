@@ -39,6 +39,12 @@ npm install -g oh-my-claude-sisyphus
 
 <div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/54757707?v=4" alt="Bellman (Yeachan Heo)"><div class="author-chip__text"><div class="author-chip__label">АВТОР ПРОЕКТА</div><div class="author-chip__name"><a href="https://github.com/Yeachan-Heo">Bellman (Yeachan Heo)</a> <span class="author-chip__handle">@Yeachan-Heo</span></div><div class="author-chip__bio">Алгоритмический трейдер из Кореи, лидер Quant.start() — крупнейшего корейского комьюнити квант-трейдинга. Сейчас в Layoff-Labs.</div></div></div>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/VOjZ8Htv9NU" title="Oh My Claude Code обзор — Prism Labs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Prism Labs — «Oh My Claude Code: Multi-Agent Orchestration with Zero Learning Curve»</p>
+
 !!! info "Тот же проект, что Sisyphus"
     На npm пакет называется **oh-my-claude-sisyphus**, в Claude Code marketplace — **oh-my-claudecode**. Это один и тот же репозиторий, два бренда. У нас есть отдельная страница [Sisyphus](../agents/sisyphus.md) — она про npm-установку и smart-routing моделей. Эта страница — про bundle из 19 агентов и многоагентную оркестрацию.
 

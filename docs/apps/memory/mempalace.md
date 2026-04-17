@@ -37,6 +37,12 @@ pip install mempalace
 
 <div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/275135684?v=4" alt="MemPalace"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/MemPalace">MemPalace</a> <span class="author-chip__handle">@MemPalace</span></div><div class="author-chip__bio">Организация во главе с актрисой Миллой Йовович и разработчиком Ben Sigman. Позиционируется как «best-benchmarked free AI memory» — заявление с которым спорит комьюнити.</div></div></div>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/WlxNNvDHJkE" title="MemPalace обзор — AI Godfather" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: AI Godfather — «MemPalace - How Milla Jovovich's AI Project Scammed the Internet»</p>
+
 ## Требования
 
 - **Где работает:** любой пайплайн, куда можно подключить Python-библиотеку

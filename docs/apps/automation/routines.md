@@ -15,6 +15,12 @@ for: agent
 
 > Облачный аналог `/loop`. Задачи выполняются на серверах Anthropic. Комп выключен — задача работает.
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/MMHa28g0z6k" title="Routines обзор — Brock Mesarich" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Brock Mesarich — «Claude is Now a 24/7 Employee (Cowork Scheduled Tasks)»</p>
+
 ## Что делает
 
 Новая фича Claude Code (апрель 2026). Планируешь задачу через `/schedule` — она уходит в облако Anthropic и выполняется по расписанию. Комп может быть выключен, ноут в сумке — всё равно работает.

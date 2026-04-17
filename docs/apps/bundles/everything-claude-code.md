@@ -39,6 +39,12 @@ git clone https://github.com/affaan-m/everything-claude-code ~/everything-cc
 
 <div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/124439313?v=4" alt="Affaan Mustafa"><div class="author-chip__text"><div class="author-chip__label">АВТОР ПРОЕКТА</div><div class="author-chip__name"><a href="https://github.com/affaan-m">Affaan Mustafa</a> <span class="author-chip__handle">@affaan-m</span></div><div class="author-chip__bio">Co-founder Itô (Ito Markets), SF-builder в AI и квант-трейдинге. Автор гайдов по Claude Code с 5M+ просмотров. Победитель Anthropic-хакатона сентября 2025.</div></div></div>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/tvmTmPal6ik" title="Everything Claude Code обзор — Prism Labs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Prism Labs — «Everything Claude Code: The 102k-Star Resource That Makes Claude Code Unstoppable»</p>
+
 ## Что делает
 
 Представь, что кто-то уже за тебя сделал: настроил десятки агентов под разные задачи, написал 181 скилл на все случаи, создал 79 кастомных команд. Everything Claude Code — это именно такая «армия готовых инструментов».

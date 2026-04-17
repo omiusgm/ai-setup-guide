@@ -34,6 +34,12 @@ claude mcp add firecrawl -e FIRECRAWL_API_KEY=твой-ключ -- npx -y firecr
 
 <div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/135057108?v=4" alt="Firecrawl"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/firecrawl">Firecrawl</a> <span class="author-chip__handle">@firecrawl</span></div><div class="author-chip__bio">YC-стартап (раньше Mendable AI). Web data API для AI-агентов. 110K звёзд — одна из самых популярных опен-сорс библиотек для скрейпинга в LLM-эпоху.</div></div></div>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/xUQ1BAH1vtw" title="Firecrawl обзор — Игорь Зуевич" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Игорь Зуевич — «Firecrawl + MCP-сервер в n8n: Забудь про сложный парсинг и скрапинг! Идеальный AI агент»</p>
+
 ## Требования
 
 - **Где работает:** облачный сервис через API + официальный MCP-сервер для Claude Code, Cursor, Claude Desktop. SDK — Python, Node, Rust, Go

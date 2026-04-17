@@ -35,6 +35,12 @@ claude mcp add amocrm -- python -m amocrm_mcp
 
 <div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/226208132?v=4" alt="cAIborg.ai"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/cAIborg-ai">cAIborg.ai</a> <span class="author-chip__handle">@cAIborg-ai</span></div><div class="author-chip__bio">Команда из РФ. Делает MCP-серверы для популярных российских сервисов. Свежий проект — баги возможны, но активно чинят.</div></div></div>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/W-wFnM2ip_4" title="AmoCRM + GPT обзор — Команда F5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Команда F5 — «Настройка нейро-сотрудника GPT в amoCRM за 30 минут — BPMN-конструктор «Процессы»»</p>
+
 ## Требования
 
 - **Где работает:** Claude Code, Claude Desktop, Cursor — любой клиент с поддержкой MCP

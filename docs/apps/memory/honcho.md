@@ -34,6 +34,12 @@ pip install honcho-ai
 
 <div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/123981229?v=4" alt="Plastic Labs"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/plastic-labs">Plastic Labs</a> <span class="author-chip__handle">@plastic-labs</span></div><div class="author-chip__bio">AI-лаборатория на стыке машинного обучения и когнитивистики. Развивают Honcho как AI-native memory поверх собственных reasoning-моделей.</div></div></div>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/pcR30j-sKxU" title="Honcho обзор — Igor Kudryk (Salesforce)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Igor Kudryk (Salesforce) — «AI memory just got solved (they beat OpenAI & Anthropic)»</p>
+
 ## Требования
 
 - **Где работает:** любой агент (Claude Code, Cursor, кастомные LLM-пайплайны) через SDK или REST API

@@ -35,6 +35,12 @@ npx create-video@latest
 
 <div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/85344006?v=4" alt="Remotion"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/remotion-dev">Remotion</a> <span class="author-chip__handle">@remotion-dev</span></div><div class="author-chip__bio">Команда во главе с Jonny Burger. С 2021 года развивают фреймворк, используется в продакшне студиями, медиа и соцсетями. Есть Remotion Lambda для рендера на AWS.</div></div></div>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/POgLAzEPUP4" title="Remotion обзор — Продуктивный Совет" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Продуктивный Совет — «Remotion - Как создавать видео в ClaudeCode (Opencode)»</p>
+
 ## Требования
 
 - **Где работает:** Node.js 16+, любая ОС (macOS / Linux / Windows)
