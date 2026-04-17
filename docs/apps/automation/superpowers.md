@@ -17,38 +17,19 @@ for: agents
 
 <div class="product-hero" markdown>
 
-<div class="product-hero-header" markdown>
+**Subagent-driven development · методология G3 (Player ↔ Coach)**
 
-**Subagent-driven development для Claude Code · методология G3 (Player ↔ Coach)**
+Агенты пишут код и ревьюят друг друга автоматически — получаешь готовый результат без ручной перепроверки.
 
-Agentic skills framework + software development methodology. Агенты пишут код и ревьюят друг друга автоматически — ты получаешь готовый результат без ручной перепроверки.
+<p class="product-hero-stats">
+<strong>157 027⭐</strong> · MIT · обновлён 16 апр 2026 · 🤖 Claude Code / Cursor / Codex / Gemini CLI · требует Pro $20 или Max $200
+</p>
 
-</div>
-
-<div class="product-hero-meta" markdown>
-
-| Репозиторий | Звёзд | Лицензия | Обновлён |
-|---|---|---|---|
-| [github.com/obra/superpowers](https://github.com/obra/superpowers) | 157 027⭐ | MIT | 16 апреля 2026 |
-
-**Marketplace:** [claude.com/plugins/superpowers](https://claude.com/plugins/superpowers) (Anthropic официально)
-**Для кого:** 🤖 Claude Code, Cursor, Codex CLI, Gemini CLI
-**Тариф Claude:** Pro $20 или Max $200 (Free не хватит по лимитам)
-
-</div>
-
-<div class="product-hero-install" markdown>
-
-**Установить:**
 ```bash
 claude plugin install superpowers@claude-plugins-official
 ```
 
-Всё. После установки — 3 команды `/brainstorm`, `/write-plan`, `/execute-plan` доступны в любом проекте.
-
-[:material-github: Смотреть на GitHub](https://github.com/obra/superpowers){ .md-button .md-button--primary } [:material-puzzle: В marketplace](https://claude.com/plugins/superpowers){ .md-button }
-
-</div>
+[:material-github: GitHub](https://github.com/obra/superpowers){ .md-button .md-button--primary } [:material-puzzle: Marketplace](https://claude.com/plugins/superpowers){ .md-button } [:material-play: Видеообзор](#видеообзор){ .md-button }
 
 </div>
 
