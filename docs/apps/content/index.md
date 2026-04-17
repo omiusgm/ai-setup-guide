@@ -50,6 +50,12 @@ hide:
 **Для видео:**
 - :material-movie-open: **[Remotion](remotion.md)** — 44K⭐ видео через React-компоненты, автогенерация роликов
 
+**Для звонков и встреч:**
+- :material-microphone-message: **[Транскрибация с диаризацией](transcription.md)** — WhisperX 21K⭐, текст звонка с метками «менеджер/клиент». Кейс AmoCRM
+
+**Для документов:**
+- :material-file-document-edit: **[Pretty-Docs + WeasyPrint + Quarto](documents.md)** — красивые Google Docs и PDF из Claude Code
+
 Скоро: Midjourney, Runway, Suno — обзоры в процессе.
 
 **Для деловых документов (КП, отчёты, PDF):**
