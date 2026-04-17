@@ -991,3 +991,89 @@
 [data-md-color-scheme="slate"] .musthave-tag {
   color: rgba(167, 139, 250, 0.95);
 }
+
+/* ====== Footer CTA: подписка на Агент Ёж ====== */
+.ezh-cta {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.08) 0%, rgba(167, 139, 250, 0.04) 100%);
+  border-top: 1px solid rgba(124, 58, 237, 0.2);
+  padding: 2rem 1rem;
+}
+
+.ezh-cta__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.ezh-cta__emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.ezh-cta__text {
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ezh-cta__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+  letter-spacing: -0.01em;
+}
+
+.ezh-cta__sub {
+  font-size: 0.88rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.45;
+}
+
+.ezh-cta__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  background: #229ED9;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  flex-shrink: 0;
+}
+
+.ezh-cta__button:hover {
+  transform: translateY(-2px);
+  background: #1b85b8;
+  box-shadow: 0 8px 18px rgba(34, 158, 217, 0.28);
+  color: #fff !important;
+}
+
+.ezh-cta__tg-icon {
+  width: 20px;
+  height: 20px;
+}
+
+[data-md-color-scheme="slate"] .ezh-cta {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(167, 139, 250, 0.04) 100%);
+  border-top: 1px solid rgba(167, 139, 250, 0.25);
+}
+
+@media (max-width: 560px) {
+  .ezh-cta__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.9rem;
+  }
+  .ezh-cta__button {
+    width: 100%;
+    justify-content: center;
+  }
+}
