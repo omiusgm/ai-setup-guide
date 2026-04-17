@@ -13,15 +13,46 @@ updated: 2026-04-17
 for: agents
 ---
 
-# 🦸 Superpowers — player-coach циклы в Claude Code
+# 🦸 Superpowers
 
-**Репозиторий:** [github.com/obra/superpowers](https://github.com/obra/superpowers) · **157 027⭐** · MIT · обновлён 16 апреля 2026
-**Marketplace:** [claude.com/plugins/superpowers](https://claude.com/plugins/superpowers)
+<div class="product-hero" markdown>
 
-!!! info "🤖 Для Claude Code (и Cursor / Codex / Gemini CLI)"
-    Официальный плагин Anthropic в marketplace. Ставится одной командой. После установки работает во всех проектах.
+<div class="product-hero-header" markdown>
 
-> Целая методология разработки: выведывает спеку из разговора → пишет план → запускает агентов, которые пишут код и ревьюят друг друга автоматически. То что в научной статье Block AI называется **G3 (Dialectical Auto-coding)** — с Player и Coach, — здесь уже встроено как `/brainstorm` → `/write-plan` → `/execute-plan`.
+**Subagent-driven development для Claude Code · методология G3 (Player ↔ Coach)**
+
+Agentic skills framework + software development methodology. Агенты пишут код и ревьюят друг друга автоматически — ты получаешь готовый результат без ручной перепроверки.
+
+</div>
+
+<div class="product-hero-meta" markdown>
+
+| Репозиторий | Звёзд | Лицензия | Обновлён |
+|---|---|---|---|
+| [github.com/obra/superpowers](https://github.com/obra/superpowers) | 157 027⭐ | MIT | 16 апреля 2026 |
+
+**Marketplace:** [claude.com/plugins/superpowers](https://claude.com/plugins/superpowers) (Anthropic официально)
+**Для кого:** 🤖 Claude Code, Cursor, Codex CLI, Gemini CLI
+**Тариф Claude:** Pro $20 или Max $200 (Free не хватит по лимитам)
+
+</div>
+
+<div class="product-hero-install" markdown>
+
+**Установить:**
+```bash
+claude plugin install superpowers@claude-plugins-official
+```
+
+Всё. После установки — 3 команды `/brainstorm`, `/write-plan`, `/execute-plan` доступны в любом проекте.
+
+[:material-github: Смотреть на GitHub](https://github.com/obra/superpowers){ .md-button .md-button--primary } [:material-puzzle: В marketplace](https://claude.com/plugins/superpowers){ .md-button }
+
+</div>
+
+</div>
+
+---
 
 ## Зачем это нужно
 
@@ -74,16 +105,7 @@ Superpowers это реализовал для реального Claude Code. �
 
 ---
 
-## Как поставить
-
-```bash
-# В любом Claude Code терминале:
-claude plugin install superpowers@claude-plugins-official
-```
-
-Всё. После установки — 3 команды `/brainstorm`, `/write-plan`, `/execute-plan` доступны в любом проекте.
-
-??? note "Альтернативные способы установки (Cursor, Codex, Gemini)"
+??? note "Установка в других средах (Cursor, Codex, Gemini CLI, Copilot)"
 
     ```bash
     # Cursor

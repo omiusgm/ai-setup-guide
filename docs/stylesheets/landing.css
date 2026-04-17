@@ -501,6 +501,77 @@
   background: rgba(76, 175, 80, 0.1);
 }
 
+/* === PRODUCT HERO (App Store-style для app-страниц) === */
+.product-hero {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.75rem;
+  padding: 1.5rem 1.8rem;
+  background: linear-gradient(135deg, rgba(103, 58, 183, 0.04), rgba(255, 193, 7, 0.03));
+  margin: 1rem 0 2rem;
+}
+
+[data-md-color-scheme="slate"] .product-hero {
+  background: linear-gradient(135deg, rgba(103, 58, 183, 0.12), rgba(255, 193, 7, 0.06));
+  border-color: rgba(255,255,255,0.08);
+}
+
+.product-hero-header {
+  margin-bottom: 1rem;
+}
+
+.product-hero-header p:first-child {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.4rem;
+}
+
+.product-hero-header p:last-child {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+  margin: 0;
+}
+
+.product-hero-meta {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.product-hero-meta table {
+  margin: 0.5rem 0 0.8rem;
+  font-size: 0.85rem;
+}
+
+.product-hero-meta table th,
+.product-hero-meta table td {
+  padding: 0.4rem 0.6rem;
+}
+
+.product-hero-meta p {
+  margin: 0.3rem 0;
+  line-height: 1.5;
+}
+
+.product-hero-install {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--md-default-fg-color--lightest);
+}
+
+.product-hero-install p:first-child {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.product-hero-install pre {
+  margin: 0.5rem 0 0.8rem;
+}
+
+.product-hero-install .md-button {
+  margin: 0.3rem 0.3rem 0 0;
+}
+
 /* === ЁЖИК === */
 
 /* Пиксельный ёж в hero */
