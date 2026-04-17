@@ -14,6 +14,8 @@ for: both
 
 # 🔌 Composio
 
+**Репозиторий:** [github.com/ComposioHQ/composio](https://github.com/ComposioHQ/composio) · **28 000⭐**
+
 !!! info "🤖💬 Для чатботов И агентов"
     Работает и в браузере (облачная версия / альтернатива), и через агента (установка). Ниже оба варианта.
 

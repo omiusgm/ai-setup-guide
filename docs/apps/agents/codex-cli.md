@@ -12,6 +12,8 @@ for: agent
 
 # ⌨️ Codex CLI
 
+**Репозиторий:** [github.com/openai/codex](https://github.com/openai/codex) · **76 000⭐**
+
 !!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
     Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
 

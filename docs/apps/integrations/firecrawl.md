@@ -13,6 +13,8 @@ for: both
 
 # 🔥 Firecrawl
 
+**Репозиторий:** [github.com/mendableai/firecrawl](https://github.com/mendableai/firecrawl) · **110 000⭐**
+
 !!! info "🤖💬 Для чатботов И агентов"
     Работает и в браузере (облачная версия / альтернатива), и через агента (установка). Ниже оба варианта.
 

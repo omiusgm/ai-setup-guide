@@ -15,6 +15,9 @@ for: agents
 
 # 🦸 Superpowers — player-coach циклы в Claude Code
 
+**Репозиторий:** [github.com/obra/superpowers](https://github.com/obra/superpowers) · **157 027⭐** · MIT · обновлён 16 апреля 2026
+**Marketplace:** [claude.com/plugins/superpowers](https://claude.com/plugins/superpowers)
+
 !!! info "🤖 Для Claude Code (и Cursor / Codex / Gemini CLI)"
     Официальный плагин Anthropic в marketplace. Ставится одной командой. После установки работает во всех проектах.
 
@@ -162,4 +165,4 @@ Superpowers **агрессивно использует subagents** — кажд
 ---
 
 !!! tip "Совместимость"
-    *Ставится из РФ без VPN (через `claude plugin`). Работает с Claude Pro / Max-тарифами, требует работающий Claude Code CLI. Open-source (MIT), 157K звёзд, официальный в Anthropic marketplace.*
+    *Работает с Claude Pro / Max-тарифами. Требует установленный Claude Code CLI. Open-source (MIT), 157K звёзд, официальный плагин в Anthropic marketplace. Поддерживает также Cursor, Codex CLI, Gemini CLI.*

@@ -14,6 +14,8 @@ for: both
 
 # 🦴 Caveman
 
+**Репозиторий:** [github.com/JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) · **35 000⭐**
+
 !!! info "🤖💬 Для чатботов И агентов"
     Работает и в браузере (облачная версия / альтернатива), и через агента (установка). Ниже оба варианта.
 

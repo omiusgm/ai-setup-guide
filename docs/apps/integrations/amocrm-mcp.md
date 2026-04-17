@@ -12,6 +12,8 @@ for: agent
 
 # 🏪 AmoCRM MCP
 
+**Репозиторий:** [github.com/cAIborg-ai/amocrm-mcp](https://github.com/cAIborg-ai/amocrm-mcp)
+
 !!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
     Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
 

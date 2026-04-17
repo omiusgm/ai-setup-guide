@@ -12,6 +12,8 @@ for: agent
 
 # 🧠 Honcho
 
+**Репозиторий:** [github.com/plastic-labs/honcho](https://github.com/plastic-labs/honcho)
+
 !!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
     Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
 

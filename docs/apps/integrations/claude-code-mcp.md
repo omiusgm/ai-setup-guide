@@ -12,6 +12,8 @@ for: agent
 
 # ♻️ Claude Code MCP
 
+**Репозиторий:** [github.com/steipete/claude-code-mcp](https://github.com/steipete/claude-code-mcp) · **1 100⭐**
+
 !!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
     Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
 

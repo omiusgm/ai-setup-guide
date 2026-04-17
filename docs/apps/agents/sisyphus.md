@@ -14,6 +14,8 @@ for: agents
 
 # ⚙️ Oh-My-ClaudeCode (Sisyphus)
 
+**Репозиторий:** [github.com/Yeachan-Heo/oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) · **29 482⭐**
+
 !!! info "🤖 Для тех кто уже в Claude Code"
     Это надстройка над Claude Code. Если ещё не пользуешься Claude Code в терминале — сначала попробуй его, потом эту штуку.
 
@@ -71,4 +73,4 @@ Claude Code по умолчанию всё гоняет через Opus — са
 ---
 
 !!! tip "Совместимость"
-    *Ставится локально через npm. Работает с любой подпиской Anthropic (API, Pro, Max). Из РФ — нужен VPN только для npm установки и API-запросов Anthropic.*
+    *Ставится локально через npm. Работает с любой подпиской Anthropic (API, Pro, Max).*

@@ -13,6 +13,8 @@ for: agent
 
 # 🎓 Hermes Agent
 
+**Репозиторий:** [github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) · **93 000⭐**
+
 !!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
     Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
 

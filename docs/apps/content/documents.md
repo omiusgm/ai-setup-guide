@@ -190,4 +190,4 @@ for: agents
 ---
 
 !!! tip "Совместимость"
-    *Все Python-инструменты работают из РФ без VPN (ставятся через pip). WeasyPrint и Office-Word-MCP-Server — open-source, можно использовать бесплатно. Claude Code → Google Docs связка требует Google Cloud проект (бесплатный до 1 млн запросов/мес).*
+    *Все Python-инструменты ставятся через pip. WeasyPrint и Office-Word-MCP-Server — open-source, можно использовать бесплатно. Claude Code → Google Docs связка требует Google Cloud проект (бесплатный до 1 млн запросов/мес).*

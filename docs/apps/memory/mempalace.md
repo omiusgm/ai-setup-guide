@@ -12,6 +12,8 @@ for: agent
 
 # 🏛️ MemPalace
 
+**Репозиторий:** [github.com/MemPalace/mempalace](https://github.com/MemPalace/mempalace) · **45 000⭐**
+
 !!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
     Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
 
