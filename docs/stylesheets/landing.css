@@ -510,6 +510,44 @@
   margin: 0.8rem 0 1.5rem;
 }
 
+/* Split-вариант: текст слева + видео справа на десктопе */
+.product-hero--split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.product-hero__main > *:first-child {
+  margin-top: 0 !important;
+}
+
+.product-hero__media {
+  position: sticky;
+  top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .product-hero--split {
+    grid-template-columns: 1fr;
+  }
+  .product-hero__media {
+    position: static;
+  }
+}
+
+.video-embed--hero {
+  margin: 0 !important;
+}
+
+.video-caption {
+  margin: 0.5rem 0 0 !important;
+  font-size: 0.78rem !important;
+  color: var(--md-default-fg-color--light) !important;
+  text-align: center;
+  font-style: italic;
+}
+
 [data-md-color-scheme="slate"] .product-hero {
   background: linear-gradient(135deg, rgba(103, 58, 183, 0.12), rgba(255, 193, 7, 0.06));
   border-color: rgba(255,255,255,0.08);

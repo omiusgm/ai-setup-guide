@@ -15,7 +15,9 @@ for: agents
 
 # Superpowers
 
-<div class="product-hero" markdown>
+<div class="product-hero product-hero--split" markdown>
+
+<div class="product-hero__main" markdown>
 
 **2-3 часа автономной работы — готовый код с тестами, без ручной перепроверки.**
 
@@ -29,7 +31,18 @@ for: agents
 claude plugin install superpowers@claude-plugins-official
 ```
 
-[:material-github: GitHub](https://github.com/obra/superpowers){ .md-button .md-button--primary } [:material-puzzle: Marketplace](https://claude.com/plugins/superpowers){ .md-button } [:material-play: Посмотреть обзор](#видеообзор){ .md-button }
+[:material-github: GitHub](https://github.com/obra/superpowers){ .md-button .md-button--primary } [:material-puzzle: Marketplace](https://claude.com/plugins/superpowers){ .md-button }
+
+</div>
+
+<div class="product-hero__media" markdown>
+
+<div class="video-embed video-embed--hero">
+  <iframe src="https://www.youtube-nocookie.com/embed/ol7KYIfUm1Y" title="Superpowers обзор — Матвей Шульга" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<p class="video-caption">Обзор: Матвей Шульга — «Этот плагин улучшит Claude Code»</p>
+
+</div>
 
 </div>
 
@@ -166,14 +179,6 @@ Superpowers **агрессивно использует subagents** — кажд
 | [GSD v2](https://github.com/gsd-build/gsd-2) | 6K | Memory reset через отдельный CLI | Не плагин, отдельный инструмент |
 | [Hegelion](https://github.com/Hmbown/Hegelion) | 143 | Честный Player-Coach, MCP-сервер | Малоизвестен, без комьюнити |
 | [Goose (Block)](https://github.com/block/goose) | 42K | От той же команды, полноценный агент | Отдельный агент, не плагин |
-
-## Видеообзор
-
-<div class="video-embed">
-  <iframe src="https://www.youtube-nocookie.com/embed/ol7KYIfUm1Y" title="Superpowers обзор от Матвея Шульги" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-
-Автор: **Матвей Шульга** — «Этот плагин улучшит Claude Code» (YouTube).
 
 ## Что читать дальше
 
