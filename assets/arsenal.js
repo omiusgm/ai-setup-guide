@@ -12,7 +12,9 @@
   ];
 
   const root = document.getElementById("arsenal-root");
-  if (!root) return;
+  const mustRoot = document.getElementById("arsenal-musthave");
+  const hideCheck = document.getElementById("hide-musthave");
+  if (!root && !mustRoot) return;
 
   let data = [];
   let activeTags = new Set();
@@ -34,7 +36,8 @@
 
   function tryLoadJson(urls, i) {
     if (i >= urls.length) {
-      root.innerHTML = "<p>Не удалось загрузить каталог. Проверь что arsenal.json на сервере.</p>";
+      if (root) root.innerHTML = "<p>Не удалось загрузить каталог. Проверь что arsenal.json на сервере.</p>";
+      if (mustRoot) mustRoot.innerHTML = "";
       return;
     }
     fetch(urls[i])
@@ -44,6 +47,23 @@
   }
 
   function render() {
+    // Must-have блок (рендерится ОДИН раз, если на странице есть #arsenal-musthave)
+    if (mustRoot && !mustRoot.dataset.rendered) {
+      const must = data.filter(d => d.must_have);
+      mustRoot.innerHTML = must.length
+        ? `<div class="ar-cards">${must.map(cardHTML).join("")}</div>`
+        : "<p>Пусто</p>";
+      mustRoot.dataset.rendered = "1";
+    }
+
+    if (!root) return; // Если нет основного каталога на странице — остановиться тут
+
+    // Бинд чекбокса «скрыть must-have» (один раз)
+    if (hideCheck && !hideCheck.dataset.bound) {
+      hideCheck.dataset.bound = "1";
+      hideCheck.addEventListener("change", render);
+    }
+
     root.innerHTML = `
       <div class="ar-topbar">
         <input class="ar-search" placeholder="🔍 поиск по названию, описанию, тегам…" value="${escape(query)}">
@@ -84,7 +104,9 @@
       tagsEl.appendChild(chip);
     });
 
+    const hideMusthave = hideCheck && hideCheck.checked;
     let filtered = data.filter(item => {
+      if (hideMusthave && item.must_have) return false;
       if (activeTags.size === 0) return true;
       return [...activeTags].every(t => (item.tags || []).includes(t));
     });
@@ -108,21 +130,23 @@
       activeLabel.textContent = `Всего: ${data.length} инструментов`;
     }
 
-    cardsEl.innerHTML = filtered.map(item => `
-      <a class="ar-card" href="${escapeAttr(item.url)}">
-        <div class="ar-card-head">
-          <span class="ar-card-emoji">${escape(item.emoji)}</span>
-          <span class="ar-card-meta">${item.ru ? "🇷🇺 " : ""}${formatStars(item.stars)}</span>
-        </div>
-        <div class="ar-card-name">${escape(item.name)}</div>
-        <div class="ar-card-tagline">${escape(item.tagline || "")}</div>
-        <div class="ar-card-tags">${(item.tags || []).slice(0, 3).map(t => `<span>${escape(t)}</span>`).join("")}</div>
-      </a>
-    `).join("") || "<p>По этим фильтрам ничего не найдено.</p>";
+    cardsEl.innerHTML = filtered.map(cardHTML).join("") || "<p>По этим фильтрам ничего не найдено.</p>";
 
     searchInput.addEventListener("input", (e) => { query = e.target.value; renderCardsOnly(); });
     sortSelect.addEventListener("change", (e) => { sortBy = e.target.value; render(); });
     resetEl.addEventListener("click", (e) => { e.preventDefault(); activeTags.clear(); query = ""; updateURL(); render(); });
+  }
+
+  function cardHTML(item) {
+    return `<a class="ar-card" href="${escapeAttr(item.url)}">
+      <div class="ar-card-head">
+        <span class="ar-card-emoji">${escape(item.emoji)}</span>
+        <span class="ar-card-meta">${item.ru ? "🇷🇺 " : ""}${formatStars(item.stars)}</span>
+      </div>
+      <div class="ar-card-name">${escape(item.name)}</div>
+      <div class="ar-card-tagline">${escape(item.tagline || "")}</div>
+      <div class="ar-card-tags">${(item.tags || []).slice(0, 3).map(t => `<span>${escape(t)}</span>`).join("")}</div>
+    </a>`;
   }
 
   function renderCardsOnly() {
