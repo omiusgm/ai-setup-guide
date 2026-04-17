@@ -5,19 +5,42 @@ tags:
   - mcp
   - бизнесу
   - автоматизация
+stars: 1
 github: cAIborg-ai/amocrm-mcp
-updated: 2026-04-16
+updated: 2026-04-17
 for: agent
 ---
 
-# 🏪 AmoCRM MCP
+# AmoCRM MCP
 
-**Репозиторий:** [github.com/cAIborg-ai/amocrm-mcp](https://github.com/cAIborg-ai/amocrm-mcp)
+<div class="product-hero" markdown>
 
-!!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
-    Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
+**36 инструментов для AmoCRM через MCP — ИИ работает с CRM напрямую.**
 
-> 36 инструментов для AmoCRM через MCP (способ дать ИИ руки — подключить его к CRM). ИИ читает сделки, пишет комментарии, создаёт задачи, обновляет контакты.
+Подключаешь к Claude Code / Cursor — агент сам читает сделки, пишет комментарии, создаёт задачи, обновляет контакты. От «покажи свежие сделки» до «собери отчёт по воронке за квартал».
+
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 1</span>
+<span class="rating-label">звезда на GitHub · обновлён 19 февраля 2026</span>
+</p>
+
+```bash
+pip install amocrm-mcp
+claude mcp add amocrm -- python -m amocrm_mcp
+```
+
+[:material-github: GitHub](https://github.com/cAIborg-ai/amocrm-mcp){ .md-button .md-button--primary } [:material-cog: Гайд по MCP](../../knowledge/getting-started.md){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/226208132?v=4" alt="cAIborg.ai"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/cAIborg-ai">cAIborg.ai</a> <span class="author-chip__handle">@cAIborg-ai</span></div><div class="author-chip__bio">Команда из РФ. Делает MCP-серверы для популярных российских сервисов. Свежий проект — баги возможны, но активно чинят.</div></div></div>
+
+## Требования
+
+- **Где работает:** Claude Code, Claude Desktop, Cursor — любой клиент с поддержкой MCP
+- **Ключи:** API-ключ AmoCRM (Настройки → Интеграции → API) и поддомен аккаунта в `.env`
+- **В РФ:** работает без VPN, AmoCRM полностью доступна
+- **Лицензия:** open-source, статус — свежий проект (1⭐, февраль 2026)
 
 ## Что делает
 

@@ -5,25 +5,44 @@ tags:
   - бесплатно
   - открытый-код
   - технарям
-stars: 93000
+stars: 95896
 github: NousResearch/hermes-agent
-updated: 2026-04-16
+updated: 2026-04-17
 for: agent
 ---
 
-# 🎓 Hermes Agent
+# Hermes Agent
 
-**Репозиторий:** [github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) · **93 000⭐**
+<div class="product-hero" markdown>
 
-!!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
-    Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
+**Агент с собственной памятью — сохраняет удачные решения как скиллы и переиспользует. Идея классная, исполнение пока сыровато.**
 
-> Агент с обучением скиллам — учебный проект Nous Research. Первые 5-10 сессий разницы не заметишь, скиллы часто кривые. Но идея классная и исполнение улучшается.
+Отличие от одноразовых агентов: `.hermes/skills/` с автосозданными паттернами, кроны, 7 мессенджеров (Telegram, Discord, Slack, WhatsApp, Signal, Email, CLI). Первые 5-10 сессий разницы не заметишь — учится постепенно.
 
-!!! warning "Этот инструмент только для программистов"
-    Hermes ставится только через чёрное окно с командами. Если ты не кодишь — посмотри [Goose](goose.md) (обычное десктоп-приложение с окошком) или [DeepSeek в браузере](../../knowledge/budget.md). Оба из РФ без VPN, без единой команды.
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 95 896</span>
+<span class="rating-label">звёзд на GitHub · обновлён 17 апреля 2026</span>
+</p>
 
-## Что делает
+```bash
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+```
+
+[:material-github: GitHub](https://github.com/NousResearch/hermes-agent){ .md-button .md-button--primary } [:material-book: Документация](https://hermes-agent.nousresearch.com/docs/){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/134168893?v=4" alt="Nous Research"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/NousResearch">Nous Research</a> <span class="author-chip__handle">@NousResearch</span></div><div class="author-chip__bio">Open-source AI-лаборатория за моделями Hermes (Llama-тюны), Nomos и Psyche. $50M Series A от Paradigm, $65M всего привлечено.</div></div></div>
+
+## Требования
+
+- **Где работает:** Linux / macOS / WSL2 / Android (Termux). Windows напрямую — нет
+- **Лицензия:** MIT — open-source
+- **Зависимости:** Python, Node.js, ripgrep, ffmpeg — one-liner установщик всё ставит сам
+- **Провайдер:** Nous Portal, OpenRouter (200+ моделей) или любой через `hermes model`. Работает и с Ollama локально
+- **Ключевое ограничение:** первые 5-10 сессий разницы с обычным агентом не заметишь — обучение идёт постепенно. Для одноразовых задач смысла нет
+
+## Зачем это нужно
 
 Большинство агентов — одноразовые. Дал задачу, он решил, забыл. Hermes отличается: у него есть «скиллы» — файлы где сохранены удачные паттерны работы. Сделал что-то хорошо — запомнил. В следующий раз (в теории) делает лучше и быстрее.
 

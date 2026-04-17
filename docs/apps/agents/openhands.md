@@ -5,25 +5,50 @@ tags:
   - бесплатно
   - открытый-код
   - технарям
-stars: 71000
+stars: 71389
 github: All-Hands-AI/OpenHands
-updated: 2026-04-16
+updated: 2026-04-17
 for: agent
 ---
 
-# 🤲 OpenHands
+# OpenHands
 
-**Репозиторий:** [github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) · **71 000⭐**
+<div class="product-hero" markdown>
 
-!!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
-    Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
+**87% SWE-bench — один из сильнейших автономных агентов в open-source. Работает на уровне живого мидла/сеньора. Ставишь задачу — уходишь пить кофе.**
 
-> 87% на SWE-bench — один из самых сильных автономных ИИ-инженеров в открытом коде. Ставишь задачу — уходишь пить кофе.
+Docker-контейнер с веб-интерфейсом. Решает задачу от начала до конца: файлы, код, тесты, git. Бывший OpenDevin, 500+ контрибьюторов, $5M seed от Menlo Ventures.
 
-!!! warning "Этот инструмент только для программистов (нужен Docker)"
-    OpenHands живёт в Docker-контейнере (это программа-контейнер, запускает приложения в изоляции). Без чёрного окна с командами не запустить. Если ты не кодишь — посмотри [Goose](goose.md) (десктоп-агент с обычным окошком) или [DeepSeek в браузере](../../knowledge/budget.md). Оба работают из РФ без VPN, без команд.
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 71 389</span>
+<span class="rating-label">звёзд на GitHub · обновлён 17 апреля 2026</span>
+</p>
 
-## Что делает
+```bash
+docker pull docker.all-hands.dev/all-hands-ai/openhands:latest
+```
+
+[:material-github: GitHub](https://github.com/All-Hands-AI/OpenHands){ .md-button .md-button--primary } [:material-book: Документация](https://docs.all-hands.dev){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/169105795?v=4" alt="All Hands AI"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/All-Hands-AI">All Hands AI</a> <span class="author-chip__handle">@All-Hands-AI</span></div><div class="author-chip__bio">Robert Brennan (экс-Google), Graham Neubig (профессор CMU, NLP) и Xingyao Wang (PhD UIUC). $5M seed от Menlo Ventures, ангелы — сооснователи Hugging Face и PyTorch.</div></div></div>
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/Q3DyeIV96tY" title="OpenHands обзор — WorldofAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: WorldofAI — «OpenHands: AI Software Engineer - Generate Complex Apps End-to-End!»</p>
+
+## Требования
+
+- **Где работает:** Docker Desktop (Linux / macOS / Windows + WSL). Самостоятельно не работает — только через контейнер
+- **Лицензия:** MIT — open-source
+- **Железо:** ~8 ГБ RAM на контейнер, слабые ноутбуки не вытянут
+- **Провайдер модели:** любой (Anthropic / OpenAI / Gemini / локальный). На Claude Sonnet большая задача стоит $5-20
+- **Предупреждение:** не оставляй без присмотра на опасных задачах — миграции баз, прод, платежи
+
+## Зачем это нужно
 
 OpenHands не помощник. Это автономный инженер, который работает по задаче от начала до конца. Тебе не надо подсказывать на каждом шагу — он САМ открывает файлы, правит код, запускает тесты, исправляет ошибки, отправляет в git.
 

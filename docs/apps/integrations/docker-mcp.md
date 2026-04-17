@@ -4,16 +4,40 @@ category: integrations
 tags:
   - mcp
   - технарям
-updated: 2026-04-16
+updated: 2026-04-17
 for: agent
 ---
 
-# 🐳 Docker MCP Toolkit
+# Docker MCP Toolkit
 
-!!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
-    Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
+<div class="product-hero" markdown>
 
-> 300+ готовых MCP-плагинов в каталоге Docker Desktop (MCP = способ дать ИИ руки для работы с внешними программами). Установка в один клик — никаких npm, pip, чёрного окна с командами.
+**300+ MCP-плагинов в каталоге Docker Desktop — установка в один клик.**
+
+Открыл Docker Desktop → MCP Toolkit → жмёшь Install на Gmail / GitHub / Postgres / AWS. Никаких npm, pip, чёрного окна. Каждый плагин запускается в изолированном контейнере — удалил и ничего не осталось.
+
+<p class="product-hero-rating">
+<span class="rating-badge">Docker Desktop</span>
+<span class="rating-label">встроено · обновляется вместе с Docker</span>
+</p>
+
+```text
+Docker Desktop → MCP Toolkit → Install (нужный плагин)
+```
+
+[:material-download: Скачать Docker Desktop](https://www.docker.com/products/docker-desktop){ .md-button .md-button--primary } [:material-book: Документация](https://docs.docker.com/ai/mcp-catalog-and-toolkit/){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/5429470?v=4" alt="Docker"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/docker">Docker, Inc.</a> <span class="author-chip__handle">@docker</span></div><div class="author-chip__bio">Создатели платформы контейнеризации (с 2013). MCP Toolkit — официальная фича Docker Desktop, бесплатно для личного использования и небольших команд.</div></div></div>
+
+## Требования
+
+- **Где работает:** Docker Desktop на Mac / Windows / Linux. Подключение MCP — Claude Code, Cursor, Claude Desktop
+- **Лицензия Docker Desktop:** бесплатно для личного использования и компаний <250 человек / <$10M выручки. Дальше — платный Docker Pro
+- **Ресурсы:** Docker Desktop ест 2-4 ГБ RAM — на слабых компах будет тяжело
+- **Ключи API:** часть плагинов (Gmail, GitHub, AWS) требует свои API-ключи или OAuth — настраиваются в Docker Desktop
+- **В РФ:** Docker Desktop работает без VPN, плагины — зависит от сервиса (AWS / GitHub доступны, Slack — нет)
 
 ## Что делает
 
@@ -67,8 +91,9 @@ Docker MCP Toolkit — как раз тот редкий случай, когд�
 
 ## Ссылки
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- [MCP Toolkit документация](https://docs.docker.com/desktop/mcp/)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop) — скачать
+- [MCP Toolkit документация](https://docs.docker.com/ai/mcp-catalog-and-toolkit/)
+- [NetworkChuck туториал по созданию своих MCP-серверов в Docker](https://github.com/theNetworkChuck/docker-mcp-tutorial)
 - Альтернативы: [Composio](composio.md), ручная установка подключений
 
 ---

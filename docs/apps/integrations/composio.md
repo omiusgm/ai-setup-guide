@@ -6,20 +6,43 @@ tags:
   - бизнесу
   - технарям
   - открытый-код
-stars: 28000
+stars: 27812
 github: ComposioHQ/composio
-updated: 2026-04-16
+updated: 2026-04-17
 for: both
 ---
 
-# 🔌 Composio
+# Composio
 
-**Репозиторий:** [github.com/ComposioHQ/composio](https://github.com/ComposioHQ/composio) · **28 000⭐**
+<div class="product-hero" markdown>
 
-!!! info "🤖💬 Для чатботов И агентов"
-    Работает и в браузере (облачная версия / альтернатива), и через агента (установка). Ниже оба варианта.
+**Один установ — и у ИИ-агента сразу 1000+ готовых подключений к сервисам.**
 
-> Один установ — и у ИИ-агента сразу 1000+ готовых подключений к сервисам. Gmail, Slack, GitHub, Jira, Notion, HubSpot — всё подключается через MCP (способ дать ИИ руки для работы с внешними программами).
+Gmail, Slack, GitHub, Jira, Notion, HubSpot — всё через один MCP. OAuth и ключи — на стороне Composio, агент сразу работает «из коробки». Нужна почта? Уже есть. Нужна Jira? Уже есть.
+
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 27 812</span>
+<span class="rating-label">звёзд на GitHub · обновлён 17 апреля 2026</span>
+</p>
+
+```bash
+curl -fsSL https://composio.dev/install | bash
+composio login
+```
+
+[:material-github: GitHub](https://github.com/ComposioHQ/composio){ .md-button .md-button--primary } [:material-web: composio.dev](https://composio.dev){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/128464815?v=4" alt="Composio"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/ComposioHQ">Composio</a> <span class="author-chip__handle">@ComposioHQ</span></div><div class="author-chip__bio">YC-стартап (S23). Делают «integration layer» для AI-агентов: подключение к 1000+ SaaS, OAuth, ключи, безопасность — на их стороне.</div></div></div>
+
+## Требования
+
+- **Где работает:** Claude Code, Cursor, Claude Desktop — любой клиент с поддержкой MCP. Также SDK для Python / TypeScript / LangChain / CrewAI
+- **Аккаунт:** регистрация на [composio.dev](https://composio.dev) (free-тир — 200 действий/мес, дальше платно от $39)
+- **OAuth:** Composio запоминает доступ к каждому сервису у себя. Корпоративные аккаунты иногда блокируют сторонние OAuth
+- **В РФ:** часть сервисов недоступна из-за санкций самих сервисов (Jira Cloud, Slack), Gmail / GitHub / Notion работают
+- **Лицензия:** Apache 2.0 — open-source
 
 ## Что делает
 
@@ -82,8 +105,8 @@ for: both
 
 ## Ссылки
 
-- [GitHub ⭐ 28K](https://github.com/ComposioHQ/composio)
-- [composio.dev](https://composio.dev)
+- [GitHub ComposioHQ/composio](https://github.com/ComposioHQ/composio) — 28K звёзд
+- [composio.dev](https://composio.dev) — веб-дашборд и документация
 - Альтернативы: [Docker MCP](docker-mcp.md), отдельные подключения под задачу
 
 ---

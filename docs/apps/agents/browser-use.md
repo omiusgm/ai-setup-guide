@@ -5,22 +5,50 @@ tags:
   - автоматизация
   - бизнесу
   - открытый-код
-stars: 88000
+stars: 88258
 github: browser-use/browser-use
-updated: 2026-04-16
+updated: 2026-04-17
 for: both
 ---
 
-# 🌐 Browser Use
+# Browser Use
 
-**Репозиторий:** [github.com/browser-use/browser-use](https://github.com/browser-use/browser-use) · **88 000⭐**
+<div class="product-hero" markdown>
 
-!!! info "🤖💬 Для чатботов И агентов"
-    Работает и в браузере (облачная версия / альтернатива), и через агента (установка). Ниже оба варианта.
+**ИИ открывает браузер и делает всё что ты делал руками — минус твои 3-4 часа в день.**
 
-> ИИ сам открывает сайты, кликает, заполняет формы, собирает данные. Всё что ты делаешь в браузере — он повторит.
+Даёшь задачу словами: «найди 20 поставщиков, собери контакты, положи в таблицу». Агент запускает настоящий Chromium, ищет, кликает, копирует. Ты смотришь как курсор бегает сам.
 
-## Что делает
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 88 258</span>
+<span class="rating-label">звёзд на GitHub · обновлён 15 апреля 2026</span>
+</p>
+
+```bash
+pip install browser-use
+playwright install chromium
+```
+
+[:material-github: GitHub](https://github.com/browser-use/browser-use){ .md-button .md-button--primary } [:material-web: Облачная версия](https://browser-use.com){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/192012301?v=4" alt="Browser Use"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/browser-use">Browser Use</a> <span class="author-chip__handle">@browser-use</span></div><div class="author-chip__bio">Magnus Müller и Gregor Zunic, выпускники ETH Zürich. Y Combinator W25, $17M seed от Felicis с Полом Грэмом в инвесторах.</div></div></div>
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/dGjztcS2zG0" title="Browser Use обзор — WorldofAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: WorldofAI — «Browser Use: FREE AI Agent CAN CONTROL BROWSERS & DO ANYTHING!»</p>
+
+## Требования
+
+- **Где работает:** Python 3.11+ (Linux / macOS / Windows), Playwright с Chromium
+- **Лицензия:** MIT — open-source, можно в коммерческих проектах
+- **Ключ для модели:** OpenAI / Anthropic / Google / Ollama. Каждый клик в браузере — это отдельный запрос к ИИ, токены расходуются быстро
+- **Ограничения:** капчи не решает (руками или через антикапчу), часть сайтов может банить ботов — помогает прокси и кастомный user-agent
+
+## Зачем это нужно
 
 Даёшь задачу: «найди 20 поставщиков на Wildberries, собери контакты, положи в таблицу». ИИ запускает браузер, идёт на WB, ищет, открывает карточки, копирует данные. Ты видишь как он работает — прям окно браузера, курсор бегает сам.
 
@@ -53,7 +81,7 @@ for: both
     playwright install chromium
     ```
 
-    Понадобится Python 3.10+ и Playwright (ставится автоматически).
+    Понадобится Python 3.11+ и Playwright (ставится автоматически).
 
     **Первый запуск:**
 

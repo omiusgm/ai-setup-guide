@@ -6,20 +6,43 @@ tags:
   - бизнесу
   - бесплатно
   - открытый-код
-stars: 184000
+stars: 184435
 github: n8n-io/n8n
-updated: 2026-04-16
+updated: 2026-04-17
 for: both
 ---
 
-# 🔗 n8n
+# n8n
 
-**Репозиторий:** [github.com/n8n-io/n8n](https://github.com/n8n-io/n8n) · **184 000⭐**
+<div class="product-hero" markdown>
 
-!!! info "🤖💬 Для чатботов И агентов"
-    Работает и в браузере (облачная версия / альтернатива), и через агента (установка). Ниже оба варианта.
+**Соединяешь сервисы блоками — пришло письмо → ИИ разобрал → таблица обновилась → отчёт улетел в Telegram. Без кода.**
 
-> Визуальный конструктор автоматизаций. Собираешь цепочку мышкой: бот ответил — таблица обновилась — отчёт улетел.
+Open-source конструктор автоматизаций. 400+ готовых блоков под Gmail, Telegram, Notion, ChatGPT, AmoCRM. Можно облако, можно у себя на сервере. Альтернатива Zapier и Make — только бесплатная и без лимитов на логику.
+
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 184 435</span>
+<span class="rating-label">звёзд на GitHub · обновлён 17 апреля 2026</span>
+</p>
+
+```bash
+# Облако: регистрация на n8n.cloud, ставить ничего не надо
+# У себя на сервере (Docker):
+docker run -it --rm --name n8n -p 5678:5678 \
+  -v ~/.n8n:/home/node/.n8n docker.n8n.io/n8nio/n8n
+```
+
+[:material-github: GitHub](https://github.com/n8n-io/n8n){ .md-button .md-button--primary } [:material-web: n8n.io](https://n8n.io){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/45487711?v=4" alt="n8n - Workflow Automation"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/n8n-io">n8n - Workflow Automation</a> <span class="author-chip__handle">@n8n-io</span></div><div class="author-chip__bio">Берлинская компания, fair-code лицензия. С 2019 года, $80M+ инвестиций. Один из самых популярных no-code инструментов в мире.</div></div></div>
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/AURnISajubk" title="Master n8n in 2 Hours — Jono Catliff" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: Jono Catliff — «Master n8n in 2 Hours: Complete Beginner's Guide»</p>
 
 ## Что делает
 
@@ -93,4 +116,5 @@ for: both
 
 ---
 
-*Подходит для: автоматизация · бизнесу · бесплатно*
+!!! tip "Совместимость"
+    *Работает в облаке (n8n.cloud) или у тебя на сервере (Docker, минимум 1 ГБ RAM). Open-source (fair-code лицензия), 184K звёзд. 400+ готовых интеграций. Связка с ChatGPT, Claude, OpenAI из коробки.*

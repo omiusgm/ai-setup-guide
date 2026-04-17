@@ -5,22 +5,49 @@ tags:
   - бесплатно
   - из-рф
   - открытый-код
-stars: 42000
+stars: 42453
 github: block/goose
-updated: 2026-04-16
+updated: 2026-04-17
 for: both
 ---
 
-# 🪿 Goose
+# Goose
 
-**Репозиторий:** [github.com/block/goose](https://github.com/block/goose) · **42 000⭐**
+<div class="product-hero" markdown>
 
-!!! info "🤖💬 Для чатботов И агентов"
-    Работает и в браузере (облачная версия / альтернатива), и через агента (установка). Ниже оба варианта.
+**Бесплатный агент с обычным окном — запускаешь на своём компе с Ollama и работаешь полностью без интернета.**
 
-> Бесплатный ИИ-агент с десктопным приложением. Работает с локальными моделями через Ollama — значит, без VPN из РФ.
+Альтернатива Claude Code за $0. Десктоп-приложение (macOS / Linux / Windows), поддерживает 15+ провайдеров — от OpenAI до локального Qwen. Собран Block (Square, Cash App, TIDAL), в январе 2026 перешёл в Linux Foundation.
 
-## Что делает
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 42 453</span>
+<span class="rating-label">звёзд на GitHub · обновлён 17 апреля 2026</span>
+</p>
+
+```bash
+curl -fsSL https://github.com/block/goose/releases/latest/download/install.sh | bash
+```
+
+[:material-github: GitHub](https://github.com/block/goose){ .md-button .md-button--primary } [:material-download: Десктоп-приложение](https://block.github.io/goose){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/185116535?v=4" alt="Block Open Source"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/block">Block Open Source</a> <span class="author-chip__handle">@block</span></div><div class="author-chip__bio">Компания Джека Дорси (Square, Cash App, Afterpay, TIDAL). Первый проект их open-source офиса. В январе 2026 Goose стал одним из трёх стартовых проектов Agentic AI Foundation в Linux Foundation.</div></div></div>
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/wUOPySw0VDw" title="Codename Goose обзор — WorldofAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Обзор: WorldofAI — «Codename Goose: NEW FREE AI Software Engineer Can DO Anything!»</p>
+
+## Требования
+
+- **Где работает:** macOS / Linux / Windows. Десктоп-приложение + CLI, кому что удобнее
+- **Лицензия:** Apache 2.0 — open-source, можно в коммерческих проектах
+- **Провайдеры:** 15+ — Anthropic, OpenAI, Google, Ollama, OpenRouter, Azure, Bedrock. С Ollama всё локально, без интернета, без VPN
+- **Железо для Ollama:** 8 ГБ RAM вытянет модели 3B-7B. Большие модели (70B) требуют 64 ГБ+
+
+## Зачем это нужно
 
 Агент, который умеет САМ: читать твои файлы, запускать команды, искать в интернете, править код. Отличие от обычного чата — он не просто советует, а делает.
 

@@ -6,20 +6,41 @@ tags:
   - экономия
   - многоагентность
   - опытным
-stars: 29482
+stars: 29561
 github: Yeachan-Heo/oh-my-claudecode
 updated: 2026-04-17
 for: agents
 ---
 
-# ⚙️ Oh-My-ClaudeCode (Sisyphus)
+# Oh-My-ClaudeCode (Sisyphus)
 
-**Репозиторий:** [github.com/Yeachan-Heo/oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) · **29 482⭐**
+<div class="product-hero" markdown>
 
-!!! info "🤖 Для тех кто уже в Claude Code"
-    Это надстройка над Claude Code. Если ещё не пользуешься Claude Code в терминале — сначала попробуй его, потом эту штуку.
+**Экономит 40-70% токенов в Claude Code — простые запросы летят на дешёвую Haiku, сложные — на Opus. Платишь меньше за ту же работу.**
 
-> Smart-routing моделей + 11 специализированных агентов. Простые задачи идут к дешёвой Haiku, сложные — к Opus. Экономит 40-70% токенов на длинных сессиях.
+Надстройка над Claude Code. Включает 19 специализированных агентов (coder, reviewer, tester, planner, researcher) и 36 скиллов. `/sisyphus` — и до 50% меньше расхода токенов на длинных сессиях.
+
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 29 561</span>
+<span class="rating-label">звёзд на GitHub · обновлён 17 апреля 2026</span>
+</p>
+
+```bash
+npm install -g oh-my-claude-sisyphus
+```
+
+[:material-github: GitHub](https://github.com/Yeachan-Heo/oh-my-claudecode){ .md-button .md-button--primary } [:material-npm: npm](https://www.npmjs.com/package/oh-my-claude-sisyphus){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/54757707?v=4" alt="Yeachan Heo"><div class="author-chip__text"><div class="author-chip__label">АВТОР ПРОЕКТА</div><div class="author-chip__name"><a href="https://github.com/Yeachan-Heo">Yeachan Heo (Bellman)</a> <span class="author-chip__handle">@Yeachan-Heo</span></div><div class="author-chip__bio">Алго-трейдер из Сеула, лидер Quant.start() — крупнейшего сообщества квант-трейдеров Кореи. Днём торгует, ночью вайб-кодит с Claude.</div></div></div>
+
+## Требования
+
+- **Где работает:** только внутри Claude Code (надстройка)
+- **Лицензия:** MIT — open-source
+- **Подписка:** любая Anthropic — API / Pro ($20) / Max ($100/$200). На Max экономия заметна сильнее
+- **Предпосылка:** базовый Claude Code уже освоен. Для первого раза это будет перебор
 
 ## Что делает
 
@@ -69,8 +90,3 @@ Claude Code по умолчанию всё гоняет через Opus — са
 - **Caveman** ([страница](../tokens/caveman.md)) — просто промпт на коротые ответы. Работает в чате, без установки
 - **Claude Code Router** ([musistudio/claude-code-router](https://github.com/musistudio/claude-code-router), 32 420⭐) — похожая идея, но с акцентом на роутинг между разными провайдерами (Claude / DeepSeek / локальные)
 - **Планы тарифов Anthropic** — Pro $20, Max $100 / $200 включают разные лимиты
-
----
-
-!!! tip "Совместимость"
-    *Ставится локально через npm. Работает с любой подпиской Anthropic (API, Pro, Max).*

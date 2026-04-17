@@ -5,20 +5,48 @@ tags:
   - mcp
   - автоматизация
   - технарям
-stars: 18000
+stars: 18328
 github: czlonkowski/n8n-mcp
-updated: 2026-04-16
+updated: 2026-04-17
 for: agent
 ---
 
-# 🔗 n8n-MCP
+# n8n-MCP
 
-**Репозиторий:** [github.com/czlonkowski/n8n-mcp](https://github.com/czlonkowski/n8n-mcp) · **18 000⭐**
+<div class="product-hero" markdown>
 
-!!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
-    Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
+**Описал автоматизацию словами — Claude собрал её в n8n блоками и запустил.**
 
-> Claude Code сам создаёт, редактирует и запускает автоматизации в n8n. ИИ собирает цепочки, ты только проверяешь.
+525 нод n8n плюс знание всех конфигов и связей. Claude Code собирает workflow с первой попытки почти без правок. Ты только проверяешь и нажимаешь «Запустить».
+
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 18 328</span>
+<span class="rating-label">звёзд на GitHub · обновлён 17 апреля 2026</span>
+</p>
+
+```bash
+claude mcp add n8n -- npx -y @czlonkowski/n8n-mcp
+```
+
+[:material-github: GitHub](https://github.com/czlonkowski/n8n-mcp){ .md-button .md-button--primary } [:material-web: n8n-mcp.com](https://www.n8n-mcp.com/){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/56956555?v=4" alt="Romuald Członkowski"><div class="author-chip__text"><div class="author-chip__label">АВТОР ПРОЕКТА</div><div class="author-chip__name"><a href="https://github.com/czlonkowski">Romuald Członkowski</a> <span class="author-chip__handle">@czlonkowski</span></div><div class="author-chip__bio">Польский разработчик. Сделал самый популярный MCP-сервер для n8n (18K⭐). Параллельно ведёт n8n-skills — 7 скиллов для Claude Code под n8n.</div></div></div>
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/7Egx498mtj0" title="How to Install n8n-mcp Server in Claude Desktop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p class="video-caption">Mike Murphy — «How to Install n8n-mcp Server in Claude Desktop To Vibe Code Automation Workflows»</p>
+
+## Требования
+
+- **Где работает:** Claude Code, Claude Desktop, Cursor, Windsurf — любой клиент с поддержкой MCP
+- **n8n:** свой инстанс (self-hosted) или [n8n Cloud](../automation/n8n.md). API-ключ из Settings → API
+- **Ключи в .env:** `N8N_URL` и `N8N_API_KEY` (даёт полный доступ — храни в `.env`)
+- **В РФ:** работает без VPN. n8n Cloud доступен, self-hosted на любом своём сервере
+- **Лицензия:** MIT — open-source
 
 ## Что делает
 
@@ -87,7 +115,9 @@ n8n-MCP нужен чтобы Claude Code собирал цепочки за т�
 
 ## Ссылки
 
-- [GitHub ⭐ 18K](https://github.com/czlonkowski/n8n-mcp)
+- [GitHub czlonkowski/n8n-mcp](https://github.com/czlonkowski/n8n-mcp) — 18K звёзд
+- [n8n-mcp.com](https://www.n8n-mcp.com/) — официальный сайт проекта
+- [n8n-skills](https://github.com/czlonkowski/n8n-skills) — 7 скиллов от того же автора для Claude Code
 - [n8n сам по себе](../automation/n8n.md)
 - Альтернативы: ручное создание в n8n, [Composio](composio.md)
 

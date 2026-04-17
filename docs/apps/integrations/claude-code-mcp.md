@@ -4,20 +4,40 @@ category: integrations
 tags:
   - mcp
   - технарям
-stars: 1100
+stars: 1235
 github: steipete/claude-code-mcp
-updated: 2026-04-16
+updated: 2026-04-17
 for: agent
 ---
 
-# ♻️ Claude Code MCP
+# Claude Code MCP
 
-**Репозиторий:** [github.com/steipete/claude-code-mcp](https://github.com/steipete/claude-code-mcp) · **1 100⭐**
+<div class="product-hero" markdown>
 
-!!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
-    Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
+**Один агент запускает другого — параллельные подагенты в собственных сессиях.**
 
-> Claude запускает другого Claude. Один агент делегирует задачи подагентам, каждый — в своей сессии. Через MCP (способ дать ИИ руки — подключить его к внешним инструментам).
+Главный Claude получает инструмент «делегируй задачу подагенту». Большая работа разбивается на части — каждый подагент работает изолированно, главный собирает результаты.
+
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 1 235</span>
+<span class="rating-label">звёзд на GitHub · обновлён 1 января 2026</span>
+</p>
+
+```bash
+claude mcp add claude-code -- npx -y @steipete/claude-code-mcp
+```
+
+[:material-github: GitHub](https://github.com/steipete/claude-code-mcp){ .md-button .md-button--primary } [:material-package: npm](https://www.npmjs.com/package/@steipete/claude-code-mcp){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/58493?v=4" alt="Peter Steinberger"><div class="author-chip__text"><div class="author-chip__label">АВТОР ПРОЕКТА</div><div class="author-chip__name"><a href="https://github.com/steipete">Peter Steinberger</a> <span class="author-chip__handle">@steipete</span></div><div class="author-chip__bio">Австриец. Бывший founder PSPDFKit, вышел на пенсию и вернулся ради ИИ. Известен в iOS-сообществе, ведёт блог steipete.me про Claude Code.</div></div></div>
+
+## Требования
+
+- **Где работает:** Claude Code, Claude Desktop, Cursor, Windsurf — любой клиент с поддержкой MCP
+- **Токены:** каждый подагент идёт в отдельной сессии — расход x2-x5 от обычного. Pro-тариф ($20/мес) можно быстро упереться в лимит, на Max ($200/мес) нормально
+- **Лицензия:** MIT — open-source, можно использовать в коммерческих проектах
 
 ## Что делает
 
@@ -25,7 +45,7 @@ for: agent
 
 Пример: «исследуй 5 конкурентов» — главный запускает 5 подагентов, каждый работает со своим конкурентом, возвращает саммари. Главный собирает.
 
-1100 звёзд. Автор — steipete (Петер Штайнбергер, известный в iOS-сообществе).
+1235 звёзд. Автор — steipete (Петер Штайнбергер, известный в iOS-сообществе).
 
 ## Кому подходит
 
@@ -46,7 +66,7 @@ Claude Code MCP работает только внутри Claude Code — а о
 ??? note "Для программистов (подключение MCP в Claude Code)"
 
     ```bash
-    claude mcp add claude-code -- npx -y claude-code-mcp
+    claude mcp add claude-code -- npx -y @steipete/claude-code-mcp
     ```
 
     **Первый запуск:**
@@ -71,9 +91,9 @@ Claude Code MCP работает только внутри Claude Code — а о
 
 ## Ссылки
 
-- [GitHub ⭐ 1.1K](https://github.com/steipete/claude-code-mcp)
-- [Автор: Peter Steinberger](https://twitter.com/steipete)
-- Альтернативы: [Claude Flow (Ruflo)](https://github.com/ruvnet/claude-flow), свой дирижёр агентов
+- [GitHub steipete/claude-code-mcp](https://github.com/steipete/claude-code-mcp) — 1.2K звёзд
+- [Блог автора steipete.me](https://steipete.me/) — про Claude Code workflows
+- Альтернативы: [Superpowers](../automation/superpowers.md) (G3-методология), свой дирижёр агентов
 
 ---
 

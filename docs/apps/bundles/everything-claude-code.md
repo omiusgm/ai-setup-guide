@@ -5,20 +5,39 @@ tags:
   - набор
   - технарям
   - бесплатно
-stars: 158000
+stars: 159342
 github: affaan-m/everything-claude-code
-updated: 2026-04-16
+updated: 2026-04-17
 for: agent
 ---
 
-# 📦 Everything Claude Code
+# Everything Claude Code
 
-**Репозиторий:** [github.com/affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) · **158 000⭐**
+<div class="product-hero" markdown>
 
-!!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
-    Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
+**47 агентов, 181 скилл, 79 команд — каталог готовых деталей для Claude Code. Скачиваешь, копируешь нужное в свой проект.**
 
-> 47 агентов. 181 скилл. 79 команд. Всё собрано в одном репозитории — скачиваешь, копируешь нужное в свой проект.
+Не одна большая установка, а склад. Внутри — агенты-ревьюеры, агенты-писатели, скиллы под Python/Rust/Go/Notion/CRM, команды на частые сценарии. Берёшь то что нужно, остальное игнорируешь. Победитель Anthropic-хакатона сентября 2025.
+
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 159 342</span>
+<span class="rating-label">звёзд на GitHub · обновлён 16 апреля 2026</span>
+</p>
+
+```bash
+# В Claude Code через marketplace плагинов:
+/plugin marketplace add affaan-m/everything-claude-code
+/plugin install everything-claude-code
+
+# Или клонировать и брать руками:
+git clone https://github.com/affaan-m/everything-claude-code ~/everything-cc
+```
+
+[:material-github: GitHub](https://github.com/affaan-m/everything-claude-code){ .md-button .md-button--primary } [:material-web: affaanmustafa.com](https://affaanmustafa.com){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/124439313?v=4" alt="Affaan Mustafa"><div class="author-chip__text"><div class="author-chip__label">АВТОР ПРОЕКТА</div><div class="author-chip__name"><a href="https://github.com/affaan-m">Affaan Mustafa</a> <span class="author-chip__handle">@affaan-m</span></div><div class="author-chip__bio">Co-founder Itô (Ito Markets), SF-builder в AI и квант-трейдинге. Автор гайдов по Claude Code с 5M+ просмотров. Победитель Anthropic-хакатона сентября 2025.</div></div></div>
 
 ## Что делает
 
@@ -90,4 +109,5 @@ Everything Claude Code это репозиторий, его можно прос
 
 ---
 
-*Подходит для: технарям · Claude Code · собирателям*
+!!! tip "Совместимость"
+    *Работает с Claude Code, Cursor, Codex CLI, OpenCode из единого репо. Open-source. 159K звёзд. Победитель Anthropic-хакатона сентября 2025.*

@@ -4,25 +4,43 @@ category: agents
 tags:
   - открытый-код
   - технарям
-stars: 76000
+stars: 75905
 github: openai/codex
-updated: 2026-04-16
+updated: 2026-04-17
 for: agent
 ---
 
-# ⌨️ Codex CLI
+# Codex CLI
 
-**Репозиторий:** [github.com/openai/codex](https://github.com/openai/codex) · **76 000⭐**
+<div class="product-hero" markdown>
 
-!!! info "🤖 Для агентов (Claude Code / Cursor / Codex)"
-    Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. [альтернативы](#как-попробовать-без-чёрного-окна-с-командами) ниже.
+**Claude Code от OpenAI — полный агент в терминале, написан на Rust для скорости. Входит в подписку ChatGPT Plus без доплат.**
 
-> OpenAI выпустили свой агент с открытым кодом. Живёт в чёрном окне с командами (как в хакерских фильмах), работает со всеми OpenAI-моделями.
+Запустил `codex` — появилась сессия: читает репо, правит файлы, запускает команды, делает ревью кода через отдельный subagent. Два режима: интерактивный (с подтверждениями) и автономный.
 
-!!! warning "Этот инструмент только для программистов"
-    Codex работает в чёрном окне с командами — без него никак. Если ты не кодишь — посмотри [Goose](goose.md) (обычное десктоп-приложение с окошком) или сразу заходи в [ChatGPT](https://chat.openai.com) / [Claude](https://claude.ai) в браузере.
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 75 905</span>
+<span class="rating-label">звёзд на GitHub · обновлён 17 апреля 2026</span>
+</p>
 
-## Что делает
+```bash
+npm install -g @openai/codex
+```
+
+[:material-github: GitHub](https://github.com/openai/codex){ .md-button .md-button--primary } [:material-book: Документация](https://developers.openai.com/codex/cli){ .md-button }
+
+</div>
+
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/14957082?v=4" alt="OpenAI"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/openai">OpenAI</a> <span class="author-chip__handle">@openai</span></div><div class="author-chip__bio">Создатели ChatGPT и GPT-5. Codex CLI — их ответ Claude Code: open-source на Rust, входит в Plus/Pro/Business планы без доплат.</div></div></div>
+
+## Требования
+
+- **Где работает:** Linux / macOS / Windows, нужен Node.js 18+ (для npm) или Homebrew
+- **Лицензия:** Apache 2.0 — open-source
+- **Подключение:** аккаунт ChatGPT Plus / Pro / Business / Edu / Enterprise (без доплат) или API-ключ OpenAI
+- **Ограничение РФ:** OpenAI санкционно закрывает доступ из России — нужен VPN для входа в аккаунт и генерации токенов
+
+## Зачем это нужно
 
 То же что Claude Code, но от OpenAI и бесплатный (только за «слова» для ИИ платишь — токены, за них считают стоимость). Запустил `codex` в чёрном окне — появилась сессия, пишешь задачу — агент работает.
 
