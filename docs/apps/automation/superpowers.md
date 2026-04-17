@@ -13,33 +13,25 @@ updated: 2026-04-17
 for: agents
 ---
 
-# 🦸 Superpowers
+# Superpowers
 
 <div class="product-hero" markdown>
 
-**Subagent-driven development · методология G3 (Player ↔ Coach)**
+**2-3 часа автономной работы — готовый код с тестами, без ручной перепроверки.**
 
-Агенты пишут код и ревьюят друг друга автоматически — получаешь готовый результат без ручной перепроверки.
+Методология G3 (Player ↔ Coach): один агент пишет код, другой ревьюит по спеке. Пока код не пройдёт ревью — цикл повторяется. Ты подтверждаешь план и уходишь заниматься своими делами.
 
 <p class="product-hero-stats">
-<strong>157 027⭐</strong> · MIT · обновлён 16 апр 2026 · 🤖 Claude Code / Cursor / Codex / Gemini CLI · требует Pro $20 или Max $200
+<strong>157 027⭐</strong> · MIT · обновлён 16 апр 2026 · Claude Code / Cursor / Codex / Gemini CLI · требует Pro $20 или Max $200
 </p>
 
 ```bash
 claude plugin install superpowers@claude-plugins-official
 ```
 
-[:material-github: GitHub](https://github.com/obra/superpowers){ .md-button .md-button--primary } [:material-puzzle: Marketplace](https://claude.com/plugins/superpowers){ .md-button } [:material-play: Видеообзор](#видеообзор){ .md-button }
+[:material-github: GitHub](https://github.com/obra/superpowers){ .md-button .md-button--primary } [:material-puzzle: Marketplace](https://claude.com/plugins/superpowers){ .md-button } [:material-play: Посмотреть обзор](#видеообзор){ .md-button }
 
 </div>
-
-## 📺 Видеообзор
-
-<div class="video-embed">
-  <iframe src="https://www.youtube-nocookie.com/embed/ol7KYIfUm1Y" title="Superpowers обзор" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-
----
 
 ## Зачем это нужно
 
@@ -52,6 +44,16 @@ G3-методология (Block AI, октябрь 2024) решила это ч
 - **Coach** не пишет — только проверяет по спецификации. Если что-то не так — отправляет на переделку
 
 Superpowers это реализовал для реального Claude Code. Плюс добавил своё — TDD, verification-before-completion, git worktrees для изоляции.
+
+## Чем это НЕ является
+
+Чтобы не было ложных ожиданий:
+
+- **Не волшебная кнопка «сделай мне продукт».** Если спека мутная — код тоже выйдет мутный. Superpowers силён именно на чётком ТЗ.
+- **Не бесплатно по токенам.** Каждый subagent — отдельная сессия, расход в 3-5 раз выше обычной. На Pro $20 можно быстро упереться в лимит.
+- **Не заменит ревью от человека на критичных задачах** (безопасность, платежи, бизнес-логика). Code-reviewer agent ловит стандартные ошибки, но свою архитектуру всё равно смотри сам.
+- **Не для быстрых правок в 5 строк** — оверкилл, проще обычным чатом.
+- **Не для не-кодинговых задач** — контент, дизайн, документы. Там другие инструменты.
 
 ## Что получаешь при установке
 
@@ -164,6 +166,14 @@ Superpowers **агрессивно использует subagents** — кажд
 | [GSD v2](https://github.com/gsd-build/gsd-2) | 6K | Memory reset через отдельный CLI | Не плагин, отдельный инструмент |
 | [Hegelion](https://github.com/Hmbown/Hegelion) | 143 | Честный Player-Coach, MCP-сервер | Малоизвестен, без комьюнити |
 | [Goose (Block)](https://github.com/block/goose) | 42K | От той же команды, полноценный агент | Отдельный агент, не плагин |
+
+## Видеообзор
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/ol7KYIfUm1Y" title="Superpowers обзор от Матвея Шульги" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+Автор: **Матвей Шульга** — «Этот плагин улучшит Claude Code» (YouTube).
 
 ## Что читать дальше
 
