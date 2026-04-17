@@ -538,6 +538,26 @@
     "updated": "2026-04-17"
   },
   {
+    "id": "karpathy-obsidian",
+    "name": "Карпати",
+    "emoji": "Метод",
+    "category": "memory",
+    "url": "/ai-setup-guide/arsenal/memory/karpathy-obsidian/",
+    "tagline": "Карпати предложил убрать RAG и векторные БД. Вместо них — Obsidian-заметки в markdown + граф связей + агент-библиотекарь. Прозрачнее, точнее",
+    "tags": [
+      "память",
+      "obsidian",
+      "rag",
+      "паттерн",
+      "карпати",
+      "продвинутым"
+    ],
+    "stars": 0,
+    "ru": true,
+    "must_have": false,
+    "updated": "2026-04-18"
+  },
+  {
     "id": "mempalace",
     "name": "MemPalace",
     "emoji": "🧠",

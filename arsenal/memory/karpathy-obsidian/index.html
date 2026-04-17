@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://omiusgm.github.io/ai-setup-guide/arsenal/memory/handoff-pattern/">
+        <link rel="canonical" href="https://omiusgm.github.io/ai-setup-guide/arsenal/memory/karpathy-obsidian/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>HANDOFF-паттерн — память через файл - 🦔 Ёжхаб</title>
+        <title>Метод Карпати — память ИИ через Obsidian - 🦔 Ёжхаб</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#handoff-" class="md-skip">
+        <a href="#obsidian" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HANDOFF-паттерн — память через файл
+              Метод Карпати — память ИИ через Obsidian
             
           </span>
         </div>
@@ -1124,10 +1124,104 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проблема: почему RAG не работает так, как обещают
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obsidian-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение Карпати: Obsidian как граф-память
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Что делает
+        Пайплайн на практике (кейс Игоря Зуевича)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karpathy-llm-knowledge-bestmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ключевой файл: Karpathy LLM Knowledge Best.md
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude-code-obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как настроить: Claude Code + Obsidian
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Как настроить: Claude Code + Obsidian">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#claude-code-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вариант А (самый простой): Claude Code прямо в папке vault
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вариант Б: MCP-сервер для Obsidian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример промпта агенту-библиотекарю
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Для чего это вайб-кодеру / предпринимателю
       
     </span>
   </a>
@@ -1138,18 +1232,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Кому подходит
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#handoffmd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Пример HANDOFF.md
+        Сравнение подходов к памяти ИИ
       
     </span>
   </a>
@@ -1160,7 +1243,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Первый запуск
+        Нюансы
       
     </span>
   </a>
@@ -1171,7 +1254,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Нюансы
+        Ссылки
       
     </span>
   </a>
@@ -1182,7 +1265,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Почему это работает лучше сложных «умных» баз
+        Кому подходит
       
     </span>
   </a>
@@ -1193,7 +1276,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ссылки
+        Совместимость
       
     </span>
   </a>
@@ -1220,84 +1303,191 @@
   
 
 
-<h1 id="handoff-">📋 HANDOFF-паттерн<a class="headerlink" href="#handoff-" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">🤖💬 Для чатботов И агентов</p>
-<p>Работает и в браузере (облачная версия / альтернатива), и через агента (установка). Ниже оба варианта.</p>
-</div>
-<blockquote>
-<p>Самый простой способ дать ИИ память между сессиями. Не репо, не пакет — просто файл <code>HANDOFF.md</code> в проекте.</p>
-</blockquote>
-<div class="admonition tip">
-<p class="admonition-title">Следующий уровень</p>
-<p><a href="../karpathy-obsidian/">Метод Карпати — память через Obsidian-граф</a> для больших баз знаний и контент-производства.</p>
+<h1 id="obsidian">Метод Карпати — память ИИ через Obsidian<a class="headerlink" href="#obsidian" title="Permanent link">&para;</a></h1>
+<div class="product-hero">
+<p><strong>Карпати предложил убрать RAG и векторные БД. Вместо них — Obsidian-заметки в markdown + граф связей + агент-библиотекарь. Прозрачнее, точнее, дешевле.</strong></p>
+<p>Андрей Карпати (ex-Tesla Autopilot, co-founder OpenAI, автор термина «vibe coding») в апреле 2026 опубликовал пост в X на 50 000+ лайков. Тезис короткий: управление знаниями для ИИ — важнее, чем написание кода. А привычный RAG — чёрный ящик, который на продакшне постоянно врёт.</p>
+<p>Решение: markdown-заметки в Obsidian, вики-ссылки между ними, отдельный агент-«библиотекарь» который их раскладывает. Живая альтернатива векторным базам для тех, кто строит контент-завод, базу знаний команды или просто устал объяснять ИИ одно и то же.</p>
+<p class="product-hero-rating">
+<span class="rating-badge">🔥 50 000+ лайков</span>
+<span class="rating-label">резонансный пост Карпати в X, апрель 2026 · метод для продвинутых</span>
+</p>
 </div>
 <div class="video-embed">
-  <iframe src="https://www.youtube-nocookie.com/embed/6NK4Pona2fY" title="HANDOFF-паттерн обзор — Олег Стефанов" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/-X7cJy2nQ90" title="Метод Карпати для Claude Code — Игорь Зуевич" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-<p class="video-caption">Обзор: Олег Стефанов — «Claude Code: полный гайд по AI-кодингу (хаки, техники и секреты)»</p>
+<p class="video-caption">Разбор: Игорь Зуевич — «Метод Андрей Карпаты для Claude Code: как устроена память AI, Obsidian и RAG»</p>
 
-<h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Никаких установок. Создаёшь в корне проекта файл <code>HANDOFF.md</code>. Агент пишет туда прогресс работы перед завершением сессии. Новая сессия — читает файл и продолжает с того же места.</p>
-<p>Идея простая до гениальности: память — это не сложные базы где ИИ ищет по смыслу и не облачные сервисы. Память — это файл, куда ты пишешь и откуда читаешь.</p>
-<p>Работает в любом редакторе, с любым агентом (Claude Code, Cline, Cursor, Goose). Ничего ставить не надо.</p>
-<h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="rag">Проблема: почему RAG не работает так, как обещают<a class="headerlink" href="#rag" title="Permanent link">&para;</a></h2>
+<p>RAG (Retrieval-Augmented Generation) — схема, где твои документы режутся на куски, каждый кусок превращается в вектор, всё это кладётся в векторную базу (Pinecone, SupaBase, ChromaDB, Weaviate). На запрос ИИ ищет похожие куски по смыслу и подмешивает их в контекст.</p>
+<p>Звучит красиво. На практике — боль:</p>
 <ul>
-<li>✅ Всем, кто работает с ИИ-агентами над долгими проектами</li>
-<li>✅ Не хочешь ставить лишние пакеты</li>
-<li>✅ Нужна простота и прозрачность — файл можно читать руками</li>
-<li>❌ НЕ подходит для задач где нужны сотни воспоминаний — файл разрастётся</li>
-<li>❌ Для продукта с тысячами пользователей — нужна настоящая БД</li>
+<li><strong>Чёрный ящик.</strong> Ты не видишь что именно попало в контекст. Чанк обрезался на полуслове? Нашёлся похожий, но не тот? Узнаешь только по странному ответу.</li>
+<li><strong>Галлюцинации на проде.</strong> Агент-продавец выдумывает цены из соседнего чанка. Поддержка выдаёт ссылку из старого документа вместо нового. Типовая история.</li>
+<li><strong>Дорого.</strong> Pinecone, SupaBase, платные эмбеддинги за каждый чанк при обновлении. Для маленькой базы знаний — неоправданно.</li>
+<li><strong>Не масштабируется по смыслу.</strong> Чем больше документов, тем хуже работает ретривал: семантически «похожих» кусков становится много, правильный тонет в шуме.</li>
 </ul>
-<h2 id="handoffmd">Пример HANDOFF.md<a class="headerlink" href="#handoffmd" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># HANDOFF — 16 апреля 2026</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gu">## Что сделано</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">-</span><span class="w"> </span>Настроил авторизацию через JWT
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">-</span><span class="w"> </span>Написал тесты на /api/users
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">-</span><span class="w"> </span>Развернул staging на Beget
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="gu">## Что в процессе</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">-</span><span class="w"> </span>Добавляю роль админа (в файле auth/roles.py, 70% готово)
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">-</span><span class="w"> </span>Нужно: дописать проверку в middleware
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="gu">## Открытые вопросы</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">-</span><span class="w"> </span>Согласовать с клиентом: нужен ли 2FA
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">-</span><span class="w"> </span>Проверить что SSL сертификат не истёк в мае
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="gu">## Контекст для следующей сессии</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>Проект на FastAPI + Postgres. Структура: backend/ — API, frontend/ — React.
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>Главный файл — backend/main.py.
-</code></pre></div>
-<h2 id="_3">Первый запуск<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Карпати формулирует это жёстче: «мы строим слепой поиск по эмбеддингам и называем это памятью». А для ИИ-агентов важнее всего не код, а то <strong>как ИИ находит нужную информацию</strong>.</p>
+<h2 id="obsidian-">Решение Карпати: Obsidian как граф-память<a class="headerlink" href="#obsidian-" title="Permanent link">&para;</a></h2>
+<p>Идея простая, почти скучная. Markdown-заметки. Ссылки <code>[[вот так]]</code>. Папки. И агент, который в этом живёт.</p>
+<p><strong>Три кита:</strong></p>
 <ol>
-<li>Создай <code>HANDOFF.md</code> в корне проекта</li>
-<li>В CLAUDE.md (или аналоге) добавь: «Перед завершением сессии обновляй HANDOFF.md. В начале сессии — читай»</li>
-<li>Первая сессия — агент начнёт писать туда</li>
-<li>Следующая — читает и продолжает</li>
+<li><strong>Markdown вместо чанков.</strong> Заметка — это файл <code>.md</code>, который можно открыть в любом редакторе. Читаемо человеку, читаемо агенту. Никаких эмбеддингов — агент прямо читает текст.</li>
+<li><strong><code>[[wiki-links]]</code> = явный граф.</strong> Ты (или агент) ставишь ссылки между заметками. Obsidian рисует граф — видно как идеи связаны. Агент видит эту структуру и ходит по ней осознанно, не гадает по косинусной близости.</li>
+<li><strong>Прозрачность.</strong> Посмотрел <code>Map-of-Content.md</code> — знаешь, что ИИ видит и откуда он это берёт. Никаких сюрпризов из векторной базы.</li>
 </ol>
-<h2 id="_4">Нюансы<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Итог: ИИ больше не «ищет что-то похожее». Он <strong>смотрит в карту и идёт по ссылкам</strong>, как человек по Википедии.</p>
+<h2 id="_1">Пайплайн на практике (кейс Игоря Зуевича)<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Зуевич построил на этом методе «контент-завод»: Telegram-посты → Obsidian → агент пишет новые в его стиле. Вот как это устроено по шагам:</p>
+<p><strong>1. Сбор сырья в Inbox.</strong>
+Экспорт Telegram-постов (или что у тебя — статьи, заметки, расшифровки встреч) → падают в папку <code>vault/inbox/</code> как <code>.md</code>-файлы.</p>
+<p><strong>2. Агент-библиотекарь проходится по Inbox.</strong>
+Claude Code (или Codex) с доступом к vault делает три вещи:
+- читает свежие заметки
+- расставляет <code>[[связи]]</code> к существующим темам
+- переносит файлы из inbox в <code>topics/{тема}/</code> — там они структурируются по проектам/направлениям</p>
+<p><strong>3. Компилятор раз в неделю.</strong>
+Отдельная задача: агент перечитывает весь граф, находит новые связи между старыми заметками, обновляет <code>Map-of-Content.md</code> — главную карту базы. Это как уборка в шкафу: не при каждой новой вещи, а раз в воскресенье.</p>
+<p><strong>4. Агент пишет новый контент.</strong>
+Когда надо написать пост — агент не гадает «как обычно пишет автор». Он читает vault: смотрит прошлые посты по теме, подхватывает стиль, берёт факты из заметок. В итоге текст получается <strong>в твоём голосе</strong>, а не в усреднённом ИИшном.</p>
+<p>Главная фишка: агент <strong>не жрёт весь vault целиком</strong>. Он читает карту, открывает только нужные заметки. Экономия токенов в 10–50 раз по сравнению с «загружу-ка всю базу знаний в контекст».</p>
+<h2 id="karpathy-llm-knowledge-bestmd">Ключевой файл: <code>Karpathy LLM Knowledge Best.md</code><a class="headerlink" href="#karpathy-llm-knowledge-bestmd" title="Permanent link">&para;</a></h2>
+<p>Это системный промпт для агента-библиотекаря. Один файл, который лежит в корне vault и описывает <strong>правила игры</strong>: как именовать, куда класть, какие теги ставить, когда переводить заметку из «свалки» в «постоянную».</p>
+<p>Агент при каждом заходе в vault читает этот файл первым. Дальше он знает что делать — не нужно объяснять заново в каждом чате.</p>
+<p>Пример структуры (по мотивам разбора Зуевича):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># Инструкция для агента-библиотекаря</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gu">## Структура vault</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">-</span><span class="w"> </span>inbox/ — свежие сырые заметки, не обработаны
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">-</span><span class="w"> </span>ideas/ — свалка идей, не структурированы
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">-</span><span class="w"> </span>topics/{тема}/ — финальные заметки, разложенные по темам
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">-</span><span class="w"> </span>archive/ — старое, не актуальное
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">-</span><span class="w"> </span>Map-of-Content.md — главная карта, обновляется раз в неделю
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="gu">## Правила именования файлов</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">-</span><span class="w"> </span>inbox: YYYY-MM-DD_короткий-заголовок.md
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">-</span><span class="w"> </span>topics: Заголовок В Human Case.md (без даты)
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">-</span><span class="w"> </span>при переносе из inbox в topics — переименуй, добавь фронтматтер
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="gu">## Фронтматтер (обязателен для всех topics/)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>---
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>created: YYYY-MM-DD
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>tags: [тема1, тема2]
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>status: draft | polished | archive
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="gu">related: [[заметка1]] [[заметка2]]</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="gu">---</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="gu">## Когда ставить [[wiki-link]]</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="k">-</span><span class="w"> </span>всегда — к людям, проектам, книгам, концепциям
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="k">-</span><span class="w"> </span>никогда — к общим словам («ИИ», «код», «бизнес»)
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="gu">## Когда пора в topics/</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="k">-</span><span class="w"> </span>заметка редактировалась 2+ раза
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="k">-</span><span class="w"> </span>на неё сослались из 3+ других заметок
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="k">-</span><span class="w"> </span>прошло 7 дней и она всё ещё актуальна
+</code></pre></div>
+<p>Логика: <strong>один файл = весь порядок</strong>. Хочешь поменять правила — правишь инструкцию, агент со следующей сессии подхватывает. Никакого «переобучения».</p>
+<h2 id="claude-code-obsidian">Как настроить: Claude Code + Obsidian<a class="headerlink" href="#claude-code-obsidian" title="Permanent link">&para;</a></h2>
+<h3 id="claude-code-vault">Вариант А (самый простой): Claude Code прямо в папке vault<a class="headerlink" href="#claude-code-vault" title="Permanent link">&para;</a></h3>
+<p>Obsidian vault — это просто папка с <code>.md</code>-файлами и подпапкой <code>.obsidian/</code> с настройками. Claude Code умеет работать с любой папкой.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>~/Documents/ObsidianVault
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>claude
+</code></pre></div>
+<p>Всё. Claude Code читает и правит <code>.md</code>-файлы как обычные текстовики. Ставит <code>[[связи]]</code>, переименовывает, создаёт папки. Obsidian при следующем открытии всё это подхватит.</p>
+<p>Плюс варианта — ничего ставить, никаких MCP, работает из коробки. Минус — Claude Code не знает что это vault и не использует специальные фишки (граф, поиск по вики-ссылкам).</p>
+<h3 id="mcp-obsidian">Вариант Б: MCP-сервер для Obsidian<a class="headerlink" href="#mcp-obsidian" title="Permanent link">&para;</a></h3>
+<p>Для продвинутой работы (поиск по тегам, обход по графу, запросы к Dataview) ставят MCP-сервер. На GitHub есть несколько вариантов — проверь актуальность перед установкой, звёзды и активность меняются:</p>
 <ul>
-<li>Если агент забывает обновлять — добавь напоминание в системный промпт</li>
-<li>Файл должен быть коротким (под 200 строк) — иначе агент не читает полностью</li>
-<li>Для крупных проектов делай несколько: <code>HANDOFF-auth.md</code>, <code>HANDOFF-frontend.md</code></li>
+<li><code>cyanheads/obsidian-mcp-server</code> — один из наиболее известных, работает через REST API плагина Local REST API в Obsidian</li>
+<li><code>smithery-ai/obsidian-mcp</code> — альтернативная реализация</li>
+<li>другие форки — ищи на GitHub по <code>obsidian mcp server</code></li>
 </ul>
-<h2 id="_5">Почему это работает лучше сложных «умных» баз<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>Ставится примерно так (сверяйся с README конкретного репо):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>obsidian<span class="w"> </span>--<span class="w"> </span>npx<span class="w"> </span>-y<span class="w"> </span>obsidian-mcp-server<span class="w"> </span>--vault<span class="w"> </span>~/Documents/ObsidianVault
+</code></pre></div>
+<p>Дальше в Claude Code можно просить: «пройдись по vault, найди дубликаты в inbox», «покажи все заметки без <code>[[связей]]</code>», «построй Map-of-Content по категории X».</p>
+<h3 id="-">Пример промпта агенту-библиотекарю<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Ты — библиотекарь моего Obsidian vault. Правила — в <code>Karpathy LLM Knowledge Best.md</code>, прочитай его первым.</p>
+<p>Задача на сегодня:
+1. Пройдись по <code>inbox/</code>, обработай заметки младше 3 дней
+2. Для каждой: расставь <code>[[связи]]</code> к существующим topics, добавь фронтматтер
+3. Если заметка подходит под существующий topic — перенеси, иначе оставь в inbox с пометкой <code>status: needs-topic</code>
+4. В конце — короткий отчёт что сделано</p>
+</blockquote>
+<h2 id="-_1">Для чего это вайб-кодеру / предпринимателю<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Всё в тексте → ты сам видишь что агент помнит</li>
-<li>Можешь править руками — удалить лишнее, добавить нужное</li>
-<li>Работает без интернета, без подключений к чужим сервисам, без квот</li>
-<li>Портируется между любыми ИИ</li>
+<li><strong>Контент-завод.</strong> Telegram-посты / статьи / черновики → граф → агент пишет новые в твоём стиле. Не «общий ИИшный тон», а именно твой — потому что агент читает твой vault.</li>
+<li><strong>База знаний для команды.</strong> Документация опыта, которая обычно живёт в головах тимлидов. Новичку не нужно три дня читать Confluence — спросил агента, он достал нужную заметку по графу.</li>
+<li><strong>Персональная Википедия.</strong> Книги, цитаты, конспекты курсов, заметки со встреч. Агент достаёт по запросу: «что я когда-то читал про X».</li>
+<li><strong>Экономия токенов.</strong> Агент не ест ВСЮ базу каждый раз — читает карту и забирает только нужные заметки. Для баз на сотни файлов это решает.</li>
 </ul>
-<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_2">Сравнение подходов к памяти ИИ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Подход</th>
+<th>Прозрачность</th>
+<th>Цена</th>
+<th>Точность</th>
+<th>Подходит для</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="../handoff-pattern/">HandOff-паттерн</a></strong> (CLAUDE.md + HANDOFF.md)</td>
+<td>✅ полная</td>
+<td>0 ₽</td>
+<td>⭐⭐⭐</td>
+<td>Один проект, до ~50 заметок</td>
+</tr>
+<tr>
+<td><strong>Obsidian-граф (Карпати)</strong></td>
+<td>✅ полная</td>
+<td>0 ₽ (базово) / $8 в мес за Sync</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Большая база, контент-производство, команда</td>
+</tr>
+<tr>
+<td><strong>RAG + векторная БД</strong></td>
+<td>❌ чёрный ящик</td>
+<td>$20–100/мес</td>
+<td>⭐⭐⭐</td>
+<td>Прод с 10 000+ документов</td>
+</tr>
+<tr>
+<td><strong><a href="../mempalace/">MemPalace</a> / <a href="../honcho/">Honcho</a></strong></td>
+<td>⚠️ частичная</td>
+<td>$0–50/мес</td>
+<td>⭐⭐</td>
+<td>Спорно, не доказано в продакшне</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">Нюансы<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Примеры HANDOFF в проекте <a href="https://github.com/omiusgm/agentezh">Агент Ёж</a></li>
-<li><a href="https://twitter.com/hrishioa">Hrishi Olickel о памяти</a> — тот, кто популяризировал паттерн</li>
-<li>Альтернативы: <a href="../mempalace/">MemPalace</a>, <a href="../honcho/">Honcho</a></li>
+<li><strong>Obsidian сам по себе — бесплатный</strong>, стоит только Obsidian Sync ($8/мес) если нужна синхронизация между устройствами. Альтернатива — vault как git-репо: бесплатно, плюс версионирование.</li>
+<li><strong>Vault должен лежать там, где Claude Code его видит.</strong> Если используешь закрытое Obsidian-облако — агент туда не достучится. Храни локально или в Git.</li>
+<li><strong>Большие vault (1000+ файлов) требуют дисциплины.</strong> Агент должен ходить по Map-of-Content и графу, а не читать всё подряд. Иначе контекст взрывается.</li>
+<li><strong>Для команды — git-репо.</strong> Push/pull правок через нормальный code review. Агент работает на своей ветке, ты мёржишь после проверки.</li>
+<li><strong>Метод для продвинутых.</strong> Если ты ещё не освоил <a href="../handoff-pattern/">HandOff-паттерн</a> — начни с него. Obsidian-граф — следующий уровень, а не первый.</li>
 </ul>
-<hr />
-<p><em>Подходит для: всем · бесплатно · простота</em></p>
+<h2 id="_4">Ссылки<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Оригинальный пост Карпати в X — апрель 2026, 50 000+ лайков. Точный URL можно найти через поиск: <code>karpathy obsidian knowledge</code> или <code>andrej karpathy rag personal notes site:x.com</code></li>
+<li><a href="https://www.youtube.com/watch?v=-X7cJy2nQ90">Разбор Игоря Зуевича на YouTube</a> — 17 минут, пайплайн с Claude Code и Obsidian</li>
+<li><a href="https://obsidian.md">Obsidian</a> — сам редактор, бесплатный</li>
+<li><a href="../handoff-pattern/">Naш HandOff-паттерн</a> — первый уровень памяти, с него начинай</li>
+<li><a href="../mempalace/">MemPalace</a> / <a href="../honcho/">Honcho</a> — альтернативные подходы</li>
+</ul>
+<h2 id="_5">Кому подходит<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>🤖 <strong>Агент (Claude Code, Codex, Cursor)</strong> — читает vault напрямую, ставит связи, обновляет карту. Это основной режим.</li>
+<li>💬 <strong>Чатбот</strong> — Obsidian к ChatGPT в браузере не подключишь, но сам vault остаётся твоим форматом организации мыслей. Копируешь нужные заметки в чат вручную.</li>
+</ul>
+<h2 id="_6">Совместимость<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><em>Obsidian — бесплатный, оффлайн, без VPN. Sync между устройствами — $8/мес или self-hosted через Syncthing / iCloud / git. MCP-серверы для Obsidian работают без VPN, ставятся через npx. Подходит всем — от вайб-кодеров до команд на 10+ человек.</em></p>
 
 
 
