@@ -593,6 +593,63 @@
   font-style: italic;
 }
 
+/* === AUTHOR CARD (блок с фото и биографией автора) === */
+.author-card {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 1.2rem;
+  align-items: start;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 0.85rem;
+  background: linear-gradient(135deg, rgba(103, 58, 183, 0.025), rgba(255, 255, 255, 0.01));
+  margin: 1rem 0 1.5rem;
+}
+
+[data-md-color-scheme="slate"] .author-card {
+  background: linear-gradient(135deg, rgba(103, 58, 183, 0.08), rgba(255, 255, 255, 0.02));
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.author-avatar {
+  width: 96px !important;
+  height: 96px !important;
+  border-radius: 50% !important;
+  object-fit: cover;
+  border: 2px solid rgba(103, 58, 183, 0.15);
+  box-shadow: 0 2px 8px rgba(103, 58, 183, 0.15);
+}
+
+.author-info h3,
+.author-info > h3 {
+  margin-top: 0 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: -0.01em;
+}
+
+.author-info p {
+  margin: 0.3rem 0 0.5rem !important;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.author-info p:first-of-type {
+  color: var(--md-default-fg-color--light) !important;
+  font-size: 0.82rem !important;
+}
+
+@media (max-width: 700px) {
+  .author-card {
+    grid-template-columns: 64px 1fr;
+    gap: 0.9rem;
+    padding: 1rem 1.1rem;
+  }
+  .author-avatar {
+    width: 64px !important;
+    height: 64px !important;
+  }
+}
+
 /* === VIDEO EMBED (16:9 responsive, full width) === */
 .video-embed {
   position: relative;
