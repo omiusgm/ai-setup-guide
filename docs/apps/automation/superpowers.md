@@ -15,36 +15,37 @@ for: agents
 
 # Superpowers
 
-<div class="product-hero product-hero--split" markdown>
-
-<div class="product-hero__main" markdown>
+<div class="product-hero" markdown>
 
 **2-3 часа автономной работы — готовый код с тестами, без ручной перепроверки.**
 
 Методология G3 (Player ↔ Coach): один агент пишет код, другой ревьюит по спеке. Пока код не пройдёт ревью — цикл повторяется. Ты подтверждаешь план и уходишь заниматься своими делами.
 
-<p class="product-hero-stats">
-<strong>157 027⭐</strong> · MIT · обновлён 16 апр 2026 · Claude Code / Cursor / Codex / Gemini CLI · требует Pro $20 или Max $200
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 157 027</span>
+<span class="rating-label">звёзд на GitHub · обновлён 16 апреля 2026</span>
 </p>
 
 ```bash
 claude plugin install superpowers@claude-plugins-official
 ```
 
-[:material-github: GitHub · ⭐ 157K](https://github.com/obra/superpowers){ .md-button .md-button--primary title="157 027 звёзд на GitHub" } [:material-puzzle: Marketplace](https://claude.com/plugins/superpowers){ .md-button }
+[:material-github: GitHub](https://github.com/obra/superpowers){ .md-button .md-button--primary } [:material-puzzle: Marketplace](https://claude.com/plugins/superpowers){ .md-button }
 
 </div>
 
-<div class="product-hero__media" markdown>
-
-<div class="video-embed video-embed--hero">
+<div class="video-embed">
   <iframe src="https://www.youtube-nocookie.com/embed/ol7KYIfUm1Y" title="Superpowers обзор — Матвей Шульга" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+
 <p class="video-caption">Обзор: Матвей Шульга — «Этот плагин улучшит Claude Code»</p>
 
-</div>
+## Требования
 
-</div>
+- **Где работает:** Claude Code, Cursor, Codex CLI, Gemini CLI, Copilot CLI
+- **Тариф Anthropic:** Pro ($20/мес) или Max ($200/мес). На Free-плане лимитов не хватит
+- **Лицензия:** MIT (open-source, можно использовать в коммерческих проектах)
+- **Автор:** obra (Jesse Vincent)
 
 ## Зачем это нужно
 
