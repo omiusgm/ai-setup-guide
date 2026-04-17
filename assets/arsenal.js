@@ -139,13 +139,15 @@
 
   function cardHTML(item) {
     return `<a class="ar-card" href="${escapeAttr(item.url)}">
-      <div class="ar-card-head">
-        <span class="ar-card-emoji">${escape(item.emoji)}</span>
-        <span class="ar-card-meta">${item.ru ? "🇷🇺 " : ""}${formatStars(item.stars)}</span>
+      <span class="ar-card-emoji">${escape(item.emoji)}</span>
+      <div class="ar-card-body">
+        <div class="ar-card-head">
+          <span class="ar-card-name">${escape(item.name)}</span>
+          <span class="ar-card-meta">${item.ru ? "🇷🇺 " : ""}${formatStars(item.stars)}</span>
+        </div>
+        <div class="ar-card-tagline">${escape(item.tagline || "")}</div>
+        <div class="ar-card-tags">${(item.tags || []).slice(0, 3).map(t => `<span>${escape(t)}</span>`).join("")}</div>
       </div>
-      <div class="ar-card-name">${escape(item.name)}</div>
-      <div class="ar-card-tagline">${escape(item.tagline || "")}</div>
-      <div class="ar-card-tags">${(item.tags || []).slice(0, 3).map(t => `<span>${escape(t)}</span>`).join("")}</div>
     </a>`;
   }
 

@@ -77,17 +77,140 @@
 .ar-active-row { display:flex; gap:0.4rem; margin:0.3rem 0 0.8rem; align-items:center; font-size:0.82rem; color: var(--md-default-fg-color--light); }
 .ar-reset { color:#7c3aed; font-weight:600; cursor:pointer; margin-left:auto; text-decoration: none; }
 .ar-reset:hover { text-decoration: underline; }
-.ar-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:0.7rem; }
-@media (max-width: 900px) { .ar-cards { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 520px) { .ar-cards { grid-template-columns: 1fr; } }
-.ar-card { display:flex; flex-direction:column; gap:0.35rem; padding:0.9rem; border:1px solid rgba(0,0,0,0.08); border-radius:10px; text-decoration:none; color: var(--md-default-fg-color); transition: border-color 0.15s, transform 0.15s; }
-.ar-card:hover { border-color:#7c3aed; transform: translateY(-2px); color: var(--md-default-fg-color); }
-.ar-card-head { display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color: var(--md-default-fg-color--light); }
-.ar-card-emoji { font-size:1.4rem; }
-.ar-card-name { font-weight:700; font-size:0.95rem; }
-.ar-card-tagline { font-size:0.78rem; color: var(--md-default-fg-color--light); line-height: 1.35; }
-.ar-card-tags { display:flex; gap:0.3rem; flex-wrap:wrap; margin-top: 0.3rem; }
-.ar-card-tags span { font-size:0.65rem; padding:0.1rem 0.4rem; background:rgba(124,58,237,0.1); border-radius:10px; color:#7c3aed; }
+/* ===== Арсенал: горизонтальные карточки (2 в ряд на десктопе) ===== */
+.ar-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+}
+
+@media (max-width: 700px) {
+  .ar-cards { grid-template-columns: 1fr; }
+}
+
+.ar-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  padding: 0.95rem 1.1rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--md-default-fg-color);
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  align-items: center;
+}
+
+.ar-card:hover {
+  border-color: #7c3aed;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(124,58,237,0.12);
+  color: var(--md-default-fg-color);
+}
+
+.ar-card-emoji {
+  font-size: 2.2rem;
+  line-height: 1;
+  align-self: center;
+}
+
+.ar-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0; /* для overflow текста */
+}
+
+.ar-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ar-card-name {
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: -0.01em;
+}
+
+.ar-card-meta {
+  font-size: 0.72rem;
+  color: var(--md-default-fg-color--light);
+  white-space: nowrap;
+}
+
+.ar-card-tagline {
+  font-size: 0.82rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ar-card-tags {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin-top: 0.15rem;
+}
+
+.ar-card-tags span {
+  font-size: 0.65rem;
+  padding: 0.1rem 0.45rem;
+  background: rgba(124,58,237,0.1);
+  border-radius: 10px;
+  color: #7c3aed;
+  white-space: nowrap;
+}
+
+/* ===== Must-have на arsenal/index — 3 в ряд (переопределение общего) ===== */
+#arsenal-musthave .ar-cards {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 900px) { #arsenal-musthave .ar-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { #arsenal-musthave .ar-cards { grid-template-columns: 1fr; } }
+
+/* ===== Must-have на главной (home) — 3 в ряд ===== */
+#home-musthave .ar-cards {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 900px) { #home-musthave .ar-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { #home-musthave .ar-cards { grid-template-columns: 1fr; } }
+
+/* ===== Sticky панель фильтров (только в #arsenal-root) ===== */
+#arsenal-root .ar-topbar,
+#arsenal-root .ar-tags {
+  position: sticky;
+  z-index: 5;
+  background: var(--md-default-bg-color);
+  backdrop-filter: blur(6px);
+}
+
+#arsenal-root .ar-topbar {
+  top: 0;
+  padding-top: 0.5rem;
+}
+
+#arsenal-root .ar-tags {
+  top: 3.2rem; /* ниже topbar */
+  margin-bottom: 0.6rem;
+}
+
+/* Тонкая граница под sticky-блоком при скролле */
+#arsenal-root .ar-tags::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 1px;
+  background: rgba(0,0,0,0.05);
+}
+
+[data-md-color-scheme="slate"] #arsenal-root .ar-tags::after {
+  background: rgba(255,255,255,0.08);
+}
 
 /* ===== Footer CTA: вторая кнопка «Куда попал» ===== */
 .ezh-cta__secondary {
