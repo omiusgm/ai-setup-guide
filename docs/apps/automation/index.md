@@ -68,12 +68,14 @@ requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage",
 
 ## Если фишек мало
 
+- :material-microphone: **[Handy](handy.md)** — 20K⭐ голос → текст по горячей клавише, локально, бесплатно. Работает везде — чаты, браузер, Claude Code
 - :material-shield-star: **[Superpowers](superpowers.md)** — 157K⭐ официальный плагин Anthropic. Player-Coach циклы (G3-методология), агенты пишут код и ревьюят друг друга автономно часами
 - :material-connection: **[n8n](n8n.md)** — 184K⭐ визуальный конструктор, собираешь мышкой
 - :material-loop: **[/loop](loop.md)** — встроенная команда Claude Code, агент крутится в цикле
 - :material-calendar-clock: **[Routines](routines.md)** — Claude Code в облаке, работает когда комп выключен
 
 **Как выбрать:**
+- Много пишешь — хочешь диктовать голосом → Handy (Whisper локально, ни рубля)
 - Пишешь код и хочешь чтобы агенты сами проверяли работу друг друга → Superpowers (G3 player-coach)
 - Вообще не кодишь → n8n, визуальный, ставишь у себя (не в облаке) на Beget за 210 руб/мес
 - Простой цикл на своём компе → /loop, включил, ушёл, вернулся к результату
