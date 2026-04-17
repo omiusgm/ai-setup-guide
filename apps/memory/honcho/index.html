@@ -23,7 +23,7 @@
     
     
       
-        <title>Honcho — память с рассуждением - App Store для Claude Code</title>
+        <title>Honcho — память с рассуждением для stateful-агентов - App Store для Claude Code</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Honcho — память с рассуждением
+              Honcho — память с рассуждением для stateful-агентов
             
           </span>
         </div>
@@ -1047,7 +1047,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Что делает
+        Требования
       
     </span>
   </a>
@@ -1058,7 +1058,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Кому подходит
+        Зачем это нужно
       
     </span>
   </a>
@@ -1069,7 +1069,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без чёрного окна с командами
+        Чем это НЕ является
       
     </span>
   </a>
@@ -1080,7 +1080,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Нюансы
+        Кому подходит
       
     </span>
   </a>
@@ -1089,6 +1089,56 @@
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Бесплатные фишки до установки
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Бесплатные фишки до установки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handoff-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HANDOFF-паттерн
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chatgpt-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChatGPT Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claude-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claude Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1118,68 +1168,80 @@
   
 
 
-<h1 id="honcho">🧠 Honcho<a class="headerlink" href="#honcho" title="Permanent link">&para;</a></h1>
-<p><strong>Репозиторий:</strong> <a href="https://github.com/plastic-labs/honcho">github.com/plastic-labs/honcho</a></p>
-<div class="admonition info">
-<p class="admonition-title">🤖 Для агентов (Claude Code / Cursor / Codex)</p>
-<p>Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. <a href="#как-попробовать-без-чёрного-окна-с-командами">альтернативы</a> ниже.</p>
+<h1 id="honcho">Honcho<a class="headerlink" href="#honcho" title="Permanent link">&para;</a></h1>
+<div class="product-hero">
+<p><strong>Внешняя память для ИИ-агентов, которая не просто хранит факты — строит модель пользователя и рассуждает о нём в фоне.</strong></p>
+<p>Plastic Labs сделали память, которая сама оптимизирует свои выводы о каждом пользователе через асинхронный процесс «Dreaming» — пока агент отвечает, Honcho додумывает. SOTA-результаты на бенчмарках памяти: 90.4% на LongMem S, 89.9% на LoCoMo.</p>
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 2 525</span>
+<span class="rating-label">звёзд на GitHub · обновлён 17 апреля 2026</span>
+</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>honcho-ai
+</code></pre></div>
+<p><a class="md-button md-button--primary" href="https://github.com/plastic-labs/honcho"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> GitHub</a> <a class="md-button" href="https://honcho.dev"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg></span> honcho.dev</a></p>
 </div>
-<blockquote>
-<p>Внешняя память для ИИ-агентов от Plastic Labs. Не просто хранит факты, а делает выводы о пользователе.</p>
-</blockquote>
-<h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/123981229?v=4" alt="Plastic Labs"><div class="author-chip__text"><div class="author-chip__label">РАЗРАБОТЧИК</div><div class="author-chip__name"><a href="https://github.com/plastic-labs">Plastic Labs</a> <span class="author-chip__handle">@plastic-labs</span></div><div class="author-chip__bio">AI-лаборатория на стыке машинного обучения и когнитивистики. Развивают Honcho как AI-native memory поверх собственных reasoning-моделей.</div></div></div>
+
+<h2 id="_1">Требования<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Где работает:</strong> любой агент (Claude Code, Cursor, кастомные LLM-пайплайны) через SDK или REST API</li>
+<li><strong>Запуск:</strong> managed-сервис (облако Plastic Labs) или self-hosted через docker-compose</li>
+<li><strong>Лицензия:</strong> AGPL-3.0 — open-source, но копилефтная. Для коммерческих SaaS учти ограничения</li>
+</ul>
+<h2 id="_2">Зачем это нужно<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Большинство систем памяти тупо сохраняют фразы. Honcho идёт дальше — строит модель пользователя. Понимает контекст, отношения, предпочтения. Агент не просто помнит «что ты сказал», а понимает «какой ты человек».</p>
-<p>Plastic Labs — не стартап-однодневка, они давно в теме персонализации ИИ. Репутация серьёзная.</p>
-<p>Работает как отдельный сервер (можно установить у себя) или облачный сервис. Агент обращается к Honcho через подключение.</p>
-<h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Ключевая фишка — <strong>Dreaming</strong>: пока агент отвечает пользователю в реальном времени, Honcho в фоне додумывает выводы об этом пользователе. Не упирается в latency на runtime, но накапливает всё более глубокую модель.</p>
+<h2 id="_3">Чем это НЕ является<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
-<li>✅ Делаешь продукт с постоянными пользователями (чат-бот, ассистент)</li>
-<li>✅ Важна персонализация — разные ответы разным людям</li>
-<li>✅ Хочешь контроль — можно установить у себя (не в облаке)</li>
+<li><strong>Не замена векторной базы.</strong> Honcho — это слой поверх хранения, который делает выводы. Если тебе нужен просто семантический поиск по заметкам — бери ChromaDB/Qdrant, будет проще.</li>
+<li><strong>Не для хобби-проектов.</strong> Требует Python-бэкенд, настройку SDK, понимание peer-моделей. Порог входа заметный.</li>
+<li><strong>Не заменяет системный промпт.</strong> Это про долгосрочную память о пользователе, а не про стайлгайд для ИИ.</li>
+<li><strong>AGPL-3.0.</strong> Если ты делаешь закрытый коммерческий продукт — читай лицензию внимательно, AGPL вирусная.</li>
+</ul>
+<h2 id="_4">Кому подходит<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>✅ Делаешь продукт с постоянными пользователями (чат-бот, ассистент, коуч-приложение)</li>
+<li>✅ Важна персонализация — разные ответы разным людям, не одинаковая болванка</li>
+<li>✅ Хочешь контроль — можно установить у себя (self-hosted) и не отдавать данные в облако</li>
 <li>❌ НЕ подходит для простых личных задач — избыточно</li>
-<li>❌ Если не умеешь работать с подключениями и серверами — барьер входа высокий</li>
+<li>❌ Если не работаешь с Python-бэкендами и API — барьер входа высокий</li>
 </ul>
-<h2 id="_3">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>Honcho — серверный инструмент для разработчиков. Если не кодишь, но нужна «память для ИИ» — забирай что попроще:</p>
-<ul>
-<li><strong><a href="../handoff-pattern/">HANDOFF-паттерн</a></strong> — обычный текстовый файл с простой разметкой, работает везде без установок</li>
-<li><strong><a href="https://claude.ai">Claude Projects</a></strong> в браузере — Project knowledge хранит контекст между чатами</li>
-<li><strong><a href="../mempalace/">MemPalace</a></strong> — попроще технически, но тоже требует Python</li>
-<li><strong>ChatGPT Memory</strong> — в настройках ChatGPT есть «Memory», сам запоминает факты о тебе</li>
-</ul>
-<p>Если реально нужен именно Honcho — готовься разбираться с серверами, подключениями и OAuth (авторизация одной кнопкой). Для хобби он перебор.</p>
+<h2 id="_5">Бесплатные фишки до установки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="handoff-">HANDOFF-паттерн<a class="headerlink" href="#handoff-" title="Permanent link">&para;</a></h3>
+<p>Обычный <code>HANDOFF.md</code> в корне проекта — без сервера, без SDK. Пишешь туда что ИИ должен помнить о тебе/проекте. В начале каждой сессии — «прочитай HANDOFF.md». Работает везде, с любым ИИ. <a href="../handoff-pattern/">Подробнее</a>.</p>
+<h3 id="chatgpt-memory">ChatGPT Memory<a class="headerlink" href="#chatgpt-memory" title="Permanent link">&para;</a></h3>
+<p>В настройках ChatGPT есть Memory — сам запоминает факты о тебе между сессиями. Для личных задач хватает.</p>
+<h3 id="claude-projects">Claude Projects<a class="headerlink" href="#claude-projects" title="Permanent link">&para;</a></h3>
+<p>Project knowledge в claude.ai — хранит контекст между чатами в рамках одного проекта, управляется мышкой в браузере.</p>
+<hr />
 <details class="note">
-<summary>Для программистов (через чёрное окно с командами)</summary>
-<p>Для Claude Code через скилл:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npx<span class="w"> </span>skills<span class="w"> </span>add<span class="w"> </span>plastic-labs/honcho
-</code></pre></div>
-<p>Или установить у себя — свой сервер:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/plastic-labs/honcho
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>honcho
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>docker-compose<span class="w"> </span>up
-</code></pre></div>
-<p><strong>Первый запуск:</strong></p>
-<ol>
-<li>Поднял сервер (локально или в облаке)</li>
-<li>В агенте — подключил</li>
-<li>Указал ID пользователя — агент начнёт писать туда заметки</li>
-<li>Следующие запросы — агент читает и использует</li>
-</ol>
+<summary>Установка для разработчиков</summary>
+<p><strong>Python SDK:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>honcho-ai
+</code></pre></div></p>
+<p><strong>Self-hosted сервер:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/plastic-labs/honcho
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>honcho
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>docker-compose<span class="w"> </span>up
+</code></pre></div></p>
+<p><strong>Первый запуск:</strong>
+1. Подключился к managed-сервису или поднял свой сервер
+2. В агенте создал Peer для каждого пользователя
+3. Агент пишет туда сообщения через SDK — Honcho в фоне делает выводы
+4. При следующих запросах — агент запрашивает контекст через dialectic API</p>
 </details>
-<h2 id="_4">Нюансы<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Требует python-бэкенд — для хобби-проектов перебор</li>
-<li>Облачная версия платная, установка у себя бесплатна</li>
-<li>Документация местами скудная, ищи в Discord сообщества</li>
-</ul>
-<h2 id="_5">Ссылки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/plastic-labs/honcho">GitHub</a></li>
-<li><a href="https://plasticlabs.ai">Plastic Labs</a></li>
+<li><a href="https://honcho.dev">honcho.dev</a> — managed-сервис и доки</li>
+<li><a href="https://blog.plasticlabs.ai">Блог Plastic Labs</a> — статьи про архитектуру и бенчмарки</li>
 <li>Альтернативы: <a href="../mempalace/">MemPalace</a>, <a href="../handoff-pattern/">HANDOFF-паттерн</a></li>
 </ul>
 <hr />
-<p><em>Подходит для: технарям · продуктовым командам · персонализации</em></p>
+<div class="admonition tip">
+<p class="admonition-title">Совместимость</p>
+<p><em>AGPL-3.0, Python SDK + REST API. Подходит под любой LLM-стек (OpenAI, Anthropic, локальные модели). Managed-сервис в облаке Plastic Labs или self-hosted через docker.</em></p>
+</div>
 
 
 

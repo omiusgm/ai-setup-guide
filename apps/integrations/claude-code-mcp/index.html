@@ -1047,7 +1047,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Что делает
+        Требования
       
     </span>
   </a>
@@ -1058,7 +1058,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Кому подходит
+        Что делает
       
     </span>
   </a>
@@ -1069,7 +1069,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как попробовать без чёрного окна с командами
+        Кому подходит
       
     </span>
   </a>
@@ -1080,7 +1080,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Примеры
+        Как попробовать без чёрного окна с командами
       
     </span>
   </a>
@@ -1091,7 +1091,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Нюансы
+        Примеры
       
     </span>
   </a>
@@ -1100,6 +1100,17 @@
       
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Нюансы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ссылки
@@ -1129,20 +1140,31 @@
   
 
 
-<h1 id="claude-code-mcp">♻️ Claude Code MCP<a class="headerlink" href="#claude-code-mcp" title="Permanent link">&para;</a></h1>
-<p><strong>Репозиторий:</strong> <a href="https://github.com/steipete/claude-code-mcp">github.com/steipete/claude-code-mcp</a> · <strong>1 100⭐</strong></p>
-<div class="admonition info">
-<p class="admonition-title">🤖 Для агентов (Claude Code / Cursor / Codex)</p>
-<p>Этот инструмент требует установки и файлового доступа. Если ты в браузере с ChatGPT — см. <a href="#как-попробовать-без-чёрного-окна-с-командами">альтернативы</a> ниже.</p>
+<h1 id="claude-code-mcp">Claude Code MCP<a class="headerlink" href="#claude-code-mcp" title="Permanent link">&para;</a></h1>
+<div class="product-hero">
+<p><strong>Один агент запускает другого — параллельные подагенты в собственных сессиях.</strong></p>
+<p>Главный Claude получает инструмент «делегируй задачу подагенту». Большая работа разбивается на части — каждый подагент работает изолированно, главный собирает результаты.</p>
+<p class="product-hero-rating">
+<span class="rating-badge">⭐ 1 235</span>
+<span class="rating-label">звёзд на GitHub · обновлён 1 января 2026</span>
+</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>claude-code<span class="w"> </span>--<span class="w"> </span>npx<span class="w"> </span>-y<span class="w"> </span>@steipete/claude-code-mcp
+</code></pre></div>
+<p><a class="md-button md-button--primary" href="https://github.com/steipete/claude-code-mcp"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> GitHub</a> <a class="md-button" href="https://www.npmjs.com/package/@steipete/claude-code-mcp"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5h13.75l-.94-1h-12zm15.42.23c.29.34.46.77.46 1.27V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6.5c0-.5.17-.93.46-1.27l1.38-1.68C5.12 3.21 5.53 3 6 3h12c.47 0 .88.21 1.15.55zM6 18h6v-3H6z"/></svg></span> npm</a></p>
 </div>
-<blockquote>
-<p>Claude запускает другого Claude. Один агент делегирует задачи подагентам, каждый — в своей сессии. Через MCP (способ дать ИИ руки — подключить его к внешним инструментам).</p>
-</blockquote>
-<h2 id="_1">Что делает<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/58493?v=4" alt="Peter Steinberger"><div class="author-chip__text"><div class="author-chip__label">АВТОР ПРОЕКТА</div><div class="author-chip__name"><a href="https://github.com/steipete">Peter Steinberger</a> <span class="author-chip__handle">@steipete</span></div><div class="author-chip__bio">Австриец. Бывший founder PSPDFKit, вышел на пенсию и вернулся ради ИИ. Известен в iOS-сообществе, ведёт блог steipete.me про Claude Code.</div></div></div>
+
+<h2 id="_1">Требования<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Где работает:</strong> Claude Code, Claude Desktop, Cursor, Windsurf — любой клиент с поддержкой MCP</li>
+<li><strong>Токены:</strong> каждый подагент идёт в отдельной сессии — расход x2-x5 от обычного. Pro-тариф ($20/мес) можно быстро упереться в лимит, на Max ($200/мес) нормально</li>
+<li><strong>Лицензия:</strong> MIT — open-source, можно использовать в коммерческих проектах</li>
+</ul>
+<h2 id="_2">Что делает<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Иногда одному агенту тяжело: большая задача, нужно параллелить, нужна изоляция — чтобы разные задачи не мешали друг другу. Claude Code MCP решает это: у главного агента появляется инструмент «запусти другого агента с такой-то задачей».</p>
 <p>Пример: «исследуй 5 конкурентов» — главный запускает 5 подагентов, каждый работает со своим конкурентом, возвращает саммари. Главный собирает.</p>
-<p>1100 звёзд. Автор — steipete (Петер Штайнбергер, известный в iOS-сообществе).</p>
-<h2 id="_2">Кому подходит<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>1235 звёзд. Автор — steipete (Петер Штайнбергер, известный в iOS-сообществе).</p>
+<h2 id="_3">Кому подходит<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>✅ Сложные задачи с параллельными частями</li>
 <li>✅ Нужна изоляция (разные проекты в одной сессии, чтобы не мешали друг другу)</li>
@@ -1150,7 +1172,7 @@
 <li>❌ НЕ подходит для простых задач — слишком сложно</li>
 <li>❌ Если не понимаешь что такое MCP — сначала разберись</li>
 </ul>
-<h2 id="_3">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">Как попробовать без чёрного окна с командами<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>Claude Code MCP работает только внутри Claude Code — а он живёт в чёрном окне с командами. Если хочешь «один ИИ запускает другого» без этого:</p>
 <ul>
 <li><strong><a href="https://claude.ai">Claude Projects</a></strong> — в одном проекте можно работать с разными специализациями через разные промпты, и копировать результаты между чатами</li>
@@ -1159,7 +1181,7 @@
 </ul>
 <details class="note">
 <summary>Для программистов (подключение MCP в Claude Code)</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>claude-code<span class="w"> </span>--<span class="w"> </span>npx<span class="w"> </span>-y<span class="w"> </span>claude-code-mcp
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>claude-code<span class="w"> </span>--<span class="w"> </span>npx<span class="w"> </span>-y<span class="w"> </span>@steipete/claude-code-mcp
 </code></pre></div>
 <p><strong>Первый запуск:</strong></p>
 <ol>
@@ -1170,23 +1192,23 @@
 <li>Главный собирает общий отчёт</li>
 </ol>
 </details>
-<h2 id="_4">Примеры<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Примеры<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Рефакторинг большого проекта — подагенты работают над разными модулями</li>
 <li>Ревью пулреквеста — один смотрит безопасность, второй стиль, третий тесты</li>
 <li>Исследование — подагенты читают разные источники, главный синтезирует</li>
 </ul>
-<h2 id="_5">Нюансы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Нюансы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Каждый подагент ест «слова» для ИИ (токены) отдельно — дорого</li>
 <li>Нужна стабильная интернет-сессия — подагенты общаются через подключение к Anthropic</li>
 <li>Следи за лимитами Anthropic — легко вылететь за квоту</li>
 </ul>
-<h2 id="_6">Ссылки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_7">Ссылки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/steipete/claude-code-mcp">GitHub ⭐ 1.1K</a></li>
-<li><a href="https://twitter.com/steipete">Автор: Peter Steinberger</a></li>
-<li>Альтернативы: <a href="https://github.com/ruvnet/claude-flow">Claude Flow (Ruflo)</a>, свой дирижёр агентов</li>
+<li><a href="https://github.com/steipete/claude-code-mcp">GitHub steipete/claude-code-mcp</a> — 1.2K звёзд</li>
+<li><a href="https://steipete.me/">Блог автора steipete.me</a> — про Claude Code workflows</li>
+<li>Альтернативы: <a href="../../automation/superpowers/">Superpowers</a> (G3-методология), свой дирижёр агентов</li>
 </ul>
 <hr />
 <p><em>Подходит для: технарям · сложным задачам · параллелизации</em></p>
