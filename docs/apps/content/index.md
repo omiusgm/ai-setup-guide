@@ -47,9 +47,13 @@ hide:
 
 ## Если фишек мало
 
+**Для видео:**
 - :material-movie-open: **[Remotion](remotion.md)** — 44K⭐ видео через React-компоненты, автогенерация роликов
 
 Скоро: Midjourney, Runway, Suno — обзоры в процессе.
+
+**Для деловых документов (КП, отчёты, PDF):**
+- :material-file-document: **[Красивые документы из ИИ](documents.md)** — python-docx, docxtpl, WeasyPrint, Quarto, MCP для Word. Обзор 6 инструментов
 
 **Для текстов:**
 - :material-account: **[Humanizer](../tokens/humanizer.md)** — 14K⭐ убирает следы ИИ из текста
