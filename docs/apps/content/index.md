@@ -53,6 +53,9 @@ hide:
 **Для звонков и встреч:**
 - :material-microphone-message: **[Транскрибация с диаризацией](transcription.md)** — WhisperX 21K⭐, текст звонка с метками «менеджер/клиент». Кейс AmoCRM
 
+**Для соцсетей и конкурентной разведки:**
+- :material-instagram: **[Instagram для ИИ](instagram-analysis.md)** — агент смотрит Reels, сторис и профили. Apify MCP / Gemini / локальный субагент — 3 класса решений
+
 **Для документов:**
 - :material-file-document-edit: **[Pretty-Docs + WeasyPrint + Quarto](documents.md)** — красивые Google Docs и PDF из Claude Code
 
