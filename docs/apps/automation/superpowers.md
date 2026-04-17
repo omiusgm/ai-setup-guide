@@ -31,7 +31,7 @@ for: agents
 claude plugin install superpowers@claude-plugins-official
 ```
 
-[:material-github: GitHub](https://github.com/obra/superpowers){ .md-button .md-button--primary } [:material-puzzle: Marketplace](https://claude.com/plugins/superpowers){ .md-button }
+[:material-github: GitHub · ⭐ 157K](https://github.com/obra/superpowers){ .md-button .md-button--primary title="157 027 звёзд на GitHub" } [:material-puzzle: Marketplace](https://claude.com/plugins/superpowers){ .md-button }
 
 </div>
 
