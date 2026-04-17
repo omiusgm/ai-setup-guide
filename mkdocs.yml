@@ -77,6 +77,7 @@ nav:
     - "10 правил": knowledge/rules.md
     - "Мифы про ИИ": knowledge/myths.md
     - "Бюджет: 0 → $200": knowledge/budget.md
+    - "Обновления моделей": knowledge/model-updates.md
     - "Память и контекст": knowledge/memory.md
     - "Россия: VPN, оплата": knowledge/russia.md
     - "4 уровня ИИ": knowledge/levels.md

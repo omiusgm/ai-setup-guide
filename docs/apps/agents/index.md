@@ -54,6 +54,7 @@ hide:
 - :material-school: **[Hermes Agent](hermes-agent.md)** — 93K⭐ агент, который учится на скиллах
 - :material-microsoft-visual-studio-code: **[Cline](cline.md)** — 60K⭐ VS Code-агент, бесплатный
 - :material-duck: **[Goose](goose.md)** — 42K⭐ десктоп + CLI, работает с локальными моделями
+- :material-cog-transfer: **[Oh-My-ClaudeCode (Sisyphus)](sisyphus.md)** — 29K⭐ умный роутер моделей + 11 агентов, экономит 40-70% токенов
 
 **Как выбрать:**
 - Не хочешь кодить → Goose (есть десктоп)
@@ -61,6 +62,7 @@ hide:
 - Уже в терминале → Codex CLI
 - Собирать данные с сайтов (копирует текст автоматом) / оформлять заказы → Browser Use
 - Сложные задачи на неделю → OpenHands
+- Уже в Claude Code и жжёшь Max-план — Oh-My-ClaudeCode
 
 ## Что читать дальше
 
