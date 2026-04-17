@@ -1044,10 +1044,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Встроено в твоей системе (самое простое)
+        1. Залить ИИ-боту (самое простое, для разовых задач)
       
     </span>
   </a>
@@ -1055,10 +1055,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-cloud-api" class="md-nav__link">
+  <a href="#2-crm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Cloud API (когда встроенного нет или нужна гибкость)
+        2. Встроено в CRM или АТС (для регулярных звонков)
       
     </span>
   </a>
@@ -1066,10 +1066,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-cloud-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Локально (приватность + большой объём)
+        3. Cloud API (для своего продукта или больших объёмов)
       
     </span>
   </a>
@@ -1077,10 +1077,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-gui" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. GUI для разовых задач
+        4. Локально (приватность + большой объём)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-claude-code-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Из Claude Code через MCP
       
     </span>
   </a>
@@ -1092,6 +1103,17 @@
     <span class="md-ellipsis">
       
         Дерево решений: что выбрать
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUI для разовых задач
       
     </span>
   </a>
@@ -1113,7 +1135,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Бесплатные фишки до любой установки
+        Сравнение всех классов решений
       
     </span>
   </a>
@@ -1124,17 +1146,6 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Сравнение всех классов решений
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Кому подходит
       
     </span>
@@ -1143,7 +1154,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Совместимость
@@ -1175,15 +1186,23 @@
 
 <h1 id="_1">Транскрибация аудио<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <div class="product-hero">
-<p><strong>Любая запись (звонок, встреча, голосовое) → текст с таймкодами и метками «кто что сказал». 4 класса решений — от «ничего не ставить» до локального бесплатного на своём компе.</strong></p>
-<p>Главное правило: <strong>сначала проверь что уже встроено в твою систему</strong>. СРМ, телефония, Zoom — у многих транскрибация уже есть, просто выключена. Внешние API и локальная установка — только если встроенного нет или оно плохо подходит.</p>
+<p><strong>Любая запись (звонок, встреча, голосовое) → текст с таймкодами и метками «кто что сказал». 5 классов решений — от «загрузил в браузер» до локального бесплатного на своём компе.</strong></p>
+<p>Главное правило: <strong>сначала смотри что уже есть бесплатно или встроено</strong>. NotebookLM, Gemini, Bitrix24 — часто решают задачу за 0 ₽ и без установок. Cloud API и локальный стек — для регулярного потока или своего продукта.</p>
 <p class="product-hero-rating">
-<span class="rating-badge">4 способа</span>
-<span class="rating-label">· как выбрать — смотри дерево решений в конце</span>
+<span class="rating-badge">5 способов</span>
+<span class="rating-label">· как выбрать — дерево решений в конце</span>
 </p>
 </div>
-<h2 id="1">1. Встроено в твоей системе (самое простое)<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p>Если у тебя уже есть СРМ или облачная телефония — 80% шансов что транскрибация там уже встроена или подключается за 5 минут. Текст сам падает в карточку сделки, ничего писать не надо.</p>
+<h2 id="1-">1. Залить ИИ-боту (самое простое, для разовых задач)<a class="headerlink" href="#1-" title="Permanent link">&para;</a></h2>
+<p>Если запись разовая (одна встреча, один звонок, один файл) — не надо ничего ставить. Грузишь файл в чат с ИИ — получаешь транскрипт и саммари сразу. Бесплатно или почти.</p>
+<p><strong>🎯 Google NotebookLM</strong> — лучший вариант под русский. Бесплатно. notebooklm.google.com → добавляешь источник → грузишь mp3/wav → готовый транскрипт + саммари + Q&amp;A по содержанию (можно задать любой вопрос — «что обсуждали про цену?»). Лимит источников бесплатно — 100 на блокнот, можно фильмы по 2 часа.</p>
+<p><strong>🎯 Google AI Studio (Gemini 2.5 Flash)</strong> — aistudio.google.com → новый чат → прикрепить аудио → промпт «транскрибируй с указанием говорящих, выдели action items». До 9.5 часов на один файл. Бесплатно в free-тире (500 запросов/день). Встроенная диаризация без настройки.</p>
+<p><strong>ChatGPT Plus</strong> — загрузи файл в чат, транскрибирует ($20/мес). Без диаризации.</p>
+<p><strong>Telegram Premium</strong> — голосовые автоматом транскрибируются (₽3-5 в мес).</p>
+<p><strong>Плюсы:</strong> ничего не ставить, бесплатно или дёшево, диаризация в Gemini/NotebookLM «из коробки».
+<strong>Минусы:</strong> ручной процесс — для каждого файла нажимать кнопки. Не для регулярного потока 100+ записей.</p>
+<h2 id="2-crm">2. Встроено в CRM или АТС (для регулярных звонков)<a class="headerlink" href="#2-crm" title="Permanent link">&para;</a></h2>
+<p>Если у тебя СРМ или облачная телефония — 80% шансов что транскрибация уже встроена или подключается за 5 минут. Текст сам падает в карточку сделки, ничего писать не надо.</p>
 <p><strong>Российские СРМ и АТС:</strong></p>
 <ul>
 <li><strong>Bitrix24</strong> — «Распознавание звонков» в тарифах Стандарт+. Движок — Yandex SpeechKit, русский отлично. Автоматом транскрибирует входящие/исходящие, текст в карточке. Диаризация работает на стерео-записях.</li>
@@ -1197,116 +1216,134 @@
 - Google Meet + Gemini (Workspace Business+)
 - MS Teams + Copilot</p>
 <p><strong>Плюсы:</strong> ничего не ставить, текст привязан к карточке автоматом, оплата в рублях.
-<strong>Минусы:</strong> платно помесячно, данные идут провайдеру, мало контроля над качеством модели.</p>
-<p><strong>Через API:</strong> все эти СРМ и АТС отдают готовый транскрипт по API — в Claude Code/n8n можно забирать текст и делать что угодно: саммари, теги, алерты РОПу.</p>
-<h2 id="2-cloud-api">2. Cloud API (когда встроенного нет или нужна гибкость)<a class="headerlink" href="#2-cloud-api" title="Permanent link">&para;</a></h2>
+<strong>Минусы:</strong> платно помесячно, данные идут провайдеру, мало контроля.</p>
+<p><strong>Через API:</strong> все эти СРМ и АТС отдают готовый транскрипт по API — в Claude Code/n8n забираешь и делаешь что угодно: саммари, теги, алерты РОПу.</p>
+<h2 id="3-cloud-api">3. Cloud API (для своего продукта или больших объёмов)<a class="headerlink" href="#3-cloud-api" title="Permanent link">&para;</a></h2>
 <p>Когда: СРМ не умеет, нужно интегрировать в свой продукт, объём больше встроенных лимитов, нужна другая модель.</p>
 <table>
 <thead>
 <tr>
 <th>Сервис</th>
-<th>Цена/мин</th>
+<th>Цена/час</th>
 <th>Диаризация</th>
 <th>Русский</th>
-<th>Для чего</th>
+<th>Особенность</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Deepgram Nova-2</strong></td>
-<td>$0.0043</td>
+<td><strong>🏆 Gemini 2.5 Flash</strong></td>
+<td><strong>$0.13</strong></td>
 <td>✅</td>
 <td>отлично</td>
-<td>100+ звонков/день, свой продукт</td>
+<td>До 9.5 ч на файл, саммари + action items в одном вызове</td>
 </tr>
 <tr>
-<td><strong>AssemblyAI</strong></td>
-<td>$0.0065</td>
+<td><strong>Deepgram Nova-2</strong></td>
+<td>$0.26</td>
+<td>✅</td>
+<td>отлично</td>
+<td>Самая низкая задержка, потоковая</td>
+</tr>
+<tr>
+<td><strong>AssemblyAI Universal-2</strong></td>
+<td>$0.37</td>
 <td>✅</td>
 <td>хорошо</td>
-<td>транскрипт + саммари в одном запросе</td>
+<td>На 30% меньше галлюцинаций, чем Whisper</td>
 </tr>
 <tr>
 <td><strong>Whisper API (OpenAI)</strong></td>
-<td>$0.006</td>
+<td>$0.36</td>
 <td>❌</td>
 <td>отлично</td>
-<td>разовые задачи</td>
+<td>Простой, без диаризации</td>
 </tr>
 <tr>
 <td><strong>Groq Whisper</strong></td>
 <td>0 ₽</td>
 <td>❌</td>
 <td>хорошо</td>
-<td>прототипы, 7200 сек/день Free</td>
+<td>Прототипы, 7200 сек/день Free</td>
 </tr>
 <tr>
 <td><strong>Yandex SpeechKit</strong></td>
-<td>~1 ₽</td>
+<td>~60 ₽</td>
 <td>✅</td>
 <td>лучший</td>
-<td>российская карта, юр. лицо</td>
+<td>Российская карта, юр. лицо</td>
 </tr>
 </tbody>
 </table>
+<p><strong>🏆 Gemini 2.5 Flash — лучшая цена + диаризация в одной модели.</strong> За $0.13/час получаешь транскрипт, диаризацию, саммари и action items в одном API-вызове. Это в 2 раза дешевле Deepgram и в 3 раза — Whisper API.</p>
 <p><strong>Типовой пайплайн:</strong> cron или webhook → скачивает аудио → POST в API → JSON с текстом → сохраняет куда надо.</p>
 <p><strong>Плюсы:</strong> ноль железа, стабильное качество, масштабируется.
-<strong>Минусы:</strong> оплата иностранной картой (Deepgram, AssemblyAI), данные уходят наружу — проверь 152-ФЗ.</p>
-<h2 id="3">3. Локально (приватность + большой объём)<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p>Когда: данные не отдаёшь наружу (юр. ограничения, NDA, коммерческая тайна), либо &gt;1000 минут/месяц — локально дешевле чем cloud-API.</p>
-<p><strong>WhisperX</strong> — топовое open-source решение. Whisper для текста + pyannote для диаризации, одна установка.</p>
+<strong>Минусы:</strong> оплата иностранной картой (Gemini, Deepgram, AssemblyAI), данные уходят наружу — проверь 152-ФЗ.</p>
+<h2 id="4">4. Локально (приватность + большой объём)<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>Когда: данные не отдаёшь наружу (юр. ограничения, NDA, коммерческая тайна), либо &gt;5000 минут/месяц — локально дешевле чем cloud-API.</p>
+<p><strong>WhisperX</strong> — топовое open-source решение. Whisper для текста + pyannote для диаризации в одной установке.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>whisperx
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>whisperx<span class="w"> </span>call.mp3<span class="w"> </span>--model<span class="w"> </span>large-v3<span class="w"> </span>--diarize<span class="w"> </span>--hf_token<span class="w"> </span>hf_xxx<span class="w"> </span>--language<span class="w"> </span>ru
 </code></pre></div>
-<p>На выходе JSON с сегментами, где каждой фразе присвоен <code>SPEAKER_00</code>, <code>SPEAKER_01</code> и таймкоды. Claude Code парсит и понимает кто говорил.</p>
+<p>На выходе JSON с сегментами, где каждой фразе присвоен <code>SPEAKER_00</code>, <code>SPEAKER_01</code> и таймкоды.</p>
 <p>HuggingFace token бесплатный: hf.co → Settings → Access Tokens → согласиться с условиями <code>pyannote/speaker-diarization-3.1</code>.</p>
 <p><strong>Железо:</strong>
-- Mac M1/M2/M3 — через MPS, реальное время ≈ 0.3× длины записи
+- Mac M1/M2/M3 — через MPS, ≈ 0.3× длины записи
 - NVIDIA GPU (8 ГБ VRAM) — 0.1×
-- CPU без GPU — 1-2×, но работает на любом ноуте</p>
-<p><strong>Плюсы:</strong> полная приватность, 0 ₽ после настройки, можно дообучить на своём домене.
-<strong>Минусы:</strong> нужно железо и час на настройку, качество на сложных акцентах чуть ниже cloud.</p>
+- CPU без GPU — 1-2×, работает на любом ноуте</p>
+<p><strong>Плюсы:</strong> полная приватность, 0 ₽ после настройки, можно дообучить.
+<strong>Минусы:</strong> нужно железо и час на настройку.</p>
+<p><strong>Для русского:</strong> базовый <code>large-v3</code> даёт WER ~9.84%. Fine-tuned <code>antony66/whisper-large-v3-russian</code> на HuggingFace — WER 6.39% (заметно лучше для бизнес-задач).</p>
 <p><strong>Репозитории:</strong>
 - <a href="https://github.com/m-bain/whisperX">WhisperX</a> · 21 352⭐
 - <a href="https://github.com/ggerganov/whisper.cpp">whisper.cpp</a> · 48 696⭐ — на C++, быстрее на CPU
-- <a href="https://github.com/pyannote/pyannote-audio">pyannote-audio</a> · 9 773⭐ — сам движок диаризации</p>
-<h2 id="4-gui">4. GUI для разовых задач<a class="headerlink" href="#4-gui" title="Permanent link">&para;</a></h2>
+- <a href="https://github.com/pyannote/pyannote-audio">pyannote-audio</a> · 9 773⭐ — движок диаризации</p>
+<h2 id="5-claude-code-mcp">5. Из Claude Code через MCP<a class="headerlink" href="#5-claude-code-mcp" title="Permanent link">&para;</a></h2>
+<p>Если хочешь чтобы Claude сам анализировал аудио — без копи-паста — подключи MCP-сервер. После установки в чате просто кидаешь путь к файлу, Claude вызывает API и приносит транскрипт.</p>
+<p><strong>Готовые MCP-серверы:</strong></p>
+<ul>
+<li><strong><code>@rlabs-inc/gemini-mcp</code></strong> — самый функциональный для Gemini: анализ аудио/видео, Deep Research, TTS (30 голосов), генерация изображений. Подключение одной командой:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>gemini<span class="w"> </span>-s<span class="w"> </span>user<span class="w"> </span>--<span class="w"> </span>env<span class="w"> </span><span class="nv">GEMINI_API_KEY</span><span class="o">=</span>ВАШ_КЛЮЧ<span class="w"> </span>npx<span class="w"> </span>-y<span class="w"> </span>@rlabs-inc/gemini-mcp
+</code></pre></div></li>
+<li><strong><code>aliargun/mcp-server-gemini</code></strong> (248⭐) — текстовая генерация, анализ изображений, эмбеддинги, подсчёт токенов</li>
+<li><strong><code>cogell/assembly-ai-mcp</code></strong> — AssemblyAI с диаризацией до 50 говорящих, async-обработка длинных файлов</li>
+<li><strong><code>SmartLittleApps/local-stt-mcp</code></strong> — локальный Whisper через whisper.cpp с диаризацией, оптимизирован под Apple Silicon. Бесплатный, приватный</li>
+<li><strong><code>BigUncle/Fast-Whisper-MCP-Server</code></strong> — локальный, CUDA-ускоренный, модели от tiny до large-v3, VAD-фильтрация</li>
+<li><strong><code>forayconsulting/zoom_transcript_mcp</code></strong> — доступ к Zoom Cloud Recording, поиск по записям, фильтры по дате/участникам</li>
+</ul>
+<p><strong>MVP за 30 минут без MCP:</strong> Claude Code умеет в bash → curl. Можно прямо из чата дёргать Gemini Files API + <code>gemini-2.5-flash:generateContent</code>. Полный bash-скрипт на 30 строк, файл загружается через resumable upload, в ответ — JSON с транскриптом и диаризацией. Скажи Claude «напиши bash-скрипт для transcribe meeting.mp3 через Gemini 2.5 Flash» — он сделает.</p>
+<h2 id="_2">Дерево решений: что выбрать<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="decision-tree">
+<p><strong>Один файл, без кода, бесплатно?</strong>
+→ NotebookLM или Google AI Studio (Gemini 2.5 Flash). Загрузил → готово.</p>
+<p><strong>У тебя CRM или облачная АТС с регулярным потоком звонков?</strong>
+→ Включи встроенный транскриб (Bitrix, MANGO, Zadarma, виджеты AmoCRM). Текст сам падает в карточку.</p>
+<p><strong>Нужно интегрировать в свой продукт?</strong>
+→ Gemini 2.5 Flash через API ($0.13/час, лучшая цена + диаризация). Альтернативы: Deepgram, AssemblyAI.</p>
+<p><strong>Данные нельзя отдавать наружу?</strong> Есть Mac M1+ или NVIDIA GPU?
+→ WhisperX локально. Бесплатно, приватно.</p>
+<p><strong>Хочешь чтобы Claude сам разбирал аудио?</strong>
+→ MCP-сервер: <code>@rlabs-inc/gemini-mcp</code> (Gemini 2.5 Flash) или <code>local-stt-mcp</code> (локальный Whisper).</p>
+<p><strong>Нужно 1-2 раза в неделю руками?</strong>
+→ MacWhisper Pro ($59) или Buzz (бесплатно).</p>
+</div>
+<h2 id="gui">GUI для разовых задач<a class="headerlink" href="#gui" title="Permanent link">&para;</a></h2>
 <p>Если код не пишешь и нужно раз в неделю разобрать запись.</p>
 <ul>
 <li><strong><a href="https://goodsnooze.gumroad.com/l/macwhisper">MacWhisper Pro</a></strong> — $59, macOS only, drag-and-drop, есть диаризация</li>
-<li><strong><a href="https://github.com/chidiwilliams/buzz">Buzz</a></strong> — 18 716⭐, бесплатно, Win/Mac/Linux, GUI на whisper.cpp, без диаризации</li>
-<li><strong><a href="https://github.com/fastrepl/hyprnote">Hyprnote</a></strong> — 8 266⭐, бесплатно, специально для встреч Zoom/Meet с саммари через локальный LLM</li>
+<li><strong><a href="https://github.com/chidiwilliams/buzz">Buzz</a></strong> — 18 716⭐, бесплатно, Win/Mac/Linux, GUI на whisper.cpp</li>
+<li><strong><a href="https://github.com/fastrepl/hyprnote">Hyprnote</a></strong> — 8 266⭐, бесплатно, специально для Zoom/Meet с саммари через локальный LLM</li>
 </ul>
-<h2 id="_2">Дерево решений: что выбрать<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="decision-tree">
-<p><strong>У тебя уже есть CRM или облачная АТС?</strong>
-→ Включи встроенный транскриб (Bitrix, MANGO, Zadarma). Готово, больше ничего не надо.</p>
-<p><strong>Нет СРМ или встроенное плохое?</strong> Записей много (&gt;100/день)?
-→ Cloud API: Deepgram (международная карта) или Yandex SpeechKit (российская).</p>
-<p><strong>Данные нельзя отдавать наружу?</strong> Есть Mac M1+ или NVIDIA GPU?
-→ WhisperX локально. Бесплатно, приватно.</p>
-<p><strong>Нужно 1-2 раза в неделю разово?</strong>
-→ MacWhisper Pro ($59) или Buzz (бесплатно).</p>
-<p><strong>Хочешь сам в своём приложении?</strong>
-→ Whisper API / AssemblyAI — самая быстрая интеграция.</p>
-</div>
 <h2 id="_3">Нюансы для всех способов<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Диаризация</strong> нужна когда один говорит за другим без разделения каналов. Если запись в стерео (менеджер и клиент в разных каналах звуковой дорожки) — диаризация не нужна, каждый канал = отдельный говорящий.</li>
-<li><strong>Русский</strong> — лучшее качество: Yandex SpeechKit &gt; Whisper large-v3 &gt; Deepgram &gt; Google Speech-to-Text.</li>
-<li><strong>Короткие записи (&lt;30 сек)</strong> — диаризация может путать. Для коротких лучше отключить и роль присваивать по контексту (кто инициатор звонка = менеджер).</li>
+<li><strong>Диаризация</strong> нужна когда один говорит за другим без разделения каналов. Если запись в стерео (менеджер и клиент в разных каналах) — диаризация не нужна, каждый канал = отдельный говорящий.</li>
+<li><strong>Русский</strong> — лучшее качество: Yandex SpeechKit &gt; Whisper large-v3-russian (fine-tuned) &gt; Gemini 2.5 Flash &gt; Deepgram &gt; Whisper base.</li>
+<li><strong>Короткие записи (&lt;30 сек)</strong> — диаризация может путать. Лучше отключить и роль присваивать по контексту.</li>
 <li><strong>Фон, шум, музыка ожидания</strong> — снижают точность на 20-30%. Прогони через RNNoise или DeepFilterNet перед транскрипцией.</li>
-<li><strong>152-ФЗ (РФ)</strong> — запись звонков с клиентами только при согласии. Стандартно — в договоре или автоинформаторе «разговор будет записан» при дозвоне. Без этого запись незаконна.</li>
-<li><strong>Стоимость vs объём:</strong> до ~500 мин/мес cloud-API дешевле; &gt;1000 мин/мес локально окупает железо; встроенное в СРМ — часто самое выгодное при интеграции в рабочий процесс.</li>
+<li><strong>152-ФЗ (РФ)</strong> — запись звонков с клиентами только при согласии. Стандартно в договоре или автоинформаторе «разговор будет записан». Без этого — незаконно.</li>
+<li><strong>Длина файла:</strong> NotebookLM до ~2 часов на источник; Gemini 2.5 Flash до 9.5 ч на запрос; Whisper API — до 25 МБ; локальный — без лимитов.</li>
 </ul>
-<h2 id="_4">Бесплатные фишки до любой установки<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Telegram Premium</strong> — голосовые автоматом транскрибируются (₽3-5 в мес)</li>
-<li><strong>ChatGPT Plus</strong> — загрузи аудио в чат, транскрибирует сам ($20/мес, без диаризации)</li>
-<li><strong>YouTube автосубтитры + yt-dlp</strong> — транскрипт любого YouTube-ролика без установок</li>
-<li><strong>Zoom Free</strong> — базовое транскрибирование встреч до 40 минут</li>
-</ul>
-<h2 id="_5">Сравнение всех классов решений<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_4">Сравнение всех классов решений<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1319,47 +1356,70 @@
 </thead>
 <tbody>
 <tr>
+<td><strong>NotebookLM / AI Studio</strong></td>
+<td>бесплатно</td>
+<td>✅</td>
+<td>данные у Google</td>
+<td>Разовые задачи, без кода</td>
+</tr>
+<tr>
 <td><strong>Встроено в CRM</strong></td>
 <td>₽-подписка</td>
 <td>✅</td>
 <td>данные у провайдера</td>
-<td>Все у кого есть Bitrix/AmoCRM/облачная АТС</td>
+<td>Регулярный поток звонков</td>
 </tr>
 <tr>
-<td><strong>Cloud API</strong></td>
-<td>$0.004-0.007/мин</td>
+<td><strong>Gemini 2.5 Flash API</strong></td>
+<td>$0.13/час</td>
+<td>✅</td>
+<td>данные у Google</td>
+<td>Свой продукт, лучшая цена</td>
+</tr>
+<tr>
+<td><strong>Deepgram / AssemblyAI</strong></td>
+<td>$0.26-0.37/час</td>
 <td>✅</td>
 <td>данные у провайдера</td>
-<td>Свой продукт, нет встроенного</td>
+<td>Своё приложение, потоковая</td>
 </tr>
 <tr>
-<td><strong>Локально (WhisperX)</strong></td>
+<td><strong>WhisperX локально</strong></td>
 <td>бесплатно</td>
 <td>✅</td>
 <td>полная</td>
 <td>Приватно + много записей</td>
 </tr>
 <tr>
-<td><strong>GUI (MacWhisper / Buzz)</strong></td>
-<td>0-$59 разово</td>
+<td><strong>MCP-серверы</strong></td>
+<td>зависит</td>
+<td>✅</td>
+<td>зависит</td>
+<td>Из Claude Code напрямую</td>
+</tr>
+<tr>
+<td><strong>GUI (MacWhisper/Buzz)</strong></td>
+<td>0-$59</td>
 <td>зависит</td>
 <td>локально</td>
-<td>Разовые задачи, без кода</td>
+<td>Разовые задачи руками</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_6">Кому подходит<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Кому подходит<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
-<li>🤖 <strong>Агент (Claude Code)</strong> — через API встроенной СРМ (проще всего), cloud API (гибко) или локальный WhisperX (приватно)</li>
-<li>💬 <strong>Чатбот (ChatGPT/Claude в браузере)</strong> — загрузка файла вручную, без автоматизации</li>
-<li><strong>Для бизнеса:</strong> отделы продаж, поддержка, HR-интервью, медицина, юристы</li>
-<li><strong>Для контента:</strong> подкасты (таймкоды), журналисты (цитаты), SMM (нарезки из эфиров)</li>
+<li>🤖 <strong>Агент (Claude Code)</strong> — MCP-сервер Gemini/AssemblyAI/Whisper или прямой curl-вызов API</li>
+<li>💬 <strong>Чатбот (NotebookLM, AI Studio, ChatGPT)</strong> — загрузка файла вручную</li>
+<li><strong>Для бизнеса:</strong> отделы продаж, поддержка, HR-интервью, медицина, юристы, аналитики</li>
+<li><strong>Для контента:</strong> подкасты (таймкоды), журналисты (цитаты), SMM (нарезки из эфиров), консультанты (записи сессий → отчёты)</li>
 </ul>
-<h2 id="_7">Совместимость<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Совместимость<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Встроенное в российские CRM и АТС</strong> — работает из РФ без VPN, оплата в рублях</li>
+<li><strong>NotebookLM, Google AI Studio, Gemini API</strong> — нужен VPN для регистрации/входа в notebooklm.google.com и aistudio.google.com (российский IP не пускает). Сами API-запросы после регистрации работают и из РФ</li>
+<li><strong>Встроенное в российские CRM и АТС</strong> — без VPN, оплата в рублях</li>
 <li><strong>WhisperX локально</strong> — без VPN, модели Whisper иногда через зеркало HuggingFace</li>
-<li><strong>Cloud API (Deepgram, AssemblyAI, OpenAI)</strong> — запросы идут без VPN; оплата — только иностранной картой. Для Yandex SpeechKit работает российская карта и юр.лицо.</li>
+<li><strong>Cloud API (Gemini, Deepgram, AssemblyAI, OpenAI)</strong> — запросы без VPN; оплата только иностранной картой</li>
+<li><strong>Yandex SpeechKit</strong> — российская карта, юр.лицо</li>
 </ul>
 
 
