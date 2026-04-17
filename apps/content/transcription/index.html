@@ -23,7 +23,7 @@
     
     
       
-        <title>Транскрибация звонков с диаризацией — текст + кто что сказал - App Store для Claude Code</title>
+        <title>Транскрибация аудио — какое решение когда подходит - App Store для Claude Code</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Транскрибация звонков с диаризацией — текст + кто что сказал
+              Транскрибация аудио — какое решение когда подходит
             
           </span>
         </div>
@@ -1044,54 +1044,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Встроено в твоей системе (самое простое)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-cloud-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Cloud API (когда встроенного нет или нужна гибкость)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Локально (приватность + большой объём)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. GUI для разовых задач
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Два уровня: транскрипт + диаризация
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-whisperx" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Способ 1. WhisperX (локально, бесплатно, с диаризацией)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-cloud-api-100" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Способ 2. Cloud API (если нет железа или &gt;100 звонков/день)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-hyprnote" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Способ 3. Hyprnote (для внутренних встреч)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#amocrm-80-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Кейс: РОП + AmoCRM (пайплайн на 80 строк Python)
+        Дерево решений: что выбрать
       
     </span>
   </a>
@@ -1102,7 +1102,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Нюансы
+        Нюансы для всех способов
       
     </span>
   </a>
@@ -1113,7 +1113,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Бесплатные фишки до установки
+        Бесплатные фишки до любой установки
       
     </span>
   </a>
@@ -1124,7 +1124,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Сравнение инструментов
+        Сравнение всех классов решений
       
     </span>
   </a>
@@ -1173,49 +1173,34 @@
   
 
 
-<h1 id="_1">Транскрибация звонков<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1">Транскрибация аудио<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <div class="product-hero">
-<p><strong>Кидаешь запись звонка — получаешь текст с таймкодами и метками «кто говорит». Менеджер и клиент разделены автоматически.</strong></p>
-<p>Для РОПа в AmoCRM: физически невозможно слушать 100 звонков менеджеров в день. ИИ-агент делает это за тебя — выжимает суть, находит возражения клиента, ловит нарушения скрипта. Решение — Whisper + диаризация (разделение говорящих).</p>
+<p><strong>Любая запись (звонок, встреча, голосовое) → текст с таймкодами и метками «кто что сказал». 4 класса решений — от «ничего не ставить» до локального бесплатного на своём компе.</strong></p>
+<p>Главное правило: <strong>сначала проверь что уже встроено в твою систему</strong>. СРМ, телефония, Zoom — у многих транскрибация уже есть, просто выключена. Внешние API и локальная установка — только если встроенного нет или оно плохо подходит.</p>
 <p class="product-hero-rating">
-<span class="rating-badge">⭐ 21 352</span>
-<span class="rating-label">звёзд у WhisperX · топ-решение для диаризации · 17 апреля 2026</span>
+<span class="rating-badge">4 способа</span>
+<span class="rating-label">· как выбрать — смотри дерево решений в конце</span>
 </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>whisperx
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>whisperx<span class="w"> </span>call.mp3<span class="w"> </span>--model<span class="w"> </span>large-v3<span class="w"> </span>--diarize<span class="w"> </span>--hf_token<span class="w"> </span>ТВОЙ_HF_TOKEN<span class="w"> </span>--language<span class="w"> </span>ru
-</code></pre></div>
-<p><a class="md-button md-button--primary" href="https://github.com/m-bain/whisperX"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> WhisperX</a> <a class="md-button" href="https://github.com/pyannote/pyannote-audio"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> pyannote</a></p>
 </div>
-<div class="author-chip"><img class="author-chip__avatar" src="https://avatars.githubusercontent.com/u/36994049?v=4" alt="Max Bain"><div class="author-chip__text"><div class="author-chip__label">АВТОР WHISPERX</div><div class="author-chip__name"><a href="https://github.com/m-bain">Max Bain</a> <span class="author-chip__handle">@m-bain</span></div><div class="author-chip__bio">PhD Oxford VGG (visual geometry group). Объединил Whisper с pyannote-audio и forced-alignment — получил самое точное open-source решение для звонков.</div></div></div>
-
-<h2 id="_2">Два уровня: транскрипт + диаризация<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><strong>Транскрипт</strong> — превращение аудио в текст. Это делает Whisper (модель OpenAI, открытая, бесплатная).</p>
-<p><strong>Диаризация</strong> — кто из говорящих что сказал. Делает pyannote-audio: слушает тембр, ритм, интонации, присваивает каждому куску речи метку <code>SPEAKER_00</code>, <code>SPEAKER_01</code>.</p>
-<p>WhisperX объединяет оба в одной установке — ставишь pip-пакет, получаешь обе фичи сразу.</p>
-<h2 id="1-whisperx">Способ 1. WhisperX (локально, бесплатно, с диаризацией)<a class="headerlink" href="#1-whisperx" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>whisperx
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>whisperx<span class="w"> </span>call.mp3<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>--model<span class="w"> </span>large-v3<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span>--diarize<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span>--hf_token<span class="w"> </span>hf_xxx<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span>--language<span class="w"> </span>ru<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span>--output_format<span class="w"> </span>json
-</code></pre></div>
-<p>На выходе JSON с сегментами:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;segments&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">4.2</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Добрый день, Алексей, вы интересовались...&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;speaker&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPEAKER_00&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">4.3</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">7.1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Да, но цена высокая для меня&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;speaker&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPEAKER_01&quot;</span><span class="p">}</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
-</code></pre></div>
-<p>Дальше агент Claude Code парсит JSON и понимает: SPEAKER_00 = менеджер (задаёт первый вопрос), SPEAKER_01 = клиент.</p>
-<p><strong>HuggingFace токен</strong> нужен для pyannote — бесплатно: hf.co → Settings → Access Tokens → согласиться с условиями на странице <code>pyannote/speaker-diarization-3.1</code>. 3 минуты разовой настройки.</p>
-<p><strong>Железо:</strong>
-- Mac M1/M2/M3 — работает через MPS, реальное время ≈ 0.3× длины записи
-- NVIDIA GPU (RTX 3060+, 8 ГБ VRAM) — 0.1×
-- CPU (без GPU) — 1-2×, но работает на любом ноуте</p>
-<h2 id="2-cloud-api-100">Способ 2. Cloud API (если нет железа или &gt;100 звонков/день)<a class="headerlink" href="#2-cloud-api-100" title="Permanent link">&para;</a></h2>
+<h2 id="1">1. Встроено в твоей системе (самое простое)<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>Если у тебя уже есть СРМ или облачная телефония — 80% шансов что транскрибация там уже встроена или подключается за 5 минут. Текст сам падает в карточку сделки, ничего писать не надо.</p>
+<p><strong>Российские СРМ и АТС:</strong></p>
+<ul>
+<li><strong>Bitrix24</strong> — «Распознавание звонков» в тарифах Стандарт+. Движок — Yandex SpeechKit, русский отлично. Автоматом транскрибирует входящие/исходящие, текст в карточке. Диаризация работает на стерео-записях.</li>
+<li><strong>AmoCRM</strong> — своего встроенного нет, но есть готовые виджеты: <strong>CallGear</strong>, <strong>Callibri</strong>, <strong>Roistat</strong>, <strong>Zadarma</strong>, <strong>СИПУНИ</strong>. Установка 5 минут, текст в примечаниях к сделке. Многие добавляют анализ тональности и ключевых слов.</li>
+<li><strong>MANGO OFFICE</strong> — «Речевая аналитика», 5 ₽/мин. Транскрипт + теги по скрипту продаж.</li>
+<li><strong>Zadarma</strong> — «Расшифровка звонков» в AI-тарифе, ~2.9 ₽/мин.</li>
+<li><strong>UIS / Ringostat / Callibri</strong> — все имеют транскрибацию с диаризацией.</li>
+</ul>
+<p><strong>Встречи (Zoom / Meet / Teams):</strong>
+- Zoom AI Companion — бесплатно на Pro+
+- Google Meet + Gemini (Workspace Business+)
+- MS Teams + Copilot</p>
+<p><strong>Плюсы:</strong> ничего не ставить, текст привязан к карточке автоматом, оплата в рублях.
+<strong>Минусы:</strong> платно помесячно, данные идут провайдеру, мало контроля над качеством модели.</p>
+<p><strong>Через API:</strong> все эти СРМ и АТС отдают готовый транскрипт по API — в Claude Code/n8n можно забирать текст и делать что угодно: саммари, теги, алерты РОПу.</p>
+<h2 id="2-cloud-api">2. Cloud API (когда встроенного нет или нужна гибкость)<a class="headerlink" href="#2-cloud-api" title="Permanent link">&para;</a></h2>
+<p>Когда: СРМ не умеет, нужно интегрировать в свой продукт, объём больше встроенных лимитов, нужна другая модель.</p>
 <table>
 <thead>
 <tr>
@@ -1223,7 +1208,7 @@
 <th>Цена/мин</th>
 <th>Диаризация</th>
 <th>Русский</th>
-<th>Лимит</th>
+<th>Для чего</th>
 </tr>
 </thead>
 <tbody>
@@ -1232,148 +1217,149 @@
 <td>$0.0043</td>
 <td>✅</td>
 <td>отлично</td>
-<td>без</td>
+<td>100+ звонков/день, свой продукт</td>
 </tr>
 <tr>
 <td><strong>AssemblyAI</strong></td>
 <td>$0.0065</td>
 <td>✅</td>
 <td>хорошо</td>
-<td>без</td>
+<td>транскрипт + саммари в одном запросе</td>
 </tr>
 <tr>
-<td><strong>Whisper API</strong></td>
+<td><strong>Whisper API (OpenAI)</strong></td>
 <td>$0.006</td>
 <td>❌</td>
 <td>отлично</td>
-<td>без</td>
+<td>разовые задачи</td>
 </tr>
 <tr>
 <td><strong>Groq Whisper</strong></td>
-<td>0₽</td>
+<td>0 ₽</td>
 <td>❌</td>
 <td>хорошо</td>
-<td>7200 сек/день</td>
+<td>прототипы, 7200 сек/день Free</td>
+</tr>
+<tr>
+<td><strong>Yandex SpeechKit</strong></td>
+<td>~1 ₽</td>
+<td>✅</td>
+<td>лучший</td>
+<td>российская карта, юр. лицо</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Для РОПа:</strong> Deepgram Nova-2 — лучший баланс. 100 звонков × 10 мин = $4.3/день (≈ 320 ₽). За месяц 9600 ₽ — дешевле любого человека, который бы слушал звонки.</p>
-<h2 id="3-hyprnote">Способ 3. Hyprnote (для внутренних встреч)<a class="headerlink" href="#3-hyprnote" title="Permanent link">&para;</a></h2>
-<p><strong>fastrepl/hyprnote</strong> · 8 266⭐ · MIT</p>
-
-<p>Локальный GUI для macOS. Подключается к Zoom / Google Meet / Teams, записывает, транскрибирует, пишет саммари через Ollama (локальный ИИ). Для планёрок и ретро — идеально, ничего в облако не уходит.</p>
-<p>Не для звонков менеджеров в AmoCRM — это отдельный инструмент для митингов.</p>
-<h2 id="amocrm-80-python">Кейс: РОП + AmoCRM (пайплайн на 80 строк Python)<a class="headerlink" href="#amocrm-80-python" title="Permanent link">&para;</a></h2>
-<p><strong>Дано:</strong> AmoCRM хранит записи звонков в облаке.
-<strong>Надо:</strong> каждый звонок → текст с метками менеджер/клиент → ИИ даёт выводы → заметка в карточке сделки.</p>
-<p><strong>Как собирать:</strong></p>
-<ol>
-<li><strong>Webhook AmoCRM</strong> на событие «завершён звонок» — AmoCRM дёргает твой endpoint с ID записи</li>
-<li><strong>Скачивание аудио</strong> из AmoCRM Files API по токену</li>
-<li><strong>WhisperX с <code>--diarize</code></strong> — JSON с ролями и таймкодами</li>
-<li><strong>Claude API:</strong> промпт «Это стенограмма звонка. SPEAKER_00 задаёт вопросы первым — это менеджер. Определи: тема, возражения клиента, закрылась ли сделка, следующий шаг. Верни JSON»</li>
-<li><strong>AmoCRM Notes API</strong> — закинуть результат в карточку сделки как заметку</li>
-</ol>
-<p>Полный скрипт напишет агент Claude Code за час — дашь спеку, получишь рабочий код. Нужны: AmoCRM API key, HuggingFace token, Claude API key (или OpenAI).</p>
-<h2 id="_3">Нюансы<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><strong>Типовой пайплайн:</strong> cron или webhook → скачивает аудио → POST в API → JSON с текстом → сохраняет куда надо.</p>
+<p><strong>Плюсы:</strong> ноль железа, стабильное качество, масштабируется.
+<strong>Минусы:</strong> оплата иностранной картой (Deepgram, AssemblyAI), данные уходят наружу — проверь 152-ФЗ.</p>
+<h2 id="3">3. Локально (приватность + большой объём)<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>Когда: данные не отдаёшь наружу (юр. ограничения, NDA, коммерческая тайна), либо &gt;1000 минут/месяц — локально дешевле чем cloud-API.</p>
+<p><strong>WhisperX</strong> — топовое open-source решение. Whisper для текста + pyannote для диаризации, одна установка.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>whisperx
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>whisperx<span class="w"> </span>call.mp3<span class="w"> </span>--model<span class="w"> </span>large-v3<span class="w"> </span>--diarize<span class="w"> </span>--hf_token<span class="w"> </span>hf_xxx<span class="w"> </span>--language<span class="w"> </span>ru
+</code></pre></div>
+<p>На выходе JSON с сегментами, где каждой фразе присвоен <code>SPEAKER_00</code>, <code>SPEAKER_01</code> и таймкоды. Claude Code парсит и понимает кто говорил.</p>
+<p>HuggingFace token бесплатный: hf.co → Settings → Access Tokens → согласиться с условиями <code>pyannote/speaker-diarization-3.1</code>.</p>
+<p><strong>Железо:</strong>
+- Mac M1/M2/M3 — через MPS, реальное время ≈ 0.3× длины записи
+- NVIDIA GPU (8 ГБ VRAM) — 0.1×
+- CPU без GPU — 1-2×, но работает на любом ноуте</p>
+<p><strong>Плюсы:</strong> полная приватность, 0 ₽ после настройки, можно дообучить на своём домене.
+<strong>Минусы:</strong> нужно железо и час на настройку, качество на сложных акцентах чуть ниже cloud.</p>
+<p><strong>Репозитории:</strong>
+- <a href="https://github.com/m-bain/whisperX">WhisperX</a> · 21 352⭐
+- <a href="https://github.com/ggerganov/whisper.cpp">whisper.cpp</a> · 48 696⭐ — на C++, быстрее на CPU
+- <a href="https://github.com/pyannote/pyannote-audio">pyannote-audio</a> · 9 773⭐ — сам движок диаризации</p>
+<h2 id="4-gui">4. GUI для разовых задач<a class="headerlink" href="#4-gui" title="Permanent link">&para;</a></h2>
+<p>Если код не пишешь и нужно раз в неделю разобрать запись.</p>
 <ul>
-<li><strong>Короткие звонки (&lt;2 мин)</strong> — диаризация путает голоса. Лучше обходиться без неё, роль ставить по факту (звонящий = менеджер)</li>
-<li><strong>Один канал vs два канала</strong> — если запись стерео с разделёнными каналами (менеджер в левом, клиент в правом) — диаризация не нужна, каждый канал = отдельный говорящий</li>
-<li><strong>Фон/шум/музыка на ожидании</strong> — снижает точность на 20-30%. Перед транскрипцией прогнать через RNNoise или DeepFilterNet</li>
-<li><strong>Русский язык</strong> — Whisper large-v3 даёт WER 6-8% (из 100 слов 6-8 с ошибками). Для бизнес-задач хватает, для юридических документов — нет</li>
-<li><strong>Юридически (РФ, 152-ФЗ)</strong> — записывать звонки с клиентами можно только при согласии. Обычно в договоре или автосообщении при дозвоне «разговор будет записан». Не пропускай этот момент</li>
+<li><strong><a href="https://goodsnooze.gumroad.com/l/macwhisper">MacWhisper Pro</a></strong> — $59, macOS only, drag-and-drop, есть диаризация</li>
+<li><strong><a href="https://github.com/chidiwilliams/buzz">Buzz</a></strong> — 18 716⭐, бесплатно, Win/Mac/Linux, GUI на whisper.cpp, без диаризации</li>
+<li><strong><a href="https://github.com/fastrepl/hyprnote">Hyprnote</a></strong> — 8 266⭐, бесплатно, специально для встреч Zoom/Meet с саммари через локальный LLM</li>
 </ul>
-<h2 id="_4">Бесплатные фишки до установки<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_2">Дерево решений: что выбрать<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="decision-tree">
+<p><strong>У тебя уже есть CRM или облачная АТС?</strong>
+→ Включи встроенный транскриб (Bitrix, MANGO, Zadarma). Готово, больше ничего не надо.</p>
+<p><strong>Нет СРМ или встроенное плохое?</strong> Записей много (&gt;100/день)?
+→ Cloud API: Deepgram (международная карта) или Yandex SpeechKit (российская).</p>
+<p><strong>Данные нельзя отдавать наружу?</strong> Есть Mac M1+ или NVIDIA GPU?
+→ WhisperX локально. Бесплатно, приватно.</p>
+<p><strong>Нужно 1-2 раза в неделю разово?</strong>
+→ MacWhisper Pro ($59) или Buzz (бесплатно).</p>
+<p><strong>Хочешь сам в своём приложении?</strong>
+→ Whisper API / AssemblyAI — самая быстрая интеграция.</p>
+</div>
+<h2 id="_3">Нюансы для всех способов<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>yt-dlp + Whisper</strong> — скачать YouTube-ролик, транскрибировать локально. Для ресёрча, не для бизнеса.</li>
-<li><strong>ChatGPT Plus</strong> — загрузить аудио в чат, транскрибирует сам. Без диаризации, платно ($20/мес).</li>
-<li><strong>Telegram Premium</strong> — голосовые автоматически транскрибируются (без диаризации, только короткие).</li>
-<li><strong>MacWhisper Free</strong> — GUI для Mac на whisper.cpp, drag-and-drop файла. Без диаризации в бесплатной версии, $59 за Pro с диаризацией.</li>
+<li><strong>Диаризация</strong> нужна когда один говорит за другим без разделения каналов. Если запись в стерео (менеджер и клиент в разных каналах звуковой дорожки) — диаризация не нужна, каждый канал = отдельный говорящий.</li>
+<li><strong>Русский</strong> — лучшее качество: Yandex SpeechKit &gt; Whisper large-v3 &gt; Deepgram &gt; Google Speech-to-Text.</li>
+<li><strong>Короткие записи (&lt;30 сек)</strong> — диаризация может путать. Для коротких лучше отключить и роль присваивать по контексту (кто инициатор звонка = менеджер).</li>
+<li><strong>Фон, шум, музыка ожидания</strong> — снижают точность на 20-30%. Прогони через RNNoise или DeepFilterNet перед транскрипцией.</li>
+<li><strong>152-ФЗ (РФ)</strong> — запись звонков с клиентами только при согласии. Стандартно — в договоре или автоинформаторе «разговор будет записан» при дозвоне. Без этого запись незаконна.</li>
+<li><strong>Стоимость vs объём:</strong> до ~500 мин/мес cloud-API дешевле; &gt;1000 мин/мес локально окупает железо; встроенное в СРМ — часто самое выгодное при интеграции в рабочий процесс.</li>
 </ul>
-<h2 id="_5">Сравнение инструментов<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_4">Бесплатные фишки до любой установки<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Telegram Premium</strong> — голосовые автоматом транскрибируются (₽3-5 в мес)</li>
+<li><strong>ChatGPT Plus</strong> — загрузи аудио в чат, транскрибирует сам ($20/мес, без диаризации)</li>
+<li><strong>YouTube автосубтитры + yt-dlp</strong> — транскрипт любого YouTube-ролика без установок</li>
+<li><strong>Zoom Free</strong> — базовое транскрибирование встреч до 40 минут</li>
+</ul>
+<h2 id="_5">Сравнение всех классов решений<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Инструмент</th>
-<th>Диаризация</th>
-<th>Локально</th>
+<th>Решение</th>
 <th>Цена</th>
-<th>GUI</th>
-<th>Для чего</th>
+<th>Диаризация</th>
+<th>Приватность</th>
+<th>Для кого</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>WhisperX</strong></td>
+<td><strong>Встроено в CRM</strong></td>
+<td>₽-подписка</td>
 <td>✅</td>
-<td>✅</td>
-<td>0₽</td>
-<td>—</td>
-<td>Звонки, интервью</td>
+<td>данные у провайдера</td>
+<td>Все у кого есть Bitrix/AmoCRM/облачная АТС</td>
 </tr>
 <tr>
-<td><strong>whisper.cpp</strong></td>
-<td>❌</td>
+<td><strong>Cloud API</strong></td>
+<td>$0.004-0.007/мин</td>
 <td>✅</td>
-<td>0₽</td>
-<td>—</td>
-<td>Быстрая транскрипция без ролей</td>
+<td>данные у провайдера</td>
+<td>Свой продукт, нет встроенного</td>
 </tr>
 <tr>
-<td><strong>Buzz</strong></td>
-<td>❌</td>
+<td><strong>Локально (WhisperX)</strong></td>
+<td>бесплатно</td>
 <td>✅</td>
-<td>0₽</td>
-<td>✅</td>
-<td>Ленивое drag-and-drop</td>
+<td>полная</td>
+<td>Приватно + много записей</td>
 </tr>
 <tr>
-<td><strong>MacWhisper Pro</strong></td>
-<td>✅</td>
-<td>✅</td>
-<td>$59</td>
-<td>✅</td>
-<td>Для тех кто не хочет pip</td>
-</tr>
-<tr>
-<td><strong>Hyprnote</strong></td>
-<td>✅</td>
-<td>✅</td>
-<td>0₽</td>
-<td>✅</td>
-<td>Встречи Zoom/Meet</td>
-</tr>
-<tr>
-<td><strong>Deepgram</strong></td>
-<td>✅</td>
-<td>—</td>
-<td>$0.0043/мин</td>
-<td>—</td>
-<td>100+ звонков/день</td>
-</tr>
-<tr>
-<td><strong>Whisper API</strong></td>
-<td>❌</td>
-<td>—</td>
-<td>$0.006/мин</td>
-<td>—</td>
-<td>Разовая транскрипция</td>
+<td><strong>GUI (MacWhisper / Buzz)</strong></td>
+<td>0-$59 разово</td>
+<td>зависит</td>
+<td>локально</td>
+<td>Разовые задачи, без кода</td>
 </tr>
 </tbody>
 </table>
 <h2 id="_6">Кому подходит<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
-<li>🤖 <strong>Агент</strong> (Claude Code) — WhisperX ставится через pip, дальше Claude сам вызывает команду и парсит JSON</li>
-<li>💬 <strong>Чатбот</strong> — загрузи аудио в ChatGPT Plus или используй Telegram-бот для коротких голосовых</li>
-<li><strong>Для бизнеса:</strong> отделы продаж, поддержка, HR-интервью, врачи (записи приёмов), юристы (переговоры)</li>
-<li><strong>Для контента:</strong> подкастеры (таймкоды по главам), журналисты (цитаты из интервью), SMM (нарезки из эфиров)</li>
+<li>🤖 <strong>Агент (Claude Code)</strong> — через API встроенной СРМ (проще всего), cloud API (гибко) или локальный WhisperX (приватно)</li>
+<li>💬 <strong>Чатбот (ChatGPT/Claude в браузере)</strong> — загрузка файла вручную, без автоматизации</li>
+<li><strong>Для бизнеса:</strong> отделы продаж, поддержка, HR-интервью, медицина, юристы</li>
+<li><strong>Для контента:</strong> подкасты (таймкоды), журналисты (цитаты), SMM (нарезки из эфиров)</li>
 </ul>
 <h2 id="_7">Совместимость<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Работает из РФ без VPN (pip работает; модели Whisper качаются с HuggingFace, иногда через зеркало)</li>
-<li>Ollama для Hyprnote ставится локально, тоже без VPN</li>
-<li>Cloud-API (Deepgram, AssemblyAI) — оплата возможна через зарубежную карту; российские карты не принимают</li>
-<li>Для NVIDIA GPU нужны драйверы CUDA, для Apple Silicon — MPS работает из коробки</li>
+<li><strong>Встроенное в российские CRM и АТС</strong> — работает из РФ без VPN, оплата в рублях</li>
+<li><strong>WhisperX локально</strong> — без VPN, модели Whisper иногда через зеркало HuggingFace</li>
+<li><strong>Cloud API (Deepgram, AssemblyAI, OpenAI)</strong> — запросы идут без VPN; оплата — только иностранной картой. Для Yandex SpeechKit работает российская карта и юр.лицо.</li>
 </ul>
 
 
