@@ -11,7 +11,7 @@ hide:
 # App Store для Claude Code
 
 <p class="hero-sub">Лучшие инструменты от комьюнити — в одном месте. Бесплатно, из РФ, без воды.</p>
-<p class="hero-meta">Апрель 2026 &middot; Обновляется каждую неделю</p>
+<p class="hero-meta">Обновлено {{ git_revision_date_localized }} · обновляется регулярно</p>
 
 [Начать с нуля :material-arrow-right:](knowledge/getting-started.md){ .md-button .md-button--primary }
 [Я уже в теме :material-arrow-right:](knowledge/rules.md){ .md-button }

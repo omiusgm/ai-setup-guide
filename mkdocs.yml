@@ -40,6 +40,11 @@ theme:
 plugins:
   - search:
       lang: ru
+  - git-revision-date-localized:
+      type: date
+      locale: ru
+      fallback_to_build_date: true
+      enable_creation_date: false
 
 markdown_extensions:
   - admonition
