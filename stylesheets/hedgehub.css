@@ -109,3 +109,86 @@
   color: #a78bfa;
   border-color: rgba(167,139,250,0.5);
 }
+
+/* ===== Level cards (на главной) ===== */
+.level-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) { .level-cards { grid-template-columns: 1fr; } }
+
+.level-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 1.3rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--md-default-fg-color);
+  border: 1px solid rgba(0,0,0,0.08);
+  background: linear-gradient(180deg, rgba(124,58,237,0.02) 0%, transparent 100%);
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+.level-card:hover {
+  transform: translateY(-3px);
+  border-color: #7c3aed;
+  box-shadow: 0 10px 28px rgba(124,58,237,0.15);
+  color: var(--md-default-fg-color);
+}
+
+.level-head {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(124,58,237,0.95);
+}
+.level-card.level-newbie .level-head { color: #16a34a; }
+.level-card.level-biz .level-head { color: #ea580c; }
+.level-card.level-techy .level-head { color: #2563eb; }
+
+.level-title { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.01em; }
+.level-desc { font-size: 0.88rem; color: var(--md-default-fg-color--light); line-height: 1.5; flex: 1; }
+.level-cta { font-weight: 600; color: #7c3aed; margin-top: 0.4rem; font-size: 0.88rem; }
+
+[data-md-color-scheme="slate"] .level-card {
+  border-color: rgba(255,255,255,0.08);
+  background: linear-gradient(180deg, rgba(167,139,250,0.05) 0%, transparent 100%);
+}
+[data-md-color-scheme="slate"] .level-card.level-newbie .level-head { color: #86efac; }
+[data-md-color-scheme="slate"] .level-card.level-biz .level-head { color: #fdba74; }
+[data-md-color-scheme="slate"] .level-card.level-techy .level-head { color: #93c5fd; }
+[data-md-color-scheme="slate"] .level-cta { color: #a78bfa; }
+
+/* ===== Arsenal CTA на главной ===== */
+.arsenal-cta {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.8rem 2rem;
+  background: linear-gradient(135deg, rgba(124,58,237,0.09) 0%, rgba(167,139,250,0.04) 100%);
+  border-radius: 14px;
+  border: 1px solid rgba(124,58,237,0.2);
+}
+.arsenal-cta__emoji { font-size: 3rem; }
+.arsenal-cta__title { font-weight: 800; font-size: 1.3rem; letter-spacing: -0.01em; }
+.arsenal-cta__sub { font-size: 0.92rem; color: var(--md-default-fg-color--light); margin-top: 0.3rem; line-height: 1.5; }
+.arsenal-cta__button {
+  background: #7c3aed; color: #fff; padding: 0.7rem 1.5rem; border-radius: 8px;
+  font-weight: 700; text-decoration: none; transition: background 0.15s;
+  white-space: nowrap;
+}
+.arsenal-cta__button:hover { background: #5b21b6; color: #fff; }
+@media (max-width: 700px) {
+  .arsenal-cta { grid-template-columns: 1fr; text-align: center; }
+  .arsenal-cta__emoji { margin: 0 auto; }
+}
+[data-md-color-scheme="slate"] .arsenal-cta {
+  background: linear-gradient(135deg, rgba(167,139,250,0.12) 0%, rgba(167,139,250,0.03) 100%);
+  border-color: rgba(167,139,250,0.3);
+}
