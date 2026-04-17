@@ -1179,10 +1179,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-0" class="md-nav__link">
+  <a href="#5-hanaokayuzugemini-api-deep-research-gemini-cookies" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Бесплатные альтернативы (если бюджет $0)
+        5. HanaokaYuzu/Gemini-API — Deep Research Gemini через cookies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Бесплатные альтернативы (если бюджет $0)
       
     </span>
   </a>
@@ -1339,7 +1350,26 @@ API-ключ берётся на exa.ai → Dashboard → API Keys.</p>
 <h2 id="4-firecrawl-deep-research">4. Firecrawl Deep Research — бонусом<a class="headerlink" href="#4-firecrawl-deep-research" title="Permanent link">&para;</a></h2>
 <p>Firecrawl (110K⭐, у нас уже есть <a href="../../integrations/firecrawl/">отдельная страница</a>) в 2026 добавил режим <code>/deep-research</code> — агент сам рекурсивно ходит по сайтам, собирает, синтезирует. По качеству на уровне Perplexity Sonar, но заточен под сбор структурированных данных с сайтов, а не под «дай мне отчёт по теме».</p>
 <p><strong>Когда подходит:</strong> если уже используешь Firecrawl для скрапинга — берёшь deep-research «в комплекте», без отдельной подписки.</p>
-<h2 id="5-0">5. Бесплатные альтернативы (если бюджет $0)<a class="headerlink" href="#5-0" title="Permanent link">&para;</a></h2>
+<h2 id="5-hanaokayuzugemini-api-deep-research-gemini-cookies">5. HanaokaYuzu/Gemini-API — Deep Research Gemini через cookies<a class="headerlink" href="#5-hanaokayuzugemini-api-deep-research-gemini-cookies" title="Permanent link">&para;</a></h2>
+<p>Хак для тех у кого уже есть <strong>Google AI Pro</strong> (бывший Gemini Advanced): берёшь reverse-engineered Python-обёртку <code>HanaokaYuzu/Gemini-API</code>, авторизуешь её cookies от своей залогиненной сессии в браузере — и получаешь <strong>полноценный Deep Research Gemini</strong> прямо внутри Claude Code. Тот же самый, что на gemini.google.com: многостраничный отчёт с источниками, 2M токенов контекста, рекурсивное углубление — всё нативное.</p>
+<p>Качество <strong>реально топовое</strong> — по охвату Gemini Deep Research в наших тестах обходит Claude.ai Research Mode (больше источников, длиннее финальный отчёт). Если ты подписан на Google AI Pro ради Gemini — вот способ заюзать её research-режим в агенте без доплат за API.</p>
+<p><strong>Установка:</strong></p>
+<details class="note">
+<summary>Для продвинутых (терминал)</summary>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># 1. Ставишь библиотеку</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>pip<span class="w"> </span>install<span class="w"> </span>gemini_webapi<span class="o">[</span>browser<span class="o">]</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># 2. Логинишься в gemini.google.com в Chrome, копируешь cookies</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># (библиотека умеет вытянуть их автоматом из профиля браузера)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># 3. Оборачиваешь в MCP-сервер и подключаешь в Claude Code</span>
+</code></pre></div>
+Готового MCP-сервера «из коробки» пока нет — нужно написать тонкую обёртку (есть форки и примеры в issues репозитория). Владельцы AI Pro уже собрали несколько вариантов — ищи в issues <code>HanaokaYuzu/Gemini-API</code>.</p>
+</details>
+<p><strong>Плюсы:</strong> Gemini Deep Research как он есть — 2M контекст, охват выше Claude.ai Research. Бесплатно поверх уже оплаченной подписки AI Pro. Работает из Claude Code через обычный MCP-вызов.
+<strong>Минусы:</strong> <strong>серая зона по ToS Google</strong> (cookie-реплей официально не разрешён, формально это reverse-engineering веб-клиента). Cookies могут отваливаться — придётся переавторизовываться. Может сломаться после любого обновления Gemini на стороне Google — библиотека догоняет, но с лагом в дни/недели. Отдельного MCP-пакета «plug-and-play» нет.</p>
+<p><strong>Когда подходит:</strong> уже платишь за Google AI Pro, хочешь лучшее качество research на рынке, готов смириться с серой зоной и риском поломки. Для продакшн-пайплайна — рискованно, для личного стека — отличное соотношение цена/качество.</p>
+<h2 id="6-0">6. Бесплатные альтернативы (если бюджет $0)<a class="headerlink" href="#6-0" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong><code>qpd-v/mcp-DEEPwebresearch</code></strong> — опен-сорс MCP, использует DuckDuckGo + агентный prompt для рекурсивного углубления. Работает, но качество поиска DuckDuckGo заметно ниже Exa/Perplexity. Годится для прототипа или нечастых задач.</li>
 <li><strong>Anthropic <code>web_search_20250305</code> tool в API</strong> — если пишешь свою оркестрацию через Claude Agent SDK, это самое прямое решение. Но это код поверх SDK, а не использование Claude Code как CLI.</li>
@@ -1353,6 +1383,8 @@ API-ключ берётся на exa.ai → Dashboard → API Keys.</p>
 → Exa MCP + researcher-субагент на Opus. Изолированный контекст, параллельные задачи, контроль.</p>
 <p><strong>Нужно ходить за авторизацией / использовать свою подписку Perplexity Pro?</strong>
 → Playwright MCP + твой залогиненный Chrome. Медленно, но подписка не простаивает.</p>
+<p><strong>Уже есть Google AI Pro и хочется лучшее качество research?</strong>
+→ <code>HanaokaYuzu/Gemini-API</code> + cookies твоей Gemini-сессии, обёрнуть в MCP. Бесплатный Deep Research Gemini поверх подписки. Серая зона по ToS, может сломаться — но качество топовое.</p>
 <p><strong>Приватность критична, данные не отдаём наружу?</strong>
 → Локальный стек: SearxNG (опен-сорс метапоиск) + Ollama/LM Studio для синтеза. Требует настройки, но всё на твоей машине. Не наша основная история — мы больше про вайбкодеров и бизнес, но для параноиков вариант есть.</p>
 <p><strong>Бюджет $0, прототип?</strong>
@@ -1410,6 +1442,14 @@ API-ключ берётся на exa.ai → Dashboard → API Keys.</p>
 <td>зависит от сервиса</td>
 <td>данные у провайдера</td>
 <td>средняя</td>
+</tr>
+<tr>
+<td><strong>HanaokaYuzu/Gemini-API + cookies</strong></td>
+<td>$0 поверх Google AI Pro</td>
+<td>средне (нативный Gemini)</td>
+<td><strong>топовое</strong> (2M контекст)</td>
+<td>данные у Google</td>
+<td>средняя (обёртка в MCP)</td>
 </tr>
 <tr>
 <td><strong>Firecrawl Deep Research</strong></td>
@@ -1479,7 +1519,7 @@ API-ключ берётся на exa.ai → Dashboard → API Keys.</p>
     <span class="md-icon" title="Последнее обновление">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="17 апреля 2026 г. 18:39:20 UTC">17 апреля 2026 г.</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="17 апреля 2026 г. 18:43:33 UTC">17 апреля 2026 г.</span>
   </span>
 
     

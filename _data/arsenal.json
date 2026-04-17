@@ -259,6 +259,49 @@
     "updated": "2026-04-17"
   },
   {
+    "id": "claude-design",
+    "name": "Claude Design",
+    "emoji": "🎨",
+    "category": "content",
+    "url": "/ai-setup-guide/arsenal/content/claude-design/",
+    "tagline": "Дизайн-визуалы (UI, слайды, one-pagers, SMM-постеры, мокапы) — прямо внутри Claude. На Pro-подписке без доплат. Готовый результат → handoff ",
+    "tags": [
+      "дизайн",
+      "anthropic",
+      "официальный",
+      "ui",
+      "слайды",
+      "бизнесу",
+      "новичкам"
+    ],
+    "stars": 0,
+    "ru": false,
+    "must_have": false,
+    "updated": "2026-04-17"
+  },
+  {
+    "id": "deep-research",
+    "name": "Deep Research в Claude Code",
+    "emoji": "🎨",
+    "category": "content",
+    "url": "/ai-setup-guide/arsenal/content/deep-research/",
+    "tagline": "Claude Code из коробки не умеет глубокий research как чатбот в браузере. WebSearch и WebFetch — это «одиночные выстрелы», а не итеративный d",
+    "tags": [
+      "research",
+      "mcp",
+      "exa",
+      "perplexity",
+      "playwright",
+      "websearch",
+      "автоматизация",
+      "технарям"
+    ],
+    "stars": 0,
+    "ru": true,
+    "must_have": false,
+    "updated": "2026-04-17"
+  },
+  {
     "id": "documents",
     "name": "Красивые документы из ИИ",
     "emoji": "📄",
