@@ -54,7 +54,7 @@ Claude 4.5 Sonnet в 5 раз дешевле Opus. В большинстве з�
 
 ## Если фишек мало
 
-- :material-scissors-cutting: **[Caveman](caveman.md)** — 35K⭐ скилл/промпт для краткости, «говори по-пещерному». Работает даже в обычном ChatGPT как промпт
+- :material-scissors-cutting: **[Caveman](caveman.md)** — 40K⭐ скилл/промпт для краткости, «говори по-пещерному». Работает даже в обычном ChatGPT как промпт
 - :material-account: **[Humanizer](humanizer.md)** — 14K⭐ убирает следы ИИ из текста, экономит правки после генерации
 
 ## Что читать дальше

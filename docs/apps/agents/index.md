@@ -51,7 +51,7 @@ hide:
 - :material-code-tags: **[Codex CLI](codex-cli.md)** — 76K⭐ OpenAI в терминале, открытый код
 - :material-robot: **[OpenHands](openhands.md)** — 71K⭐ автономный ИИ-инженер, 87% на SWE-bench
 - :material-web: **[Browser Use](browser-use.md)** — 88K⭐ ИИ сам кликает по сайтам
-- :material-school: **[Hermes Agent](hermes-agent.md)** — 93K⭐ агент, который учится на скиллах
+- :material-school: **[Hermes Agent](hermes-agent.md)** — 104K⭐ агент, который учится на скиллах
 - :material-microsoft-visual-studio-code: **[Cline](cline.md)** — 60K⭐ VS Code-агент, бесплатный
 - :material-duck: **[Goose](goose.md)** — 42K⭐ десктоп + CLI, работает с локальными моделями
 

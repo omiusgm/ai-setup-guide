@@ -5,9 +5,9 @@ tags:
   - бесплатно
   - открытый-код
   - технарям
-stars: 93000
+stars: 103685
 github: NousResearch/hermes-agent
-updated: 2026-04-16
+updated: 2026-04-20
 for: agent
 ---
 

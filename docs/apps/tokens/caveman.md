@@ -6,9 +6,9 @@ tags:
   - бесплатно
   - новичкам
   - из-рф
-stars: 35000
+stars: 39548
 github: JuliusBrussee/caveman
-updated: 2026-04-16
+updated: 2026-04-20
 for: both
 ---
 

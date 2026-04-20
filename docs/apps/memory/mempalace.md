@@ -4,9 +4,9 @@ category: memory
 tags:
   - память
   - технарям
-stars: 45000
+stars: 48296
 github: MemPalace/mempalace
-updated: 2026-04-16
+updated: 2026-04-20
 for: agent
 ---
 

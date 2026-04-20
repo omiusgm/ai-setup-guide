@@ -52,7 +52,7 @@ Claude и ChatGPT видят изображения. Скрин экрана →
 - :material-docker: **[Docker MCP](docker-mcp.md)** — 300+ плагинов в каталоге (Docker — программа-контейнер)
 - :material-robot: **[AmoCRM MCP](amocrm-mcp.md)** — 36 инструментов для AmoCRM (родная русская)
 - :material-sitemap: **[n8n-MCP](n8n-mcp.md)** — 18K⭐ Claude управляет n8n workflows
-- :material-recursive: **[Claude Code MCP](claude-code-mcp.md)** — 1.1K⭐ агент запускает другого агента
+- :material-recursive: **[Claude Code MCP](claude-code-mcp.md)** — 1.2K⭐ агент запускает другого агента
 
 **Как выбрать:**
 - Один конкретный сервис (Gmail, Slack, Notion) → ищи готовый MCP по названию

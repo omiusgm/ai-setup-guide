@@ -4,9 +4,9 @@ category: integrations
 tags:
   - mcp
   - технарям
-stars: 1100
+stars: 1237
 github: steipete/claude-code-mcp
-updated: 2026-04-16
+updated: 2026-04-20
 for: agent
 ---
 
