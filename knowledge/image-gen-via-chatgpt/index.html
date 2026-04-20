@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://omiusgm.github.io/ai-setup-guide/knowledge/russia/">
+        <link rel="canonical" href="https://omiusgm.github.io/ai-setup-guide/knowledge/image-gen-via-chatgpt/">
       
       
-        <link rel="prev" href="../memory/">
+        <link rel="prev" href="../choose-agent/">
       
       
-        <link rel="next" href="../levels/">
+        <link rel="next" href="../rules/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Россия: VPN, оплата - App Store для Claude Code</title>
+        <title>Картинки через ChatGPT за $20 - App Store для Claude Code</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#claude-code-20-chatgpt-50-midjourney" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Россия: VPN, оплата
+              Картинки через ChatGPT за $20
             
           </span>
         </div>
@@ -682,10 +682,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../image-gen-via-chatgpt/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Картинки через ChatGPT за $20
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -701,6 +728,136 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сначала — почему это не очевидно
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-codex-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 1. Установить Codex CLI и залогиниться
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-openai_api_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 2. Убрать OPENAI_API_KEY из окружения
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 3. Обойти баг с кириллицей в пути
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 4. Правильная команда генерации
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 5. Как вызывать из Claude Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ограничения подписочной генерации
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сколько это экономит
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Если не взлетает — чеклист для диагностики
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Дальше — связки и оркестры
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -822,37 +979,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Россия: VPN, оплата
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../russia/" class="md-nav__link">
         
   
   
@@ -868,81 +998,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#vpn-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VPN -- доступ к зарубежным сервисам
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Оплата ИИ-сервисов из РФ
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#google" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Google из РФ
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apple-icloud" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Apple / iCloud
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        "Арбузный" формат
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1209,10 +1264,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vpn-" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VPN -- доступ к зарубежным сервисам
+        Сначала — почему это не очевидно
       
     </span>
   </a>
@@ -1220,10 +1275,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
+  <a href="#1-codex-cli" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Оплата ИИ-сервисов из РФ
+        Шаг 1. Установить Codex CLI и залогиниться
       
     </span>
   </a>
@@ -1231,10 +1286,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#google" class="md-nav__link">
+  <a href="#2-openai_api_key" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Google из РФ
+        Шаг 2. Убрать OPENAI_API_KEY из окружения
       
     </span>
   </a>
@@ -1242,10 +1297,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#apple-icloud" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Apple / iCloud
+        Шаг 3. Обойти баг с кириллицей в пути
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 4. Правильная команда генерации
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 5. Как вызывать из Claude Code
       
     </span>
   </a>
@@ -1256,7 +1333,40 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        "Арбузный" формат
+        Ограничения подписочной генерации
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сколько это экономит
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Если не взлетает — чеклист для диагностики
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Дальше — связки и оркестры
       
     </span>
   </a>
@@ -1283,72 +1393,196 @@
   
 
 
-<h1 id="_1">Особенности использования ИИ в России<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>VPN, оплата, Google, Apple ID и "арбузный" формат для тех кто хочет максимум за минимум.</p>
+<h1 id="claude-code-20-chatgpt-50-midjourney">Как рисовать картинки из Claude Code за $20-подписку ChatGPT, а не $50 на Midjourney<a class="headerlink" href="#claude-code-20-chatgpt-50-midjourney" title="Permanent link">&para;</a></h1>
+<p>Если ты пишешь код в Claude Code и регулярно нужны картинки — обложки, иконки, мемы, баннеры — ты, скорее всего, платишь либо <strong>Midjourney $30/мес</strong>, либо <strong>nano-banana / Ideogram / Flux API</strong> (токены по $0.01-0.10 за штуку), либо вручную открываешь ChatGPT в браузере и копипастишь по одной.</p>
+<p>Всё это — пережиток. С <strong>16 апреля 2026</strong> OpenAI добавил встроенную генерацию картинок (<code>gpt-image-1.5</code>) прямо в <strong>Codex CLI</strong>, и эта функция <strong>покрывается обычной подпиской ChatGPT Plus за $20/мес</strong>. Не токены. Не отдельные API-счета. Подписка. И вызывается прямо из Claude Code через один инструмент.</p>
+<p>Ниже — пошаговая инструкция как это подключить. Проверено на macOS (apple silicon), Codex CLI 0.121.0, Claude Code Desktop.</p>
+<p><img alt="Ёж держит удлинитель с тремя вилками и лейблом MCP. LED горит — связка работает" src="../../assets/preview/diagram-mcp-orchestra.png" /></p>
+<h2 id="_1">Сначала — почему это не очевидно<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Даже зная про Codex, 95% пользователей упираются в <strong>одну и ту же ошибку</strong>:</p>
 <blockquote>
-<p><em>В России ИИ-сервисы не заблокированы. Ограничения доступа -- это санкции со стороны самих компаний (Anthropic, OpenAI, Google), которые ограничили доступ из определённых регионов. VPN-сервисы упоминаются как способ решения этой проблемы, не для обхода блокировок РКН. Контент сгенерирован ИИ.</em></p>
+<p><em>The <code>imagegen</code> skill requires the built-in <code>image_gen</code> tool... Use the imagegen CLI fallback? OPENAI_API_KEY must be set for live API calls.</em></p>
 </blockquote>
-<hr />
-<h2 id="vpn-">VPN -- доступ к зарубежным сервисам<a class="headerlink" href="#vpn-" title="Permanent link">&para;</a></h2>
-<p>Некоторые зарубежные ИИ-сервисы ограничивают доступ из РФ по своей инициативе. Чтобы пользоваться их продуктами:</p>
+<p>Codex говорит «нужен API-ключ», хотя ты платишь $20 за Plus. Выглядит как «разводят на ещё один биллинг».</p>
+<p>На самом деле <strong>Plus-подписка реально покрывает image-gen</strong>, но в <code>codex exec</code> (non-interactive режим, из которого Claude Code вызывает Codex) эта фича <strong>отключена feature-флагом по умолчанию</strong>. Модель уходит в fallback-ветку и требует API-ключ. Документация OpenAI об этом молчит — узнаёшь из community-обсуждений и собственных синяков.</p>
+<p>Решение — один флаг + одна настройка окружения. Ниже.</p>
+<h2 id="1-codex-cli">Шаг 1. Установить Codex CLI и залогиниться<a class="headerlink" href="#1-codex-cli" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Установка</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@openai/codex
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># или через Homebrew:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>codex
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Проверка</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>codex<span class="w"> </span>--version<span class="w">                </span><span class="c1"># должно быть &gt;= 0.121.0</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># Логин через ChatGPT OAuth (откроется браузер)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>codex<span class="w"> </span>login
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>codex<span class="w"> </span>login<span class="w"> </span>status<span class="w">             </span><span class="c1"># должно вернуть &quot;Logged in using ChatGPT&quot;</span>
+</code></pre></div>
+<p>Важно: логиниться <strong>через ChatGPT</strong>, не через API-ключ. Подписочная квота применяется только при OAuth-входе.</p>
+<h2 id="2-openai_api_key">Шаг 2. Убрать <code>OPENAI_API_KEY</code> из окружения<a class="headerlink" href="#2-openai_api_key" title="Permanent link">&para;</a></h2>
+<p>Если в <code>~/.zshrc</code> / <code>~/.bashrc</code> / launchd выставлен <code>OPENAI_API_KEY</code> — <strong>Codex молча использует его вместо OAuth-токена</strong>. Это <a href="https://github.com/openai/codex/issues/15151">баг/фича</a>, и через API image-gen платный.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Проверить</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$OPENAI_API_KEY</span><span class="w">           </span><span class="c1"># должно быть пусто</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Если не пусто — убрать временно</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">unset</span><span class="w"> </span>OPENAI_API_KEY
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># И убрать из shell-rc навсегда</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>grep<span class="w"> </span><span class="s2">&quot;OPENAI_API_KEY&quot;</span><span class="w"> </span>~/.zshrc<span class="w"> </span>~/.bashrc<span class="w"> </span>~/.zprofile
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># Если что-то нашлось — отредактируй и удали строку</span>
+</code></pre></div>
+<p>Без этого фикса — не взлетит. Это самая частая причина «Codex просит API-ключ».</p>
+<h2 id="3">Шаг 3. Обойти баг с кириллицей в пути<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>Codex передаёт текущую рабочую директорию в HTTP-заголовок <code>x-codex-turn-metadata</code>. Если в пути есть non-ASCII (кириллица, иероглифы) — заголовок не проходит UTF-8 encoding и websocket падает на <code>Reconnecting...</code>.</p>
+<p>Фикс — работать из ASCII-only папки:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/tmp/codex-clean
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>/tmp/codex-clean
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># отсюда запускать codex exec</span>
+</code></pre></div>
+<p>Результат потом копируется в нужное место через <code>Save as /abs/path/to/result.png</code> в промпте.</p>
+<h2 id="4">Шаг 4. Правильная команда генерации<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>/tmp/codex-clean
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>codex<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>--enable<span class="w"> </span>image_generation<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>--full-auto<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span>--skip-git-repo-check<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="s1">&#39;$imagegen Описание картинки здесь. NO readable text on image. Save as /абс/путь/output.png. Size 1024x1024.&#39;</span>
+</code></pre></div>
+<p>Ключевые элементы:</p>
 <ul>
-<li><strong>2-3 VPN-сервиса</strong> на телефоне про запас -- если один недоступен, переключиться</li>
-<li>Happ, Amnezia, собственный сервер (WireGuard/Outline)</li>
+<li><strong><code>--enable image_generation</code></strong> — активирует feature-flag для built-in image tool. БЕЗ НЕГО БАГ С API-КЛЮЧОМ</li>
+<li><strong><code>$imagegen</code></strong> в начале промпта — триггер image-gen skill'а</li>
+<li><strong><code>--full-auto</code></strong> — Codex не спрашивает подтверждений на каждую команду</li>
+<li><strong><code>--skip-git-repo-check</code></strong> — не требует git-репо в cwd</li>
+<li><strong><code>Save as /abs/path.png</code></strong> — абсолютный путь сохранения (Codex внутренне сохраняет в <code>~/.codex/generated_images/&lt;uuid&gt;/</code> и копирует к тебе)</li>
+<li><strong><code>Size WxH</code></strong> — <code>1024x1024</code> (квадрат) или <code>1536x1024</code> (landscape)</li>
 </ul>
-<hr />
-<h2 id="-">Оплата ИИ-сервисов из РФ<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<p>Генерация занимает <strong>1-3 минуты</strong> на картинку. Выглядит медленно по сравнению с Midjourney — но это подписочная генерация, не токеновая. Бесплатно.</p>
+<h2 id="5-claude-code">Шаг 5. Как вызывать из Claude Code<a class="headerlink" href="#5-claude-code" title="Permanent link">&para;</a></h2>
+<p>После установки — Claude Code умеет делать это через встроенный <strong>Bash-инструмент</strong>, без отдельного MCP-сервера. Просто скажи:</p>
+<blockquote>
+<p>«Сгенери обложку для моего поста про X — ёж с ноутбуком, тёмный editorial-punk стиль»</p>
+</blockquote>
+<p>Claude Code сам составит промпт, запустит <code>codex exec --enable image_generation</code> из <code>/tmp/codex-clean/</code>, дождётся результата и покажет.</p>
+<p>Если хочешь сделать это <strong>автоматическим паттерном для всех проектов</strong> — поставь <a href="https://github.com/omiusgm/claude-code-image-skill">наш глобальный skill</a> (ссылка на репо появится после публикации), он работает как готовый пресет.</p>
+<h2 id="_2">Ограничения подписочной генерации<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Честно — не все задачи закрывает:</p>
+<ul>
+<li><strong>Русский текст внутри картинки</strong> модель не умеет — выдаёт псевдо-кириллицу. Решение: делать подписи markdown'ом снаружи.</li>
+<li><strong>Фотореалистичные лица реальных людей</strong> — фильтрация или «пластиковое подобие».</li>
+<li><strong>Точное количество мелких объектов</strong> (10+) — модель проигнорирует, нарисует «много».</li>
+<li><strong>Квота Plus</strong> — не бесконечная. Тяжёлые batch'и (десятки картинок за час) упрутся в rate-limit; подождать 1-6 часов.</li>
+</ul>
+<p>Для типовых задач вайбкодера / предпринимателя / SMM-щика (обложка поста, иконка карточки, баннер для лендинга, мем в канал) — <strong>полностью хватает</strong>.</p>
+<h2 id="_3">Сколько это экономит<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Типовой стек до Codex image-gen:</p>
 <table>
 <thead>
 <tr>
-<th>Способ</th>
-<th>Комментарий</th>
+<th>Инструмент</th>
+<th>Цена/мес</th>
+<th>Кейс</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Иностранные карты</strong></td>
-<td>Самый надёжный вариант. Можно оформить через сервисы виртуальных карт</td>
+<td>Midjourney Standard</td>
+<td>$30</td>
+<td>Обложки, баннеры</td>
 </tr>
 <tr>
-<td><strong>FunPay и подобные</strong></td>
-<td>Покупка аккаунтов/подписок. Аккаунты живут не всегда долго, есть риск бана</td>
+<td>ChatGPT Plus</td>
+<td>$20</td>
+<td>Чат</td>
 </tr>
 <tr>
-<td><strong>Крипта</strong></td>
-<td>Некоторые сервисы принимают напрямую</td>
+<td><strong>Итого</strong></td>
+<td><strong>$50/мес</strong></td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<p>После:</p>
+<table>
+<thead>
+<tr>
+<th>Инструмент</th>
+<th>Цена/мес</th>
+<th>Кейс</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT Plus</td>
+<td>$20</td>
+<td>И чат, <strong>и картинки</strong></td>
+</tr>
+<tr>
+<td><strong>Итого</strong></td>
+<td><strong>$20/мес</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Экономия <strong>$30/мес</strong> = $360/год на одном рабочем сетапе. Плюс — не надо держать отдельный workflow: всё в одном агенте (Claude Code), одна подписка.</p>
+<div class="admonition tip">
+<p class="admonition-title">Главный принцип</p>
+<p>Если у тебя уже есть ChatGPT Plus — <strong>Midjourney и nano-banana подписки больше не нужны</strong> для 95% задач. Продли Plus, отмени остальное.</p>
+</div>
+<h2 id="_4">Если не взлетает — чеклист для диагностики<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Частые ошибки и их симптомы:</p>
+<table>
+<thead>
+<tr>
+<th>Симптом</th>
+<th>Причина</th>
+<th>Фикс</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«OPENAI_API_KEY must be set...»</td>
+<td><code>$OPENAI_API_KEY</code> выставлен в env</td>
+<td><code>unset OPENAI_API_KEY</code></td>
+</tr>
+<tr>
+<td>«imagegen skill requires built-in...»</td>
+<td>Забыл <code>--enable image_generation</code></td>
+<td>Добавить флаг</td>
+</tr>
+<tr>
+<td>«Reconnecting... failed to convert header»</td>
+<td>Кириллица в cwd / git-предке</td>
+<td><code>cd /tmp/codex-clean &amp;&amp; codex exec ...</code></td>
+</tr>
+<tr>
+<td>«Logged in using API key»</td>
+<td>Залогинился через API, не через ChatGPT</td>
+<td><code>rm ~/.codex/auth.json &amp;&amp; codex login</code> (выбрать ChatGPT)</td>
+</tr>
+<tr>
+<td>Ничего не происходит 5 минут</td>
+<td>Фоновая генерация идёт, ждёт</td>
+<td><code>tail -f codex.log</code> — смотреть прогресс</td>
+</tr>
+</tbody>
+</table>
+<p>Если ни одно из выше не подошло — пиши <a href="https://t.me/omius">@omius</a> с логами, разберём.</p>
+<h2 id="_5">Дальше — связки и оркестры<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>Это был <strong>один инструмент связки</strong>: Codex как генератор картинок. Полная архитектура с тремя ИИ (Claude как дирижёр, Codex как картинки+second opinion, Gemini как видео-аудио) — в <a href="../choose-agent/">Какой ИИ выбрать: собери свой оркестр</a>.</p>
+<p>Бюджетные варианты целиком, от $0 до $240 — в <a href="../budget/">Бюджет на ИИ</a>.</p>
 <hr />
-<h2 id="google">Google из РФ<a class="headerlink" href="#google" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Новые учётки</strong> Google банит при регистрации из РФ -- разбан: написать с резервной почты (указывай при регистрации!)</li>
-<li>Для надёжности: плати с иностранной карты</li>
-<li><strong>NotebookLM</strong> -- есть MCP-клиент (подключение через способ дать ИИ руки — подключить к сервисам), нужна платная подписка Google (~700 руб через FunPay). Для старых аккаунтов -- риск минимальный</li>
-</ul>
-<hr />
-<h2 id="apple-icloud">Apple / iCloud<a class="headerlink" href="#apple-icloud" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Иностранный Apple ID</strong> -- можно создать бесплатно из РФ. SMS не всегда приходит сразу, но реально</li>
-<li>Переключаться только в App Store, <strong>НЕ выходить из основного Apple ID в настройках телефона</strong></li>
-<li>На Mac: 99% софта можно скачать напрямую минуя App Store</li>
-</ul>
-<hr />
-<h2 id="_2">"Арбузный" формат<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Для тех кто хочет максимум за минимум:</p>
-<ul>
-<li>Бесплатные аккаунты и абузы подписок через FunPay -- работает, но аккаунты не вечные</li>
-<li><strong>OpenRouter</strong> -- один API-ключ (способ подключения программ), десятки моделей. Можно авторизоваться через все свои подписки</li>
-<li><strong>DeepSeek</strong> -- работает из РФ без VPN, бесплатный базовый доступ</li>
-<li><strong>Gemini CLI</strong> -- 1000 бесплатных запросов в день (CLI — работа через терминал, чёрное окно с командами)</li>
-</ul>
-<p><em>Обновлено: апрель 2026 | Контент сгенерирован ИИ</em></p>
+<p><em>Обновлено 20 апреля 2026. Проверено на Codex CLI 0.121.0, macOS 25.4, Claude Code Desktop.</em></p>
 
 
 
 
 
 
+
+  
+  
 
 
 
