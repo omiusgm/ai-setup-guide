@@ -1,0 +1,449 @@
+.hh-preview {
+  --hh-bg: #120e0b;
+  --hh-bg-soft: #1a1410;
+  --hh-panel: rgba(31, 23, 18, 0.9);
+  --hh-panel-strong: rgba(41, 29, 21, 0.96);
+  --hh-line: rgba(255, 183, 114, 0.18);
+  --hh-line-strong: rgba(255, 183, 114, 0.35);
+  --hh-text: #f5ead8;
+  --hh-muted: #c6b49a;
+  --hh-accent: #ff9d2e;
+  --hh-accent-soft: #ffbe6a;
+  --hh-shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
+  color: var(--hh-text);
+  margin: -0.5rem auto 3rem;
+}
+
+.hh-preview a {
+  color: inherit;
+}
+
+.hh-ribbon,
+.hh-hero,
+.hh-block {
+  width: min(1180px, calc(100vw - 2rem));
+  margin: 0 auto 1.25rem;
+}
+
+.hh-ribbon {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.9rem 1rem 0.2rem;
+}
+
+.hh-ribbon a {
+  text-decoration: none;
+  color: var(--hh-muted);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hh-ribbon a:hover {
+  color: var(--hh-accent-soft);
+}
+
+.hh-hero,
+.hh-block {
+  background:
+    radial-gradient(circle at top left, rgba(255, 160, 60, 0.2), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    var(--hh-bg);
+  border: 1px solid var(--hh-line);
+  border-radius: 28px;
+  box-shadow: var(--hh-shadow);
+  overflow: hidden;
+}
+
+.hh-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.hh-hero::after,
+.hh-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 183, 114, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 183, 114, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.hh-hero-copy,
+.hh-hero-visual,
+.hh-block > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hh-kicker,
+.hh-section-label {
+  margin: 0 0 0.8rem;
+  color: var(--hh-accent-soft);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.hh-hero h1,
+.hh-block-head h2 {
+  font-family: "Avenir Next", "Inter", sans-serif;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.hh-hero h1 {
+  font-size: clamp(3.2rem, 8vw, 5.8rem);
+  max-width: 8ch;
+}
+
+.hh-lead {
+  max-width: 58ch;
+  margin: 1rem 0 1.4rem;
+  color: var(--hh-muted);
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+
+.hh-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.hh-actions .md-button {
+  border-radius: 999px;
+  padding-inline: 1.2rem;
+}
+
+.hh-stats {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.hh-stats span,
+.hh-feature-tag,
+.hh-news-tag,
+.hh-guide-label,
+.hh-tool-tags span,
+.hh-chips span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--hh-line-strong);
+  background: rgba(255, 183, 114, 0.08);
+  color: var(--hh-accent-soft);
+  padding: 0.35rem 0.72rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.hh-hero-visual {
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+}
+
+.hh-avatar-card,
+.hh-note-card,
+.hh-feature-card,
+.hh-lane,
+.hh-news-card,
+.hh-arsenal-shell,
+.hh-guide-card,
+.hh-tool-card,
+.hh-prompt {
+  background: var(--hh-panel);
+  border: 1px solid var(--hh-line);
+  border-radius: 24px;
+}
+
+.hh-avatar-card {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  background:
+    radial-gradient(circle at center, rgba(255, 162, 53, 0.32), transparent 42%),
+    var(--hh-panel-strong);
+}
+
+.hh-avatar-card img {
+  width: min(100%, 360px);
+  display: block;
+  border-radius: 24px;
+}
+
+.hh-note-card {
+  padding: 1rem 1.2rem;
+}
+
+.hh-note-card code {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: var(--hh-text);
+  font-size: 0.95rem;
+}
+
+.hh-note-label {
+  margin: 0;
+  color: var(--hh-muted);
+}
+
+.hh-block {
+  position: relative;
+  padding: 1.6rem;
+}
+
+.hh-block-head {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 1.25rem;
+}
+
+.hh-block-head h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.02;
+  max-width: 16ch;
+}
+
+.hh-feature-grid,
+.hh-lanes,
+.hh-news-grid,
+.hh-guides-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.hh-feature-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.hh-feature-card,
+.hh-lane,
+.hh-guide-card,
+.hh-tool-card {
+  padding: 1.1rem;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.hh-feature-card:hover,
+.hh-lane:hover,
+.hh-guide-card:hover,
+.hh-tool-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--hh-line-strong);
+  background: rgba(45, 31, 22, 0.96);
+}
+
+.hh-feature-card strong,
+.hh-lane strong,
+.hh-news-card h3,
+.hh-guide-card h3,
+.hh-tool-card h3 {
+  display: block;
+  margin: 0.8rem 0 0.55rem;
+  font-size: 1.12rem;
+}
+
+.hh-feature-card p,
+.hh-lane p,
+.hh-news-card p,
+.hh-guide-card p,
+.hh-tool-card p {
+  margin: 0;
+  color: var(--hh-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.hh-lanes {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.hh-lane span {
+  color: var(--hh-text);
+  font-weight: 700;
+}
+
+.hh-lane--newbie { background: linear-gradient(180deg, rgba(67, 160, 71, 0.12), rgba(31, 23, 18, 0.96)); }
+.hh-lane--biz { background: linear-gradient(180deg, rgba(239, 108, 0, 0.14), rgba(31, 23, 18, 0.96)); }
+.hh-lane--tech { background: linear-gradient(180deg, rgba(38, 166, 154, 0.12), rgba(31, 23, 18, 0.96)); }
+
+.hh-news-grid {
+  grid-template-columns: 1.2fr 1.2fr 0.8fr;
+}
+
+.hh-news-card {
+  overflow: hidden;
+}
+
+.hh-news-card--image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.hh-news-copy,
+.hh-news-card--text {
+  padding: 1rem;
+}
+
+.hh-news-card--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  background:
+    radial-gradient(circle at top right, rgba(255, 157, 46, 0.18), transparent 35%),
+    var(--hh-panel-strong);
+}
+
+.hh-news-card--text a {
+  color: var(--hh-accent-soft);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hh-arsenal-shell {
+  padding: 1rem;
+}
+
+.hh-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.hh-search,
+.hh-toolbar-meta {
+  border-radius: 999px;
+  border: 1px solid var(--hh-line);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.8rem 1rem;
+  color: var(--hh-muted);
+}
+
+.hh-search {
+  flex: 1;
+}
+
+.hh-chips {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.hh-arsenal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.hh-tool-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--hh-accent-soft);
+  font-size: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.hh-tool-tags {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-top: 0.95rem;
+}
+
+.hh-guides-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.hh-block--prompt .hh-block-head h2 {
+  max-width: 20ch;
+}
+
+.hh-prompt {
+  padding: 1.1rem;
+  background:
+    linear-gradient(135deg, rgba(255, 157, 46, 0.08), rgba(255, 255, 255, 0.02)),
+    var(--hh-panel);
+}
+
+.hh-prompt p {
+  margin: 0 0 0.8rem;
+  color: var(--hh-muted);
+}
+
+.hh-prompt pre {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(10, 8, 7, 0.92);
+  overflow-x: auto;
+}
+
+@media (max-width: 1100px) {
+  .hh-hero,
+  .hh-news-grid,
+  .hh-feature-grid,
+  .hh-lanes,
+  .hh-guides-grid,
+  .hh-arsenal-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hh-hero {
+    align-items: start;
+  }
+
+  .hh-news-card--text {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .hh-ribbon,
+  .hh-hero,
+  .hh-block {
+    width: min(100%, calc(100vw - 1rem));
+  }
+
+  .hh-hero,
+  .hh-news-grid,
+  .hh-feature-grid,
+  .hh-lanes,
+  .hh-guides-grid,
+  .hh-arsenal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hh-hero {
+    padding: 1.2rem;
+  }
+
+  .hh-block {
+    padding: 1rem;
+  }
+
+  .hh-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

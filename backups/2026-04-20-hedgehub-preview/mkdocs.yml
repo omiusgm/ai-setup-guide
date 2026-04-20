@@ -1,0 +1,97 @@
+site_name: "App Store для Claude Code"
+site_description: "Лучшие инструменты от комьюнити — промпты, агенты, MCP-подключения. Бесплатно, из РФ."
+site_url: https://omiusgm.github.io/ai-setup-guide/
+repo_url: https://github.com/omiusgm/ai-setup-guide
+repo_name: omiusgm/ai-setup-guide
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: ru
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Тёмная тема
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Светлая тема
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: ru
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - stylesheets/landing.css
+
+nav:
+  - "": index.md
+  - "📂 Приложения":
+    - "🤖 Агенты": apps/agents/index.md
+    - "🧠 Память": apps/memory/index.md
+    - "✂️ Экономия токенов": apps/tokens/index.md
+    - "⚡ Автоматизация": apps/automation/index.md
+    - "🔌 Интеграции (MCP)": apps/integrations/index.md
+    - "🎨 Контент": apps/content/index.md
+    - "📦 Наборы": apps/bundles/index.md
+  - "📚 Знания":
+    - "Быстрый старт": knowledge/getting-started.md
+    - "10 правил": knowledge/rules.md
+    - "Мифы про ИИ": knowledge/myths.md
+    - "Бюджет: 0 → $200": knowledge/budget.md
+    - "Память и контекст": knowledge/memory.md
+    - "Россия: VPN, оплата": knowledge/russia.md
+    - "4 уровня ИИ": knowledge/levels.md
+    - "3 режима Claude": knowledge/modes.md
+    - "Без кода — начни здесь": knowledge/no-code-start.md
+    - "Реальные кейсы": knowledge/cases/index.md
+  - "🤖 Для ИИ":
+    - "Для чатботов": for-chatbots.md
+    - "Для агентов": for-agents.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/agentezh
+      name: Telegram-канал Агент Ёж
+  generator: false
+
+copyright: "Контент сгенерирован ИИ | <a href='https://t.me/agentezh'>Telegram «Агент Ёж»</a>"
