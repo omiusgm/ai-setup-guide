@@ -10,6 +10,11 @@ tags:
 
 ![Ёж за мольбертом рисует картинки, рядом бейдж PLUS, на полу скомканные счета за платные сервисы](../assets/preview/imggen-hero.png)
 
+!!! abstract "Нужно быстро — скинь другу"
+    - **Готовый скилл-файл для Claude Code:** [`codex-image-skill.md`](../skills/codex-image-skill.md) — клади в `~/.claude/skills/image-generation-via-codex/SKILL.md`, и Claude научится сам
+    - **Эта статья (сохранить ссылку):** [omiusgm.github.io/ai-setup-guide/knowledge/image-gen-via-chatgpt/](https://omiusgm.github.io/ai-setup-guide/knowledge/image-gen-via-chatgpt/)
+    - **Raw-файл скилла для скачивания:** [github.com/omiusgm/ai-setup-guide/…/codex-image-skill.md](https://raw.githubusercontent.com/omiusgm/ai-setup-guide/main/docs/skills/codex-image-skill.md)
+
 Если ты пишешь код в Claude Code и регулярно нужны картинки — обложки, иконки, мемы, баннеры — ты, скорее всего, платишь либо **Midjourney $30/мес**, либо **nano-banana / Ideogram / Flux API** (токены по $0.01-0.10 за штуку), либо вручную открываешь ChatGPT в браузере и копипастишь по одной.
 
 Всё это — пережиток. С **16 апреля 2026** OpenAI добавил встроенную генерацию картинок (`gpt-image-1.5`) прямо в **Codex CLI**, и эта функция **покрывается обычной подпиской ChatGPT Plus за $20/мес**. Не токены. Не отдельные API-счета. Подписка. И вызывается прямо из Claude Code через один инструмент.
@@ -165,7 +170,7 @@ Claude Code сам составит промпт, запустит `codex exec -
 
 ## Дальше — связки и оркестры
 
-Это был **один инструмент связки**: Codex как генератор картинок. Полная архитектура с тремя ИИ (Claude как дирижёр, Codex как картинки+second opinion, Gemini как видео-аудио) — в [Какой ИИ выбрать: собери свой оркестр](choose-agent.md).
+Это был **один инструмент связки**: Codex как генератор картинок. Полная архитектура с тремя ИИ (Claude как дирижёр, Codex как картинки+second opinion, Gemini как видео-аудио) — в [Не выбирай ИИ. Собирай команду под свою работу](choose-agent.md).
 
 Бюджетные варианты целиком, от $0 до $240 — в [Бюджет на ИИ](budget.md).
 
