@@ -61,9 +61,11 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/landing.css
+  - stylesheets/hedgehub-preview.css
 
 nav:
   - "": index.md
+  - "🧪 Превью Ёжхаб": hedgehub-preview.md
   - "📂 Приложения":
     - "🤖 Агенты": apps/agents/index.md
     - "🧠 Память": apps/memory/index.md
@@ -74,6 +76,7 @@ nav:
     - "📦 Наборы": apps/bundles/index.md
   - "📚 Знания":
     - "Быстрый старт": knowledge/getting-started.md
+    - "Какой ИИ выбрать": knowledge/choose-agent.md
     - "10 правил": knowledge/rules.md
     - "Мифы про ИИ": knowledge/myths.md
     - "Бюджет: 0 → $200": knowledge/budget.md
