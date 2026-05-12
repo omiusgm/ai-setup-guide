@@ -65,30 +65,22 @@ hide:
 <p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">Не теория — примеры с результатом</p>
 
 <div class="case-grid">
-<a class="case-card" href="knowledge/cases/rop-amocrm/">
-<div class="case-emoji">📊</div>
-<div class="case-title">РОП + AmoCRM за вечер</div>
-<div class="case-metric">+12% к выручке за 2 месяца</div>
-<div class="case-desc">Автоматические отчёты, мониторинг сделок, алерты</div>
+<a class="case-card" href="apps/automation/ai-radar/">
+<div class="case-emoji">🛰️</div>
+<div class="case-title">AI Radar 24/7</div>
+<div class="case-metric">Новые репозитории, новости и видео — в одну базу</div>
+<div class="case-desc">Google Sheets + Claude + Gemini + сайт</div>
 </a>
-<a class="case-card" href="knowledge/cases/product-descriptions/">
-<div class="case-emoji">📝</div>
-<div class="case-title">500 описаний Ozon за вечер</div>
-<div class="case-metric">Экономия 50 000 ₽ на копирайтере</div>
-<div class="case-desc">ChatGPT + хороший промпт вместо фрилансера</div>
+<a class="case-card" href="apps/automation/ai-radar/">
+<div class="case-emoji">🗂️</div>
+<div class="case-title">Weekly digest</div>
+<div class="case-metric">Топ недели без ручной рутины</div>
+<div class="case-desc">Claude собирает текст из лучших находок</div>
 </a>
-<a class="case-card" href="knowledge/cases/marketplace-prices/">
-<div class="case-emoji">📉</div>
-<div class="case-title">Мониторинг цен WB</div>
-<div class="case-metric">+8% маржи за месяц</div>
-<div class="case-desc">Browser Use следит за конкурентами сам</div>
-</a>
-<a class="case-card" href="knowledge/cases/smm-wb-cards/">
-<div class="case-emoji">🎨</div>
-<div class="case-title">SMM: 50 карточек WB за 35 минут</div>
-<div class="case-metric">Экономия 100 часов</div>
-<div class="case-desc">ChatGPT + Midjourney + Canva</div>
-</a>
+</div>
+
+<div class="landing-note" style="text-align:center; margin-top:1rem; color:var(--md-default-fg-color--light);">
+Старые маркетплейс-кейсы остаются в архиве, а здесь показываем активный контур.
 </div>
 
 <p style="text-align:center; margin-top:1rem;"><a href="knowledge/cases/" class="md-button">Все кейсы :material-arrow-right:</a></p>
@@ -135,7 +127,7 @@ hide:
 <div class="cat-emoji">🎨</div>
 <div class="cat-name">Контент</div>
 <div class="cat-count">1 инструмент</div>
-<div class="cat-desc">Генерация видео и текста</div>
+<div class="cat-desc">Посты, дайджесты и рабочие тексты</div>
 </a>
 <a class="category-tile" href="apps/bundles/">
 <div class="cat-emoji">📦</div>
@@ -161,7 +153,7 @@ hide:
 <a class="audience-tile audience-biz" href="knowledge/cases/">
 <div class="aud-emoji">🟠</div>
 <div class="aud-name">Бизнесу</div>
-<div class="aud-desc">CRM, маркетплейсы, автоматизация. Реальные кейсы с цифрами.</div>
+<div class="cat-desc">Автоматизация, контент, рабочие схемы. Реальные кейсы с цифрами.</div>
 </a>
 <a class="audience-tile audience-techy" href="for-agents/">
 <div class="aud-emoji">🔵</div>

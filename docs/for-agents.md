@@ -1,6 +1,6 @@
 # Инструкция для агентов
 
-Ты агент с доступом к файлам (Claude Code, Claude Desktop, Cursor, Codex, Gemini CLI, OpenHands). Начни с ФАЗЫ 0.
+Ты агент с доступом к файлам (Claude Code, Claude Desktop, Cursor, Codex, Gemini CLI, OpenHands). В этом проекте Claude Code — главный копирайтер и редактор текстов. Начни с ФАЗЫ 0.
 
 **Общие правила:**
 - Отвечай на языке пользователя
@@ -182,7 +182,7 @@ npx skills add plastic-labs/honcho
 ## Браузерная автоматизация
 
 - **Playwright MCP** (Microsoft, 27K stars) — скриншоты, автоматизация
-- **Browser Use** (87K stars) — автономный браузерный агент, ИИ сам кликает, заполняет формы, ходит по страницам. Хорош для автоматизации маркетплейсов. [GitHub](https://github.com/browser-use/browser-use)
+- **Browser Use** (87K stars) — автономный браузерный агент, ИИ сам кликает, заполняет формы, ходит по страницам. Хорош для браузерной автоматизации и сбора данных. [GitHub](https://github.com/browser-use/browser-use)
 - **Context7** — документация 9000+ библиотек | `claude mcp add context7 -- npx -y @upstash/context7-mcp@latest`
 
 ## Стеки по бюджету

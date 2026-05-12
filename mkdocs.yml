@@ -70,7 +70,11 @@ nav:
     - "🤖 Агенты": apps/agents/index.md
     - "🧠 Память": apps/memory/index.md
     - "✂️ Экономия токенов": apps/tokens/index.md
-    - "⚡ Автоматизация": apps/automation/index.md
+    - "⚡ Автоматизация":
+      - "AI Radar 24/7": apps/automation/ai-radar.md
+      - "Главная": apps/automation/index.md
+      - "/loop": apps/automation/loop.md
+      - "Routines": apps/automation/routines.md
     - "🔌 Интеграции (MCP)": apps/integrations/index.md
     - "🎨 Контент": apps/content/index.md
     - "📦 Наборы": apps/bundles/index.md
