@@ -13,9 +13,6 @@ hide:
 <div class="app-list" markdown>
 
 - :material-store: **[РОП + AmoCRM + Wahelp](rop-amocrm.md)** — автоматизация отчётов по отделу продаж, +12% к выручке за 2 месяца
-- :material-cart: **[SMM: 50 карточек WB за 35 минут](smm-wb-cards.md)** — связка ChatGPT + Midjourney + Canva, экономия 100 часов
-- :material-chart-line: **[Маркетплейс: мониторинг цен](marketplace-prices.md)** — Browser Use + DeepSeek следит за конкурентами на WB, +8% маржи
-- :material-file-document-edit: **[500 описаний Ozon за вечер](product-descriptions.md)** — Claude/ChatGPT вместо копирайтера, экономия 50 000 ₽
 - :material-rss: **[AI Radar 24/7](../../apps/automation/ai-radar.md)** — репозитории, новости и видео в одну таблицу, затем посты и дайджесты
 - :material-newspaper-variant: **[Weekly digest](../../apps/automation/ai-radar.md)** — итог недели, собранный из лучших находок
 - :material-code-braces: **[dev_family: 46K строк CRM за 1.5 месяца](dev-family-46k.md)** — 2 разработчика + Claude Code, вместо 4-5 месяцев командой
@@ -25,6 +22,18 @@ hide:
 - :material-hospital-box: **[Eugene Vestel: 21 репо за $2800 — честный антикейс](vestel-21-repos.md)** — что бывает, когда вайб-кодишь без продуктового мышления
 
 </div>
+
+## Архивные marketplace-кейсы
+
+<div class="app-list" markdown>
+
+- :material-cart: **[SMM: 50 карточек WB за 35 минут](smm-wb-cards.md)** — связка ChatGPT + Midjourney + Canva, экономия 100 часов
+- :material-chart-line: **[Маркетплейс: мониторинг цен](marketplace-prices.md)** — Browser Use + DeepSeek следит за конкурентами на WB, +8% маржи
+- :material-file-document-edit: **[500 описаний Ozon за вечер](product-descriptions.md)** — Claude/ChatGPT вместо копирайтера, экономия 50 000 ₽
+
+</div>
+
+> Эти кейсы оставлены как архив. В активной витрине проекта теперь показываем AI Radar 24/7, weekly digest и другие не-marketplace сценарии.
 
 ## Скоро
 
