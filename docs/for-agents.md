@@ -1,6 +1,6 @@
 # Инструкция для агентов
 
-Ты агент с доступом к файлам (Claude Code, Claude Desktop Cowork, Cursor, Codex). Начни с ФАЗЫ 0.
+Ты агент с доступом к файлам (Claude Code, Claude Desktop, Cursor, Codex, Gemini CLI, OpenHands). Начни с ФАЗЫ 0.
 
 **Общие правила:**
 - Отвечай на языке пользователя
@@ -425,6 +425,6 @@ git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
 
 ---
 
-*v5.0 | Апрель 2026 | Контент сгенерирован ИИ*
+*Актуальная версия | 2026 | Контент сгенерирован ИИ*
 
 [Телеграм-канал «Агент Ёж»](https://t.me/agentezh)

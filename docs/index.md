@@ -8,10 +8,10 @@ hide:
 
 <span class="hero-hedgehog">🦔</span>
 
-# App Store для Claude Code
+# AI Setup Guide
 
-<p class="hero-sub">Лучшие инструменты от комьюнити — в одном месте. Бесплатно, из РФ, без воды.</p>
-<p class="hero-meta">Апрель 2026 &middot; Обновляется каждую неделю</p>
+<p class="hero-sub">Каталог инструментов, промптов и рабочих схем — для людей и агентов.</p>
+<p class="hero-meta">Актуализируется по мере изменений в стеке &middot; 2026</p>
 
 [Начать с нуля :material-arrow-right:](knowledge/getting-started.md){ .md-button .md-button--primary }
 [Я уже в теме :material-arrow-right:](knowledge/rules.md){ .md-button }
@@ -20,9 +20,9 @@ hide:
 
 <div class="landing-section">
 
-<h2 style="text-align:center; margin-bottom:0.5rem;">🏆 Топ этой недели</h2>
-<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:0.75rem;">Что реально скачивают вайбкодеры · <em>звёзды актуальны на 16 апреля 2026, из GitHub API</em></p>
-<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem; font-size:0.9em;">💬 — работает в браузере (ChatGPT, DeepSeek). 🤖 — нужен агент (Claude Code, Cursor). 🤖💬 — и там и там.</p>
+<h2 style="text-align:center; margin-bottom:0.5rem;">🏆 Что брать первым</h2>
+<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:0.75rem;">Сначала инструменты, которые реально экономят время и деньги</p>
+<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem; font-size:0.9em;">💬 — браузер | 🤖 — агент | 🤖💬 — и там и там</p>
 
 <div class="top-grid">
 <a class="top-card" href="apps/automation/n8n/">
@@ -61,8 +61,8 @@ hide:
 
 <div class="landing-section">
 
-<h2 style="text-align:center; margin-bottom:0.5rem;">💼 Реальные кейсы</h2>
-<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">Не теория — живые истории с цифрами</p>
+<h2 style="text-align:center; margin-bottom:0.5rem;">💼 Живые кейсы</h2>
+<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">Не теория — примеры с результатом</p>
 
 <div class="case-grid">
 <a class="case-card" href="knowledge/cases/rop-amocrm/">
@@ -175,7 +175,7 @@ hide:
 <div class="landing-section">
 
 <h2 style="text-align:center; margin-bottom:0.5rem;">📚 Знания</h2>
-<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">Основы и контекст</p>
+<p style="text-align:center; color:var(--md-default-fg-color--light); margin-bottom:1.5rem;">База, чтобы не строить ерунду поверх ерунды</p>
 
 <div class="knowledge-grid">
 <a class="knowledge-card" href="knowledge/getting-started/">🚀 Быстрый старт</a>

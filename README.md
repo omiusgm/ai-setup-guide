@@ -1,39 +1,38 @@
-# Как заставить ИИ работать за тебя (v5.0)
+# AI Setup Guide
 
-> Апрель 2026 | Бесплатно | Обновляется каждую неделю
+> Практичный каталог инструментов, промптов и рабочих схем для людей и агентов.
 
-## Для человека
+## Что это
 
-**Читай гайд на сайте** (красивая версия с навигацией и поиском):
+Это не «книга про ИИ» и не витрина хайпа. Это рабочий гайд: что выбрать, как запустить и как не слить деньги, токены и время.
 
-**[omiusgm.github.io/ai-setup-guide](https://omiusgm.github.io/ai-setup-guide/)**
+**Открыть сайт:** [omiusgm.github.io/ai-setup-guide](https://omiusgm.github.io/ai-setup-guide/)
 
-Или в Notion: [Notion-версия](https://flameinside.notion.site/v5-0-33c32c903a6d813497e2c9e17f7dcfcf)
+**Архивная Notion-версия:** [v5.0](https://flameinside.notion.site/v5-0-33c32c903a6d813497e2c9e17f7dcfcf)
 
-## Для ИИ
+## Куда идти дальше
 
-Ты ИИ и читаешь этот файл? Не пересказывай его. Открой нужный файл:
-
-- **Чатбот** (ChatGPT, DeepSeek, Gemini) → читай [docs/for-chatbots.md](docs/for-chatbots.md)
-- **Агент** (Claude Code, Cursor, Codex) → читай [docs/for-agents.md](docs/for-agents.md)
+- **Если ты человек** → начни с [docs/for-chatbots.md](docs/for-chatbots.md)
+- **Если ты агент** → начни с [docs/for-agents.md](docs/for-agents.md)
+- **Если хочешь быстро понять карту проекта** → открой [docs/index.md](docs/index.md)
 
 ## Что внутри
 
 | Тема | Файл | Для кого |
 |------|------|----------|
 | Быстрый старт | [getting-started.md](docs/getting-started.md) | Новички |
-| 10 правил | [rules.md](docs/guides/rules.md) | Все |
-| Мифы про ИИ | [myths.md](docs/guides/myths.md) | Все |
-| Бюджет от 0 до $200 | [budget.md](docs/guides/budget.md) | Все |
-| Экономия токенов | [caveman.md](docs/skills/caveman.md) | Все |
-| Память и контекст | [memory.md](docs/guides/memory.md) | Все |
-| AmoCRM + ИИ | [amocrm.md](docs/crm/amocrm.md) | Бизнес |
-| n8n автоматизация | [n8n.md](docs/automation/n8n.md) | Продвинутые |
-| Подключение поиска | [search.md](docs/skills/search.md) | Технари |
-| Россия: VPN, оплата | [russia.md](docs/guides/russia.md) | РФ |
+| Режимы работы | [knowledge/modes.md](docs/knowledge/modes.md) | Все |
+| 10 правил | [knowledge/rules.md](docs/knowledge/rules.md) | Все |
+| Мифы про ИИ | [knowledge/myths.md](docs/knowledge/myths.md) | Все |
+| Бюджет и стек | [knowledge/budget.md](docs/knowledge/budget.md) | Все |
+| Память и контекст | [knowledge/memory.md](docs/knowledge/memory.md) | Все |
+| AmoCRM + ИИ | [crm/amocrm.md](docs/crm/amocrm.md) | Бизнес |
+| n8n автоматизация | [apps/automation/n8n.md](docs/apps/automation/n8n.md) | Продвинутые |
+| Поиск и MCP | [skills/search.md](docs/skills/search.md) | Технари |
+| Россия: VPN, оплата | [knowledge/russia.md](docs/knowledge/russia.md) | РФ |
 
 ---
 
-[Telegram «Агент Ёж»](https://t.me/agentezh) — ежедневные новости и обновления гайда
+[Telegram «Агент Ёж»](https://t.me/agentezh) — обновления, разборы и новые находки
 
 *Контент сгенерирован ИИ*
