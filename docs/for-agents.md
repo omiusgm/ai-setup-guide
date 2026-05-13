@@ -96,6 +96,7 @@ npx get-shit-done-cc --claude --global
 - **`subagent-driven-development`** — отдельные subagents на независимые задачи
 - **`documentation-site-refresh`** — когда нужно держать docs/site/nav в одном состоянии
 - **`webhook-subscriptions`** — если нужен event-driven запуск вместо ручного старта
+- **`orchestration-quality-gate`** — если нужен слой вида Symphony → agent → Archon → tests → Done
 - **`claude-code`** — если нужно делегировать кодовые задачи в Claude Code CLI
 - **`codex`** — если нужен второй кодовый агент для независимой проверки или параллельной работы
 - **`google-workspace`** — если рабочая база живёт в Sheets/Docs/Drive

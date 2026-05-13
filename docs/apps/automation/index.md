@@ -17,9 +17,21 @@ hide:
 
 [AI Radar 24/7](ai-radar.md) → новые репозитории, новости и видео попадают в Google Sheets, а лучшие находки уходят в посты и дайджесты.
 
+[MVP v2: контент-пайплайн](mvp-v2.md) → явная рабочая схема: источники → фильтр → Sheets → Claude → публикация.
+
+[Google Sheets: рабочая база](google-sheets-schema.md) → как устроить таблицу, статусы и очереди.
+
+[Symphony + Archon](symphony-archon.md) → оркестрация задач + quality gate для автономных dev-воркеров.
+
+[Autonomous worker](autonomous-worker.md) → полный цикл исполнения: ticket → workspace → agent → checks → status update.
+
+[Symphony task schema](symphony-task-schema.md) → формат задач, статусы, stop conditions и follow-up.
+
+[Symphony inbox](symphony-inbox.md) → единая очередь, куда могут писать пользователь, система и Claude.
+
 [Контент](../content/index.md) → Claude пишет аналитику и тексты, Gemini помогает с YouTube, сайт показывает результат.
 
-Всё это можно поднять без большого кода: сначала cron и таблица, потом публикация.
+Всё это можно поднять без большого кода: сначала cron и таблица, потом фильтр и публикация.
 
 ## Почему `/run` недостаточно
 

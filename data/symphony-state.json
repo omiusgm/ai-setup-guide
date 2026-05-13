@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "queued": 6
+  },
+  "inbox_hash": "4ac011b2eec465cbf7d27596b5ac31eccc3c882fe3a0da12cd7da92111242e97",
+  "queued_count": 6,
+  "top_ids": [
+    "inbox-001",
+    "inbox-002",
+    "inbox-003"
+  ],
+  "updated_at": "2026-05-13T20:54:53+03:00"
+}

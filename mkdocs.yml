@@ -72,6 +72,12 @@ nav:
     - "✂️ Экономия токенов": apps/tokens/index.md
     - "⚡ Автоматизация":
       - "AI Radar 24/7": apps/automation/ai-radar.md
+      - "MVP v2": apps/automation/mvp-v2.md
+      - "Google Sheets": apps/automation/google-sheets-schema.md
+      - "Symphony + Archon": apps/automation/symphony-archon.md
+      - "Autonomous worker": apps/automation/autonomous-worker.md
+      - "Symphony task schema": apps/automation/symphony-task-schema.md
+      - "Symphony inbox": apps/automation/symphony-inbox.md
       - "Главная": apps/automation/index.md
       - "/loop": apps/automation/loop.md
       - "Routines": apps/automation/routines.md
