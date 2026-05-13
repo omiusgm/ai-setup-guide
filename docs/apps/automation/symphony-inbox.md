@@ -29,42 +29,28 @@ tags:
 
 ## Текущие задачи
 
-```md
-- title: Подключить inbox к реальному источнику данных
-  goal: Сделать так, чтобы Symphony читал не только страницу в docs, а живую очередь задач
-  priority: high
-  source: system
-  notes: Сейчас inbox существует как документация; нужен настоящий список задач или файл-хранилище
+!!! tip "Живая очередь"
+    Задачи хранятся в `data/symphony-inbox.json` — не в этой странице. Эта страница — только документация.
 
-- title: Автоматически подхватывать задачи из inbox в planner
-  goal: Чтобы planner сначала смотрел inbox, а потом уже предлагал новые задачи
-  priority: high
-  source: system
-  notes: Это ключевой шаг к автономии — без него система не замыкается в один поток
+Просмотр текущей очереди:
 
-- title: Добавить правило для Claude / агентов на запись follow-up задач
-  goal: Чтобы любой агент мог быстро класть полезные задачи в inbox, не ломая workflow
-  priority: high
-  source: claude
-  notes: Нужен единый формат записи и короткое объяснение пользы задачи
+```bash
+jq '.items[] | select(.status != "done") | {id, title, priority, status}' data/symphony-inbox.json
+```
 
-- title: Сделать удобный просмотр очереди задач
-  goal: Чтобы пользователь видел inbox без чтения markdown-файлов вручную
-  priority: medium
-  source: system
-  notes: Подойдёт простая веб-страница или блок в текущем интерфейсе
+Добавить задачу через CLI:
 
-- title: Описать критерии готовности и проверки для автономных тикетов
-  goal: Убрать неопределённость, когда задача может считаться завершённой
-  priority: medium
-  source: system
-  notes: Нужны checks, ready_for_check и done criteria в одном месте
-
-- title: Настроить уведомление о новых важных задачах
-  goal: Чтобы ты узнавал о новых задачах без ручной проверки inbox
-  priority: medium
-  source: system
-  notes: Можно через digest или короткое сообщение по расписанию
+```bash
+# Добавить запись в inbox (пример)
+jq '.items += [{
+  "id": "inbox-NNN",
+  "title": "...",
+  "goal": "...",
+  "priority": "high",
+  "source": "claude",
+  "status": "queued",
+  "notes": "..."
+}] | .updated_at = (now | todate)' data/symphony-inbox.json > /tmp/inbox.json && mv /tmp/inbox.json data/symphony-inbox.json
 ```
 
 ## Формат записи
