@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🦔 Pipeline — как работает @agentezh</title>
+<style>
+:root {
+  --bg: #1a1614;
+  --panel: #221d1a;
+  --panel2: #2a221d;
+  --text: #e6dcd1;
+  --muted: #8a7a6a;
+  --accent: #e07b3a;
+  --accent2: #f5a266;
+  --ok: #6abb4f;
+  --bad: #c25a4c;
+  --wait: #d1a73a;
+  --human: #5aa9d1;
+  --border: #3a2f27;
+  --line: #4d3f33;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--text);
+  font: 14px/1.4 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  margin: 0; padding: 24px;
+}
+h1 { font-size: 22px; margin: 0 0 4px; }
+.sub { color: var(--muted); font-size: 13px; margin-bottom: 16px; }
+.legend {
+  display: flex; gap: 14px; font-size: 12px; color: var(--muted);
+  margin-bottom: 24px; flex-wrap: wrap;
+}
+.legend .dot {
+  display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+  vertical-align: middle; margin-right: 4px;
+}
+.flow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 24px 18px;
+  align-items: stretch;
+  margin-bottom: 32px;
+}
+.node {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex; flex-direction: column; gap: 6px;
+  position: relative;
+  min-height: 130px;
+}
+.node.auto { border-left: 3px solid var(--ok); }
+.node.human { border-left: 3px solid var(--human); }
+.node.source { border-left: 3px solid var(--muted); background: var(--panel2); }
+.node.publish { border-left: 3px solid var(--accent); }
+.node h3 {
+  font-size: 13px; margin: 0; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--accent2);
+}
+.node h3 .ic { font-size: 18px; margin-right: 6px; }
+.node .who { font-size: 11px; color: var(--muted); }
+.node .desc { font-size: 12px; line-height: 1.45; color: var(--text); }
+.node .cost { font-size: 11px; color: var(--muted); margin-top: auto; }
+.node .badge {
+  position: absolute; top: -10px; right: -10px;
+  background: var(--accent); color: #1a1614;
+  font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 8px;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.arrow {
+  align-self: center; color: var(--line); font-size: 18px;
+  margin: 0 4px;
+}
+.row {
+  display: grid; gap: 18px; margin-bottom: 28px;
+}
+.row.r1 { grid-template-columns: 1fr 24px 1fr 24px 1fr 24px 1fr; }
+.row.r2 { grid-template-columns: 1fr 24px 1fr 24px 1fr; }
+.row.r3 { grid-template-columns: 1fr 24px 1fr; }
+
+.section-title {
+  font-size: 13px; color: var(--accent2); text-transform: uppercase;
+  letter-spacing: 1px; margin: 20px 0 10px; font-weight: 700;
+}
+.panel {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 6px;
+  padding: 14px; margin-bottom: 16px;
+}
+.panel h4 { margin: 0 0 8px; font-size: 13px; color: var(--accent2); }
+.panel ul { margin: 4px 0 0; padding-left: 18px; }
+.panel li { margin-bottom: 4px; font-size: 13px; color: var(--text); }
+.panel code { background: var(--panel2); padding: 1px 5px; border-radius: 3px; font-size: 12px; color: var(--accent2); }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.kv { font-size: 12px; color: var(--muted); }
+.kv b { color: var(--text); }
+.note {
+  font-size: 12px; color: var(--muted); font-style: italic;
+  border-left: 2px solid var(--line); padding-left: 8px;
+}
+.back { color: var(--accent2); text-decoration: none; font-size: 13px; }
+.back:hover { text-decoration: underline; }
+@media (max-width: 900px) {
+  .row.r1 { grid-template-columns: 1fr; }
+  .row.r2 { grid-template-columns: 1fr; }
+  .row.r3 { grid-template-columns: 1fr; }
+  .arrow { display: none; }
+  .cols { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<a class="back" href="./">← к карточкам</a>
+<h1>🦔 Pipeline @agentezh — как всё работает</h1>
+<div class="sub">от идеи в бэклоге до поста в Telegram. Зелёное = автомат. Синее = ты. Оранжевое = публикация.</div>
+
+<div class="legend">
+  <span><span class="dot" style="background:var(--ok)"></span>auto (claude/codex)</span>
+  <span><span class="dot" style="background:var(--human)"></span>human (ты)</span>
+  <span><span class="dot" style="background:var(--accent)"></span>publish (TG)</span>
+  <span><span class="dot" style="background:var(--muted)"></span>storage / источник</span>
+</div>
+
+<!-- ROW 1: source → BUILD_DRAFT → CONSILIUM → DESIGN -->
+<div class="row r1">
+
+  <div class="node source">
+    <h3><span class="ic">💡</span>Hot-backlog</h3>
+    <div class="who">docs/post-queue.md</div>
+    <div class="desc">4 идеи: TaxHacker, MCP/CLI, Karpathy-skills, Claude Routines. Ты добавляешь сюда темы вручную или digest-сканер ежедневно.</div>
+    <div class="cost">storage</div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="node auto">
+    <h3><span class="ic">📝</span>BUILD_DRAFT</h3>
+    <div class="who">claude -p + subagents: strategist, copywriter</div>
+    <div class="desc">Берёт верхнюю идею. Anti-duplicate vs post-history. Пишет YAML: skeleton + first-screen + body. Учит на failures_log.</div>
+    <div class="cost">~$1 · ~4 мин · max 40 turns</div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="node auto">
+    <h3><span class="ic">🔍</span>CONSILIUM</h3>
+    <div class="who">claude -p + 3 critics</div>
+    <div class="desc">bulldog (анти-жаргон, PASS/FAIL) + 1 стилист (kasuka/serditov/care) + 1 ЦА (katya/artyom/oleg). Avg ≥ 8 + bulldog PASS → ready-for-publish. Иначе needs-rewrite + feedback.</div>
+    <div class="cost">~$0.5 · ~2 мин</div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="node auto">
+    <h3><span class="ic">🎨</span>DESIGN</h3>
+    <div class="who">claude -p → designer subagent → codex CLI</div>
+    <div class="desc">3 варианта картинок (1024×1024, editorial-punk style). Через Codex CLI на ChatGPT-подписке (без API key). Обновляет image_options в YAML.</div>
+    <div class="cost">~$0.3 · ~8 мин · 3× image quota</div>
+  </div>
+</div>
+
+<!-- ROW 2: TG notify → PREVIEW → SCHEDULE -->
+<div class="row r2">
+
+  <div class="node">
+    <h3><span class="ic">🔔</span>TG notify</h3>
+    <div class="who">@trendagetnnews_bot → твой DM</div>
+    <div class="desc">После каждого успешного тика — короткое сообщение: "новый драфт / consilium pass / 3 картинки готовы". Чтобы ты не проверял preview-site зря.</div>
+    <div class="cost">мгновенно</div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="node human">
+    <h3><span class="ic">👀</span>PREVIEW-SITE <span class="badge">ты</span></h3>
+    <div class="who">http://localhost:8765 через ssh-tunnel</div>
+    <div class="desc">Карточка с 3 картинками + текстом. Выбираешь вариант (v1/v2/v3), approve/reject, ставишь время публикации. Submit batch → schedule.json.</div>
+    <div class="cost">1-3 мин на пост</div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="node source">
+    <h3><span class="ic">📅</span>schedule.json</h3>
+    <div class="who">/root/.hermes/state/schedule.json</div>
+    <div class="desc">{ scheduled: [...], rejected: [...] }. Pipeline на каждом тике смотрит «есть due-entry?» (publish_at &lt;= now). Если есть — публикует первой.</div>
+    <div class="cost">storage</div>
+  </div>
+</div>
+
+<!-- ROW 3: PUBLISH_SCHEDULED → @agentezh -->
+<div class="row r3">
+
+  <div class="node publish">
+    <h3><span class="ic">🚀</span>PUBLISH_SCHEDULED</h3>
+    <div class="who">pipeline (без claude — чистый Python)</div>
+    <div class="desc">Берёт due-запись из schedule.json. Читает body из yaml. sendPhoto с выбранной картинкой + caption (если ≤1024 chars) или sendMessage с body как reply. Обновляет post-history.md и помечает entry опубликованной.</div>
+    <div class="cost">~5 сек</div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="node publish">
+    <h3><span class="ic">📡</span>@agentezh</h3>
+    <div class="who">Telegram канал · 12 подписчиков</div>
+    <div class="desc">Реальная публикация. msg_id записывается в post-history.md (для anti-duplicate в будущих BUILD_DRAFT). Ты получаешь TG-уведомление в DM что вышло.</div>
+    <div class="cost">live</div>
+  </div>
+</div>
+
+<!-- ====== controls and infra ====== -->
+
+<div class="section-title">Триггеры и контроль</div>
+
+<div class="cols">
+  <div class="panel">
+    <h4>⏰ Cron расписание</h4>
+    <ul>
+      <li><code>ezh-publish-loop</code>: <b>10:00 / 14:00 / 17:00 MSK</b> — основной двигатель, один тик = одно действие.</li>
+      <li><code>ezh-news-scan</code>: 09:09 MSK — обновляет daily-ai-digest, добавляет идеи в post-queue.</li>
+      <li><code>ezh-morning-digest</code>: 08:55 MSK — статус в твой DM.</li>
+      <li><code>ezh-bekaper</code>: 19:05 MSK — бэкап.</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h4>🚦 Флаги (файлы в <code>/root/.hermes/state/</code>)</h4>
+    <ul>
+      <li><code>ezh_enable_publish</code> — старый PUBLISH stage включён</li>
+      <li><code>ezh_enable_consilium</code> — CONSILIUM включён</li>
+      <li><code>ezh_enable_design</code> — DESIGN включён</li>
+      <li><code>ezh_enable_build</code> — BUILD_DRAFT включён</li>
+      <li><code>ezh_publish_live</code> — реальная публикация (без него только preview/dry-run)</li>
+      <li><code>ezh_tg_dry_run</code> — TG calls идут в файлы вместо API</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cols">
+  <div class="panel">
+    <h4>💾 Где что лежит</h4>
+    <ul>
+      <li><code>docs/post-drafts/*.yaml</code> — все драфты (текущие 26)</li>
+      <li><code>docs/post-queue.md</code> — backlog идей</li>
+      <li><code>docs/post-history.md</code> — что опубликовано (для anti-dup)</li>
+      <li><code>content/images/*.png</code> — все картинки</li>
+      <li><code>/root/.hermes/state/ezh_pipeline_state.json</code> — daily spend + last actions + stuck_drafts</li>
+      <li><code>/root/.hermes/state/schedule.json</code> — очередь на публикацию</li>
+      <li><code>.claude/agent-memory/copywriter/failures_log.md</code> — что отклонил bulldog (Failure Alchemy)</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h4>🛑 Safety</h4>
+    <ul>
+      <li><b>Daily cost cap</b>: $5/день, после — IDLE до следующего дня</li>
+      <li><b>flock</b>: параллельные тики не запускаются</li>
+      <li><b>Anti-duplicate</b>: BUILD_DRAFT и PUBLISH читают post-history последние 90 дней, &gt;70% overlap → skip</li>
+      <li><b>Stuck-detector</b>: 3 FAIL подряд → draft помечается stuck → пропускается</li>
+      <li><b>Loop-detector</b>: 20+ одинаковых tool calls → kill сессии</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-title">Жизненный путь одного поста</div>
+
+<div class="panel">
+  <p style="margin:0 0 8px;">Пример с <b>TaxHacker</b> (идея из бэклога с 25 апреля):</p>
+  <ol style="margin:0; padding-left:20px; font-size:13px;">
+    <li><b>10:00 MSK</b> — cron, pipeline видит TaxHacker без draft → запускает BUILD_DRAFT (~4 мин). Получает <code>2026-XX-XX-taxhacker-v1.yaml</code> со статусом <code>ready-for-review</code>. → 🔔 TG: «📝 новый драфт».</li>
+    <li><b>14:00 MSK</b> — cron, pipeline видит ready-for-review → CONSILIUM (~2 мин). 3 критика, avg=8.5, bulldog PASS → статус <code>ready-for-publish</code>. → 🔔 TG: «✅ avg 8.5».</li>
+    <li><b>17:00 MSK</b> — cron, pipeline видит ready-for-publish без image_options → DESIGN (~8 мин). Designer subagent генерит 3 картинки через Codex. → 🔔 TG: «🎨 3 картинки готовы, открой preview».</li>
+    <li><b>Ты заходишь в preview-site</b>, видишь карточку, выбираешь v2, approve, ставишь время «завтра 10:00». Submit → запись в <code>schedule.json</code>.</li>
+    <li><b>Завтра 10:00 MSK</b> — cron, pipeline видит due-entry → PUBLISH_SCHEDULED → sendPhoto в @agentezh. → 🔔 TG: «🚀 опубликовано msg #N».</li>
+  </ol>
+  <p class="note" style="margin-top:10px;">Итого: от идеи до публикации ~3 cron-тика (10/14/17), всё автоматически кроме твоего approve. Ты дотрагиваешься 1 раз на пост.</p>
+</div>
+
+<div class="section-title">Что НЕ автомат — твои зоны</div>
+
+<div class="panel">
+  <ul>
+    <li><b>Добавление тем в backlog</b> — <code>docs/post-queue.md</code> руками. Digest-сканер тоже подкидывает, но финальный отбор — твой.</li>
+    <li><b>Approve/reject + выбор картинки</b> — через preview-site. Без тебя система не публикует (если <code>ezh_publish_live</code> снять, dry-run).</li>
+    <li><b>Правки текста</b> — пока через CLI/Claude напрямую (preview-site не редактирует). В планах: textarea в карточке + кнопка «send rewrite» → новый CONSILIUM-цикл с твоим feedback.</li>
+    <li><b>Editorial direction</b> — что вообще публикуем (китайские модели — нет, ChatGPT/Claude — да). Хранится в memory + post-queue.</li>
+  </ul>
+</div>
+
+</body>
+</html>
