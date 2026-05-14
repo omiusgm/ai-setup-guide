@@ -100,6 +100,30 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 }
 .gnode .help-btn:hover { background: var(--accent); color: #1a1614; border-color: var(--accent); }
 
+.gnode .status-dot, .subagent .status-dot {
+  position: absolute; top: 6px; left: 6px;
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 1px solid #1a1614;
+}
+.gnode .status-dot.ok, .subagent .status-dot.ok    { background: var(--ok); box-shadow: 0 0 6px rgba(106,187,79,0.6); }
+.gnode .status-dot.wait, .subagent .status-dot.wait  { background: var(--wait); box-shadow: 0 0 6px rgba(209,167,58,0.6); }
+.gnode .status-dot.bad, .subagent .status-dot.bad  { background: var(--bad); box-shadow: 0 0 6px rgba(194,90,76,0.6); }
+.gnode .status-dot.plan, .subagent .status-dot.plan { background: var(--human); }
+.gnode .status-dot.idle, .subagent .status-dot.idle { background: var(--muted); }
+.subagent .status-dot { top: 3px; left: 4px; width: 7px; height: 7px; }
+
+.nav-bar {
+  display: flex; gap: 12px; font-size: 13px; margin-bottom: 18px;
+  padding-bottom: 14px; border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.nav-bar a {
+  color: var(--accent2); text-decoration: none;
+  padding: 6px 12px; border: 1px solid var(--border); border-radius: 4px;
+}
+.nav-bar a:hover { background: var(--panel); color: var(--text); }
+.nav-bar a.current { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+
 /* sub-agent pill (small satellite under main node) */
 .subagent {
   width: 100%; height: 100%;
@@ -225,9 +249,14 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 </head>
 <body>
 
-<a class="back" href="./">← к карточкам</a>
+<div class="nav-bar">
+  <a href="#" class="current">🔧 Pipeline workflow</a>
+  <a href="roadmap.html">🗺️ Roadmap &amp; гипотезы</a>
+  <a href="./" style="margin-left:auto;color:var(--muted);">← AI Setup Guide</a>
+</div>
+
 <h1>🦔 Pipeline @agentezh — workflow</h1>
-<div class="sub">от идеи в бэклоге до поста в Telegram. Сплошная линия = основной поток, пунктир = уведомления.</div>
+<div class="sub">от идеи в бэклоге до поста в Telegram. Сплошная линия = основной поток, пунктир = уведомления. Кружок слева в углу узла = статус.</div>
 
 <div class="legend">
   <span><span class="sw" style="background:var(--ok)"></span>auto (claude/codex)</span>
@@ -235,6 +264,14 @@ h1 { font-size: 22px; margin: 0 0 4px; }
   <span><span class="sw" style="background:var(--storage)"></span>storage / источник</span>
   <span><span class="sw" style="background:var(--accent)"></span>publish (TG)</span>
   <span><span class="sw" style="background:var(--wait); border:1px dashed var(--wait)"></span>TG-уведомление</span>
+</div>
+<div class="legend" style="margin-top:6px;">
+  <b style="color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;">статус:</b>
+  <span><span class="sw" style="background:var(--ok);border-radius:50%;width:10px;height:10px;"></span>работает</span>
+  <span><span class="sw" style="background:var(--wait);border-radius:50%;width:10px;height:10px;"></span>деплой / e2e pending</span>
+  <span><span class="sw" style="background:var(--bad);border-radius:50%;width:10px;height:10px;"></span>блок / проблема</span>
+  <span><span class="sw" style="background:var(--human);border-radius:50%;width:10px;height:10px;"></span>план</span>
+  <span><span class="sw" style="background:var(--muted);border-radius:50%;width:10px;height:10px;"></span>idle/отложено</span>
 </div>
 
 <div class="graph-wrap">
@@ -951,6 +988,58 @@ const HELP = {
     ]
   }
 };
+
+// Status of each node — single source of truth for status dots.
+// ok = работает (verified) · wait = деплой, e2e pending · bad = блок · plan = не сделано · idle = отложено
+const STATUS = {
+  "cron-trigger": "ok",
+  "modes": "ok",
+  "omniroute": "ok",
+  "hot-backlog": "ok",
+  "build-draft": "ok",
+  "consilium": "ok",
+  "design": "ok",
+  "tg-notify": "ok",
+  "preview-site": "wait",
+  "schedule": "wait",
+  "publish-scheduled": "wait",
+  "channel": "bad",
+  "failures-log": "ok",
+  "post-history": "ok",
+  "state-json": "ok",
+  "news-scan": "ok",
+  "drafts-folder": "ok",
+  "images-folder": "ok",
+  "git-repo": "ok",
+  "system-config": "ok",
+  "agent-strategist": "ok",
+  "agent-copywriter": "ok",
+  "agent-bulldog": "ok",
+  "agent-stylist": "ok",
+  "agent-audience": "ok",
+  "agent-designer": "ok",
+  "tool-codex": "ok"
+};
+const STATUS_TITLES = {
+  ok: "работает (проверено)",
+  wait: "задеплоено, e2e тест pending",
+  bad: "блок / проблема",
+  plan: "в планах, не сделано",
+  idle: "отложено"
+};
+
+// Apply status dots on load
+document.querySelectorAll(".gnode, .subagent").forEach(el => {
+  const btn = el.querySelector("[data-help]");
+  if (!btn) return;
+  const key = btn.dataset.help;
+  const status = STATUS[key];
+  if (!status) return;
+  const dot = document.createElement("span");
+  dot.className = "status-dot " + status;
+  dot.title = STATUS_TITLES[status] || status;
+  el.appendChild(dot);
+});
 
 (function() {
   const modal = document.getElementById('help-modal');
