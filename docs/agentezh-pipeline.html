@@ -87,6 +87,62 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 }
 .gnode.publish .pill { background: var(--accent); }
 
+.gnode .help-btn {
+  position: absolute; top: 6px; right: 6px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  color: var(--accent2);
+  font-size: 12px; font-weight: 700;
+  cursor: pointer; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  line-height: 1;
+}
+.gnode .help-btn:hover { background: var(--accent); color: #1a1614; border-color: var(--accent); }
+
+#help-modal {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(0,0,0,0.75);
+  display: none; align-items: center; justify-content: center;
+  padding: 20px;
+}
+#help-modal.open { display: flex; }
+#help-modal .mbody {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  max-width: 560px; width: 100%;
+  max-height: 85vh; overflow-y: auto;
+  padding: 22px 24px;
+  position: relative;
+}
+#help-modal h2 {
+  font-size: 20px; margin: 0 0 6px; color: var(--accent2);
+  display: flex; align-items: center; gap: 8px;
+}
+#help-modal .who {
+  color: var(--muted); font-size: 12px; margin-bottom: 14px;
+}
+#help-modal .section {
+  margin-bottom: 14px; font-size: 13px; line-height: 1.55;
+}
+#help-modal .section .lbl {
+  display: block; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.6px; color: var(--accent2); margin-bottom: 4px;
+}
+#help-modal code {
+  background: var(--panel2); padding: 1px 5px; border-radius: 3px;
+  font-size: 12px; color: var(--accent2);
+}
+#help-modal ul { margin: 4px 0 0; padding-left: 18px; }
+#help-modal li { margin-bottom: 3px; }
+#help-modal .close {
+  position: absolute; top: 12px; right: 14px;
+  background: transparent; border: 0; color: var(--muted);
+  font-size: 22px; cursor: pointer; line-height: 1;
+}
+#help-modal .close:hover { color: var(--text); }
+
 /* edges */
 .edge { fill: none; stroke: var(--line2); stroke-width: 2; }
 .edge.notify { stroke: var(--wait); stroke-dasharray: 4 4; stroke-width: 1.5; }
@@ -181,6 +237,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
   <!-- ROW 1 — y=30, nodes top -->
   <foreignObject x="30" y="30" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode storage">
+      <button class="help-btn" data-help="hot-backlog">?</button>
       <div class="ttl"><span class="ic">💡</span>Hot-backlog</div>
       <div class="who">docs/post-queue.md</div>
       <div class="desc">4 идеи: TaxHacker, MCP/CLI, Karpathy, Routines. Ты + digest-scan.</div>
@@ -190,6 +247,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 
   <foreignObject x="270" y="30" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode auto">
+      <button class="help-btn" data-help="build-draft">?</button>
       <div class="ttl"><span class="ic">📝</span>Build_draft</div>
       <div class="who">claude -p · strategist + copywriter</div>
       <div class="desc">YAML: skeleton + first-screen + body. Anti-duplicate + failures_log.</div>
@@ -199,6 +257,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 
   <foreignObject x="510" y="30" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode auto">
+      <button class="help-btn" data-help="consilium">?</button>
       <div class="ttl"><span class="ic">🔍</span>Consilium</div>
       <div class="who">claude -p · 3 критика</div>
       <div class="desc">bulldog + 1 стилист + 1 ЦА. Avg ≥ 8 → ready-for-publish.</div>
@@ -208,6 +267,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 
   <foreignObject x="750" y="30" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode auto">
+      <button class="help-btn" data-help="design">?</button>
       <div class="ttl"><span class="ic">🎨</span>Design</div>
       <div class="who">designer subagent · codex CLI</div>
       <div class="desc">3 варианта 1024×1024 через ChatGPT-подписку. → image_options.</div>
@@ -218,6 +278,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
   <!-- TG notify box центр -->
   <foreignObject x="450" y="220" width="200" height="80">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode" style="border-left-color:var(--wait); height:80px;">
+      <button class="help-btn" data-help="tg-notify">?</button>
       <div class="ttl" style="color:var(--wait)"><span class="ic">🔔</span>TG notify</div>
       <div class="who">@trendagetnnews_bot → твой DM</div>
       <div class="desc" style="font-size:10px;">На каждом успешном auto-тике + после публикации.</div>
@@ -228,6 +289,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
   <foreignObject x="750" y="310" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode human">
       <span class="pill">ты</span>
+      <button class="help-btn" data-help="preview-site">?</button>
       <div class="ttl"><span class="ic">👀</span>Preview-site</div>
       <div class="who">localhost:8765 / GH-pages</div>
       <div class="desc">Выбираешь v1/v2/v3, approve/reject, datetime. Submit batch.</div>
@@ -237,6 +299,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 
   <foreignObject x="510" y="310" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode storage">
+      <button class="help-btn" data-help="schedule">?</button>
       <div class="ttl"><span class="ic">📅</span>schedule.json</div>
       <div class="who">/root/.hermes/state/</div>
       <div class="desc">{ scheduled, rejected }. Pipeline берёт due-entry первым.</div>
@@ -246,6 +309,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 
   <foreignObject x="270" y="310" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode publish">
+      <button class="help-btn" data-help="publish-scheduled">?</button>
       <div class="ttl"><span class="ic">🚀</span>Publish_scheduled</div>
       <div class="who">pipeline · чистый Python</div>
       <div class="desc">sendPhoto с image + caption (или sendMessage если &gt; 1024).</div>
@@ -256,6 +320,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
   <foreignObject x="30" y="310" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode output">
       <span class="pill">live</span>
+      <button class="help-btn" data-help="channel">?</button>
       <div class="ttl" style="color:var(--accent)"><span class="ic">📡</span>@agentezh</div>
       <div class="who">Telegram канал · 12 подп.</div>
       <div class="desc">Реальный пост. msg_id → post-history.md (anti-dup).</div>
@@ -348,6 +413,158 @@ h1 { font-size: 22px; margin: 0 0 4px; }
     <li><b>Editorial direction</b> — что вообще публикуем. Хранится в memory + post-queue.</li>
   </ul>
 </div>
+
+<!-- ============ HELP MODAL ============ -->
+<div id="help-modal" role="dialog" aria-modal="true" aria-labelledby="help-title">
+  <div class="mbody">
+    <button class="close" aria-label="Закрыть">×</button>
+    <h2 id="help-title"><span id="help-icon"></span><span id="help-name"></span></h2>
+    <div class="who" id="help-who"></div>
+    <div id="help-content"></div>
+  </div>
+</div>
+
+<script>
+const HELP = {
+  "hot-backlog": {
+    icon: "💡", title: "Hot-backlog (источник идей)",
+    who: "docs/post-queue.md · хранится в git, секция «Идеи в горячем бэклоге»",
+    sections: [
+      { lbl: "Что это", html: "Текстовый список идей для будущих постов. Каждая идея — строка с датой, заголовком, ссылкой на research-документ, целевым типом поста (#ежемнение / #ежефишечка / #еженовости и т.д.)." },
+      { lbl: "Откуда берутся идеи", html: "1) Ты вручную добавляешь.<br>2) <code>ezh-news-scan</code> (cron 09:09 MSK) сканит HN/Reddit/Anthropic/OpenAI/GitHub trending → пишет в daily-ai-digest.md, сильные находки попадают в post-queue. Ты потом ревью." },
+      { lbl: "Что делает pipeline", html: "<code>BUILD_DRAFT</code> на каждом cron-тике вызывает <code>find_queue_ideas_without_drafts()</code> — парсит секцию «Идеи в горячем бэклоге», возвращает идеи без существующего draft с тем же slug. Берёт первую." },
+      { lbl: "Сейчас в backlog", html: "<ul><li>TaxHacker (vas3k, 5K⭐) — AI-бухгалтер self-hosted</li><li>MCP жрёт токены в 30× больше CLI</li><li>Karpathy-skills CLAUDE.md (115K⭐)</li><li>Claude Code Routines (Anthropic)</li></ul>" },
+      { lbl: "Удалённое", html: "DeepSeek V4, DeepSeek-TUI, Pixelle-Video, Ollama — китайские модели / локальные LLM, не наша ЦА (editorial focus от 14 мая)." }
+    ]
+  },
+  "build-draft": {
+    icon: "📝", title: "BUILD_DRAFT",
+    who: "claude -p · subagents: strategist + copywriter (Ёж-Перо) · max 40 turns",
+    sections: [
+      { lbl: "Когда запускается", html: "На любом cron-тике <code>ezh-publish-loop</code> (10/14/17 MSK), если: флаг <code>ezh_enable_build</code> установлен И в hot-backlog есть идея без draft И нет более приоритетных задач (PUBLISH/CONSILIUM/DESIGN)." },
+      { lbl: "Что делает", html: "1. <b>Anti-duplicate check</b>: читает <code>post-history.md</code> за последние 90 дней. Если тема &gt;70% совпадает с уже опубликованным — abort + log в failures_log.<br>2. <b>Failure Alchemy</b>: инжектит в prompt 10 последних записей из <code>failures_log.md</code> чтобы не повторять ошибки (канцелярит, формат и т.д.).<br>3. Читает research-документ (если есть), <code>content-pipeline.md</code>, <code>posts.md</code>, <code>TELEGRAM-STYLEGUIDE.md</code>.<br>4. <code>strategist</code> subagent выбирает angle, hook, формулу, тип поста.<br>5. <code>copywriter</code> (Ёж-Перо) пишет body.<br>6. Сохраняет в <code>docs/post-drafts/{date}-{slug}-v1.yaml</code> со <code>status: ready-for-review</code>." },
+      { lbl: "Стоимость", html: "~$1 за итерацию · ~4 мин wall-time · max_turns=40 в run_claude" },
+      { lbl: "Что на выходе", html: "Один файл yaml с полями: slug, type, status=ready-for-review, title, main_idea, body (HTML с тегами Telegram), length_chars_body, и стадийные блоки stage1_skeleton / stage3_first_screen / stage5_body для аудита." }
+    ]
+  },
+  "consilium": {
+    icon: "🔍", title: "CONSILIUM (3-critic consilium)",
+    who: "claude -p · subagents: bulldog + 1 стилист + 1 ЦА",
+    sections: [
+      { lbl: "Когда запускается", html: "На cron-тике, если есть draft со <code>status: ready-for-review</code> И флаг <code>ezh_enable_consilium</code>." },
+      { lbl: "3 критика", html: "<b>bulldog</b> — анти-жаргон gate, PASS/FAIL без скоринга. Триггеры: канцелярит, «применима везде», «фундамент — статистика», «итог:» и т.п.<br><br><b>1 стилист</b> — выбирается dynamically по типу поста:<ul><li><code>persona-kasuka</code> для длинных #ежемнение (структура, плотность)</li><li><code>persona-serditov</code> для #еженовости/#ежефишечка (сила хука, кликабельность)</li><li><code>care</code> для остального (жаргон, понятность)</li></ul><br><b>1 ЦА-критик</b> — по типу аудитории:<ul><li><code>persona-artyom</code> — предприниматель, ищет автоматизацию</li><li><code>persona-oleg</code> — скептик, фильтрует инфошум</li><li><code>persona-katya</code> — новичок 28 лет, дефолт</li></ul>Каждый получает rubric YAML и ставит score 1-10." },
+      { lbl: "Решение", html: "<code>avg(стилист + ЦА) ≥ 8.0</code> + <code>bulldog: PASS</code> → status = <code>ready-for-publish</code>.<br>Иначе → <code>needs-rewrite</code> + поле <code>feedback</code> с weak_points." },
+      { lbl: "Стоимость", html: "~$0.5 · ~2 мин · max 30 turns. Раньше было 7 критиков ($1.5) — сократили до 3 после community-research (RewardBench показал что &gt;3 → конформизм)." }
+    ]
+  },
+  "design": {
+    icon: "🎨", title: "DESIGN (3 image variants)",
+    who: "claude -p → designer subagent (Ёж-Дизайнер) → /root/.hermes/scripts/ezh_image_gen.sh × 3 → Codex CLI",
+    sections: [
+      { lbl: "Когда запускается", html: "На cron-тике, если есть draft со status <code>ready-for-review</code> ИЛИ <code>ready-for-publish</code> без поля <code>image_options</code>, и флаг <code>ezh_enable_design</code>." },
+      { lbl: "Что делает designer subagent", html: "1. Читает yaml + <code>designer.md</code> + <code>visual-style.md</code> (стайлгайд: ёж с очками, тёмная кухня, editorial-punk) + <code>visual-prompts-archive.md</code> (предыдущие удачные промпты).<br>2. Придумывает 3 разные визуальные концепции для одного поста.<br>3. Для каждой вызывает <code>bash /root/.hermes/scripts/ezh_image_gen.sh &lt;slug&gt; v1|v2|v3 \"&lt;prompt&gt;\"</code>.<br>4. Wrapper запускает <code>codex exec --enable image_generation</code> через ChatGPT-подписку (без OPENAI_API_KEY) — built-in image_gen tool.<br>5. Codex сохраняет PNG в кэш, копирует в <code>content/images/&lt;slug&gt;-v[1-3].png</code>, ffmpeg downscale до 1024×1024.<br>6. После 3 успешных — designer редактирует yaml, добавляет <code>image_options: [...]</code>.<br>7. Записывает в <code>visual-prompts-archive.md</code> с QA-нотами." },
+      { lbl: "Стоимость", html: "~$0.3 claude orchestration · ~8 мин wall-time · 3× ChatGPT image_gen квоты (одна из 5 учёток OmniRoute).<br><br><code>EZH_IMAGE_DRY_RUN=1</code> — wrapper пишет 1×1 placeholder вместо реальной генерации (для тестов)." },
+      { lbl: "QA-аудит", html: "designer.md обязывает после генерации проверять: характер ежа (хмурый, не Disney), композиция (точное число объектов), палитра (тёмные + amber), нет читаемого текста, нет двойных конечностей. Косяки → перегенерить с уточнённым промптом." }
+    ]
+  },
+  "tg-notify": {
+    icon: "🔔", title: "TG notify (уведомления в твой DM)",
+    who: "@trendagetnnews_bot (id 8776279976) → chat_id 222667878 (омius)",
+    sections: [
+      { lbl: "Когда срабатывает", html: "После КАЖДОГО успешного auto-тика:<ul><li><b>BUILD_DRAFT OK</b>: «📝 Новый драфт: &lt;slug&gt;, &lt;length&gt; chars»</li><li><b>CONSILIUM PASS</b>: «✅ &lt;slug&gt; прошёл консилиум (avg=X), status → ready-for-publish»</li><li><b>CONSILIUM needs-rewrite</b>: «⚠️ &lt;slug&gt; нужна доработка: feedback»</li><li><b>DESIGN OK</b>: «🎨 &lt;slug&gt;: 3 картинки готовы — открой preview»</li><li><b>PUBLISH_SCHEDULED OK</b>: «🚀 опубликовано в @agentezh msg #N»</li><li><b>PUBLISH_SCHEDULED FAIL</b>: «❌ публикация &lt;slug&gt; провалилась: reason»</li><li><b>Schedule-entry rejected</b> (yaml missing / empty body): «❌ запланированная публикация снята»</li></ul>" },
+      { lbl: "Где код", html: "<code>tg_notify_owner(text)</code> в <code>ezh_pipeline.py</code>. Вызывается в <code>main()</code> после успешного action (BUILD/CONSILIUM/DESIGN), парсит блок-output claude (slug, status, etc.), формирует HTML-message, шлёт через <code>sendMessage</code>." },
+      { lbl: "В DRY-RUN режиме", html: "Если <code>EZH_TG_DRY_RUN=1</code> — уведомления пишутся в pipeline.log как «notify DRY-RUN: ...» без реального TG-вызова." }
+    ]
+  },
+  "preview-site": {
+    icon: "👀", title: "PREVIEW-SITE (твоя кнопка approve)",
+    who: "127.0.0.1:8765 (systemd: agentezh-preview.service) · nginx на /agentezh-review/ с basic-auth",
+    sections: [
+      { lbl: "Где открыть", html: "<b>Локально:</b> запусти <code>ssh -N -L 8765:127.0.0.1:8765 hermes-vps</code> в терминале → открой <a href='http://localhost:8765/'>http://localhost:8765/</a>.<br><br><b>Через nginx:</b> <code>http://hermess.fvds.ru/agentezh-review/</code> (admin / пароль в <code>/root/.hermes/state/preview-pass.txt</code>). DNS .fvds.ru может не работать в РФ через VPN — тогда туннель.<br><br>Карта pipeline (эта страница) — публично на GitHub Pages." },
+      { lbl: "Что показывает", html: "Все драфты со <code>status</code> in {ready-for-review, ready-for-publish}. Для каждого: title, status badge, body preview (300 chars), 3 image thumbnails (если есть <code>image_options</code>), radio выбора варианта, approve/reject, datetime picker «publish_at»." },
+      { lbl: "Submit", html: "Кнопка «Submit batch» собирает все выбранные карточки в payload, POST <code>/api/submit</code> → atomic write в <code>schedule.json</code>. Approved entries → <code>scheduled[]</code>, rejected → <code>rejected[]</code>." },
+      { lbl: "Что нельзя сейчас", html: "Редактировать body. Только approve / reject. Правки — через CLI: <code>ssh hermes-vps -t 'cd /root/projects/agentezh && claude'</code>, потом «допиши body в yaml X». В планах — textarea в карточке + кнопка «rewrite with feedback»." }
+    ]
+  },
+  "schedule": {
+    icon: "📅", title: "schedule.json (очередь публикаций)",
+    who: "/root/.hermes/state/schedule.json · atomic write через os.replace",
+    sections: [
+      { lbl: "Формат", html: "<pre style='font-size:11px;background:var(--panel2);padding:8px;border-radius:4px;overflow-x:auto;'>{\n  \"scheduled\": [\n    {\n      \"slug\": \"taxhacker\",\n      \"yaml_path\": \"docs/post-drafts/2026-XX-taxhacker-v1.yaml\",\n      \"image\": \"content/images/taxhacker-v2.png\",\n      \"publish_at\": \"2026-05-15T10:00:00+03:00\",\n      \"submitted_at\": \"2026-05-14T17:23:00+03:00\"\n    }\n  ],\n  \"rejected\": [...],\n  \"version\": 1\n}</pre>" },
+      { lbl: "Как пайплайн читает", html: "Каждый тик: <code>load_schedule_due_now()</code> возвращает entries где <code>publish_at &lt;= now</code> И <code>published_at</code> ещё не заполнено. Берёт первую → action = <code>PUBLISH_SCHEDULED</code>. Это <b>высший приоритет</b> в decide_action (обходит publish-hour gate)." },
+      { lbl: "Что после публикации", html: "Entry получает <code>published_at: ts</code> и <code>msg_id: N</code> — больше не due. Остаётся в файле для аудита." },
+      { lbl: "Permanent fail handling", html: "Если yaml пропал / парс упал / body пустой — entry автоматически перемещается в <code>rejected[]</code> с <code>auto_rejected_at</code>, чтобы не зацикливать retry. → TG-уведомление «запланированная публикация снята»." }
+    ]
+  },
+  "publish-scheduled": {
+    icon: "🚀", title: "PUBLISH_SCHEDULED",
+    who: "pipeline · чистый Python (БЕЗ claude -p) · handle_scheduled_publish()",
+    sections: [
+      { lbl: "Что делает", html: "1. Читает yaml из <code>schedule.json</code> entry.<br>2. Извлекает body. Если пусто / yaml missing → permanent fail (см. schedule.json help).<br>3. Если <code>PUBLISH_LIVE</code> флаг ВЫКЛ — выходит как dry-run (логирует «would have published»), не пишет в TG.<br>4. Вызывает <code>tg_publish_to_channel(body, image_path=...)</code>:<ul><li>Если <code>len(body) ≤ 1024</code> — <code>sendPhoto</code> с photo + caption (одно сообщение в канале с картинкой сверху и текстом снизу).</li><li>Если &gt; 1024 — <code>sendPhoto</code> с title как caption, потом <code>sendMessage</code> с полным body как reply_to.</li></ul>5. На success — добавляет запись в <code>post-history.md</code>, помечает entry опубликованной, 🔔 TG: «🚀 опубликовано msg #N»." },
+      { lbl: "Безопасность", html: "Не требует bulldog gate (уже прошёл через CONSILIUM + твой preview-approve). НО HTML body должен быть валидным для Telegram (<code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;blockquote expandable&gt;...&lt;/blockquote&gt;</code> — парные!). Если TG отвечает HTTP 400 — fail, retry на следующем тике." },
+      { lbl: "Стоимость", html: "$0 — чистый HTTP-запрос к TG Bot API. ~5 секунд wall-time." }
+    ]
+  },
+  "channel": {
+    icon: "📡", title: "@agentezh (Telegram канал)",
+    who: "t.me/agentezh · 12 подписчиков · bot @trendagetnnews_bot (admin)",
+    sections: [
+      { lbl: "Что в канале", html: "Голос «Агент Ёж» — циничный практик, кухня, мат ок, «ИИшечка» вместо «Claude». Темы: AI-инструменты для пользователей ChatGPT/Claude. Типы: #ежемнение (длинные мнения), #еженовости, #ежефишечка (микрогайды), #ежескильчик." },
+      { lbl: "После публикации", html: "msg_id возвращается из Telegram API → записывается в <code>docs/post-history.md</code> в формате <code>### YYYY-MM-DD HH:MM MSK — slug (msg #N)</code>. Это <b>источник истины для anti-duplicate</b> в BUILD_DRAFT — pipeline не сделает повторный пост на ту же тему." },
+      { lbl: "Bot token", html: "Хранится в <code>/root/projects/agentezh/.env</code> как <code>TELEGRAM_BOT_TOKEN</code>. Bot добавлен в канал как admin (может постить, не может удалять подписчиков)." },
+      { lbl: "Канал-цели", html: "Сейчас 12 подп. — pre-launch. После стабильной автоматики (10+ автономных постов без правок) — refactor для роста: посевы, кросс-постинг, аналитика engagement через TG-engagement-reader (Phase 3, не сделано)." }
+    ]
+  }
+};
+
+(function() {
+  const modal = document.getElementById('help-modal');
+  const titleEl = document.getElementById('help-name');
+  const iconEl = document.getElementById('help-icon');
+  const whoEl = document.getElementById('help-who');
+  const contentEl = document.getElementById('help-content');
+
+  function open(key) {
+    const data = HELP[key];
+    if (!data) return;
+    iconEl.textContent = data.icon || '';
+    titleEl.textContent = data.title;
+    whoEl.textContent = data.who || '';
+    contentEl.innerHTML = '';
+    for (const s of (data.sections || [])) {
+      const div = document.createElement('div');
+      div.className = 'section';
+      const lbl = document.createElement('span');
+      lbl.className = 'lbl';
+      lbl.textContent = s.lbl;
+      div.appendChild(lbl);
+      const body = document.createElement('div');
+      body.innerHTML = s.html;
+      div.appendChild(body);
+      contentEl.appendChild(div);
+    }
+    modal.classList.add('open');
+  }
+
+  function close() { modal.classList.remove('open'); }
+
+  document.addEventListener('click', (ev) => {
+    const btn = ev.target.closest('.help-btn');
+    if (btn) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      open(btn.dataset.help);
+      return;
+    }
+    if (ev.target.closest('.close') || ev.target === modal) {
+      close();
+    }
+  });
+  document.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Escape') close();
+  });
+})();
+</script>
 
 </body>
 </html>
