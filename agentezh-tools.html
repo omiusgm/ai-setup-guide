@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🧰 Knowledge base — инструменты, скилы, репо</title>
+<style>
+:root {
+  --bg: #1a1614;
+  --panel: #221d1a;
+  --panel2: #2a221d;
+  --text: #e6dcd1;
+  --muted: #8a7a6a;
+  --accent: #e07b3a;
+  --accent2: #f5a266;
+  --ok: #6abb4f;
+  --bad: #c25a4c;
+  --wait: #d1a73a;
+  --human: #5aa9d1;
+  --border: #3a2f27;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--text);
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  margin: 0; padding: 28px 24px 60px;
+  max-width: 1200px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 24px; margin: 0 0 6px; }
+.sub { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+h2 {
+  font-size: 16px; color: var(--accent2);
+  text-transform: uppercase; letter-spacing: 1.5px;
+  margin: 32px 0 12px;
+  padding-bottom: 6px; border-bottom: 1px solid var(--border);
+}
+.nav {
+  display: flex; gap: 12px; font-size: 13px; margin-bottom: 24px;
+  padding-bottom: 14px; border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.nav a {
+  color: var(--accent2); text-decoration: none;
+  padding: 6px 12px; border: 1px solid var(--border); border-radius: 4px;
+}
+.nav a:hover { background: var(--panel); color: var(--text); }
+.nav a.current { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+table {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+  background: var(--panel); border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+th, td {
+  padding: 10px 12px; text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+th {
+  background: var(--panel2); font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--accent2); font-weight: 700;
+  white-space: nowrap;
+}
+tr:last-child td { border-bottom: 0; }
+td a { color: var(--accent2); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+td .name { font-weight: 700; color: var(--text); }
+td .type { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
+.badge {
+  display: inline-block; padding: 2px 7px; border-radius: 4px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+  text-transform: uppercase; white-space: nowrap;
+}
+.badge.ok { background: rgba(106, 187, 79, 0.2); color: var(--ok); border: 1px solid var(--ok); }
+.badge.wait { background: rgba(209, 167, 58, 0.2); color: var(--wait); border: 1px solid var(--wait); }
+.badge.plan { background: rgba(90, 169, 209, 0.15); color: var(--human); border: 1px solid var(--human); }
+.badge.parked { background: rgba(138, 122, 106, 0.15); color: var(--muted); border: 1px solid var(--muted); }
+.badge.note { background: rgba(194, 90, 76, 0.2); color: var(--bad); border: 1px solid var(--bad); }
+code {
+  background: var(--panel2); padding: 1px 5px; border-radius: 3px;
+  font-size: 12px; color: var(--accent2);
+}
+.note { font-size: 12px; color: var(--muted); font-style: italic; margin: 4px 0 0; }
+.cmd {
+  background: var(--panel2); padding: 6px 10px; border-radius: 4px;
+  font-size: 12px; color: var(--accent2); font-family: ui-monospace, monospace;
+  display: block; margin: 4px 0;
+}
+.section-intro { font-size: 13px; color: var(--muted); margin: -4px 0 12px; }
+@media (max-width: 800px) {
+  table, thead, tbody, th, td, tr { display: block; }
+  thead { display: none; }
+  tr {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 8px; margin-bottom: 10px; padding: 8px 12px;
+  }
+  td { padding: 4px 0; border: 0; }
+  td::before {
+    content: attr(data-label) ": ";
+    color: var(--accent2); font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.5px; font-weight: 700; display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="agentezh-pipeline.html">🔧 Pipeline workflow</a>
+  <a href="roadmap.html">🗺️ Roadmap &amp; гипотезы</a>
+  <a href="#" class="current">🧰 Knowledge base</a>
+  <a href="./" style="margin-left:auto;color:var(--muted);">← AI Setup Guide</a>
+</div>
+
+<h1>🧰 Knowledge base — инструменты, скилы, репо</h1>
+<div class="sub">База находок Vladimir'а. Что подключено сейчас, что в сундуке, что для знания. Пополняется когда ты кидаешь скрин/ссылку.</div>
+
+<!-- ===================== УСТАНОВЛЕНО И РАБОТАЕТ ===================== -->
+<h2>✅ Установлено и работает</h2>
+<div class="section-intro">Инструменты в активном использовании в pipeline / на VPS / в Claude.</div>
+
+<table>
+<thead><tr>
+  <th>Инструмент</th>
+  <th>Тип</th>
+  <th>Как запустить</th>
+  <th>Стоимость</th>
+  <th>Use-case у нас</th>
+  <th>Status</th>
+</tr></thead>
+<tbody>
+
+<tr>
+  <td data-label="Инструмент">
+    <span class="name">ux-discovery-interviewer</span><br>
+    <span class="type">claude code skill</span><br>
+    <a href="https://github.com/JacobLinCool/ux-discovery-interviewer-skill" target="_blank">github</a>
+  </td>
+  <td data-label="Тип">skill (SKILL.md)</td>
+  <td data-label="Как запустить">
+    <code class="cmd">claude</code>
+    <p class="note">«Запусти skill ux-discovery-interviewer для @agentezh»</p>
+  </td>
+  <td data-label="Стоимость">$0 + Claude Max</td>
+  <td data-label="Use-case">Прогнать discovery-интервью на себе перед Фазой H. Вытащить пропущенные вопросы по vision/ЦА/метрикам.</td>
+  <td data-label="Status"><span class="badge ok">установлен</span><br>14 мая, ~/.claude/skills/</td>
+</tr>
+
+<tr>
+  <td data-label="Инструмент">
+    <span class="name">SkillsMP / vercel-labs/skills</span><br>
+    <span class="type">CLI · npx</span><br>
+    <a href="https://skillsmp.com/" target="_blank">skillsmp.com</a> · <a href="https://github.com/vercel-labs/skills" target="_blank">github</a>
+  </td>
+  <td data-label="Тип">CLI поисковик скилов</td>
+  <td data-label="Как запустить">
+    <code class="cmd">npx skills find &lt;keyword&gt;</code>
+    <code class="cmd">npx skills install &lt;repo&gt;</code>
+    <p class="note">Не требует install — npx тянет налету</p>
+  </td>
+  <td data-label="Стоимость">$0</td>
+  <td data-label="Use-case">Когда Vladimir кидает скрин/ссылку — быстро находим скил по semantic search, проверяем популярность, инсталлим. 1.2M+ SKILL.md в индексе.</td>
+  <td data-label="Status"><span class="badge ok">готов к использованию</span></td>
+</tr>
+
+<tr>
+  <td data-label="Инструмент">
+    <span class="name">Codex CLI</span><br>
+    <span class="type">CLI · OpenAI</span><br>
+    <a href="https://github.com/openai/codex" target="_blank">github</a>
+  </td>
+  <td data-label="Тип">CLI агент с image_gen tool</td>
+  <td data-label="Как запустить">
+    <code class="cmd">codex exec --enable image_generation "&lt;prompt&gt;"</code>
+  </td>
+  <td data-label="Стоимость">ChatGPT-подписка (subscription-only)</td>
+  <td data-label="Use-case">DESIGN stage pipeline — генерит 3 картинки для каждого draft через ChatGPT-учётку (без OPENAI_API_KEY).</td>
+  <td data-label="Status"><span class="badge ok">работает</span><br>VPS, v0.130.0</td>
+</tr>
+
+<tr>
+  <td data-label="Инструмент">
+    <span class="name">OmniRoute</span><br>
+    <span class="type">proxy / quota pool</span>
+  </td>
+  <td data-label="Тип">systemd service · 127.0.0.1:20128/v1</td>
+  <td data-label="Как запустить">авто</td>
+  <td data-label="Стоимость">5× ChatGPT подписки</td>
+  <td data-label="Use-case">Раунд-робин между 5 ChatGPT-учётками → 5× квоты для chat-моделей. Image gen через него не работает — для этого Codex CLI.</td>
+  <td data-label="Status"><span class="badge ok">работает</span></td>
+</tr>
+
+<tr>
+  <td data-label="Инструмент">
+    <span class="name">Hermes Agent</span><br>
+    <span class="type">harness · cron</span>
+  </td>
+  <td data-label="Тип">systemd · ezh_pipeline.py</td>
+  <td data-label="Как запустить">
+    <code class="cmd">hermes cron list</code>
+    <code class="cmd">EZH_TEST_ANYHOUR=1 /root/.hermes/scripts/ezh_pipeline.py</code>
+  </td>
+  <td data-label="Стоимость">Claude Max</td>
+  <td data-label="Use-case">Главный двигатель — 8 cron jobs, decide_action, state machine, run_claude wrapper.</td>
+  <td data-label="Status"><span class="badge ok">работает</span><br>~1.5GB RAM</td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- ===================== В СУНДУКЕ (PARKED) ===================== -->
+<h2>📦 В сундуке (parked для потом)</h2>
+<div class="section-intro">Идеи и инструменты, к которым возвращаемся когда созреет момент.</div>
+
+<table>
+<thead><tr>
+  <th>Идея</th>
+  <th>Тип</th>
+  <th>Почему отложено</th>
+  <th>Когда подключим</th>
+  <th>Status</th>
+</tr></thead>
+<tbody>
+
+<tr>
+  <td data-label="Идея">
+    <span class="name">Cloudflare Tunnel</span><br>
+    <span class="type">cloudflared · публичный HTTPS</span>
+  </td>
+  <td data-label="Тип">CLI · публичный URL</td>
+  <td data-label="Почему отложено">Установка <code>dpkg cloudflared.deb</code> заблокирована auto-mode 14 мая (third-party binary). Нужен явный OK Vladimir'а.</td>
+  <td data-label="Когда">Когда Vladimir скажет «да установи cloudflared». Альтернатива сейчас — SSH-туннель.</td>
+  <td data-label="Status"><span class="badge wait">parked · ждёт OK</span></td>
+</tr>
+
+<tr>
+  <td data-label="Идея">
+    <span class="name">Pixelle-Video</span><br>
+    <span class="type">video pipeline · Alibaba</span><br>
+    <a href="https://github.com/AIDC-AI/Pixelle-Video" target="_blank">github</a>
+  </td>
+  <td data-label="Тип">open-source видео-конвейер</td>
+  <td data-label="Почему отложено">Editorial focus: китайские модели мимо ЦА. НО как инструмент для собственной авто-генерации Shorts/Reels — норм. Нужна GPU 6-8GB.</td>
+  <td data-label="Когда">Phase J — «опубликовал пост в TG → авто-собрал short с цитатой + visual + voiceover → YouTube Shorts / Reels / TikTok».</td>
+  <td data-label="Status"><span class="badge parked">parked · research нужен</span></td>
+</tr>
+
+<tr>
+  <td data-label="Идея">
+    <span class="name">Mem0 self-hosted</span><br>
+    <span class="type">semantic memory</span><br>
+    <a href="https://github.com/mem0ai/mem0" target="_blank">github</a>
+  </td>
+  <td data-label="Тип">memory service</td>
+  <td data-label="Почему отложено">RAM не хватает на 4GB VPS (нужен PostgreSQL + векторный store). Текущий anti-dup через grep post-history достаточен на первое время.</td>
+  <td data-label="Когда">После апгрейда VPS до 8GB+. Phase I — engagement loop с memory.</td>
+  <td data-label="Status"><span class="badge parked">parked · VPS upgrade нужен</span></td>
+</tr>
+
+<tr>
+  <td data-label="Идея">
+    <span class="name">Langfuse self-hosted</span><br>
+    <span class="type">LLM tracing</span><br>
+    <a href="https://langfuse.com/" target="_blank">langfuse.com</a>
+  </td>
+  <td data-label="Тип">observability</td>
+  <td data-label="Почему отложено">Stack тяжёлый — postgres + clickhouse + langfuse-server. 4GB VPS не тянет.</td>
+  <td data-label="Когда">После апгрейда VPS до 8GB+. Когда станет важна стоимость/времени аналитика по claude -p вызовам.</td>
+  <td data-label="Status"><span class="badge parked">parked · 27K⭐ verified</span></td>
+</tr>
+
+<tr>
+  <td data-label="Идея">
+    <span class="name">Postiz</span><br>
+    <span class="type">multi-platform posting</span><br>
+    <a href="https://github.com/gitroomhq/postiz-app" target="_blank">github</a>
+  </td>
+  <td data-label="Тип">self-hosted cross-post</td>
+  <td data-label="Почему отложено">Сейчас только Telegram. Расширение на VK/Дзен/ОК — Phase J.</td>
+  <td data-label="Когда">После стабильных 20+ постов в TG. Когда захочется расширить audience.</td>
+  <td data-label="Status"><span class="badge parked">parked · phase J</span></td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- ===================== ЗНАНИЕ / РЕФЕРЕНС ===================== -->
+<h2>📚 Знание / референс</h2>
+<div class="section-intro">Полезно знать что такое существует. Без активного использования — на случай «вот тут есть alternative».</div>
+
+<table>
+<thead><tr>
+  <th>Что</th>
+  <th>Тип</th>
+  <th>Зачем знать</th>
+  <th>Ссылка</th>
+</tr></thead>
+<tbody>
+
+<tr>
+  <td data-label="Что">
+    <span class="name">anthropics/skills</span>
+  </td>
+  <td data-label="Тип">official skills repo</td>
+  <td data-label="Зачем">Official Anthropic skills — pdf, xlsx, pptx, docx, brand-guidelines, mcp-builder, skill-creator. Уже доступны в Claude Code (anthropic-skills:*).</td>
+  <td data-label="Ссылка"><a href="https://github.com/anthropics/skills" target="_blank">github</a></td>
+</tr>
+
+<tr>
+  <td data-label="Что">
+    <span class="name">awesome-claude-skills</span>
+  </td>
+  <td data-label="Тип">curated list</td>
+  <td data-label="Зачем">Несколько списков от community: ComposioHQ, alirezarezvani (263+), travisvn, VoltAgent (1000+). Когда нужна определённая тематика — Ctrl+F по этим.</td>
+  <td data-label="Ссылка">
+    <a href="https://github.com/ComposioHQ/awesome-claude-skills" target="_blank">ComposioHQ</a> ·
+    <a href="https://github.com/VoltAgent/awesome-agent-skills" target="_blank">VoltAgent</a> ·
+    <a href="https://github.com/travisvn/awesome-claude-skills" target="_blank">travisvn</a>
+  </td>
+</tr>
+
+<tr>
+  <td data-label="Что">
+    <span class="name">Claude Code Routines</span>
+  </td>
+  <td data-label="Тип">Anthropic feature</td>
+  <td data-label="Зачем">Облачные cron-автоматизации Claude Code (Pro/Max/Team). Альтернатива нашему /loop + scheduled-tasks. Лимиты: Pro 5/день, Max 15/день. Серая зона из РФ.</td>
+  <td data-label="Ссылка"><a href="https://docs.anthropic.com/" target="_blank">anthropic.com/docs</a></td>
+</tr>
+
+<tr>
+  <td data-label="Что">
+    <span class="name">Karpathy-skills CLAUDE.md</span>
+  </td>
+  <td data-label="Тип">принципы CLAUDE.md</td>
+  <td data-label="Зачем">115K⭐ репо: один файл с 4 принципами против ловушек ИИ-кодинга (модели врут, не уточняют, переусложняют). Может вдохновить наш CLAUDE.md в agentezh.</td>
+  <td data-label="Ссылка"><a href="https://github.com/karpathy/karpathy-md" target="_blank">github</a></td>
+</tr>
+
+</tbody>
+</table>
+
+<p style="font-size:12px;color:var(--muted);font-style:italic;margin-top:30px;">
+Обновляется по мере поступления находок. Если кинешь скрин/ссылку — попадёт сюда (или в сундук/install сразу) по audit-workflow.
+</p>
+
+</body>
+</html>
