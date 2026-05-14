@@ -100,6 +100,52 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 }
 .gnode .help-btn:hover { background: var(--accent); color: #1a1614; border-color: var(--accent); }
 
+/* sub-agent pill (small satellite under main node) */
+.subagent {
+  width: 100%; height: 100%;
+  background: #1d1916;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 5px;
+  padding: 6px 8px 6px 10px;
+  display: flex; flex-direction: column; gap: 1px;
+  position: relative;
+  font-family: inherit; color: var(--text);
+}
+.subagent .nm {
+  font-size: 11px; font-weight: 700; color: var(--accent2);
+  display: flex; align-items: center; gap: 4px;
+  text-transform: lowercase;
+}
+.subagent .nm .ic { font-size: 12px; }
+.subagent .rl { font-size: 9px; color: var(--muted); line-height: 1.25; }
+.subagent.bull { border-left-color: var(--bad); }
+.subagent.bull .nm { color: #e08070; }
+.subagent.human { border-left-color: var(--human); }
+.subagent.human .nm { color: var(--human); }
+.subagent.persona { border-left-color: var(--wait); }
+.subagent.persona .nm { color: var(--wait); }
+.subagent .qmark {
+  position: absolute; top: 3px; right: 4px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: var(--accent2);
+  font-size: 9px; font-weight: 700;
+  cursor: pointer; padding: 0; border: 0;
+  display: flex; align-items: center; justify-content: center;
+  line-height: 1;
+}
+.subagent .qmark:hover { background: var(--accent); color: #1a1614; }
+
+.group-label {
+  font-size: 9px; font-family: inherit; fill: var(--muted);
+  text-transform: uppercase; letter-spacing: 1.5px;
+}
+.group-rect {
+  fill: none; stroke: var(--border); stroke-width: 1; stroke-dasharray: 3 3;
+  rx: 8;
+}
+
 #help-modal {
   position: fixed; inset: 0; z-index: 100;
   background: rgba(0,0,0,0.75);
@@ -192,7 +238,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 </div>
 
 <div class="graph-wrap">
-<svg viewBox="0 0 1100 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="agentezh pipeline workflow">
+<svg viewBox="0 0 1100 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="agentezh pipeline workflow">
 
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
@@ -201,41 +247,137 @@ h1 { font-size: 22px; margin: 0 0 4px; }
     <marker id="arrow-notify" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#d1a73a"/>
     </marker>
+    <marker id="arrow-feedback" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c25a4c"/>
+    </marker>
   </defs>
 
-  <!-- ============== MAIN FLOW ============== -->
-  <!-- Row 1 (auto): BACKLOG → BUILD → CONSILIUM → DESIGN -->
+  <!-- ============== TRIGGER (top bar) ============== -->
+  <foreignObject x="30" y="10" width="380" height="36">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="background:#2a221d;border:1px solid var(--border);border-left:3px solid var(--wait);border-radius:6px;padding:6px 10px;font-size:11px;color:var(--text);display:flex;align-items:center;gap:6px;position:relative;">
+      <button class="help-btn" data-help="cron-trigger" style="position:relative;top:auto;right:auto;">?</button>
+      <span style="font-size:14px;">⏰</span>
+      <b>cron · ezh-publish-loop</b>
+      <span style="color:var(--muted);font-size:10px;">10:00 / 14:00 / 17:00 MSK — один тик</span>
+    </div>
+  </foreignObject>
+
+  <!-- ============== MAIN FLOW Row 1 ============== -->
+  <!-- BACKLOG → BUILD → CONSILIUM → DESIGN at y=70 -->
 
   <!-- arrow: BACKLOG → BUILD -->
-  <path class="edge" d="M 210 80 C 235 80, 245 80, 270 80" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 210 120 C 235 120, 245 120, 270 120" marker-end="url(#arrow)"/>
   <!-- arrow: BUILD → CONSILIUM -->
-  <path class="edge" d="M 450 80 C 475 80, 485 80, 510 80" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 450 120 C 475 120, 485 120, 510 120" marker-end="url(#arrow)"/>
   <!-- arrow: CONSILIUM → DESIGN -->
-  <path class="edge" d="M 690 80 C 715 80, 725 80, 750 80" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 690 120 C 715 120, 725 120, 750 120" marker-end="url(#arrow)"/>
 
-  <!-- U-bend: DESIGN.right → PREVIEW.right (down + over) -->
-  <path class="edge" d="M 930 80 C 1020 80, 1020 360, 930 360" marker-end="url(#arrow)"/>
+  <!-- trigger feeds row 1 -->
+  <path class="edge notify" d="M 220 50 C 220 80, 120 80, 120 70" marker-end="url(#arrow-notify)"/>
 
-  <!-- Row 2 (R→L flow): PREVIEW → SCHEDULE → PUBLISH → CHANNEL -->
-  <!-- arrow: PREVIEW → SCHEDULE (leftward) -->
-  <path class="edge" d="M 750 360 C 725 360, 715 360, 690 360" marker-end="url(#arrow)"/>
-  <!-- arrow: SCHEDULE → PUBLISH (leftward) -->
-  <path class="edge" d="M 510 360 C 485 360, 475 360, 450 360" marker-end="url(#arrow)"/>
-  <!-- arrow: PUBLISH → CHANNEL (leftward) -->
-  <path class="edge" d="M 270 360 C 245 360, 235 360, 210 360" marker-end="url(#arrow)"/>
+  <!-- ============== SUB-AGENTS — dashed rectangles grouping each parent's agents ============== -->
 
-  <!-- ============== TG NOTIFY (side branch) ============== -->
-  <!-- TG notify dashed arrows from each auto stage end → notify box at center -->
-  <path class="edge notify" d="M 360 130 C 360 200, 540 200, 540 220" marker-end="url(#arrow-notify)"/>
-  <path class="edge notify" d="M 600 130 C 600 195, 545 195, 545 220" marker-end="url(#arrow-notify)"/>
-  <path class="edge notify" d="M 840 130 C 840 200, 555 200, 555 220" marker-end="url(#arrow-notify)"/>
-  <!-- PUBLISH_SCHEDULED also notifies -->
-  <path class="edge notify" d="M 360 310 C 360 260, 540 260, 540 250" marker-end="url(#arrow-notify)"/>
+  <!-- BUILD_DRAFT cluster: strategist + copywriter, y=200..280 -->
+  <rect class="group-rect" x="240" y="190" width="180" height="100" rx="8"/>
+  <text class="group-label" x="330" y="206" text-anchor="middle">subagents · BUILD_DRAFT</text>
 
-  <!-- nodes via foreignObject so we get HTML/CSS goodness -->
+  <!-- CONSILIUM cluster: bulldog + stylist + audience, y=200..340 (3 stacked) -->
+  <rect class="group-rect" x="480" y="190" width="180" height="155" rx="8"/>
+  <text class="group-label" x="570" y="206" text-anchor="middle">subagents · CONSILIUM (3 критика)</text>
 
-  <!-- ROW 1 — y=30, nodes top -->
-  <foreignObject x="30" y="30" width="180" height="100">
+  <!-- DESIGN cluster: designer + codex-cli, y=200..280 -->
+  <rect class="group-rect" x="720" y="190" width="180" height="100" rx="8"/>
+  <text class="group-label" x="810" y="206" text-anchor="middle">subagents · DESIGN</text>
+
+  <!-- thin lines from parent main blocks down into clusters -->
+  <line x1="360" y1="170" x2="360" y2="190" stroke="#4d3f33" stroke-width="1" stroke-dasharray="2 2"/>
+  <line x1="600" y1="170" x2="600" y2="190" stroke="#4d3f33" stroke-width="1" stroke-dasharray="2 2"/>
+  <line x1="840" y1="170" x2="840" y2="190" stroke="#4d3f33" stroke-width="1" stroke-dasharray="2 2"/>
+
+  <!-- BUILD subagents -->
+  <foreignObject x="250" y="216" width="160" height="32">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="subagent">
+      <button class="qmark" data-help="agent-strategist">?</button>
+      <div class="nm"><span class="ic">🧭</span>strategist</div>
+      <div class="rl">выбирает угол, hook, формулу</div>
+    </div>
+  </foreignObject>
+  <foreignObject x="250" y="252" width="160" height="32">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="subagent">
+      <button class="qmark" data-help="agent-copywriter">?</button>
+      <div class="nm"><span class="ic">✍️</span>copywriter · Ёж-Перо</div>
+      <div class="rl">пишет body голосом Ежа</div>
+    </div>
+  </foreignObject>
+
+  <!-- CONSILIUM subagents (3) -->
+  <foreignObject x="490" y="216" width="160" height="32">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="subagent bull">
+      <button class="qmark" data-help="agent-bulldog">?</button>
+      <div class="nm"><span class="ic">🐕</span>bulldog · gate</div>
+      <div class="rl">PASS/FAIL · анти-жаргон</div>
+    </div>
+  </foreignObject>
+  <foreignObject x="490" y="252" width="160" height="32">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="subagent persona">
+      <button class="qmark" data-help="agent-stylist">?</button>
+      <div class="nm"><span class="ic">🎭</span>стилист (1 of 3)</div>
+      <div class="rl">kasuka / serditov / care</div>
+    </div>
+  </foreignObject>
+  <foreignObject x="490" y="288" width="160" height="32">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="subagent persona">
+      <button class="qmark" data-help="agent-audience">?</button>
+      <div class="nm"><span class="ic">👥</span>ЦА-критик (1 of 3)</div>
+      <div class="rl">katya / artyom / oleg</div>
+    </div>
+  </foreignObject>
+
+  <!-- DESIGN subagents -->
+  <foreignObject x="730" y="216" width="160" height="32">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="subagent">
+      <button class="qmark" data-help="agent-designer">?</button>
+      <div class="nm"><span class="ic">🦔</span>designer · Ёж-Дизайнер</div>
+      <div class="rl">3 концепции + QA-audit</div>
+    </div>
+  </foreignObject>
+  <foreignObject x="730" y="252" width="160" height="32">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="subagent">
+      <button class="qmark" data-help="tool-codex">?</button>
+      <div class="nm"><span class="ic">🛠️</span>codex CLI · image_gen</div>
+      <div class="rl">ChatGPT-подписка (без API key)</div>
+    </div>
+  </foreignObject>
+
+  <!-- ============== TG NOTIFY (centered, y=380) ============== -->
+  <foreignObject x="450" y="380" width="200" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="gnode" style="border-left-color:var(--wait); height:80px;">
+      <button class="help-btn" data-help="tg-notify">?</button>
+      <div class="ttl" style="color:var(--wait)"><span class="ic">🔔</span>TG notify</div>
+      <div class="who">@trendagetnnews_bot → твой DM</div>
+      <div class="desc" style="font-size:10px;">На каждом успешном auto-тике + после публикации.</div>
+    </div>
+  </foreignObject>
+
+  <!-- TG notify dashed inputs from auto-stages -->
+  <path class="edge notify" d="M 360 170 C 360 360, 540 360, 540 380" marker-end="url(#arrow-notify)"/>
+  <path class="edge notify" d="M 600 170 C 600 355, 545 355, 545 380" marker-end="url(#arrow-notify)"/>
+  <path class="edge notify" d="M 840 170 C 840 360, 555 360, 555 380" marker-end="url(#arrow-notify)"/>
+
+  <!-- U-bend: DESIGN.right → PREVIEW.right (down + over to row 2) -->
+  <path class="edge" d="M 930 120 C 1030 120, 1030 540, 930 540" marker-end="url(#arrow)"/>
+
+  <!-- ============== ROW 2 (y=490): PREVIEW → SCHEDULE → PUBLISH → CHANNEL ============== -->
+  <!-- R → L flow -->
+  <path class="edge" d="M 750 540 C 725 540, 715 540, 690 540" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 510 540 C 485 540, 475 540, 450 540" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 270 540 C 245 540, 235 540, 210 540" marker-end="url(#arrow)"/>
+
+  <!-- PUBLISH_SCHEDULED → TG notify -->
+  <path class="edge notify" d="M 360 490 C 360 440, 540 440, 540 460" marker-end="url(#arrow-notify)"/>
+
+  <!-- ============== ROW 1 main blocks ============== -->
+  <foreignObject x="30" y="70" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode storage">
       <button class="help-btn" data-help="hot-backlog">?</button>
       <div class="ttl"><span class="ic">💡</span>Hot-backlog</div>
@@ -245,7 +387,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
     </div>
   </foreignObject>
 
-  <foreignObject x="270" y="30" width="180" height="100">
+  <foreignObject x="270" y="70" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode auto">
       <button class="help-btn" data-help="build-draft">?</button>
       <div class="ttl"><span class="ic">📝</span>Build_draft</div>
@@ -255,7 +397,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
     </div>
   </foreignObject>
 
-  <foreignObject x="510" y="30" width="180" height="100">
+  <foreignObject x="510" y="70" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode auto">
       <button class="help-btn" data-help="consilium">?</button>
       <div class="ttl"><span class="ic">🔍</span>Consilium</div>
@@ -265,7 +407,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
     </div>
   </foreignObject>
 
-  <foreignObject x="750" y="30" width="180" height="100">
+  <foreignObject x="750" y="70" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode auto">
       <button class="help-btn" data-help="design">?</button>
       <div class="ttl"><span class="ic">🎨</span>Design</div>
@@ -275,18 +417,8 @@ h1 { font-size: 22px; margin: 0 0 4px; }
     </div>
   </foreignObject>
 
-  <!-- TG notify box центр -->
-  <foreignObject x="450" y="220" width="200" height="80">
-    <div xmlns="http://www.w3.org/1999/xhtml" class="gnode" style="border-left-color:var(--wait); height:80px;">
-      <button class="help-btn" data-help="tg-notify">?</button>
-      <div class="ttl" style="color:var(--wait)"><span class="ic">🔔</span>TG notify</div>
-      <div class="who">@trendagetnnews_bot → твой DM</div>
-      <div class="desc" style="font-size:10px;">На каждом успешном auto-тике + после публикации.</div>
-    </div>
-  </foreignObject>
-
-  <!-- ROW 2 — y=310, R→L flow -->
-  <foreignObject x="750" y="310" width="180" height="100">
+  <!-- ============== ROW 2 main blocks (y=490) ============== -->
+  <foreignObject x="750" y="490" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode human">
       <span class="pill">ты</span>
       <button class="help-btn" data-help="preview-site">?</button>
@@ -297,7 +429,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
     </div>
   </foreignObject>
 
-  <foreignObject x="510" y="310" width="180" height="100">
+  <foreignObject x="510" y="490" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode storage">
       <button class="help-btn" data-help="schedule">?</button>
       <div class="ttl"><span class="ic">📅</span>schedule.json</div>
@@ -307,7 +439,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
     </div>
   </foreignObject>
 
-  <foreignObject x="270" y="310" width="180" height="100">
+  <foreignObject x="270" y="490" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode publish">
       <button class="help-btn" data-help="publish-scheduled">?</button>
       <div class="ttl"><span class="ic">🚀</span>Publish_scheduled</div>
@@ -317,7 +449,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
     </div>
   </foreignObject>
 
-  <foreignObject x="30" y="310" width="180" height="100">
+  <foreignObject x="30" y="490" width="180" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml" class="gnode output">
       <span class="pill">live</span>
       <button class="help-btn" data-help="channel">?</button>
@@ -328,12 +460,56 @@ h1 { font-size: 22px; margin: 0 0 4px; }
     </div>
   </foreignObject>
 
-  <!-- subtle row labels -->
-  <text x="540" y="20" text-anchor="middle" font-size="10" fill="#8a7a6a" font-family="inherit" letter-spacing="2">▼ AUTO ▼</text>
-  <text x="540" y="460" text-anchor="middle" font-size="10" fill="#8a7a6a" font-family="inherit" letter-spacing="2">▲ HUMAN + PUBLISH ▲</text>
+  <!-- ============== FEEDBACK STORAGE (y=630) ============== -->
+  <text class="group-label" x="120" y="615" text-anchor="middle">feedback loops</text>
+
+  <foreignObject x="30" y="625" width="180" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="gnode storage" style="height:80px;border-left-color:var(--bad);">
+      <button class="help-btn" data-help="failures-log">?</button>
+      <div class="ttl" style="color:#e08070;"><span class="ic">🪵</span>failures_log.md</div>
+      <div class="who">.claude/agent-memory/copywriter/</div>
+      <div class="desc" style="font-size:11px;">Anti-pattern log → инжектится в next BUILD_DRAFT prompt</div>
+    </div>
+  </foreignObject>
+
+  <foreignObject x="270" y="625" width="180" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="gnode storage" style="height:80px;">
+      <button class="help-btn" data-help="post-history">?</button>
+      <div class="ttl"><span class="ic">📜</span>post-history.md</div>
+      <div class="who">docs/post-history.md</div>
+      <div class="desc" style="font-size:11px;">Опубликованные посты. Anti-duplicate source за 90 дней.</div>
+    </div>
+  </foreignObject>
+
+  <foreignObject x="510" y="625" width="180" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="gnode storage" style="height:80px;">
+      <button class="help-btn" data-help="state-json">?</button>
+      <div class="ttl"><span class="ic">💾</span>state.json</div>
+      <div class="who">/root/.hermes/state/ezh_pipeline_state.json</div>
+      <div class="desc" style="font-size:11px;">Daily spend / actions / stuck_drafts / draft_history.</div>
+    </div>
+  </foreignObject>
+
+  <foreignObject x="750" y="625" width="180" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="gnode storage" style="height:80px;">
+      <button class="help-btn" data-help="news-scan">?</button>
+      <div class="ttl"><span class="ic">📰</span>news-scan</div>
+      <div class="who">cron 09:09 MSK · daily-ai-digest.md</div>
+      <div class="desc" style="font-size:11px;">HN / Reddit / Anthropic / OpenAI / GitHub → backlog</div>
+    </div>
+  </foreignObject>
+
+  <!-- feedback arrows (failures_log → BUILD, post-history → BUILD, channel → post-history, news-scan → backlog) -->
+  <path class="edge" d="M 120 625 C 120 590, 120 200, 120 200" stroke="#c25a4c" stroke-dasharray="3 3" stroke-width="1.5" marker-end="url(#arrow-feedback)" fill="none" opacity="0.5"/>
+  <path class="edge" d="M 360 625 C 360 600, 360 200, 360 200" stroke="#c25a4c" stroke-dasharray="3 3" stroke-width="1.5" marker-end="url(#arrow-feedback)" fill="none" opacity="0.5"/>
+  <!-- channel → post-history (writes msg_id) -->
+  <path class="edge" d="M 120 590 C 120 605, 320 605, 320 625" stroke="#6abb4f" stroke-dasharray="3 3" stroke-width="1.5" marker-end="url(#arrow)" fill="none" opacity="0.6"/>
+  <!-- news-scan → backlog (feeds ideas) -->
+  <path class="edge" d="M 840 625 C 840 30, 120 30, 120 70" stroke="#5aa9d1" stroke-dasharray="3 3" stroke-width="1.5" marker-end="url(#arrow)" fill="none" opacity="0.4"/>
 
   <!-- U-bend label -->
-  <text x="1030" y="220" text-anchor="middle" font-size="10" fill="#8a7a6a" font-family="inherit">требует approve</text>
+  <text x="1040" y="330" text-anchor="middle" font-size="10" fill="#8a7a6a" font-family="inherit">требует</text>
+  <text x="1040" y="345" text-anchor="middle" font-size="10" fill="#8a7a6a" font-family="inherit">approve</text>
 
 </svg>
 </div>
@@ -513,6 +689,138 @@ const HELP = {
       { lbl: "После публикации", html: "msg_id возвращается из Telegram API → записывается в <code>docs/post-history.md</code> в формате <code>### YYYY-MM-DD HH:MM MSK — slug (msg #N)</code>. Это <b>источник истины для anti-duplicate</b> в BUILD_DRAFT — pipeline не сделает повторный пост на ту же тему." },
       { lbl: "Bot token", html: "Хранится в <code>/root/projects/agentezh/.env</code> как <code>TELEGRAM_BOT_TOKEN</code>. Bot добавлен в канал как admin (может постить, не может удалять подписчиков)." },
       { lbl: "Канал-цели", html: "Сейчас 12 подп. — pre-launch. После стабильной автоматики (10+ автономных постов без правок) — refactor для роста: посевы, кросс-постинг, аналитика engagement через TG-engagement-reader (Phase 3, не сделано)." }
+    ]
+  },
+
+  "cron-trigger": {
+    icon: "⏰", title: "Cron-триггер · ezh-publish-loop",
+    who: "hermes cron · 0 10,14,17 * * * MSK",
+    sections: [
+      { lbl: "Что", html: "Три ежедневных тика по будням и выходным. Каждый тик = один pipeline-вызов через flock-обёртку, ровно одно действие (не цикл из 8 действий за раз — это намеренно)." },
+      { lbl: "Почему 3 раза", html: "Каждый этап (BUILD → CONSILIUM → DESIGN → PUBLISH_SCHEDULED) занимает ~5-10 мин и стоит денег. Pipeline делает один шаг → сохраняет state → ждёт следующий cron. Это даёт:<br>1. Естественный rate-limit + cost ceiling<br>2. Возможность вмешаться между шагами (выключить флаг, отменить approval)<br>3. Возможность не дёргать систему вне публикационных окон." },
+      { lbl: "decide_action() приоритеты", html: "На каждом тике pipeline решает <b>один</b> action в таком порядке:<br>1. <code>PUBLISH_SCHEDULED</code> — есть due-entry в schedule.json (высший приоритет)<br>2. <code>PUBLISH</code> — старая стадия, есть ready-for-publish + сейчас publish-hour<br>3. <code>CONSILIUM</code> — есть ready-for-review draft<br>4. <code>DESIGN</code> — есть ready-for-* draft без image_options<br>5. <code>BUILD_DRAFT</code> — есть идея в backlog без существующего draft<br>6. <code>IDLE</code> — ничего не подошло" },
+      { lbl: "Другие cron jobs", html: "<ul><li><code>ezh-news-scan</code> 09:09 — обновляет daily-ai-digest, кидает идеи</li><li><code>ezh-morning-digest</code> 08:55 — статус-репорт в твой DM</li><li><code>ezh-bekaper</code> 19:05 — бэкап (с flock)</li><li><code>symphony-*</code> — другой проект (ai-setup-guide)</li><li><code>ai-setup-docs-drift</code> понедельник 11:00 — weekly drift</li></ul>" }
+    ]
+  },
+
+  "agent-strategist": {
+    icon: "🧭", title: "strategist (Ёж-Стратег)",
+    who: "subagent в BUILD_DRAFT · model: opus · Read/Glob/Grep/WebFetch/Bash",
+    sections: [
+      { lbl: "Роль", html: "Выбирает <b>угол атаки</b> для поста: какую сторону темы раскрыть, какую формулу хука использовать, на какую боль ЦА опираться. Не пишет тексты — пишет brief." },
+      { lbl: "Когда срабатывает", html: "В начале BUILD_DRAFT, до copywriter. Получает: research-документ (если есть), идею из backlog, voice-guidelines (Ёж = циничный практик), последние посты для anti-repetition (по подходу, не по теме)." },
+      { lbl: "Что возвращает", html: "Brief в формате yaml/markdown:<ul><li><code>angle</code> — конкретный угол («не „вот новая модель“, а „вот почему конкретно тебе она вредит/полезна“»)</li><li><code>hook_formula</code> — boom/тут-я-вру/арка-с-msg-NN/обратный-совет</li><li><code>type</code> — #ежемнение / #еженовости / #ежефишечка</li><li><code>pain_point</code> — главная боль ЦА к которой апеллируем</li><li><code>structure</code> — outline 4-7 блоков</li></ul>" },
+      { lbl: "Файл", html: "<code>/root/projects/agentezh/.claude/agents/strategist.md</code>" }
+    ]
+  },
+
+  "agent-copywriter": {
+    icon: "✍️", title: "copywriter (Ёж-Перо)",
+    who: "subagent в BUILD_DRAFT · model: sonnet · Read/Write/Edit/Grep",
+    sections: [
+      { lbl: "Роль", html: "Главный текстовик. Превращает brief от strategist в готовый Telegram-пост на голосе «Агент Ёж»." },
+      { lbl: "Что читает перед началом", html: "<ul><li><code>CLAUDE.md</code> — конституция (характер Ежа)</li><li><code>TELEGRAM-STYLEGUIDE.md</code> — HTML-теги, длина first-screen, blockquote rules</li><li><code>.claude/rules/posts.md</code> — path-scoped правила (anti-spam, no emojis in title, …)</li><li><code>failures_log.md</code> — Failure Alchemy, последние 10 fails от bulldog</li></ul>" },
+      { lbl: "Что пишет", html: "Пять блоков-стадий в yaml:<br>1. <code>stage1_skeleton</code> — 4-6 пунктов outline<br>2. <code>stage3_first_screen</code> — 3 варианта первого экрана (Telegram показывает ~280 chars без раскрытия)<br>3. <code>stage5_body</code> — финальный HTML body с правильными тегами<br>4. <code>main_idea</code> — одна фраза<br>5. <code>title</code> — bold-заголовок для канала" },
+      { lbl: "Voice rules", html: "«ИИшечка» вместо Claude/ChatGPT. Кухня, хрущёвка, тапочки. Мат разрешён но точечно. Цифры конкретные, не «много». Анти-формулы: «итак», «давайте разберём», «применима везде», «фундамент — это…». Bulldog убивает за это." },
+      { lbl: "Файл", html: "<code>/root/projects/agentezh/.claude/agents/copywriter.md</code>" }
+    ]
+  },
+
+  "agent-bulldog": {
+    icon: "🐕", title: "bulldog · PASS/FAIL gate",
+    who: "subagent в CONSILIUM + PUBLISH · model: sonnet · Read/Grep",
+    sections: [
+      { lbl: "Роль", html: "Бескомпромиссный gate против шлака. Не ставит оценку 1-10 — только PASS или FAIL. Один FAIL = весь draft не идёт дальше." },
+      { lbl: "Что проверяет", html: "<ul><li>Канцелярит и общие фразы («применима везде», «фундамент — статистика», «двумя вариантами обработки», итд)</li><li>Pseudo-инсайты («помни: <общеизвестное>»)</li><li>Списки без цифр и конкретики</li><li>Нарушения TELEGRAM-STYLEGUIDE: ссылки в теле вместо expandable, неправильные HTML-теги, длинные fl-абзацы без воздуха</li><li>«Итак / итог / в заключение» — баны</li><li>Анти-форматы: маркетинг-bullshit, шаблонные CTA</li></ul>" },
+      { lbl: "Output", html: "<code>bulldog: PASS</code> ИЛИ <code>bulldog: FAIL</code> + <code>weak_points: [список конкретных строк/фраз]</code><br><br>При FAIL → CONSILIUM возвращает <code>status: needs-rewrite</code>, copywriter учится через failures_log." },
+      { lbl: "История", html: "Доказательно строгий: при первом включении забраковал 12 из 14 готовых драфтов с явной мотивацией. Не false-positive — реально слабые." }
+    ]
+  },
+
+  "agent-stylist": {
+    icon: "🎭", title: "стилист · 1 of 3",
+    who: "subagent в CONSILIUM — выбирается dynamically по типу поста",
+    sections: [
+      { lbl: "Как выбирается", html: "Pipeline в build_consilium_prompt() смотрит yaml.type или эвристически:<ul><li><b>persona-kasuka</b> — длинные #ежемнение, проверяет density+ритм, структура→хук, плотность инсайтов на абзац</li><li><b>persona-serditov</b> — короткие #еженовости/#ежефишечка, проверяет силу первого экрана, эффект скроллстопа, кликабельность</li><li><b>persona-care</b> — всё остальное (или unsure), проверяет жаргон/понятность для нетехнического читателя</li></ul>" },
+      { lbl: "Что делает", html: "Получает rubric YAML с 5 явными критериями 1-10:<br>• hook_strength · density · voice_match · structure · stickiness<br>Возвращает score 1-10 по каждому + finding paragraph." },
+      { lbl: "Почему dynamic", html: "Раньше CONSILIUM вызывал ВСЕХ троих + ещё 4 — конформизм и стоимость. Cut to 1 stylist + 1 audience (research SYNTHESIS.md #2). Avg cost снизился ≥40%." },
+      { lbl: "Файлы", html: "<code>.claude/agents/persona-kasuka.md</code>, <code>persona-serditov.md</code>, <code>care.md</code>" }
+    ]
+  },
+
+  "agent-audience": {
+    icon: "👥", title: "ЦА-критик · 1 of 3",
+    who: "subagent в CONSILIUM — выбирается dynamically по типу/боли",
+    sections: [
+      { lbl: "Как выбирается", html: "<ul><li><b>persona-katya</b> (default) — новичок 28 лет, не разработчик, юзер ChatGPT/Claude. Триггер: широкая ЦА, объясняем как для друга. Проверяет: понятно ли с первого экрана, нет ли непонятных терминов, что попробую прямо сейчас.</li><li><b>persona-artyom</b> — предприниматель, ищет автоматизацию и ROI. Триггер: посты про бизнес-применение, agentic workflows. Проверяет: какая мне польза, сколько денег/времени, кому делегировать.</li><li><b>persona-oleg</b> — скептик, фильтр инфошума, sniff-test. Триггер: hype-темы (новые модели, релизы), якобы-революции. Проверяет: правда или маркетинг, цифры подтверждены, есть конкретика.</li></ul>" },
+      { lbl: "Rubric", html: "Score 1-10 по: clarity · relevance · actionability · honesty · curiosity_trigger." },
+      { lbl: "Output", html: "Score + short paragraph: «что я понял с поста / что сделаю / что вызвало сомнения»." },
+      { lbl: "Файлы", html: "<code>.claude/agents/persona-katya.md</code>, <code>persona-artyom.md</code>, <code>persona-oleg.md</code>" }
+    ]
+  },
+
+  "agent-designer": {
+    icon: "🦔", title: "designer (Ёж-Дизайнер)",
+    who: "subagent в DESIGN · model: sonnet · Read/Write/Edit/Bash/Glob/Grep",
+    sections: [
+      { lbl: "Роль", html: "Хранитель визуального лора. Не просто «сгенерь картинку» — придумывает 3 разные концепции (hero vs inline / разные метафоры), пишет промпты, шеллит на Codex CLI, делает QA-аудит." },
+      { lbl: "Что читает перед", html: "<ul><li><code>visual-style.md</code> — стайлгайд: ёж с очками, кухня в хрущёвке, editorial-punk, тёмная палитра + amber</li><li><code>visual-prompts-archive.md</code> — что работало раньше</li><li><code>codex-cli-notes.md</code> — технические грабли</li><li>yaml draft — про что вообще пост</li></ul>" },
+      { lbl: "Процесс", html: "1. Бриф: hero или inline? Размер? Тон?<br>2. Сочиняет 3 разных концепции с явным <code>exactly N objects</code><br>3. Для каждой вызывает <code>bash /root/.hermes/scripts/ezh_image_gen.sh &lt;slug&gt; v[1-3] \"&lt;prompt&gt;\"</code><br>4. QA-аудит: чек-лист на ежа (хмурый? иглы острые? аксессуары каноничные?), композицию, палитру, текст на картинке, артефакты<br>5. Если косяк — перегенерить v[N] с уточнённым промптом<br>6. Обновить <code>image_options</code> в yaml + дописать в archive" },
+      { lbl: "Файл", html: "<code>/root/projects/agentezh/.claude/agents/designer.md</code>" }
+    ]
+  },
+
+  "tool-codex": {
+    icon: "🛠️", title: "Codex CLI — image_gen tool",
+    who: "/usr/local/bin/codex v0.130.0 · ChatGPT-подписка (без OPENAI_API_KEY)",
+    sections: [
+      { lbl: "Что", html: "OpenAI Codex — official CLI агент. У него встроенный image_generation tool (как у ChatGPT в web). Авторизация через <code>codex login</code> с QR-кодом (один раз на VPS, токен в <code>~/.codex/auth.json</code>)." },
+      { lbl: "Как вызывается", html: "<code>codex exec --enable image_generation --full-auto --skip-git-repo-check \"&lt;prompt&gt;\"</code><br><br>Codex генерит PNG, сохраняет в свой кэш. Wrapper <code>ezh_image_gen.sh</code> копирует в нужное место с правильным именем и downscale ffmpeg до 1024×1024." },
+      { lbl: "Почему через Codex, а не OpenAI API", html: "Subscription-only constraint: Vladimir работает только через ChatGPT-подписки (5 учёток × OmniRoute) + Claude Max. Никаких pay-per-token API. Codex использует ChatGPT-учётку напрямую через OAuth — это в рамках подписки." },
+      { lbl: "Альтернатива OmniRoute", html: "Пробовали — OmniRoute проксит только chat-модели, image-эндпоинт возвращает «No credentials for image provider». Codex — рабочий путь." }
+    ]
+  },
+
+  "failures-log": {
+    icon: "🪵", title: "failures_log.md (Failure Alchemy)",
+    who: ".claude/agent-memory/copywriter/failures_log.md · в git",
+    sections: [
+      { lbl: "Что", html: "Append-only log всех bulldog-FAILs с конкретными weak_points. Каждая запись: дата · slug · тип ошибки · цитата проблемной строки · short fix-direction." },
+      { lbl: "Кто пишет", html: "Pipeline функция <code>record_failure(slug, reason)</code> вызывается в:<ul><li>CONSILIUM при bulldog FAIL → пишет с пометкой [consilium]</li><li>PUBLISH при bulldog FAIL → [publish]</li><li>handle_scheduled_publish() при permanent fail → [publish_scheduled]</li><li>Также OOM / TG 400 / прочие инфра-ошибки</li></ul>" },
+      { lbl: "Кто читает", html: "<code>build_draft_prompt()</code> инжектит tail последних 10 записей в context перед BUILD_DRAFT. Copywriter видит «эти ошибки уже делались, не повторяй»." },
+      { lbl: "Эффект", html: "Failure Alchemy — паттерн из SYNTHESIS Report 3 «AI Team OS». Anti-pattern память для модели. Без неё каждая итерация наступает на те же грабли." }
+    ]
+  },
+
+  "post-history": {
+    icon: "📜", title: "post-history.md",
+    who: "docs/post-history.md · в git · источник истины для anti-dup",
+    sections: [
+      { lbl: "Формат", html: "Markdown-файл с записями в формате:<br><code># msg #N — slug — YYYY-MM-DD HH:MM MSK</code><br>Каждая запись содержит: title, тип, тезисы, ссылку, краткий angle (1-2 строки), engagement-snapshot если есть." },
+      { lbl: "Кто пишет", html: "<code>tg_publish_to_channel()</code> после успешного sendPhoto/sendMessage — добавляет запись с msg_id. PUBLISH_SCHEDULED делает то же самое." },
+      { lbl: "Кто читает", html: "<b>BUILD_DRAFT</b> и <b>PUBLISH</b> читают последние 90 дней. Если новая идея/draft &gt;70% theme-overlap с любым ранее опубликованным — abort с reason=«duplicate of msg #N from DATE»." },
+      { lbl: "История бага", html: "До 7 мая anti-dup был ТОЛЬКО в BUILD_DRAFT, не в PUBLISH. Поэтому magic-of-prompts-is-dead был сгенерён повторно (msg #86) — это и привело к Failure Alchemy + дублирующему check в PUBLISH." }
+    ]
+  },
+
+  "state-json": {
+    icon: "💾", title: "ezh_pipeline_state.json",
+    who: "/root/.hermes/state/ezh_pipeline_state.json · atomic write",
+    sections: [
+      { lbl: "Что хранит", html: "<pre style='font-size:11px;background:var(--panel2);padding:8px;border-radius:4px;overflow-x:auto;'>{\n  \"date\": \"2026-05-14\",\n  \"spent_usd\": 4.49,\n  \"actions\": [\n    { \"ts\": \"...\", \"action\": \"BUILD_DRAFT\",\n      \"turns\": 18, \"cost_usd\": 0.99,\n      \"error\": false, \"text_head\": \"...\" },\n    ...\n  ],\n  \"stuck_drafts\": {\n    \"uploaded-fly\": { \"fail_count\": 99, ... }\n  },\n  \"draft_history\": {...}\n}</pre>" },
+      { lbl: "Daily reset", html: "<code>load_state()</code> на старте каждого тика проверяет: если <code>state.date != today_str()</code> — обнуляет <code>spent_usd</code>, <code>actions</code>, оставляет <code>stuck_drafts</code> + <code>draft_history</code>. Это автоматический «новый день»." },
+      { lbl: "Cost cap", html: "Если <code>spent_usd ≥ DAILY_COST_CAP_USD</code> ($5) — pipeline сразу выходит как IDLE без вызова claude. Override: <code>EZH_DAILY_CAP_USD=10</code> env." },
+      { lbl: "stuck_drafts", html: "Draft, на котором pipeline зафейлился ≥3 раза подряд, помечается stuck → pipeline пропускает его в decide_action() пока кто-то не сбросит вручную или не пометит как needs-rewrite." }
+    ]
+  },
+
+  "news-scan": {
+    icon: "📰", title: "ezh-news-scan (cron 09:09)",
+    who: "hermes cron · scripts/hermes-cron/ezh_news_scan.py",
+    sections: [
+      { lbl: "Что сканит", html: "Каждое утро:<ul><li>Hacker News top + комменты last 24h</li><li>r/ClaudeAI, r/OpenAI, r/LocalLLaMA top</li><li>Anthropic Releasebot + Anthropic news</li><li>OpenAI ChatGPT release notes</li><li>GitHub trending (Python/JS/Rust) последний день</li></ul>" },
+      { lbl: "Что делает с находками", html: "1. Пишет полный raw-дамп в <code>docs/daily-ai-digest.md</code> с заголовками, ссылками, кратким abstract.<br>2. Сильные находки (по эвристике — топ stars, anthropic, mass-mentions) добавляет в <code>docs/post-queue.md</code> в секцию «Идеи для будущих постов».<br>3. Также фильтрует по editorial-focus: китайские модели → markup «мимо ЦА», не превращает в idea." },
+      { lbl: "Что НЕ делает", html: "Не пишет драфты. Только enrichment входной очереди. BUILD_DRAFT сам решает что взять из очереди." }
     ]
   }
 };
