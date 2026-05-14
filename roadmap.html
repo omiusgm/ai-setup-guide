@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🦔 Roadmap @agentezh — статус, гипотезы, твои действия</title>
+<style>
+:root {
+  --bg: #1a1614;
+  --panel: #221d1a;
+  --panel2: #2a221d;
+  --text: #e6dcd1;
+  --muted: #8a7a6a;
+  --accent: #e07b3a;
+  --accent2: #f5a266;
+  --ok: #6abb4f;
+  --bad: #c25a4c;
+  --wait: #d1a73a;
+  --human: #5aa9d1;
+  --border: #3a2f27;
+  --line: #4d3f33;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--text);
+  font: 15px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  margin: 0; padding: 28px 24px 60px;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 26px; margin: 0 0 6px; }
+h2 {
+  font-size: 17px; color: var(--accent2);
+  text-transform: uppercase; letter-spacing: 1.5px;
+  margin: 36px 0 14px;
+  padding-bottom: 6px; border-bottom: 1px solid var(--border);
+}
+h3 { font-size: 15px; margin: 18px 0 6px; color: var(--accent2); }
+.sub { color: var(--muted); font-size: 14px; margin-bottom: 6px; }
+.nav {
+  display: flex; gap: 14px; font-size: 13px; margin-bottom: 28px;
+  padding-bottom: 14px; border-bottom: 1px solid var(--border);
+}
+.nav a {
+  color: var(--accent2); text-decoration: none;
+  padding: 6px 12px; border: 1px solid var(--border); border-radius: 4px;
+}
+.nav a:hover { background: var(--panel); color: var(--text); }
+.nav a.current { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+
+/* hero */
+.hero {
+  background: linear-gradient(135deg, #2a221d, #3a2820);
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 22px 24px; margin-bottom: 28px;
+}
+.hero h2 { border: 0; margin: 0 0 10px; color: var(--accent2); font-size: 14px; }
+.hero ul { margin: 6px 0 0; padding-left: 22px; }
+.hero li { margin-bottom: 5px; font-size: 14px; }
+
+/* status badge */
+.badge {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+  text-transform: uppercase; margin-right: 6px;
+  vertical-align: middle;
+}
+.badge.ok { background: rgba(106, 187, 79, 0.2); color: var(--ok); border: 1px solid var(--ok); }
+.badge.wait { background: rgba(209, 167, 58, 0.2); color: var(--wait); border: 1px solid var(--wait); }
+.badge.plan { background: rgba(90, 169, 209, 0.15); color: var(--human); border: 1px solid var(--human); }
+.badge.bad { background: rgba(194, 90, 76, 0.2); color: var(--bad); border: 1px solid var(--bad); }
+.badge.idle { background: rgba(138, 122, 106, 0.15); color: var(--muted); border: 1px solid var(--muted); }
+
+/* legend dots */
+.legend-row {
+  display: flex; gap: 18px; font-size: 12px; color: var(--muted);
+  flex-wrap: wrap; margin: 12px 0 0;
+}
+
+/* journey */
+.journey {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+.j-card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  border-radius: 8px; padding: 12px;
+  position: relative;
+}
+.j-card h4 {
+  margin: 0 0 4px; font-size: 12px;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--accent2); display: flex; align-items: center; gap: 6px;
+}
+.j-card h4 .num {
+  display: inline-flex; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--accent); color: var(--bg);
+  align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700;
+}
+.j-card .ic { font-size: 16px; }
+.j-card p { margin: 0; font-size: 12px; line-height: 1.4; color: var(--text); }
+.j-card .who { font-size: 10px; color: var(--muted); margin-top: 6px; }
+.j-card .arrow-after::after {
+  content: '→'; position: absolute; right: -14px; top: 50%;
+  transform: translateY(-50%); color: var(--line); font-size: 18px;
+  z-index: 2;
+}
+@media (max-width: 900px) {
+  .journey { grid-template-columns: 1fr; }
+  .j-card .arrow-after::after { content: '↓'; right: 50%; top: auto; bottom: -18px; transform: translateX(50%); }
+}
+
+/* table */
+.status-table {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+  background: var(--panel); border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+.status-table th, .status-table td {
+  padding: 8px 12px; text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.status-table th {
+  background: var(--panel2); font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--accent2); font-weight: 700;
+}
+.status-table tr:last-child td { border-bottom: 0; }
+.status-table td:first-child { width: 110px; }
+.status-table td:nth-child(2) { width: 200px; font-weight: 600; }
+.status-table code { background: var(--panel2); padding: 1px 5px; border-radius: 3px; font-size: 11px; color: var(--accent2); }
+
+/* todo */
+.todo-list {
+  list-style: none; padding: 0; margin: 0;
+}
+.todo-list li {
+  background: var(--panel); border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px; padding: 12px 14px;
+  margin-bottom: 10px;
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.todo-list .num {
+  display: inline-flex; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--accent); color: var(--bg);
+  align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; flex-shrink: 0;
+}
+.todo-list .body { flex: 1; }
+.todo-list .ttl { font-weight: 700; font-size: 14px; margin-bottom: 4px; color: var(--text); }
+.todo-list .meta { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.todo-list li.low { border-left-color: var(--muted); }
+.todo-list li.low .num { background: var(--muted); }
+.todo-list li.opt { border-left-color: var(--human); }
+.todo-list li.opt .num { background: var(--human); }
+
+/* hypotheses */
+.hyp {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 6px; padding: 12px 14px; margin-bottom: 10px;
+  display: grid; grid-template-columns: 60px 1fr; gap: 12px;
+  align-items: start;
+}
+.hyp .ic-block {
+  width: 50px; height: 50px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+}
+.hyp.proved .ic-block { background: rgba(106, 187, 79, 0.15); border-color: var(--ok); color: var(--ok); }
+.hyp.testing .ic-block { background: rgba(209, 167, 58, 0.15); border-color: var(--wait); color: var(--wait); }
+.hyp.untested .ic-block { background: rgba(90, 169, 209, 0.15); border-color: var(--human); color: var(--human); }
+.hyp.refuted .ic-block { background: rgba(194, 90, 76, 0.15); border-color: var(--bad); color: var(--bad); }
+.hyp .ttl { font-weight: 700; font-size: 14px; margin: 0 0 6px; }
+.hyp .desc { font-size: 13px; line-height: 1.5; color: var(--text); }
+.hyp .desc strong { color: var(--accent2); }
+
+/* phases timeline */
+.timeline {
+  position: relative; padding-left: 28px;
+}
+.timeline::before {
+  content: ''; position: absolute;
+  left: 12px; top: 6px; bottom: 6px;
+  width: 2px; background: var(--border);
+}
+.phase {
+  position: relative; margin-bottom: 18px;
+}
+.phase::before {
+  content: ''; position: absolute;
+  left: -22px; top: 6px;
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: var(--bg);
+}
+.phase.done::before { background: var(--ok); border-color: var(--ok); }
+.phase.now::before { background: var(--wait); border-color: var(--wait); animation: pulse 2s infinite; }
+.phase.plan::before { background: var(--bg); border-color: var(--human); }
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(209, 167, 58, 0.7); }
+  50% { box-shadow: 0 0 0 6px rgba(209, 167, 58, 0); }
+}
+.phase h3 { margin: 0 0 4px; font-size: 14px; color: var(--accent2); }
+.phase .meta { font-size: 11px; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.phase ul { margin: 4px 0 0; padding-left: 20px; font-size: 13px; }
+.phase li { margin-bottom: 3px; }
+
+.note { font-size: 12px; color: var(--muted); font-style: italic; }
+code { background: var(--panel2); padding: 1px 5px; border-radius: 3px; font-size: 12px; color: var(--accent2); }
+.col2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 700px) {
+  .col2 { grid-template-columns: 1fr; }
+  .status-table { font-size: 12px; }
+  .status-table td:first-child { width: 80px; }
+  .status-table td:nth-child(2) { width: auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="agentezh-pipeline.html">🔧 Pipeline workflow</a>
+  <a href="#" class="current">🗺️ Roadmap &amp; гипотезы</a>
+  <a href="./" style="margin-left:auto;color:var(--muted);">← AI Setup Guide</a>
+</div>
+
+<h1>🦔 @agentezh — статус контент-завода</h1>
+<div class="sub">обновлено 14 мая 2026 вечером. Завтра утром 10:00 MSK pipeline проснётся.</div>
+
+<!-- ============== HERO: что увидишь утром ============== -->
+<div class="hero">
+  <h2>🌅 Утро 15 мая — что увидишь</h2>
+  <ul>
+    <li><b>10:00 MSK</b> — cron → BUILD_DRAFT возьмёт <b>TaxHacker</b> (первый в backlog) → ~4 мин. 🔔 TG: «📝 новый драфт: taxhacker».</li>
+    <li><b>14:00</b> — cron → CONSILIUM (3 критика) → ~2 мин. 🔔 TG: «✅/⚠️ avg X.X».</li>
+    <li><b>17:00</b> — cron → DESIGN (3 картинки через Codex) → ~8 мин. 🔔 TG: «🎨 готово, открой preview».</li>
+    <li>К вечеру 15 мая — карточка TaxHacker готова к approve.</li>
+  </ul>
+  <p class="note" style="margin-top:12px;">Если на каком-то шаге FAIL — TG-уведомление придёт с reason. Daily-cap $5: 4-5 шагов в день без override.</p>
+</div>
+
+<!-- ============== 1. JOURNEY: путь до поста ============== -->
+<h2>1. Путь от идеи до поста</h2>
+<div class="sub">5 этапов. Этапы 1–3 авто, этап 4 — твой approve, этап 5 — авто-публикация.</div>
+
+<div class="journey">
+  <div class="j-card arrow-after">
+    <h4><span class="num">1</span><span class="ic">💡</span>Идея в backlog</h4>
+    <p>news-scan ловит в HN/Reddit/Anthropic news → пишет в <code>post-queue.md</code>. Ты тоже руками добавляешь.</p>
+    <div class="who">авто · cron 09:09 + ты</div>
+  </div>
+  <div class="j-card arrow-after">
+    <h4><span class="num">2</span><span class="ic">📝</span>BUILD_DRAFT</h4>
+    <p>Anti-dup vs post-history. strategist выбирает угол, copywriter пишет body на голосе Ежа.</p>
+    <div class="who">авто · ~4 мин · $1</div>
+  </div>
+  <div class="j-card arrow-after">
+    <h4><span class="num">3</span><span class="ic">🔍🎨</span>CONSILIUM + DESIGN</h4>
+    <p>3 критика оценивают, avg ≥ 8 → ready-for-publish. Designer делает 3 картинки через Codex.</p>
+    <div class="who">авто · ~10 мин · $0.8</div>
+  </div>
+  <div class="j-card arrow-after">
+    <h4><span class="num">4</span><span class="ic">👀</span>Твой approve</h4>
+    <p>Preview-site: выбираешь картинку v1/v2/v3, approve/reject, ставишь datetime. 1–3 мин на пост.</p>
+    <div class="who">ты · 1–3 мин на пост</div>
+  </div>
+  <div class="j-card">
+    <h4><span class="num">5</span><span class="ic">🚀</span>Публикация</h4>
+    <p>PUBLISH_SCHEDULED в назначенный час → sendPhoto в @agentezh. msg_id в post-history.md.</p>
+    <div class="who">авто · ~5 сек</div>
+  </div>
+</div>
+
+<!-- ============== 2. STATUS КОМПОНЕНТОВ ============== -->
+<h2>2. Статус компонентов</h2>
+<div class="sub">что работает, что задеплоено-но-не-проверено, что в планах.</div>
+
+<div class="legend-row">
+  <span><span class="badge ok">работает</span>проверено на реальных запусках</span>
+  <span><span class="badge wait">деплой</span>код есть, e2e тест pending</span>
+  <span><span class="badge plan">план</span>не сделано</span>
+  <span><span class="badge bad">блок</span>проблема / заблокировано</span>
+</div>
+
+<table class="status-table" style="margin-top:14px;">
+<thead><tr><th>Статус</th><th>Компонент</th><th>Что есть</th></tr></thead>
+<tbody>
+<tr><td><span class="badge ok">работает</span></td><td>cron ezh-publish-loop</td><td>3 тика в день, тикает стабильно</td></tr>
+<tr><td><span class="badge ok">работает</span></td><td>BUILD_DRAFT</td><td>strategist + copywriter, проверено сегодня на deepseek-v4 (удалён) и uploaded-fly</td></tr>
+<tr><td><span class="badge ok">работает</span></td><td>CONSILIUM</td><td>3 критика, оценили несколько драфтов сегодня (browser-use → needs-rewrite, magic-of-prompts → ready-for-publish)</td></tr>
+<tr><td><span class="badge ok">работает</span></td><td>DESIGN</td><td>Codex CLI, сгенерил 3 картинки deepseek сегодня (потом удалены)</td></tr>
+<tr><td><span class="badge ok">работает</span></td><td>TG notify</td><td>задеплоено сегодня, smoke-test пришёл в твой DM (msg #4)</td></tr>
+<tr><td><span class="badge wait">деплой</span></td><td>Preview-site</td><td>работает технически, но <b>ты ещё не видел реальную карточку</b> (0 ready-for-publish сейчас)</td></tr>
+<tr><td><span class="badge wait">деплой</span></td><td>schedule.json + PUBLISH_SCHEDULED</td><td>код проверен на deepseek (синтетика), <b>реальная публикация в @agentezh не отработана</b></td></tr>
+<tr><td><span class="badge bad">блок</span></td><td>@agentezh канал</td><td>молчит с 7 мая. Цель — первый автономный пост 15 мая</td></tr>
+<tr><td><span class="badge ok">работает</span></td><td>failures_log + Failure Alchemy</td><td>есть реальные записи, инжектится в BUILD_DRAFT</td></tr>
+<tr><td><span class="badge ok">работает</span></td><td>post-history.md + anti-dup</td><td>fix от 7 мая после magic-of-prompts дубля</td></tr>
+<tr><td><span class="badge ok">работает</span></td><td>state.json + cost cap</td><td>$5/день, сегодня доехали до $4.49</td></tr>
+<tr><td><span class="badge ok">работает</span></td><td>news-scan (cron 09:09)</td><td>daily-ai-digest + кандидаты в backlog</td></tr>
+<tr><td><span class="badge ok">работает</span></td><td>OmniRoute</td><td>5 ChatGPT учёток, проксит chat-модели</td></tr>
+<tr><td><span class="badge ok">работает</span></td><td>git agentezh repo</td><td>pipeline коммитит после каждой стадии</td></tr>
+<tr><td><span class="badge plan">план</span></td><td>Editable text в preview-карточке</td><td>сейчас approve/reject only, нет textarea для правок</td></tr>
+<tr><td><span class="badge plan">план</span></td><td>Cloudflare Tunnel</td><td>заблокирован auto-mode 14 мая, ждёт твоего OK на установку</td></tr>
+<tr><td><span class="badge plan">план</span></td><td>TG engagement reader</td><td>Phase 3, не начат</td></tr>
+<tr><td><span class="badge plan">план</span></td><td>Mem0 / Langfuse self-hosted</td><td>RAM не хватает на 4GB VPS, deferred</td></tr>
+</tbody>
+</table>
+
+<!-- ============== 3. ЧТО ОТ ТЕБЯ НУЖНО ============== -->
+<h2>3. Что от тебя нужно (по приоритету)</h2>
+
+<ol class="todo-list">
+<li>
+  <span class="num">1</span>
+  <div class="body">
+    <div class="ttl">Утвердить TaxHacker — твой первый реальный approve</div>
+    <div>Pipeline соберёт draft + 3 картинки к вечеру 15 мая. Открой preview-site → выбери картинку → approve → поставь datetime. После approve в назначенный час pipeline опубликует в @agentezh.</div>
+    <div class="meta">когда: 15 мая вечер · сколько: ~3 мин · как: <code>ssh -N -L 8765:127.0.0.1:8765 hermes-vps</code> + http://localhost:8765/</div>
+  </div>
+</li>
+
+<li class="opt">
+  <span class="num">2</span>
+  <div class="body">
+    <div class="ttl">(опц) Дать «да установи cloudflared»</div>
+    <div>Чтобы preview-site открывался с любого устройства без SSH-туннеля. Один раз 10 мин — поднимаю Cloudflare Tunnel, получаем стабильный HTTPS URL.</div>
+    <div class="meta">опционально · альтернатива: SSH-туннель из терминала</div>
+  </div>
+</li>
+
+<li class="opt">
+  <span class="num">3</span>
+  <div class="body">
+    <div class="ttl">(опц) Глянуть гипотезы (см. ниже)</div>
+    <div>Список того что мы проверяем. Если какая-то гипотеза тебе кажется неверной — скажи, скорректирую editorial-direction.</div>
+    <div class="meta">опционально</div>
+  </div>
+</li>
+
+<li class="low">
+  <span class="num">4</span>
+  <div class="body">
+    <div class="ttl">(когда захочешь) Просмотреть post-queue.md</div>
+    <div>Сейчас 4 темы в hot-backlog. Если хочешь переставить приоритет — поправь файл на VPS / через GitHub. news-scan тоже подкидывает идеи каждое утро.</div>
+    <div class="meta">file: <code>docs/post-queue.md</code></div>
+  </div>
+</li>
+</ol>
+
+<!-- ============== 4. ПРОГОНЫ КОТОРЫЕ ОСТАЛОСЬ СДЕЛАТЬ ============== -->
+<h2>4. Прогоны системы — что осталось проверить</h2>
+
+<table class="status-table">
+<thead><tr><th>Статус</th><th>Прогон</th><th>Что покажет</th></tr></thead>
+<tbody>
+<tr><td><span class="badge wait">завтра</span></td><td><b>Full TaxHacker E2E</b></td><td>BUILD → CONSILIUM → DESIGN → твой approve → реальная публикация в @agentezh. <b>Главный тест.</b> Подтвердит что цепочка работает без рук.</td></tr>
+<tr><td><span class="badge plan">после E2E</span></td><td>Anti-duplicate на повторе</td><td>После публикации TaxHacker — попробовать форсануть BUILD_DRAFT на ту же тему. Pipeline должен skip с reason="dup of msg #N".</td></tr>
+<tr><td><span class="badge plan">после E2E</span></td><td>Bulldog FAIL — Failure Alchemy</td><td>Поймать реальный bulldog FAIL, проверить что запись в failures_log появилась, следующий BUILD_DRAFT её прочёл и НЕ повторил ошибку.</td></tr>
+<tr><td><span class="badge plan">через неделю</span></td><td>5+ постов автономно</td><td>5 постов подряд без вмешательства — статистика по avg score, стоимости, времени на approve.</td></tr>
+<tr><td><span class="badge plan">в проекте</span></td><td>Editable text feedback loop</td><td>Сейчас только approve/reject. Хотим: «правка → новый CONSILIUM цикл с твоим feedback».</td></tr>
+<tr><td><span class="badge idle">отложено</span></td><td>Mem0 anti-dup</td><td>Сейчас anti-dup через grep post-history. Mem0 семантический — точнее. RAM не хватает на 4GB VPS.</td></tr>
+</tbody>
+</table>
+
+<!-- ============== 5. ГИПОТЕЗЫ ============== -->
+<h2>5. Гипотезы которые проверяем</h2>
+<div class="sub">что подтверждено, что в процессе, что ещё не тестировали.</div>
+
+<div class="hyp proved">
+  <div class="ic-block">✓</div>
+  <div>
+    <p class="ttl">Image gen через ChatGPT-подписку (без OPENAI_API_KEY) — реально</p>
+    <p class="desc"><strong>Гипотеза:</strong> можно генерить картинки через Codex CLI на квоте ChatGPT-учётки. <strong>Проверка:</strong> сгенерили 3 картинки для deepseek-v4 сегодня — работает. <strong>Subscription-only constraint держится.</strong></p>
+  </div>
+</div>
+
+<div class="hyp proved">
+  <div class="ic-block">✓</div>
+  <div>
+    <p class="ttl">DeepSeek/китайские модели — мимо ЦА</p>
+    <p class="desc"><strong>Гипотеза (14 мая):</strong> наша ЦА — пользователи ChatGPT/Claude, китайские LLM для них экзотика. <strong>Зафиксировано:</strong> editorial focus сохранён в memory, удалены 4 идеи из backlog (DeepSeek V4, DeepSeek-TUI, Pixelle-Video, Ollama).</p>
+  </div>
+</div>
+
+<div class="hyp proved">
+  <div class="ic-block">✓</div>
+  <div>
+    <p class="ttl">Pipeline стабилен 24/7 без вмешательства</p>
+    <p class="desc"><strong>Гипотеза:</strong> cron + flock + cost-cap не дают системе уйти в разнос или съесть всю квоту. <strong>Проверка:</strong> сегодня 7 cron-тиков прошли, $4.49 потрачено, flock сработал, cap остановил pipeline в IDLE.</p>
+  </div>
+</div>
+
+<div class="hyp testing">
+  <div class="ic-block">⏳</div>
+  <div>
+    <p class="ttl">3-критика дешевле и не хуже 7-критика</p>
+    <p class="desc"><strong>Гипотеза (из community-research):</strong> сократить с 7 критиков до 3 (bulldog + 1 стилист + 1 ЦА) даст −40% стоимости без потери качества. <strong>Сейчас:</strong> стоимость подтверждена ($0.5 vs $1.5). Качество — частично, нужно 5+ постов для статистики.</p>
+  </div>
+</div>
+
+<div class="hyp testing">
+  <div class="ic-block">⏳</div>
+  <div>
+    <p class="ttl">Anti-duplicate ловит повторы за 90 дней</p>
+    <p class="desc"><strong>Гипотеза:</strong> grep по post-history.md + 70% theme-overlap = достаточный фильтр. <strong>Текущий статус:</strong> магия-промптов inцидент 7 мая показал что нужен check В PUBLISH (не только BUILD). Фикс добавлен. <strong>Test pending</strong> — попробуем форсануть повтор после TaxHacker.</p>
+  </div>
+</div>
+
+<div class="hyp untested">
+  <div class="ic-block">?</div>
+  <div>
+    <p class="ttl">Vladimir подключается 1 раз на пост — этого хватает</p>
+    <p class="desc"><strong>Гипотеза:</strong> approve + pick image + datetime — единственный момент твоего участия на пост, без правок текста. <strong>Не проверено:</strong> может тебе постоянно будут нужны правки (тогда нужно сделать editable text). <strong>Узнаем после 3-5 постов.</strong></p>
+  </div>
+</div>
+
+<div class="hyp untested">
+  <div class="ic-block">?</div>
+  <div>
+    <p class="ttl">Default-approve в approval gate — норм или опасно?</p>
+    <p class="desc"><strong>Гипотеза:</strong> если ты afk и не нажмёшь approve за 4 минуты — pipeline default-approve и публикует. <strong>Риск:</strong> средний пост уходит без проверки если ты спишь. <strong>Альтернатива:</strong> default-reject + длинное окно (24ч). Решим после первых постов.</p>
+  </div>
+</div>
+
+<div class="hyp untested">
+  <div class="ic-block">?</div>
+  <div>
+    <p class="ttl">$5/день daily-cap — достаточно для 1 поста/день?</p>
+    <p class="desc"><strong>Гипотеза:</strong> один полный цикл BUILD+CONSILIUM+DESIGN+PUBLISH стоит ~$1.8. На день хватает 2-3 циклов с запасом. <strong>Сегодня:</strong> $4.49 потрачено — но половина на rejected attempts (uploaded-fly, deepseek), не на полезное. Нужна чистая статистика после стабилизации.</p>
+  </div>
+</div>
+
+<!-- ============== 6. ROADMAP ПО ФАЗАМ ============== -->
+<h2>6. Roadmap по фазам</h2>
+<div class="sub">что сделано (✅), что сейчас (⏳), что в планах (○). Кружок пульсирует на текущей фазе.</div>
+
+<div class="timeline">
+  <div class="phase done">
+    <div class="meta">2026-04 → 2026-05-13 · ✅ done</div>
+    <h3>Фаза 0–2 — Стабилизация (16/16 criteria)</h3>
+    <ul>
+      <li>OAuth токен на год, flock-обёртки, ccusage baseline</li>
+      <li>3-критика consilium + loop-detector + Failure Alchemy</li>
+      <li>TG approval gate (legacy, через inline-keyboard)</li>
+      <li>BUILD_DRAFT + CONSILIUM включены и обкатаны</li>
+      <li>Anti-duplicate в BUILD_DRAFT и PUBLISH</li>
+      <li>5 broken yamls починены</li>
+      <li>YouTube monitoring (script есть, cron paused)</li>
+      <li>docs-drift weekly cron</li>
+    </ul>
+  </div>
+
+  <div class="phase done">
+    <div class="meta">2026-05-14 · ✅ done сегодня</div>
+    <h3>Фаза A–E — Preview-site + Codex image gen + batch approval</h3>
+    <ul>
+      <li>Codex CLI login + image_gen wrapper</li>
+      <li>Designer subagent + DESIGN stage в pipeline</li>
+      <li>Preview-site (Python HTTP + nginx + basic-auth)</li>
+      <li>PUBLISH_SCHEDULED action + schedule.json</li>
+      <li>Permanent-fail handling (move to rejected)</li>
+    </ul>
+  </div>
+
+  <div class="phase done">
+    <div class="meta">2026-05-14 · ✅ done сегодня вечером</div>
+    <h3>Фаза F — Notifications + Visualization</h3>
+    <ul>
+      <li>TG-уведомления в твой DM на каждом успешном auto-тике</li>
+      <li>Pipeline workflow page (SVG node-graph + help-modals)</li>
+      <li>Roadmap page (эта)</li>
+      <li>Editorial focus в memory (китайские модели skip)</li>
+    </ul>
+  </div>
+
+  <div class="phase now">
+    <div class="meta">2026-05-15 · ⏳ сейчас</div>
+    <h3>Фаза G — Первый реальный E2E прогон (TaxHacker)</h3>
+    <ul>
+      <li>BUILD_DRAFT TaxHacker (10:00 cron)</li>
+      <li>CONSILIUM (14:00 cron)</li>
+      <li>DESIGN — 3 картинки (17:00 cron)</li>
+      <li>Твой approve через preview-site</li>
+      <li>Реальная публикация в @agentezh</li>
+    </ul>
+  </div>
+
+  <div class="phase plan">
+    <div class="meta">2026-05-15 → 2026-05-22 · ○ next</div>
+    <h3>Фаза H — Стабилизация на 5+ постах</h3>
+    <ul>
+      <li>5 постов автономно опубликовано</li>
+      <li>Cloudflare Tunnel (если ты дашь ОК на установку)</li>
+      <li>Editable text feedback-loop в preview-site</li>
+      <li>Решение по default-approve / default-reject</li>
+      <li>Чистая статистика стоимости/времени</li>
+    </ul>
+  </div>
+
+  <div class="phase plan">
+    <div class="meta">2026-06 · ○ потом</div>
+    <h3>Фаза I — Engagement loop</h3>
+    <ul>
+      <li>TG engagement reader (опубликовали → читаем реакции → feedback в copywriter)</li>
+      <li>Архив удачных формул в memory</li>
+      <li>Mem0 self-hosted (когда расширим VPS до 8GB)</li>
+    </ul>
+  </div>
+
+  <div class="phase plan">
+    <div class="meta">2026-06+ · ○ ecosystem</div>
+    <h3>Фаза J — Other platforms</h3>
+    <ul>
+      <li>Postiz self-hosted (VK / Дзен / ОК)</li>
+      <li>Site sync через Google Sheets → MkDocs</li>
+      <li>Видео-pipeline (video-ezh, отложен)</li>
+    </ul>
+  </div>
+</div>
+
+<p class="note" style="margin-top:30px;">
+Эту страницу можно перегенерить когда статусы поменяются. Источник — память Claude + state.json + post-history.md.
+</p>
+
+</body>
+</html>
