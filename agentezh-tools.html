@@ -272,6 +272,18 @@ code {
 
 <tr>
   <td data-label="Идея">
+    <span class="name">NoobyGains/godmode</span><br>
+    <span class="type">claude code plugin · coding framework</span><br>
+    <a href="https://github.com/NoobyGains/godmode" target="_blank">github</a>
+  </td>
+  <td data-label="Тип">36 skills · 5-phase pipeline</td>
+  <td data-label="Почему отложено">Для coding-проектов, не для контента. У @agentezh уже есть свой 10-step content pipeline + 19 sub-agents. Overlap.</td>
+  <td data-label="Когда">Для будущих <b>coding</b>-проектов: preview-site v2, video-pipeline, новый MCP-сервер. Установка: <code>claude plugin marketplace add NoobyGains/godmode</code> + <code>claude plugin install godmode</code>.</td>
+  <td data-label="Status"><span class="badge parked">parked · для coding-проектов</span></td>
+</tr>
+
+<tr>
+  <td data-label="Идея">
     <span class="name">Postiz</span><br>
     <span class="type">multi-platform posting</span><br>
     <a href="https://github.com/gitroomhq/postiz-app" target="_blank">github</a>
@@ -280,6 +292,61 @@ code {
   <td data-label="Почему отложено">Сейчас только Telegram. Расширение на VK/Дзен/ОК — Phase J.</td>
   <td data-label="Когда">После стабильных 20+ постов в TG. Когда захочется расширить audience.</td>
   <td data-label="Status"><span class="badge parked">parked · phase J</span></td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- ===================== МИФЫ И ЧЕСТНЫЕ АЛЬТЕРНАТИВЫ ===================== -->
+<h2>🪦 Мифы (что не работает) и реальные альтернативы</h2>
+<div class="section-intro">Команды из TikTok-роликов которые звучат красиво но не существуют. Здесь — что вместо них.</div>
+
+<table>
+<thead><tr>
+  <th>«Команда»</th>
+  <th>Что говорят в роликах</th>
+  <th>Реальность</th>
+  <th>Что вместо в нашем pipeline</th>
+</tr></thead>
+<tbody>
+
+<tr>
+  <td data-label="Команда"><span class="name">/ghost</span><br><span class="badge note">миф</span></td>
+  <td data-label="Что говорят">Делает текст более человечным, обходит AI-детекторы</td>
+  <td data-label="Реальность">CLI отсекает за 12мс с "Unknown skill: ghost". 0 токенов до модели. Не существует ни в каком виде в leaked source code (512K LOC проверено).</td>
+  <td data-label="Что вместо">
+    <p><b>Уже сильнее:</b></p>
+    <ul>
+      <li><code>copywriter</code> Ёж-Перо пишет на голосе Ежа (мат, кухня, «ИИшечка»)</li>
+      <li><code>bulldog</code> ловит AI-маркеры (канцелярит, «применима везде», «фундамент — статистика», «итак»)</li>
+      <li><code>failures_log</code> учит copywriter не повторять anti-pattern фразы</li>
+    </ul>
+    Дополнительный humanizer избыточен.
+  </td>
+</tr>
+
+<tr>
+  <td data-label="Команда"><span class="name">/godmode</span> (Claude built-in)<br><span class="badge note">миф</span></td>
+  <td data-label="Что говорят">«Бог-режим», агент сам всё решает</td>
+  <td data-label="Реальность">"Unknown skill: godmode". Тоже миф. <b>Но существует</b> third-party skill <a href="https://github.com/NoobyGains/godmode" target="_blank">NoobyGains/godmode</a> — engineering framework для coding (36 skills, Define→Plan→Execute→Review→Ship).</td>
+  <td data-label="Что вместо">
+    Для contentpipeline @agentezh — overlap с тем что есть (CONSILIUM gate = quality gate, decide_action = task-planning).<br>
+    <b>Для собственных coding-проектов</b> (preview-site v2, video-pipeline) — может быть полезен как scaffolding. В сундук → когда захочешь coding-проект.
+  </td>
+</tr>
+
+<tr>
+  <td data-label="Команда"><span class="name">OODA</span> (как «команда»)<br><span class="badge wait">misnomer</span></td>
+  <td data-label="Что говорят">«Включает» OODA-режим</td>
+  <td data-label="Реальность"><b>Это не команда</b>, а фреймворк John Boyd (Observe→Orient→Decide→Act). Без слэша уходит к модели, Claude узнаёт и структурирует ответ. То же самое со «SWOT», «5 Whys», «RACI». Не hidden feature — обычная грамотность Claude.</td>
+  <td data-label="Что вместо">
+    <p><b>Реально полезно как pattern в rubric:</b></p>
+    <ul>
+      <li><b>bulldog</b> может судить через OODA: Observe (что сказано) → Orient (куда уводит) → Decide (publish или нет) → Act (конкретные правки)</li>
+      <li><b>strategist</b> для конкурентных постов: OODA по тренду</li>
+    </ul>
+    Можно добавить в их prompt'ы как optional rubric.
+  </td>
 </tr>
 
 </tbody>
