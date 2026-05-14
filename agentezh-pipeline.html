@@ -238,7 +238,7 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 </div>
 
 <div class="graph-wrap">
-<svg viewBox="0 0 1100 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="agentezh pipeline workflow">
+<svg viewBox="0 0 1100 860" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="agentezh pipeline workflow">
 
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
@@ -252,13 +252,31 @@ h1 { font-size: 22px; margin: 0 0 4px; }
     </marker>
   </defs>
 
-  <!-- ============== TRIGGER (top bar) ============== -->
+  <!-- ============== TRIGGER (top bar) + MODE banner ============== -->
   <foreignObject x="30" y="10" width="380" height="36">
     <div xmlns="http://www.w3.org/1999/xhtml" style="background:#2a221d;border:1px solid var(--border);border-left:3px solid var(--wait);border-radius:6px;padding:6px 10px;font-size:11px;color:var(--text);display:flex;align-items:center;gap:6px;position:relative;">
       <button class="help-btn" data-help="cron-trigger" style="position:relative;top:auto;right:auto;">?</button>
       <span style="font-size:14px;">⏰</span>
       <b>cron · ezh-publish-loop</b>
       <span style="color:var(--muted);font-size:10px;">10:00 / 14:00 / 17:00 MSK — один тик</span>
+    </div>
+  </foreignObject>
+
+  <foreignObject x="430" y="10" width="240" height="36">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="background:#2a221d;border:1px solid var(--border);border-left:3px solid var(--ok);border-radius:6px;padding:6px 10px;font-size:11px;color:var(--text);display:flex;align-items:center;gap:6px;position:relative;">
+      <button class="help-btn" data-help="modes" style="position:relative;top:auto;right:auto;">?</button>
+      <span style="font-size:14px;">🚦</span>
+      <b style="color:var(--ok);">LIVE mode</b>
+      <span style="color:var(--muted);font-size:10px;">dry-run флаги доступны</span>
+    </div>
+  </foreignObject>
+
+  <foreignObject x="690" y="10" width="240" height="36">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="background:#2a221d;border:1px solid var(--border);border-left:3px solid var(--storage);border-radius:6px;padding:6px 10px;font-size:11px;color:var(--text);display:flex;align-items:center;gap:6px;position:relative;">
+      <button class="help-btn" data-help="omniroute" style="position:relative;top:auto;right:auto;">?</button>
+      <span style="font-size:14px;">🛣️</span>
+      <b>OmniRoute</b>
+      <span style="color:var(--muted);font-size:10px;">5 ChatGPT учёток · quota pool</span>
     </div>
   </foreignObject>
 
@@ -506,6 +524,48 @@ h1 { font-size: 22px; margin: 0 0 4px; }
   <path class="edge" d="M 120 590 C 120 605, 320 605, 320 625" stroke="#6abb4f" stroke-dasharray="3 3" stroke-width="1.5" marker-end="url(#arrow)" fill="none" opacity="0.6"/>
   <!-- news-scan → backlog (feeds ideas) -->
   <path class="edge" d="M 840 625 C 840 30, 120 30, 120 70" stroke="#5aa9d1" stroke-dasharray="3 3" stroke-width="1.5" marker-end="url(#arrow)" fill="none" opacity="0.4"/>
+
+  <!-- ============== INFRA ROW (y=730) ============== -->
+  <text class="group-label" x="120" y="720" text-anchor="middle">infrastructure (где живут файлы)</text>
+
+  <foreignObject x="30" y="730" width="180" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="gnode storage" style="height:80px;">
+      <button class="help-btn" data-help="drafts-folder">?</button>
+      <div class="ttl"><span class="ic">📁</span>post-drafts/</div>
+      <div class="who">docs/post-drafts/*.yaml</div>
+      <div class="desc" style="font-size:11px;">Workspace: BUILD пишет, CONSILIUM обновляет, DESIGN добавляет картинки.</div>
+    </div>
+  </foreignObject>
+
+  <foreignObject x="270" y="730" width="180" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="gnode storage" style="height:80px;">
+      <button class="help-btn" data-help="images-folder">?</button>
+      <div class="ttl"><span class="ic">🖼️</span>content/images/</div>
+      <div class="who">PNG · 1024×1024 · editorial-punk</div>
+      <div class="desc" style="font-size:11px;">DESIGN кладёт сюда v1/v2/v3. PREVIEW читает для thumbnail.</div>
+    </div>
+  </foreignObject>
+
+  <foreignObject x="510" y="730" width="180" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="gnode storage" style="height:80px;border-left-color:var(--ok);">
+      <button class="help-btn" data-help="git-repo">?</button>
+      <div class="ttl" style="color:var(--ok);"><span class="ic">📦</span>git agentezh</div>
+      <div class="who">github.com/omiusgm/agentezh</div>
+      <div class="desc" style="font-size:11px;">Pipeline коммитит и пушит после каждой успешной стадии.</div>
+    </div>
+  </foreignObject>
+
+  <foreignObject x="750" y="730" width="180" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="gnode storage" style="height:80px;border-left-color:var(--human);">
+      <button class="help-btn" data-help="system-config">?</button>
+      <div class="ttl" style="color:var(--human);"><span class="ic">⚙️</span>system config</div>
+      <div class="who">CLAUDE.md + .claude/agents/*.md + .env</div>
+      <div class="desc" style="font-size:11px;">Голос/правила. Загружается каждый claude -p автоматически.</div>
+    </div>
+  </foreignObject>
+
+  <!-- (без крестящих стрелок к drafts/ — связь объяснена в help modal каждого блока) -->
+  <text x="540" y="715" text-anchor="middle" font-size="9" fill="#8a7a6a" font-family="inherit" font-style="italic">читаются/пишутся всеми auto-стадиями (детали — в ?-кнопке каждого блока)</text>
 
   <!-- U-bend label -->
   <text x="1040" y="330" text-anchor="middle" font-size="10" fill="#8a7a6a" font-family="inherit">требует</text>
@@ -821,6 +881,73 @@ const HELP = {
       { lbl: "Что сканит", html: "Каждое утро:<ul><li>Hacker News top + комменты last 24h</li><li>r/ClaudeAI, r/OpenAI, r/LocalLLaMA top</li><li>Anthropic Releasebot + Anthropic news</li><li>OpenAI ChatGPT release notes</li><li>GitHub trending (Python/JS/Rust) последний день</li></ul>" },
       { lbl: "Что делает с находками", html: "1. Пишет полный raw-дамп в <code>docs/daily-ai-digest.md</code> с заголовками, ссылками, кратким abstract.<br>2. Сильные находки (по эвристике — топ stars, anthropic, mass-mentions) добавляет в <code>docs/post-queue.md</code> в секцию «Идеи для будущих постов».<br>3. Также фильтрует по editorial-focus: китайские модели → markup «мимо ЦА», не превращает в idea." },
       { lbl: "Что НЕ делает", html: "Не пишет драфты. Только enrichment входной очереди. BUILD_DRAFT сам решает что взять из очереди." }
+    ]
+  },
+
+  "modes": {
+    icon: "🚦", title: "Режимы работы (DRY-RUN / LIVE)",
+    who: "Управление через флаг-файлы в /root/.hermes/state/",
+    sections: [
+      { lbl: "Глобальный режим", html: "<b>LIVE</b> = <code>ezh_publish_live</code> файл есть + <code>EZH_TG_DRY_RUN</code> env не установлен. В этом режиме PUBLISH_SCHEDULED реально шлёт <code>sendPhoto</code> в @agentezh.<br><br>Если <b>файл <code>ezh_publish_live</code> снят</b> — pipeline всё делает но публикация — это no-op + HTML preview в <code>dry-runs/</code>." },
+      { lbl: "EZH_TG_DRY_RUN=1", html: "Переопределяет всё TG: <code>tg_send_approval_request</code>, <code>tg_poll_approval</code>, <code>tg_publish_to_channel</code>, <code>tg_notify_owner</code> — все пишут в файлы вместо реальных API-вызовов. Безопасно для ночных тестов. Артефакты в <code>/root/.hermes/state/dry-runs/</code>." },
+      { lbl: "EZH_IMAGE_DRY_RUN=1", html: "Wrapper <code>ezh_image_gen.sh</code> пишет 1×1 placeholder PNG вместо вызова Codex. Сохраняет квоту OmniRoute. Тестирует только orchestration." },
+      { lbl: "EZH_DAILY_CAP_USD=10", html: "Override дневного $5 cap. После исчерпания pipeline возвращает IDLE без действий. Reset в полночь автоматический (load_state видит новую дату)." },
+      { lbl: "EZH_TEST_ANYHOUR=1", html: "Игнорирует ограничение <code>publish_hour ∈ {10,14,17}</code> для старой PUBLISH стадии — позволяет тестировать в любое время. PUBLISH_SCHEDULED это всегда игнорирует (планирование на любое время)." }
+    ]
+  },
+
+  "omniroute": {
+    icon: "🛣️", title: "OmniRoute — quota pool из 5 ChatGPT-учёток",
+    who: "systemd: omniroute.service · 127.0.0.1:20128/v1",
+    sections: [
+      { lbl: "Зачем", html: "Vladimir работает только через подписки (subscription-only constraint), без pay-per-token API. OmniRoute — proxy который раунд-робинит запросы между 5 ChatGPT-учётками, давая 5× квоты для одного приложения." },
+      { lbl: "Что проксит сейчас", html: "Chat-модели: <code>hermes-auto</code>, <code>codex/gpt-5.5-*</code>, <code>cx/gpt-5.5-*</code> (~10 моделей текста). Все они идут через ChatGPT-учётку, не через OpenAI API." },
+      { lbl: "Image gen НЕ через OmniRoute", html: "Проверено 14 мая: <code>/v1/images/generations</code> возвращает <code>No credentials for image provider: openai</code>. OmniRoute не настроен на image-провайдер. Поэтому DESIGN идёт через <b>Codex CLI</b> напрямую (он сам аутентифицирован через ChatGPT-учётку Vladimir'а)." },
+      { lbl: "Где конфиг", html: "<code>/usr/local/lib/hermes-agent/</code> — серверная часть.<br><code>/root/.hermes/.env</code> — endpoints + ключи." }
+    ]
+  },
+
+  "drafts-folder": {
+    icon: "📁", title: "docs/post-drafts/ — центральный workspace",
+    who: "/root/projects/agentezh/docs/post-drafts/*.yaml · в git",
+    sections: [
+      { lbl: "Что", html: "Папка где живут ВСЕ драфты постов. Каждый yaml — один draft со своей итерацией (v1, v2, v3, …). Slug + дата создания в имени. 26 драфтов на сейчас." },
+      { lbl: "Кто пишет", html: "<ul><li><b>BUILD_DRAFT</b> создаёт <code>{date}-{slug}-v1.yaml</code> со status=ready-for-review</li><li><b>CONSILIUM</b> обновляет тот же файл — меняет status на ready-for-publish или needs-rewrite + добавляет блок <code>consilium_feedback</code></li><li><b>DESIGN</b> добавляет поле <code>image_options: [v1, v2, v3]</code> со ссылками на PNG</li><li>Вручную (через claude CLI) — copywriter может писать v2/v3 итерации</li><li><b>PUBLISH_SCHEDULED</b> читает body и пометит entry опубликованной в schedule.json (не меняет yaml)</li></ul>" },
+      { lbl: "YAML структура", html: "<pre style='font-size:11px;background:var(--panel2);padding:8px;border-radius:4px;'>slug, date, type, status,\niteration: v1|v2|...,\ntitle, main_idea,\nbody: |  &lt;HTML&gt;,\nlength_chars_body,\nstage1_skeleton, stage3_first_screen,\nfailures_addressed,\nimage_options: [...]\nconsilium_feedback: {...}</pre>" },
+      { lbl: "Кто читает", html: "BUILD_DRAFT (anti-dup vs существующие), PREVIEW-SITE (показывает карточки), PUBLISH_SCHEDULED (body для отправки)." }
+    ]
+  },
+
+  "images-folder": {
+    icon: "🖼️", title: "content/images/",
+    who: "/root/projects/agentezh/content/images/*.png · в git (большой)",
+    sections: [
+      { lbl: "Что хранится", html: "PNG-файлы 1024×1024, editorial-punk stylе. Имя файла = <code>{slug}-v[1-3].png</code>. После DESIGN draft получает 3 варианта, после твоего approve один выбирается, остальные остаются (для возможной переиспользовки)." },
+      { lbl: "Кто пишет", html: "<b>DESIGN</b> через wrapper <code>/root/.hermes/scripts/ezh_image_gen.sh</code> → Codex CLI с <code>--enable image_generation</code>. Wrapper сохраняет в правильный путь + ffmpeg downscale до 1024×1024." },
+      { lbl: "Кто читает", html: "<ul><li><b>PREVIEW-SITE</b> → endpoint <code>/images/{path}</code> для thumbnail в карточке</li><li><b>PUBLISH_SCHEDULED</b> → читает выбранный путь, шлёт через <code>sendPhoto</code></li></ul>" },
+      { lbl: "Git", html: "Изображения коммитятся в git. На 26 драфтов с 3 картинками = ~78 PNG × ~1MB. Это допустимо, GitHub LFS не нужен." }
+    ]
+  },
+
+  "git-repo": {
+    icon: "📦", title: "Git agentezh — все артефакты в репо",
+    who: "github.com/omiusgm/agentezh · main branch · push после каждой стадии",
+    sections: [
+      { lbl: "Что коммитится", html: "<ul><li>Новые драфты (yaml) от BUILD_DRAFT</li><li>Изменения статусов от CONSILIUM</li><li>Картинки от DESIGN (PNG)</li><li>Обновления post-history.md от PUBLISH_SCHEDULED</li><li>Записи в failures_log от любой стадии</li><li>Изменения в post-queue.md от news-scan</li><li>Daily digest от news-scan</li></ul>" },
+      { lbl: "Когда коммитится", html: "Pipeline в конце успешного action делает <code>git add &amp;&amp; git commit -m \"...\" &amp;&amp; git push</code>. Если push fails (race с другим коммитером) — retry с <code>git pull --rebase</code>, до 3 раз." },
+      { lbl: "Зачем", html: "1. Audit trail — видно когда что было сгенерено<br>2. Disaster recovery — VPS может умереть, репо живёт<br>3. Параллельные сессии могут забрать актуальное состояние<br>4. Sourceный код pipeline там же, в <code>scripts/hermes-cron/</code> — синхронизированная копия с <code>/root/.hermes/scripts/</code>" },
+      { lbl: "Безопасные коммиты", html: "Pipeline не добавляет <code>git add -A</code> или <code>git add .</code> — только конкретные файлы. Не коммитит <code>.env</code>, токены, dry-run артефакты." }
+    ]
+  },
+
+  "system-config": {
+    icon: "⚙️", title: "System config — голос и правила",
+    who: "Загружается каждый claude -p вызов автоматически",
+    sections: [
+      { lbl: "CLAUDE.md", html: "<code>/root/projects/agentezh/CLAUDE.md</code> — конституция проекта. Описывает: голос «Агент Ёж» (циничный практик), ЦА, типы постов, anti-pattern фразы, требования к first-screen, hashtag policy. ~10K chars. Читается claude автоматически как system prompt." },
+      { lbl: "Sub-agent definitions", html: "<code>/root/projects/agentezh/.claude/agents/*.md</code> — 19 определений (copywriter, strategist, bulldog, designer, persona-katya, persona-artyom, и т.д.). Каждый файл — frontmatter + промпт. claude -p автоматически делает их доступными через Task subagent." },
+      { lbl: "Path-scoped rules", html: "<code>.claude/rules/posts.md</code> — правила, применяющиеся только к файлам в <code>docs/post-drafts/</code>. Например: «не используй ⭐ в title», «blockquote всегда expandable», «length_chars_body обязательно». Claude учитывает их при write/edit в этой папке." },
+      { lbl: ".env (секреты)", html: "<code>/root/projects/agentezh/.env</code> — <code>TELEGRAM_BOT_TOKEN</code>, <code>OPENAI_API_KEY</code> (опционально, мы не используем), URL'ы. НЕ коммитится. Читается pipeline-скриптами напрямую." }
     ]
   }
 };
