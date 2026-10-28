@@ -46,3 +46,13 @@
 [Telegram «Агент Ёж»](https://t.me/agentezh) — обновления, разборы и новые находки
 
 *Контент сгенерирован ИИ*
+
+<!-- ezh-community:start -->
+## Обратная связь и вклад в проект
+
+Часть линейки **Агент Ёж**: сделать подключение личных сервисов к AI-агенту понятным для новичка. Начинаем с чтения, расширяем права отдельно.
+
+[Каталог и быстрый старт](https://github.com/omiusgm/agent-ezh-catalog) · [Ошибка или идея](https://github.com/omiusgm/ai-setup-guide/issues/new/choose) · [Как предложить PR](CONTRIBUTING.md) · [Безопасность](SECURITY.md)
+
+English: Issues and focused pull requests are welcome. See [contribution guidelines](CONTRIBUTING.md).
+<!-- ezh-community:end -->
